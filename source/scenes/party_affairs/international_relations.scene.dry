@@ -30,7 +30,6 @@ on-arrival: resources -= 1; united_russia += 1; oldleft_strength += 4; oldleft_d
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-// audio: shuffle music/communist/workers_of_vienna_normalized.mp3
 on-arrival: beweli_strength += 3; resources -= 1; lfi += 1;
 
 
