@@ -33,21 +33,21 @@ view-if: oldleft_strength < 45
 on-arrival: issue_cost_of_living -= 0.2; issue_welfare -= 0.2; issue_feminism += 1; issue_services -= 0.2; issue_pacifism -= 0.2; social_moderation -= 0.5; youth_linke += 0.5*(1-dissent); oldleft_dissent += 5; beweli_strength += 1; greens_relation += 1;
 
 @pacifism
-  view-if: pragmatist_strength < 65
-  on-arrival: issue_cost_of_living -= 0.2; issue_welfare -= 0.2; issue_feminism -= 0.2; issue_services -= 0.2; issue_pacifism += 1; foreign_moderation -= 0.5; youth_linke += 0.5*(1-dissent); pragmatist_dissent += 2;
+view-if: pragmatist_strength < 65
+on-arrival: issue_cost_of_living -= 0.2; issue_welfare -= 0.2; issue_feminism -= 0.2; issue_services -= 0.2; issue_pacifism += 1; foreign_moderation -= 0.5; youth_linke += 0.5*(1-dissent); pragmatist_dissent += 2;
 
 @environmentalism
-  view-if: oldleft_strength < 40
-  on-arrival: issue_environmentalism += 1; youth_linke += 1*(1-dissent); youth_greens -= 1*(1-dissent); greens_relation += 2;
+view-if: oldleft_strength < 40
+on-arrival: issue_environmentalism += 1; youth_linke += 1*(1-dissent); youth_greens -= 1*(1-dissent); greens_relation += 2;
 
 @antifascism
-  view-if: afd_votes >= 20
-  on-arrival: issue_antifascism += 1; econ_moderation += 0.5; youth_linke += (afd_votes/15)*(1-dissent); pro_status_quo -= 1; greens_relation += 2; spd_relation += 2;
+view-if: afd_votes >= 20
+on-arrival: issue_antifascism += 1; econ_moderation += 0.5; youth_linke += (afd_votes/15)*(1-dissent); pro_status_quo -= 1; greens_relation += 2; spd_relation += 2;
 
 @promigration
-  view-if: oldleft_strength < 45
-  on-arrival: issue_migration -= 1; pro_status_quo += 1; social_moderation -= 0.5; youth_linke += 1*(1-dissent); oldleft_dissent += 1;
+view-if: oldleft_strength < 45
+on-arrival: issue_migration -= 1; pro_status_quo += 1; social_moderation -= 0.5; youth_linke += 1*(1-dissent); oldleft_dissent += 1;
 
 @antimigration
-  view-if: oldleft_strength >= 45
-  on-arrival: issue_migration += 1; pro_status_quo -= 2; social_moderation += 1; oldleft_dissent -= 3; youth_linke -= 2; urban_linke -= 1; rural_linke += 2*(1-dissent); bsw_relation += 5;
+view-if: oldleft_strength >= 45
+on-arrival: issue_migration += 1; pro_status_quo -= 2; social_moderation += 1; oldleft_dissent -= 3; youth_linke -= 2; urban_linke -= 1; rural_linke += 2*(1-dissent); bsw_relation += 5;
