@@ -73,6 +73,7 @@ Q.pragmatist_left = 0;
 Q.foreign_moderation = 3;
 Q.econ_moderation = 3;
 Q.social_moderation = 5;
+Q.decentralization = 4;
 
 // organizations
 
@@ -80,6 +81,12 @@ Q.newspapers = 0;
 Q.social_media = 0;
 Q.tradeunion_contact = 0;
 Q.solid = 0;
+
+Q.united_russia = 0;
+Q.lfi = 0;
+Q.guengl = 0;
+Q.dsa = 0;
+Q.mamdani = 0;
 
 // inter-party relations
 Q.bsw_relation = 0;
