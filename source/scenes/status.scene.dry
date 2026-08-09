@@ -169,7 +169,7 @@ Support for the Status Quo: [+ pro_status_quo_disp +]%
 
 **Detailed results for each demographic**
 
-{!<div id="results" style="display: none;">!}
+{!<div id="polls" style="display: none;">!}
     {!<div style="overflow-x:auto;">!}
     {!<table style="text-align:center; border-spacing: 0.2em;">!}
         {!<tr>!}
