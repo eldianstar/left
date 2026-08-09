@@ -1,0 +1,34 @@
+title: Linksjugend SoLiD
+new-page: true
+is-card: true
+tags: party_affairs
+card-image: img/reichsbanner.jpg
+on-arrival: month_actions += 1; reichsbanner_timer += 6;
+max-visits: 6
+#subtitle: subtitle text
+
+= SoLiD
+
+text
+
+- @militant: invest in solid
+- @same: Keep the linksjugend as it is.
+- @cut_rb: Cut funding
+- @easy_discard
+- @cancel_advisor_action
+
+@militant
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources
+on-arrival: resources -= 1; solid += 1; beweli_strength += 3; pragmatist_dissent += 5; foreign_moderation -= 0.5; econ_moderation -= 0.5; social_moderation -= 0.5; youth += 3*(1-dissent); spd_relation -= 4; greens_relation -= 2;
+
+@same
+
+@cut_rb
+subtitle: +1 resources
+on-arrival: resources += 1; solid -= 1; beweli_strength -= 2; beweli_dissent += 1; youth_linke -= 2; youth_greens += 2;
+
+
+@homosexual
+achievement: anders_als_die_andern
