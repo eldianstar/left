@@ -473,8 +473,6 @@ if (window && d3) {
 }
 !}
 
-go-to: achievement_check_e
-
 = Election results
 
 {!<svg id="bundestag" style="width: 500px; height: 250px;"> </svg>!}
