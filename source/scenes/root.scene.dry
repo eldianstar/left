@@ -88,6 +88,15 @@ Q.guengl = 0;
 Q.dsa = 0;
 Q.mamdani = 0;
 
+Q.issue_cost_of_living = 3;
+Q.issue_welfare = 5;
+Q.issue_feminism = 3;
+Q.issue_antimilitarism = 2;
+Q.issue_environment = 3;
+Q.issue_services = 4;
+Q.issue_migration = 4;
+Q.issue_antifascism = 1;
+
 // inter-party relations
 Q.bsw_relation = 0;
 Q.greens_relation = 50;
