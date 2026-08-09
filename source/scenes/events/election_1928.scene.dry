@@ -480,9 +480,19 @@ if (window && d3) {
 
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}Left: {!</td><td>!} [+ linke_votes +]% {!</td><td>!} [+ str_votes_change_linke +] {!</td><td>!} [+ linke_b +]% {!</td><td>!} [+ str_change_linke +] {!</td></tr>!}
 
-//[? if not z_dnef: {!<tr><td><div class="box" style='background-color:#000'> </div> !} [+ z_party_name +]: {!</td><td>!} [+ z_minus_csu_votes +]% {!</td><td>!} [+ str_votes_change_z +] {!</td><td>!} [+ z_minus_csu_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!} ?]
+[? if bsw_split: {!<tr><td><div class="box" style='background-color:#700000'> </div> !}BSW: {!</td><td>!} [+ bsw_votes +]% {!</td><td>!} [+ str_votes_change_bsw +] {!</td><td>!} [+ bsw_b +]% {!</td><td>!} [+ str_change_bsw +] {!</td></tr>!} ?]
 
-//[? if not z_dnef: {!<tr><td><div class="box" style='background-color:#A2D8E0'> </div> !} BVP: {!</td><td>!} [+ csu_votes +]% {!</td><td>!} [+ str_votes_change_csu +] {!</td><td>!} [+ csu_r +]% {!</td><td>!} [+ str_change_csu +] {!</td></tr>!} ?]
+{!<tr><td><div class="box" style='background-color:#700000'> </div> !}SPD: {!</td><td>!} [+ spd_votes +]% {!</td><td>!} [+ str_votes_change_spd +] {!</td><td>!} [+ spd_b +]% {!</td><td>!} [+ str_change_spd +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#700000'> </div> !}B90/Greens: {!</td><td>!} [+ greens_votes +]% {!</td><td>!} [+ str_votes_change_greens +] {!</td><td>!} [+ greens_b +]% {!</td><td>!} [+ str_change_greens +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#700000'> </div> !}FDP: {!</td><td>!} [+ fdp_votes +]% {!</td><td>!} [+ str_votes_change_fdp +] {!</td><td>!} [+ fdp_b +]% {!</td><td>!} [+ str_change_fdp +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} CDU: {!</td><td>!} [+ cdu_minus_csu_votes +]% {!</td><td>!} [+ str_votes_change_cdu +] {!</td><td>!} [+ cdu_minus_csu_b +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#A2D8E0'> </div> !} CSU: {!</td><td>!} [+ csu_votes +]% {!</td><td>!} [+ str_votes_change_csu +] {!</td><td>!} [+ csu_b +]% {!</td><td>!} [+ str_change_csu +] {!</td></tr>!} ?]
+
+{!<tr><td><div class="box" style='background-color:#700000'> </div> !}AfD: {!</td><td>!} [+ afd_votes +]% {!</td><td>!} [+ str_votes_change_afd +] {!</td><td>!} [+ afd_b +]% {!</td><td>!} [+ str_change_afd +] {!</td></tr>!}
 
 {!</table>!}
 
