@@ -169,13 +169,13 @@ Support for the Status Quo: [+ pro_status_quo_disp +]%
 
 **Detailed results for each demographic**
 
-    <table style="text-align:center; border-spacing: 0.2em; width: 95%; font-size: 80%;">
+    <table style="text-align:center; border-spacing: 0.2em; width: 95%;">
         {!<tr>!}
-            {!<th>Youth</th>!}
-            {!<th>Urban</th>!}
-            {!<th>Rural</th>!}
-            {!<th>Upper</th>!}
-            {!<th>East</th>!}
+            {!<th style="font-size: 0.65em;">Youth</th>!}
+            {!<th style="font-size: 0.65em;">Urban</th>!}
+            {!<th style="font-size: 0.65em;">Rural</th>!}
+            {!<th style="font-size: 0.65em;">Upper</th>!}
+            {!<th style="font-size: 0.65em;">East</th>!}
         {!</tr>!}
         {!<tr>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_linke_display +]%{!</td>!}
