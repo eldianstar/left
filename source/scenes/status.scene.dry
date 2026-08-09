@@ -169,7 +169,7 @@ Support for the Status Quo: [+ pro_status_quo_disp +]%
 
 **Detailed results for each demographic**
 
-    {!<table style="text-align:center; border-spacing: 0.2em;">!}
+    <table style="text-align:center; border-spacing: 0.2em;">
         {!<tr>!}
             {!<th>Party</th>!}
             {!<th>Youth</th>!}
@@ -229,4 +229,4 @@ Support for the Status Quo: [+ pro_status_quo_disp +]%
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ upper_afd_display +]%{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ east_afd_display +]%{!</td>!}
         {!</tr>!}
-    {!</table>!}
+    </table>
