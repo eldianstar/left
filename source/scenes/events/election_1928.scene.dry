@@ -589,7 +589,7 @@ if (window && d3) {
 
 [? if groko_combo >= 45 and ampelkoalition_failed : Grand Coalition(cdu/csu+spd): [+ groko_combo +]% ?]
 
-[? if kenya_coalition_combo >= 45%and ampelkoalition_failed and groko_combo < 45: Kenyan coalition(cdu/csu+spd+greens): [+ kenya_coalition_combo +]% ?]
+[? if kenya_coalition_combo >= 45% and ampelkoalition_failed and groko_combo < 45: Kenyan coalition(cdu/csu+spd+greens): [+ kenya_coalition_combo +]% ?]
 
 [? if !brandmauer and midnight_coalition_combo >= 45 : Midnight coalition(afd+cdu/csu): [+ midnight_coalition_combo +]% ?]
 
