@@ -187,12 +187,12 @@ if (new_party_sum > 0) {
 
     // Calculate the total of all `r` values after redistribution
     for (var party of Q.parties) {
-        total_r_sum += Q[party + '_b'];
+        total_b_sum += Q[party + '_b'];
     }
 
     // Adjust each party's `r` value proportionally if the total isn't 100
-    if (total_r_sum !== 100) {
-        let normalization_factor = 100 / total_r_sum;
+    if (total_b_sum !== 100) {
+        let normalization_factor = 100 / total_b_sum;
         for (var party of Q.parties) {
             if (Q[party + '_b'] > 0) {
                 Q[party + '_b'] = Math.round(Q[party + '_b'] * normalization_factor * 10) / 10;
@@ -259,22 +259,22 @@ var sign2 = Q.str_votes_change_csu > 0
 : Q.str_votes_change_csu < 0 
   ? '<img src="img/arrowdown.png"> ' 
   : '<img src="img/steady.png"> ';
-Q.str_votes_change_csu = sign2 + Math.abs(Q.str_votes_change_bvp).toFixed(1);
+Q.str_votes_change_csu = sign2 + Math.abs(Q.str_votes_change_csu).toFixed(1);
 
 Q.str_change_csu = Q.csu_b - Q.old_csu_b;
 var sign2 = Q.str_change_csu > 0 
 ? '<img src="img/arrowup.png"> ' 
-: Q.str_change_bvp < 0 
+: Q.str_change_csu < 0 
   ? '<img src="img/arrowdown.png"> ' 
   : '<img src="img/steady.png"> ';
-Q.str_change_csu = sign2 + Math.abs(Q.str_change_bvp).toFixed(1);
+Q.str_change_csu = sign2 + Math.abs(Q.str_change_csu).toFixed(1);
 
 if (Q.csu_b) {
     Q.pre_previous_cdu_last_election_votes -= Q.previous_csu_last_election_votes;
     Q.old_cdu_b -= Q.old_csu_b;
 }
 Q.previous_csu_last_election_votes = Q.csu_votes;
-Q.old_csu_b = Q.bvp_b;
+Q.old_csu_b = Q.csu_b;
 
 console.log("cdu_minus_csu_votes:", Q.cdu_minus_csu_votes);
 console.log("pre_previous_cdu_last_election_votes:", Q.pre_previous_cdu_last_election_votes);
@@ -287,7 +287,7 @@ var sign2 = Q.str_votes_change_cdu > 0
   : '<img src="img/steady.png"> ';
 Q.str_votes_change_cdu = sign2 + Math.abs(Q.str_votes_change_cdu).toFixed(1);
 
-if (pragmatist_strength <= 40 or oldleft_strength >= 45 or beweli_strength >= 45) {
+if (pragmatist_strength <= 40 || oldleft_strength >= 45 || beweli_strength >= 45) {
     if (Q.linke_votes >= 35) {
         Q.greens_relation -= 12;
         Q.spd_relation -= 12;
@@ -318,7 +318,7 @@ if (Q.spd_b >= Q.cdu_b && Q.spd_b >= Q.linke_b && Q.spd_b >= Q.afd_b) {
 
 // coalitions
 
-Q.rrgreen_coalition = parseFloat((Q.linke_b + Q.spd_b + greens_b).toFixed(1));
+Q.rrgreen_coalition = parseFloat((Q.linke_b + Q.spd_b + Q.greens_b).toFixed(1));
 Q.ampelkoalition_coalition = parseFloat((Q.spd_b + Q.greens_b + Q.fdp_b).toFixed(1));
 
 
@@ -353,6 +353,7 @@ for (var party of Q.parties_graph) {
 }
 Q.election_records.push(election_result);
 !}
+
 on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
 on-display: {!
 const data = [];
@@ -484,9 +485,9 @@ go-to: achievement_check_e
 
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}Left: {!</td><td>!} [+ linke_votes +]% {!</td><td>!} [+ str_votes_change_linke +] {!</td><td>!} [+ linke_b +]% {!</td><td>!} [+ str_change_linke +] {!</td></tr>!}
 
-//[? if not z_dnef: {!<tr><td><div class="box" style='background-color:#000'> </div> !} [+ z_party_name +]: {!</td><td>!} [+ z_minus_bvp_votes +]% {!</td><td>!} [+ str_votes_change_z +] {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!} ?]
+//[? if not z_dnef: {!<tr><td><div class="box" style='background-color:#000'> </div> !} [+ z_party_name +]: {!</td><td>!} [+ z_minus_csu_votes +]% {!</td><td>!} [+ str_votes_change_z +] {!</td><td>!} [+ z_minus_csu_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!} ?]
 
-//[? if not z_dnef: {!<tr><td><div class="box" style='background-color:#A2D8E0'> </div> !} BVP: {!</td><td>!} [+ bvp_votes +]% {!</td><td>!} [+ str_votes_change_bvp +] {!</td><td>!} [+ bvp_r +]% {!</td><td>!} [+ str_change_bvp +] {!</td></tr>!} ?]
+//[? if not z_dnef: {!<tr><td><div class="box" style='background-color:#A2D8E0'> </div> !} BVP: {!</td><td>!} [+ csu_votes +]% {!</td><td>!} [+ str_votes_change_csu +] {!</td><td>!} [+ csu_r +]% {!</td><td>!} [+ str_change_csu +] {!</td></tr>!} ?]
 
 {!</table>!}
 
