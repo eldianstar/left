@@ -29,8 +29,8 @@ text
   on-arrival: issue_cost_of_living -= 0.2; issue_welfare -= 0.2; issue_feminism -= 0.2; issue_services += 1; issue_pacifism -= 0.2; econ_moderation -= 0.5; urban_linke += 1*(1-dissent); youth_linke += 1*(1-dissent); rural_linke -= 0.5; greens_relation += 1;
 
 @feminism
-  view-if: oldleft_strength < 45
-  on-arrival: issue_cost_of_living -= 0.2; issue_welfare -= 0.2; issue_feminism += 1; issue_services -= 0.2; issue_pacifism -= 0.2; social_moderation -= 0.5; youth_linke += 0.5*(1-dissent); oldleft_dissent += 5; beweli_strength += 1; greens_relation += 1;
+view-if: oldleft_strength < 45
+on-arrival: issue_cost_of_living -= 0.2; issue_welfare -= 0.2; issue_feminism += 1; issue_services -= 0.2; issue_pacifism -= 0.2; social_moderation -= 0.5; youth_linke += 0.5*(1-dissent); oldleft_dissent += 5; beweli_strength += 1; greens_relation += 1;
 
 @pacifism
   view-if: pragmatist_strength < 65
