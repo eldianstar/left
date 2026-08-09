@@ -42,7 +42,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; foreign_moderation += 1; social_moderation += 1; econ_moderation += 1; cdu_relation += 6*(1 - dissent); beweli_dissent += 4; pragmatist_strength += 3; oldleft_dissent += 1; pragmatist_dissent -= 1; emali_dissent += 1;
 
-@spd_alone
+@linke_alone
 on-arrival: greens_relation -= 1; spd_relation -= 1; beweli_strength += 1;
 
 Whether it is because we *cannot* or *will not*, we do not make ties with other parties at this moment.
