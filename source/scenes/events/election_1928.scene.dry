@@ -490,7 +490,7 @@ if (window && d3) {
 
 {!<tr><td><div class="box" style='background-color:#000'> </div> !} CDU: {!</td><td>!} [+ cdu_minus_csu_votes +]% {!</td><td>!} [+ str_votes_change_cdu +] {!</td><td>!} [+ cdu_minus_csu_b +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#A2D8E0'> </div> !} CSU: {!</td><td>!} [+ csu_votes +]% {!</td><td>!} [+ str_votes_change_csu +] {!</td><td>!} [+ csu_b +]% {!</td><td>!} [+ str_change_csu +] {!</td></tr>!} ?]
+{!<tr><td><div class="box" style='background-color:#A2D8E0'> </div> !} CSU: {!</td><td>!} [+ csu_votes +]% {!</td><td>!} [+ str_votes_change_csu +] {!</td><td>!} [+ csu_b +]% {!</td><td>!} [+ str_change_csu +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}AfD: {!</td><td>!} [+ afd_votes +]% {!</td><td>!} [+ str_votes_change_afd +] {!</td><td>!} [+ afd_b +]% {!</td><td>!} [+ str_change_afd +] {!</td></tr>!}
 
