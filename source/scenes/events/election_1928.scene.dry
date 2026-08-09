@@ -591,7 +591,7 @@ if (window && d3) {
 
 [? if kenya_coalition_combo >= 45 and ampelkoalition_failed and groko_combo < 45: Kenyan coalition(cdu/csu+spd+greens): [+ kenya_coalition_combo +]% ?]
 
-[? if !brandmauer and midnight_coalition_combo >= 45 : Midnight coalition(afd+cdu/csu): [+ midnight_coalition_combo +]% ?]
+[? if brandmauer = 0 and midnight_coalition_combo >= 45 : Midnight coalition(afd+cdu/csu): [+ midnight_coalition_combo +]% ?]
 
 [? if !brandmauer and midnight_coalition_combo < 45 and jamaica_coalition >= 45 : Jamaican coalition(afd+cdu/csu+fdp): [+ jamaica_coalition_combo +]% ?]
 
