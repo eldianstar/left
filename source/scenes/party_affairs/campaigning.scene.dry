@@ -47,5 +47,4 @@ on-arrival: upper_linke += (4+econ_moderation)/4*(1-dissent); resources -= 1; pr
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-view-if: peoples_party == 1
 on-arrival: catholics_spd += ((newspapers+social_moderation+(10-foreign_moderation))/3)*(1-dissent); resources -= 1; oldleft_strength += 3; pragmatist_strength += 2;
