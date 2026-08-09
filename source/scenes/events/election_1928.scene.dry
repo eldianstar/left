@@ -661,7 +661,7 @@ on-arrival: cdu_in_government = 1; afd_in_government = 1; midnight_coalition = 1
 @do_jamaica
 title: text jamaica
 view-if: (brandmauer = 0 and midnight_coalition_combo < 50 and jamaica_coalition_combo >= 50)
-on-arrival: cdu_in_government = 1; afd_in_government = 1; fdp_in_government; jamaica_coalition = 1
+on-arrival: cdu_in_government = 1; afd_in_government = 1; fdp_in_government = 1; jamaica_coalition = 1
 
 @no_majority
 title: There is no clear governing majority.
