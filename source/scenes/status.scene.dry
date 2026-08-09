@@ -146,6 +146,25 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="pragmatist text">Pragmatists</span>!} strength: [+ pragmatist_strength : strength +], dissent: [+ pragmatist_dissent : dissent +]
 
+@defense
+title: Party
+
+= Party Leadership
+
+Party Leadership: xyz
+
+Bundestag Leadership: xyz
+
+= Internal Factions of the <span style="color: #c00000;">**SPD**</span>
+
+{!<span class="tooltip-text" title="oldleft text">Old Left</span>!} strength: [+ oldleft_strength : strength +], dissent: [+ oldleft_dissent : dissent +]
+
+{!<span class="tooltip-text" title="beweli text">Movement Left</span>!} strength: [+ beweli_strength : strength +], dissent: [+ beweli_dissent : dissent +]
+
+{!<span class="tooltip-text" title="emali text">Centre</span>!} strength: [+ emali_strength : strength +], dissent: [+ emali_dissent : dissent +]
+
+{!<span class="tooltip-text" title="pragmatist text">Pragmatists</span>!} strength: [+ pragmatist_strength : strength +], dissent: [+ pragmatist_dissent : dissent +]
+
 
 @polls
 on-arrival: {!
