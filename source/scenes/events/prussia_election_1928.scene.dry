@@ -1130,10 +1130,12 @@ They say that they expect to see these goals fulfilled in [+ kpd_ultimatum_pruss
 @popular_front_success_federal
 on-arrival: prussia_negotiations_kpd_trigger = 0; 
 
+- @election_1928.popular_front_success: Continue negotiations.
 
 @left_front_success_federal
 on-arrival: prussia_negotiations_kpd_left_trigger = 0
 
+- @election_1928.left_coalition_success: Continue negotiations.
 
 @right_coalition_prussia
 title: Refuse to form a government, so that a right-wing coalition may be formed.
