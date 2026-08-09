@@ -320,6 +320,7 @@ if (Q.spd_b >= Q.cdu_b && Q.spd_b >= Q.linke_b && Q.spd_b >= Q.afd_b) {
 
 Q.rrgreen_coalition = parseFloat((Q.linke_b + Q.spd_b + Q.greens_b).toFixed(1));
 Q.ampelkoalition_coalition = parseFloat((Q.spd_b + Q.greens_b + Q.fdp_b).toFixed(1));
+Q.
 
 
 Q.leverage = Q.linke_b;
@@ -338,7 +339,7 @@ Q.afd_in_government = 0;
 Q.fdp_in_government = 0;
 Q.in_rrgreen_coalition = 0;
 Q.ampelkoalition = 0;
-Q.in_left_front = 0;
+Q.in_linke_bsw_coalition = 0;
 Q.in_linke_majority = 0;
 
 if (Q.year < 2025) {
