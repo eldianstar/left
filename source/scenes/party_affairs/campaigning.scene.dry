@@ -41,7 +41,7 @@ on-arrival: rural_linke += ((newspapers+social_moderation)/2.5)*(1-dissent); res
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: upper_linke += (4+econ_moderation)/4*(1-dissent); resources -= 1; pragmatist_strength += 1; econ_moderation += 0.5; beweli_dissent += 3; emali_dissent += 3; oldleft dissent += 3; spd_relation += 1;
+on-arrival: upper_linke += (4+econ_moderation)/4*(1-dissent); resources -= 1; pragmatist_strength += 1; econ_moderation += 0.5; beweli_dissent += 3; emali_dissent += 3; oldleft_dissent += 3; spd_relation += 1;
 
 @east
 subtitle: -1 resources
