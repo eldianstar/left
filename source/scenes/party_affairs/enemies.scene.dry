@@ -18,7 +18,7 @@ In our media and campaign materials, who should we consider as our main opponent
 - @left: spd/greens
 - @establishment: establishment (spd/greens/fdp/cdu)
 - @noenemy: thorfinnmaxxing
-- @easy-discard
+- @easy_discard
 
 @right
 on-arrival: enemies = "right-wing parties"; beweli_strength += 4; emali_strength += 4; pragmatist_dissent += 1; urban_cdu -= 1; urban_afd -= 1; youth_cdu -= 1; youth_afd -= 1; youth_linke += 1*(1-dissent); urban_linke += 1*(1-dissent); pro_status_quo -= 1; cdu_relation -= 2;
