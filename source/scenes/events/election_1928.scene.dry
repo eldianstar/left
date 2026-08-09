@@ -352,7 +352,7 @@ for (var party of Q.parties_graph) {
     election_result[party] = Q[party + '_b'];
 }
 Q.election_records.push(election_result);
-!}
+
 
 if (Q.bsw_b) {
     data.push({
@@ -472,6 +472,7 @@ if (window && d3) {
     }
 }
 !}
+
 go-to: achievement_check_e
 
 = Election results
