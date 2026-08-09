@@ -71,19 +71,16 @@ view-if: right_coalition >= 50 and bourgeois_coalition < 50
 choose-if: (dnvp_ideology == "Moderate" or dnvp_westarp) and not (year = 1929 and month >= 7)
 on-arrival: center_dissent += 5; reformist_dissent += 5; spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; coalition_dissent = 0
 unavailable-subtitle: The <span style="color: #3E88B3;">DNVP</span> isn't willing to enter government.
-go-to: election_1928.right_coalition_2
 
 @center_right_coalition
 view-if: right_coalition < 50 and center_right_coalition >= 50 and bourgeois_coalition < 50 and dnvp_ideology == "Moderate"
 choose-if: not (year = 1929 and month >= 7)
 on-arrival: center_dissent += 5; reformist_dissent += 5; spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; coalition_dissent = 0
 unavailable-subtitle: The <span style="color: #3E88B3;">DNVP</span> isn't willing to enter government.
-go-to: election_1928.center_right_coalition_2
 
 @bourgeois_coalition
 view-if: bourgeois_coalition >= 50
 on-arrival: spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; coalition_dissent = 0
-go-to: election_1928.bourgeois_coalition
 
 @minority_bruning
 view-if: constructive_vonc and not (right_coalition >= 50 and bourgeois_coalition < 50 and (dnvp_ideology == "Moderate" or dnvp_westarp) and not (year = 1929 and month >= 7)) and not (right_coalition < 50 and center_right_coalition >= 50 and bourgeois_coalition < 50 and dnvp_ideology == "Moderate" and not (year = 1929 and month >= 7))
@@ -121,7 +118,6 @@ view-if: not constructive_vonc and (bruning_event_seen or year < 1930)
 choose-if: not (right_coalition >= 50 and bourgeois_coalition < 50 and (dnvp_ideology == "Moderate" or dnvp_westarp) and not (year = 1929 and month >= 7)) and not (right_coalition < 50 and center_right_coalition >= 50 and bourgeois_coalition < 50 and dnvp_ideology == "Moderate" and not (year = 1929 and month >= 7))
 unavailable-subtitle: They don't need us.
 on-arrival: spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; coalition_dissent = 0; left_dissent += 15; labor_dissent += 5; center_dissent += 5; workers_spd -= 3; workers_kpd += 3; workers_nsdap += 3; lvp_left += 1; ddp_left += 0.5; dvp_left += 1
-go-to: election_1928.toleration_bruning
 
 Many in the party are incredulous. We have just been expelled from government, and our reaction is to allow this government to govern?
 
