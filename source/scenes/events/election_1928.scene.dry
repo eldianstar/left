@@ -520,28 +520,28 @@ if (window && d3) {
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ east_linke_display +]%[? if n_elections != 1 and demo_change_east_linke_display != 0 : ([+ demo_change_east_linke_display +])?]{!</td>!}
         {!</tr>!}
 [? if bsw_split :            
-            {!<td>!}<span style="color: #000000;">**CDU**</span>/<span style="color: #4B758B;">**CSU**</span>{!</td>!}
+            {!<td>!}<span style="color: #000000;">**BSW**</span>{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_bsw_display +]%[? if n_elections != 1 and demo_change_youth_bsw_display != 0 : ([+ demo_change_youth_bsw_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ urban_bsw_display +]%[? if n_elections != 1 and demo_change_urban_bsw_display != 0 : ([+ demo_change_urban_bsw_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ rural_bsw_display +]%[? if n_elections != 1 and demo_change_rural_bsw_display != 0 : ([+ demo_change_rural_bsw_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ upper_bsw_display +]%[? if n_elections != 1 and demo_change_upper_bsw_display != 0 : ([+ demo_change_upper_bsw_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ east_bsw_display +]%[? if n_elections != 1 and demo_change_east_bsw_display != 0 : ([+ demo_change_east_bsw_display +])?]{!</td>!}
         {!</tr>!} ?]
-            {!<td>!}<span style="color: #000000;">**CDU**</span>/<span style="color: #4B758B;">**CSU**</span>{!</td>!}
+            {!<td>!}<span style="color: #000000;">**SPD**</span>{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_spd_display +]%[? if n_elections != 1 and demo_change_youth_spd_display != 0 : ([+ demo_change_youth_spd_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ urban_spd_display +]%[? if n_elections != 1 and demo_change_urban_spd_display != 0 : ([+ demo_change_urban_spd_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ rural_spd_display +]%[? if n_elections != 1 and demo_change_rural_spd_display != 0 : ([+ demo_change_rural_spd_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ upper_spd_display +]%[? if n_elections != 1 and demo_change_upper_spd_display != 0 : ([+ demo_change_upper_spd_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ east_spd_display +]%[? if n_elections != 1 and demo_change_east_spd_display != 0 : ([+ demo_change_east_spd_display +])?]{!</td>!}
         {!</tr>!}
-            {!<td>!}<span style="color: #000000;">**CDU**</span>/<span style="color: #4B758B;">**CSU**</span>{!</td>!}
+            {!<td>!}<span style="color: #000000;">**B90/Greens**</span>{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_greens_display +]%[? if n_elections != 1 and demo_change_youth_greens_display != 0 : ([+ demo_change_youth_greens_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ urban_greens_display +]%[? if n_elections != 1 and demo_change_urban_greens_display != 0 : ([+ demo_change_urban_greens_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ rural_greens_display +]%[? if n_elections != 1 and demo_change_rural_greens_display != 0 : ([+ demo_change_rural_greens_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ upper_greens_display +]%[? if n_elections != 1 and demo_change_upper_greens_display != 0 : ([+ demo_change_upper_greens_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ east_greens_display +]%[? if n_elections != 1 and demo_change_east_greens_display != 0 : ([+ demo_change_east_greens_display +])?]{!</td>!}
         {!</tr>!}
-            {!<td>!}<span style="color: #000000;">**CDU**</span>/<span style="color: #4B758B;">**CSU**</span>{!</td>!}
+            {!<td>!}<span style="color: #000000;">**FDP**</span>{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_fdp_display +]%[? if n_elections != 1 and demo_change_youth_fdp_display != 0 : ([+ demo_change_youth_fdp_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ urban_fdp_display +]%[? if n_elections != 1 and demo_change_urban_fdp_display != 0 : ([+ demo_change_urban_fdp_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ rural_fdp_display +]%[? if n_elections != 1 and demo_change_rural_fdp_display != 0 : ([+ demo_change_rural_fdp_display +])?]{!</td>!}
@@ -555,7 +555,7 @@ if (window && d3) {
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ upper_cdu_display +]%[? if n_elections != 1 and demo_change_upper_cdu_display != 0 : ([+ demo_change_upper_cdu_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ east_cdu_display +]%[? if n_elections != 1 and demo_change_east_cdu_display != 0 : ([+ demo_change_east_cdu_display +])?]{!</td>!}
         {!</tr>!}
-            {!<td>!}<span style="color: #000000;">**CDU**</span>/<span style="color: #4B758B;">**CSU**</span>{!</td>!}
+            {!<td>!}<span style="color: #000000;">**AfD**</span>{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_afd_display +]%[? if n_elections != 1 and demo_change_youth_afd_display != 0 : ([+ demo_change_youth_afd_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ urban_afd_display +]%[? if n_elections != 1 and demo_change_urban_afd_display != 0 : ([+ demo_change_urban_afd_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ rural_afd_display +]%[? if n_elections != 1 and demo_change_rural_afd_display != 0 : ([+ demo_change_rural_afd_display +])?]{!</td>!}
