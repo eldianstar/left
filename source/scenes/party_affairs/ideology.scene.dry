@@ -29,5 +29,5 @@ on-arrival: ideology = "radical progressive"; beweli_strength += 6; beweli_disse
 @emali
 on-arrival: ideology = "centrist"; emali_strength += 6; emali_dissent -= 5; oldleft_dissent -= 1; beweli_dissent -= 2; pragmatist_dissent -= 3;
 
-@reform
+@pragmatist
 on-departure: ideology = "pragmatic"; pragmatist_strength += 8; pragmatist_dissent -= 5; oldleft_dissent += 4; beweli_dissent += 4; spd_relation += 4; greens_relation += 4; cdu_relation += 3;
