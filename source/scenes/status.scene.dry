@@ -146,7 +146,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="pragmatist text">Pragmatists</span>!} strength: [+ pragmatist_strength : strength +], dissent: [+ pragmatist_dissent : dissent +]
 
-@defense
+@paramilitaries
 title: Party
 
 = Party Leadership
