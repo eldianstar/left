@@ -593,7 +593,7 @@ if (window && d3) {
 
 [? if brandmauer = 0 and midnight_coalition_combo >= 45 : Midnight coalition(afd+cdu/csu): [+ midnight_coalition_combo +]% ?]
 
-[? if !brandmauer and midnight_coalition_combo < 45 and jamaica_coalition >= 45 : Jamaican coalition(afd+cdu/csu+fdp): [+ jamaica_coalition_combo +]% ?]
+[? if brandmauer = 0 and midnight_coalition_combo < 45 and jamaica_coalition >= 45 : Jamaican coalition(afd+cdu/csu+fdp): [+ jamaica_coalition_combo +]% ?]
 
 There are some potential coalition arrangements.
 
@@ -655,12 +655,12 @@ on-arrival: cdu_in_government = 1; spd_in_government = 1; groko = 1
 
 @do_midnight
 title: text midnight
-view-if: (!brandmauer and midnight_coalition_combo >= 50)
+view-if: (brandmauer = 0 and midnight_coalition_combo >= 50)
 on-arrival: cdu_in_government = 1; afd_in_government = 1; midnight_coalition = 1
 
 @do_jamaica
 title: text jamaica
-view-if: (!brandmauer and midnight_coalition_combo < 50 and jamaica_coalition_combo >= 50)
+view-if: (brandmauer = 0 and midnight_coalition_combo < 50 and jamaica_coalition_combo >= 50)
 on-arrival: cdu_in_government = 1; afd_in_government = 1; fdp_in_government; jamaica_coalition = 1
 
 @no_majority
