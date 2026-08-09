@@ -29,6 +29,3 @@ on-arrival: resources -= 1; solid += 1; beweli_strength += 3; pragmatist_dissent
 subtitle: +1 resources
 on-arrival: resources += 1; solid -= 1; beweli_strength -= 2; beweli_dissent += 1; youth_linke -= 2; youth_greens += 2;
 
-
-@homosexual
-achievement: anders_als_die_andern
