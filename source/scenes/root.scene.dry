@@ -33,7 +33,7 @@ Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
 Q.year = 2021;
-Q.month = 12;
+Q.month = 6;
 Q.week = 0;
 Q.week_checked = 0;
 // how many actions have been taken this month?
@@ -260,7 +260,7 @@ Q.adjustmentFactors_votes_other = 1.0;
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
-// party support records for every month
+// party support records for every 
 Q.party_support_records = [];
 // inflation and unemployment records
 Q.economic_records = [];
@@ -431,7 +431,7 @@ Q.elections_1932 = 0;
 // elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
 Q.in_election = 1;
 Q.next_election_year = 2021;
-Q.next_election_month = 18;
+Q.next_election_month = 9;
 Q.next_election_time = 6;
 // government affairs timers
 Q.campaigning_timer = 0;
