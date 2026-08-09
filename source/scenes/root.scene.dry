@@ -76,6 +76,11 @@ Q.social_moderation = 5;
 
 // organizations
 
+Q.newspapers = 0;
+Q.social_media = 0;
+Q.tradeunion_contact = 0;
+Q.solid = 0;
+
 // inter-party relations
 Q.bsw_relation = 0;
 Q.greens_relation = 50;
