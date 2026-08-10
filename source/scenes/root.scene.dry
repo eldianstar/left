@@ -360,6 +360,8 @@ Q.education_minister = 'Karliczek';
 Q.education_minister_party = 'CDU';
 Q.cooperation_minister = 'Müller';
 Q.cooperation_minister_party = 'CSU';
+Q.housing_minister = 'xyz';
+Q.housing_minister_party = 'xyz';
 
 // Events: what has occurred?
 Q.ampelkoalition = 0;
