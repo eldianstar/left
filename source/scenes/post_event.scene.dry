@@ -4605,6 +4605,23 @@ for (var c of Q.classes) {
         Q[c + '_' + party + '_calculations_display'] = Math.round(100*Q[c+'_'+party]/class_votes);
     }
 }
+var total_support = 0; 
+for (var party of Q.parties) {
+    var party_support = 0;
+    for (var c of Q.classes) {
+        if (Q.old_demographics) { 
+            party_support += Q[c]*Q[c+'_'+party];
+        } else  { 
+            party_support += Q[c]*Q[c+'_'+party+'_normalized'];
+        } 
+    }
+    Q[party + '_support_calculations'] = party_support;
+    total_support += party_support; 
+}
+for (var party of Q.parties) {
+    Q[party+'_normalized_calculations'] = Q[party + '_support_calculations']/total_support;
+    Q[party+'_votes_calculations'] = Math.round(Q[party+'_normalized_calculations']*1000)/ 10;
+}
 
 if (Q.ddp_ideology == "Right" && Q.ddp_leader == "Dietrich" && !Q.dstp_formed && (Q.bourgeois_parliament_ddp || Q.liberal_parliament) && !Q.lvp_formed) {
     Q.industrial_ddp_backing = 2;
