@@ -65,6 +65,7 @@ Q.pragmatist_strength = 25;
 Q.pragmatist_dissent = 10;
 
 // secret events...
+Q.wagenknecht_left = 0;
 Q.bsw_split = 0;
 Q.beweli_left = 0;
 Q.emali_left = 0;
