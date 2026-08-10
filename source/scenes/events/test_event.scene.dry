@@ -13,7 +13,7 @@ tests
 
 @ok
 on-arrival: secret_trigger = 0
-go-to: lvp_formed
+go-to: understanding_enemy
 
 ok
 
