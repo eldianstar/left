@@ -325,23 +325,37 @@ Q.coalition_dissent = 0;
 Q.linke_toleration = 0;
 
 
-// ministries - which parties control the ministries? TODO
-Q.foreign_minister = 'Stresemann';
-Q.foreign_minister_party = 'DVP';
-Q.interior_minister = 'von Keudell';
-Q.interior_minister_party = 'DNVP';
-Q.justice_minister = 'Hergt';
-Q.justice_minister_party = 'DNVP';
-Q.labor_minister = 'Brauns';
-Q.labor_minister_party = 'Z';
-Q.reichswehr_minister = 'Groener';
-Q.reichswehr_minister_party = 'I';
-Q.economic_minister = 'Curtius';
-Q.economic_minister_party = 'DVP';
-Q.finance_minister = 'Köhler';
-Q.finance_minister_party = 'Z';
-Q.agriculture_minister = 'Schiele';
-Q.agriculture_minister_party = 'DNVP'; 
+// ministries - which parties control the ministries? Merkel IV
+
+Q.foreign_minister = 'Maas';
+Q.foreign_minister_party = 'SPD';
+Q.interior_minister = 'Seehofer';
+Q.interior_minister_party = 'CSU';
+Q.justice_minister = 'Lambrecht';
+Q.justice_minister_party = 'SPD';
+Q.labor_minister = 'Heil';
+Q.labor_minister_party = 'SPD';
+Q.defense_minister = 'Kramp-Karrenbauer';
+Q.defense_minister_party = 'CDU';
+Q.economic_minister = 'Altmaier';
+Q.economic_minister_party = 'CDU';
+Q.finance_minister = 'Scholz';
+Q.finance_minister_party = 'SPD';
+Q.agriculture_minister = 'Klöckner';
+Q.agriculture_minister_party = 'CDU';
+Q.family_minister = 'Lambrecht';
+Q.family_minister_party = 'SPD';
+Q.health_minister = 'Spahn';
+Q.health_minister_party = 'CDU';
+Q.transport_minister = 'Scheuer';
+Q.transport_minister_party = 'CSU';
+Q.environment_minister = 'Schulze';
+Q.environment_minister_party = 'SPD';
+Q.education_minister = 'Karliczek';
+Q.education_minister_party = 'CDU';
+Q.cooperation_minister = 'Müller';
+Q.cooperation_minister_party = 'CSU';
+
 // Events: what has occurred?
 Q.ampelkoalition = 0;
 Q.ampelkoalition_time = 0;
