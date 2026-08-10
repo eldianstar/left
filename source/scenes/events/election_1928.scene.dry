@@ -1017,7 +1017,7 @@ go-to: ministries
 @drop_justice
 title: Drop the Justice
 view-if: justice_minister_party = "LINKE"
-on-arrival: justice_minister_party = "SPD"; justice_minister = "Stefanie Hubig"; leverage += 10;
+on-arrival: justice_minister_party = "SPD"; justice_minister = "Stefanie Hubig"; leverage += 8;
 tags: drop_mins_1928
 go-to: ministries
 
@@ -1030,62 +1030,62 @@ go-to: ministries
 @drop_agriculture
 title: Drop the Agricultur
 view-if: agriculture_minister_party = "LINKE"
-on-arrival: agriculture_minister_party = "Greens"; agriculture_minister = "Cem Özdemir"; leverage += 10;
+on-arrival: agriculture_minister_party = "Greens"; agriculture_minister = "Cem Özdemir"; leverage += 7;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_reichswehr
 title: Drop the Reichswehr
 view-if: reichswehr_minister_party = "LINKE"
-on-arrival: reichswehr_minister_party = "SPD"; reichswehr_minister = "Boris Pistorius"; leverage += 15;
+on-arrival: reichswehr_minister_party = "SPD"; reichswehr_minister = "Boris Pistorius"; leverage += 11;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_family
 title: Drop the family
 view-if: family_minister_party = "LINKE"
-on-arrival: family_minister_party = "Greens"; family_minister = "Lisa Paus"; leverage += 15;
+on-arrival: family_minister_party = "Greens"; family_minister = "Lisa Paus"; leverage += 5;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_health
 title: Drop the health
 view-if: health_minister_party = "LINKE"
-on-arrival: health_minister_party = "SPD"; health_minister = "Karl Lauterbach"; leverage += 15;
+on-arrival: health_minister_party = "SPD"; health_minister = "Karl Lauterbach"; leverage += 6;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_transport
 title: Drop the transport
 view-if: transport_minister_party = "LINKE"
-on-arrival: transport_minister_party = "I"; transport_minister = "Volker Wissing"; leverage += 15;
+on-arrival: transport_minister_party = "I"; transport_minister = "Volker Wissing"; leverage += 6;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_environment
 title: Drop the environment
 view-if: environment_minister_party = "LINKE"
-on-arrival: environment_minister_party = "Greens"; environment_minister = "Steffi Lemke"; leverage += 15;
+on-arrival: environment_minister_party = "Greens"; environment_minister = "Steffi Lemke"; leverage += 6;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_education
 title: Drop the education
 view-if: education_minister_party = "LINKE"
-on-arrival: education_minister_party = "Greens"; education_minister = "Cem Özdemir"; leverage += 15;
+on-arrival: education_minister_party = "Greens"; education_minister = "Cem Özdemir"; leverage += 6;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_cooperation
 title: Drop the cooperation
 view-if: cooperation_minister_party = "LINKE"
-on-arrival: cooperation_minister_party = "SPD"; cooperation_minister = "Svenja Schulze"; leverage += 15;
+on-arrival: cooperation_minister_party = "SPD"; cooperation_minister = "Svenja Schulze"; leverage += 6;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_housing
 title: Drop the housing
 view-if: housing_minister_party = "LINKE"
-on-arrival: housing_minister_party = "SPD"; housing_minister = "Klara Geywitz"; leverage += 15;
+on-arrival: housing_minister_party = "SPD"; housing_minister = "Klara Geywitz"; leverage += 5;
 tags: drop_mins_1928
 go-to: ministries
