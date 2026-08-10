@@ -12,7 +12,7 @@ body {
   --tab-hover-color: #ececec;
   --card-border-color: #ccc; 
   --card-bg-color: #ddd; 
-  font-family: "Minion Pro", Georgia, serif;
+  font-family: "Tahoma", Verdana, sans-serif;
   background-color: var(--bg-color);
   padding: 0;
   line-height: 155%;
@@ -695,175 +695,42 @@ th {
 }
 
 /* Styles for parties */
-.seat.kpd {
-  fill: #700000;
+.seat.bsw {
+  fill: #4C0B5F;
 }
 
-.seat.spd {
-  fill: #E3000F;
+.seat.linke {
+  fill: #BC2D72;
   stroke: var(--border-color);
   stroke-width: 1.5px;
 }
 
-.seat.ddp {
-  fill: #D3C24D;
+.seat.spd {
+  fill: 	#E3000F;
 }
 
-.seat.z {
-  fill: #000;
-}
-
-.seat.bvp {
-  fill: #A2D8E0;
-}
-
-.seat.dvp {
-  fill: #D5AC27;
+.seat.greens {
+  fill: #1AA037;
 }
 
 .seat.other {
-  fill: #909090;
+  fill: #00277E;
 }
 
-.seat.dnvp {
-  fill: #3E88B3;
+.seat.fdp {
+  fill: #FFD600;
 }
 
-.seat.nsdap {
-  fill: #7A3C00;
+.seat.cdu {
+  fill: #000000;
 }
 
-.seat.dsu {
-  fill: #6A1E1E;
+.seat.csu {
+  fill: #002440;
 }
 
-.seat.nvf {
-  fill: #142e20;
-}
-
-.seat.sapd {
-  fill: #9B0000;
-}
-
-.seat.dnf {
-  fill: #003755;
-}
-
-.seat.kvp {
-  fill: #0087DC;
-}
-
-.seat.lvp {
-  fill: #FFCC00;
-}
-
-.seat.dnef {
-  fill: #BFC8CC;
-  stroke: #000000;
-  stroke-width: 1.5px;
-}
-
-.seat.right_dnef {
-  fill: #5F7278;
-  stroke: #000000;
-  stroke-width: 1.5px;
-}
-
-.seat.left_dnef {
-  fill: #B86558;
-  stroke: #000000;
-  stroke-width: 1.5px;
-}
-
-.seat.dnvp_wholesome {
-  fill: #3E88B3;
-  stroke: #000000;
-  stroke-width: 1.5px;
-}
-
-
-.seat.fkp {
-  fill: #00C0FF;
-}
-
-.seat.farm {
-  fill: #38C538;
-}
-
-.seat.farm2 {
-  fill: #006400;
-}
-
-.seat.farm3 {
-  fill: #7FCEB1;
-}
-
-.seat.farm4 {
-  fill: #11DD11;
-}
-
-.seat.wp {
-  fill: #b8996f;
-}
-
-.seat.vrp {
-  fill: #0075EB;
-}
-
-.seat.aspd {
-  fill: #fe9e00;
-}
-
-.seat.csvd {
-  fill: #8ED8E4;
-}
-
-.seat.vnr {
-  fill: #D3D3A9;
-}
-
-.seat.rdp {
-  fill: #E0B0FF;
-}
-
-.seat.pcf {
-  fill: #88001A;
-}
-
-.seat.pup {
-  fill: #B22222;
-}
-
-.seat.sfio {
-  fill: #ff0000;
-}
-
-.seat.prs {
-  fill: #FF6699;
-}
-
-.seat.rad {
-  fill: #E0B0FF;
-}
-
-.seat.rad2 {
-  fill: #aa4fff;
-}
-
-.seat.ad {
-  fill: #FFBF00;
-}
-
-.seat.pdp {
-  fill: #00CCCC;
-}
-
-.seat.fr {
-  fill: #005ACA;
-}
-
-.seat.fr2 {
-  fill: #ADC1FD;
+.seat.afd {
+  fill: #0489db;
 }
 
 .tooltip-text {
