@@ -703,102 +703,155 @@ We can pick from any number of ministries. Controlling a ministry allows us to d
 - #drop_mins_1928
 
 @labor
-title: Labor Ministry
-subtitle: Taking the Labor Ministry is expected of us.
+title: labor
+subtitle: subtitle
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
-view-if: labor_minister_party != "SPD"
-on-arrival: leverage -= 5; labor_minister_party = "SPD"; labor_minister = "Wissell"
+view-if: labor_minister_party != "LINKE"
+on-arrival: leverage -= 5; labor_minister_party = "LINKE"; labor_minister = "Katja Kipping"; labor_minister = "Bernd Riexinger" if oldleft_strength >= 45; labor_minister = "Bernd Riexinger" if beweli_strength >= 45;
 go-to: ministries
-
-Rudolf Wissell of the <span style="color: #c00000;">**SPD**</span> has been appointed labor minister.
 
 @interior
-title: Interior Ministry
-subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
+title: Interior
+subtitle: subtitle
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
-view-if: interior_minister_party != "SPD"
-on-arrival: leverage -= 5; interior_minister_party = "SPD"; interior_minister = "Severing"
+view-if: interior_minister_party != "LINKE"
+on-arrival: leverage -= 5; interior_minister_party = "LINKE"; interior_minister = "Clara Bünger"; interior_minister = "Klaus Ernst" if oldleft_strength >= 55 and bsw_split = 0;
 go-to: ministries
-
-Carl Severing of the <span style="color: #c00000;">**SPD**</span> has been appointed Interior Minister.
 
 @finance
-title: Finance Ministry
-subtitle: The Finance Ministry controls the government budget and taxes.
+title: Finance
+subtitle: sub
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
-view-if: finance_minister_party != "SPD"
-on-arrival: leverage -= 10; finance_minister_party = "SPD"; finance_minister = "Hilferding"
+view-if: finance_minister_party != "LINKE"
+on-arrival: leverage -= 10; finance_minister_party = "LINKE"; finance_minister = "Christian Görke";
 go-to: ministries
-
-Rudolf Hilferding of the <span style="color: #c00000;">**SPD**</span> has been appointed Finance Minister.
 
 @economic
-title: Economic Ministry
-subtitle: The Economic Ministry controls broader economic policy.
+title: Economic
+subtitle: sub
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
-choose-if: leverage >= 10 
-view-if: economic_minister_party != "SPD"
-on-arrival: leverage -= 10; economic_minister_party = "SPD"; economic_minister = "Schmidt"
+choose-if: leverage >= 8 
+view-if: economic_minister_party != "LINKE"
+on-arrival: leverage -= 8; economic_minister_party = "LINKE"; economic_minister = "Janine Wissler"
 go-to: ministries
-
-Robert Schmidt of the <span style="color: #c00000;">**SPD**</span> has been appointed Economic Minister.
 
 @justice
-title: Justice Ministry
-subtitle: The Justice Ministry controls the courts.
-unavailable-subtitle: [? if leverage < 10: We do not have enough leverage. ?] [? if cvp_ministers_accepted: Our coalition agreement stipulates that we must forfeit the Justice Ministry. ?]
+title: Justice
+subtitle: sub
+unavailable-subtitle: [? if leverage < 10: We do not have enough leverage. ?]
 tags: mins_1928
-choose-if: leverage >= 10 and not cvp_ministers_accepted
-view-if: justice_minister_party != "SPD"
-on-arrival: leverage -= 10; justice_minister_party = "SPD"; justice_minister = "Radbruch"
+choose-if: leverage >= 8
+view-if: justice_minister_party != "LINKE"
+on-arrival: leverage -= 8; justice_minister_party = "LINKE"; justice_minister = "Luke Hoss"
 go-to: ministries
 
-Gustav Radbruch of the <span style="color: #c00000;">**SPD**</span> has been appointed Justice Minister.
 
 @foreign
-title: Foreign Ministry
-subtitle: [? if stresemann_dead = 0: This is usually the domain of Gustav Stresemann of the [? if not lvp_formed: <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]?][? if stresemann_dead = 1: This is usually the domain of the [? if not lvp_formed and dvp_exist: <span style="color: #C0A054;">**DVP**</span>?][? if not lvp_formed and not dvp_exist: former <span style="color: #C0A054;">**DVP**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?] ?].
+title: Foreign
+subtitle: 
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
-view-if: foreign_minister_party != "SPD"
-on-arrival: leverage -= 10; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"
+view-if: foreign_minister_party != "LINKE"
+on-arrival: leverage -= 10; foreign_minister_party = "LINKE"; foreign_minister = "Jan van Aken"
 go-to: ministries
-
-Rudolf Breitscheid of the <span style="color: #c00000;">**SPD**</span> has been appointed Foreign Minister.
-
 
 @agriculture
 title: Agricultural Ministry
 subtitle: This is not our usual domain.
-unavailable-subtitle: [? if leverage < 10: We do not have enough leverage. ?] [? if cvp_ministers_accepted: Our coalition agreement stipulates that we must forfeit the Agricultural Ministry. ?]
-choose-if: leverage >= 10 and not cvp_ministers_accepted
-view-if: agriculture_minister_party != "SPD"
-on-arrival: leverage -= 10; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"
+unavailable-subtitle: [? if leverage < 7: We do not have enough leverage. ?]
+choose-if: leverage >= 7
+view-if: agriculture_minister_party != "LINKE"
+on-arrival: leverage -= 7; agriculture_minister_party = "LINKE"; agriculture_minister = "Ina Latendorf"
 go-to: ministries
 tags: mins_1928
-
-Fritz Baade of the <span style="color: #c00000;">**SPD**</span> has been appointed Agriculture Minister.
 
 @reichswehr
-title: Reichswehr Ministry
-subtitle: The Ministry responsible for the armed forces is not typically our domain; General Groener and the bourgeois-conservatives will be displeased[? if president = "Hindenburg" or president_ideology != "Left":&nbsp;along with President [+ president +]?].
-unavailable-subtitle: [? if leverage < 15: We do not have enough leverage. ?] [? if cvp_ministers_accepted: Our coalition agreement stipulates that we must forfeit the Reichswehr Ministry. ?]
+title: defense
+subtitle: sub
 tags: mins_1928
-choose-if: leverage >= 15 and not cvp_ministers_accepted
-view-if: reichswehr_minister_party != "SPD"
-on-arrival: leverage -= 15; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; hindenburg_angry += 10
+unavailable-subtitle: We do not have enough leverage.
+choose-if: leverage >= 11
+view-if: defense_minister_party != "LINKE"
+on-arrival: leverage -= 11; defense_minister_party = "LINKE"; defense_minister = "Ulrich Thoden";
 go-to: ministries
 
-Julius Leber of the <span style="color: #c00000;">**SPD**</span> has been appointed Reichswehr Minister.
+@health
+title: health
+subtitle: sub
+tags: mins_1928
+unavailable-subtitle: [? if leverage < 6: We do not have enough leverage. ?]
+choose-if: leverage >= 6
+view-if: health_minister_party != "LINKE"
+on-arrival: leverage -= 6; health_minister_party = "LINKE"; health_minister = "Nicole Gohlke";
+go-to: ministries
 
+@education
+title: health
+subtitle: sub
+tags: mins_1928
+unavailable-subtitle: [? if leverage < 6: We do not have enough leverage. ?]
+choose-if: leverage >= 6
+view-if: education_minister_party != "LINKE"
+on-arrival: leverage -= 6; education_minister_party = "LINKE"; education_minister = "Nicole Gohlke";
+go-to: ministries
+
+@transport
+title: transport and digital
+subtitle: sub
+tags: mins_1928
+unavailable-subtitle: We do not have enough leverage.
+choose-if: leverage >= 6
+view-if: transport_minister_party != "LINKE"
+on-arrival: leverage -= 6; transport_minister_party = "LINKE"; transport_minister = "Luigi Pantisano";
+go-to: ministries
+
+@environment
+title: environment
+subtitle: sub
+tags: mins_1928
+unavailable-subtitle: We do not have enough leverage.
+choose-if: leverage >= 6
+view-if: environment_minister_party != "LINKE"
+on-arrival: leverage -= 6; environment_minister_party = "LINKE"; environment_minister = "Jan van Aken";
+go-to: ministries
+
+@housing
+title: housing
+subtitle: sub
+tags: mins_1928
+unavailable-subtitle: We do not have enough leverage.
+choose-if: leverage >= 5
+view-if: housing_minister_party != "LINKE"
+on-arrival: leverage -= 5; housing_minister_party = "LINKE"; housing_minister = "Caren Lay";
+go-to: ministries
+
+@family
+title: family
+subtitle: sub
+tags: mins_1928
+unavailable-subtitle: We do not have enough leverage.
+choose-if: leverage >= 5
+view-if: family_minister_party != "LINKE"
+on-arrival: leverage -= 5; family_minister_party = "LINKE"; family_minister = "Heidi Reichinnek";
+go-to: ministries
+
+@cooperation
+title: cooperation
+subtitle: sub
+tags: mins_1928
+unavailable-subtitle: We do not have enough leverage.
+choose-if: leverage >= 6
+view-if: cooperation_minister_party != "LINKE"
+on-arrival: leverage -= 6; cooperation_minister_party = "LINKE"; cooperation_minister = "Desiree Becker";
+go-to: ministries
 
 @no_more
 title: No more ministries.
@@ -928,90 +981,111 @@ ministries.forEach(ministry => {
     }
 });
 
-if (Q.in_wholesome_coalition) {
-    ministries.forEach(ministry => {
-    let partyKey = `${ministry}`;
-    if (Q[partyKey] != "SPD") {
-        Q[partyKey] = "DNVP";
-    }
-});
-}
-if (Q.hindenburg_angry_old > 0) Q.hindenburg_angry = Q.hindenburg_angry_old;
 !}
 subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
 tags: mins_1928
 
 This coalition arrangement is tolerable to all.
 
-- @prussian_coalition_form: Negotiate a new Prussian coalition.
-
-@prussian_coalition_form
-view-if: prussia_negotiations_trigger == 1
-on-arrival: prussia_negotiations_trigger = 0
-go-to: prussian_coalition_formation
-
 @drop_labor
-title: Drop the Labor Ministry.
-view-if: labor_minister_party = "SPD"
-on-arrival: labor_minister_party = "Z"; labor_minister = "Stegerwald"; leverage += 5;
+title: Drop the Labor
+view-if: labor_minister_party = "LINKE"
+on-arrival: labor_minister_party = "SPD"; labor_minister = "Hubertus Heil"; leverage += 5;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_interior
-title: Drop the Interior Ministry.
-view-if: interior_minister_party = "SPD"
-on-arrival: interior_minister_party = "Z"; interior_minister = "Wirth"; leverage += 5;
+title: Drop interior
+view-if: interior_minister_party = "LINKE"
+on-arrival: interior_minister_party = "SPD"; interior_minister = "Nancy Faeser"; leverage += 5;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_finance
-title: Drop the Finance Ministry.
-view-if: finance_minister_party = "SPD"
-on-arrival: finance_minister_party = "DVP"; finance_minister_party = "LVP" if lvp_formed; finance_minister = "Moldenhauer"; leverage += 10; finance_minister_party = "Z" if in_weimar_coalition or in_popular_front; finance_minister = "Köhler" if in_weimar_coalition or in_popular_front
-tags: drop_mins_1928
+title: Drop the Financ
+view-if: finance_minister_party = "LINKE"
+on-arrival: finance_minister_party = "SPD"; finance_minister = "Jörg Kukies"; leverage += 10;
 go-to: ministries
 
 @drop_economic
-title: Drop the Economic Ministry.
-view-if: economic_minister_party = "SPD"
-on-arrival: economic_minister_party = "DVP"; economic_minister_party = "LVP" if lvp_formed; economic_minister = "Curtius"; leverage += 10; economic_minister_party = ddp_name if in_weimar_coalition or in_popular_front; economic_minister = "Dietrich" if in_weimar_coalition or in_popular_front;
+title: Drop the Economic 
+view-if: economic_minister_party = "LINKE"
+on-arrival: economic_minister_party = "Greens"; economic_minister = "Robert Habeck"; leverage += 10;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_justice
-title: Drop the Justice Ministry.
-view-if: justice_minister_party = "SPD"
-on-arrival: justice_minister_party = ddp_name; justice_minister = "Koch-Weser"; leverage += 10;
+title: Drop the Justice
+view-if: justice_minister_party = "LINKE"
+on-arrival: justice_minister_party = "SPD"; justice_minister = "Stefanie Hubig"; leverage += 10;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_foreign
-title: Drop the Foreign Ministry.
-view-if: foreign_minister_party = "SPD"
-on-arrival: foreign_minister_party = "DVP"; foreign_minister_party = "LVP" if lvp_formed; foreign_minister = "Stresemann"; foreign_minister = "Curtius" if streseman_dead; leverage += 10; foreign_minister_party = "Z" if in_weimar_coalition or in_popular_front; foreign_minister = "Wirth" if in_weimar_coalition or in_popular_front;
-tags: drop_mins_1928
+title: Drop the Foreign
+view-if: foreign_minister_party = "LINKE"
+on-arrival: foreign_minister_party = "Greens"; foreign_minister = "Annalena Baerbock"; leverage += 10;
 go-to: ministries
 
 @drop_agriculture
-title: Drop the Agriculture Ministry.
-view-if: agriculture_minister_party = "SPD"
-on-arrival: agriculture_minister_party = ddp_name; agriculture_minister = "Dietrich"; leverage += 10; agriculture_minister_party = "Z" if in_weimar_coalition; agriculture_minister = "Hermes" if in_weimar_coalition
+title: Drop the Agricultur
+view-if: agriculture_minister_party = "LINKE"
+on-arrival: agriculture_minister_party = "Greens"; agriculture_minister = "Cem Özdemir"; leverage += 10;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_reichswehr
-title: Drop the Reichswehr Ministry.
-view-if: reichswehr_minister_party = "SPD"
-on-arrival: reichswehr_minister_party = "I"; reichswehr_minister = "Groener"; leverage += 15; hindenburg_angry -= 10
+title: Drop the Reichswehr
+view-if: reichswehr_minister_party = "LINKE"
+on-arrival: reichswehr_minister_party = "SPD"; reichswehr_minister = "Boris Pistorius"; leverage += 15;
 tags: drop_mins_1928
 go-to: ministries
 
-@dvp_prussia_1
-subtitle: This will restrict our actions in Prussia.
-view-if: year <= 1929 and in_grand_coalition_prussia = 0 and (in_weimar_coalition_prussia or in_minority_weimar_coalition_prussia) and not in_left_front and not in_popular_front and not in_weimar_coalition and not in_emergency_government and dvp_was_in_prussia == 0 and not lvp_formed and dvp_exist
-on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 1; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0; leverage += 5; dvp_relation += 7; z_relation -= 5; coalition_dissent = -1; left_dissent += 5; dvp_left += 3; new_middle_dvp += 3
+@drop_family
+title: Drop the family
+view-if: family_minister_party = "LINKE"
+on-arrival: family_minister_party = "Greens"; family_minister = "Lisa Paus"; leverage += 15;
+tags: drop_mins_1928
 go-to: ministries
 
-Letting the <span style="color: #C0A054;">**DVP**</span> into the Prussian government is an offer too good for them to refuse, no matter their leadership. However, this will negatively impact our actions involving the Prussian police force due to the <span style="color: #C0A054;">**DVP**</span> has ties to right-wing organizations such as the <span style="color: #3E88B3;">Stahlhelm</span>.
+@drop_health
+title: Drop the health
+view-if: health_minister_party = "LINKE"
+on-arrival: health_minister_party = "SPD"; health_minister = "Karl Lauterbach"; leverage += 15;
+tags: drop_mins_1928
+go-to: ministries
 
-The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] also is against this change because of the <span style="color: #C0A054;">**DVP**</span>'s opposition to a Prussian concordat.
+@drop_transport
+title: Drop the transport
+view-if: transport_minister_party = "LINKE"
+on-arrival: transport_minister_party = "I"; transport_minister = "Volker Wissing"; leverage += 15;
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_environment
+title: Drop the environment
+view-if: environment_minister_party = "LINKE"
+on-arrival: environment_minister_party = "Greens"; environment_minister = "Steffi Lemke"; leverage += 15;
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_education
+title: Drop the education
+view-if: education_minister_party = "LINKE"
+on-arrival: education_minister_party = "Greens"; education_minister = "Cem Özdemir"; leverage += 15;
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_cooperation
+title: Drop the cooperation
+view-if: cooperation_minister_party = "LINKE"
+on-arrival: cooperation_minister_party = "SPD"; cooperation_minister = "Svenja Schulze"; leverage += 15;
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_housing
+title: Drop the housing
+view-if: housing_minister_party = "LINKE"
+on-arrival: housing_minister_party = "SPD"; housing_minister = "Klara Geywitz"; leverage += 15;
+tags: drop_mins_1928
+go-to: ministries
