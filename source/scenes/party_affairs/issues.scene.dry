@@ -45,7 +45,7 @@ view-if: afd_votes >= 20
 on-arrival: issue_antifascism += 1; econ_moderation += 0.5; youth_linke += (afd_votes/15)*(1-dissent); pro_status_quo -= 1; greens_relation += 2; spd_relation += 2;
 
 @promigration
-view-if: oldleft_strength < 45
+view-if: oldleft_strength < 35
 on-arrival: issue_migration -= 1; pro_status_quo += 1; social_moderation -= 0.5; youth_linke += 1*(1-dissent); oldleft_dissent += 1;
 
 @antimigration
