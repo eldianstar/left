@@ -64,6 +64,11 @@ Q.emali_dissent = 0;
 Q.pragmatist_strength = 25;
 Q.pragmatist_dissent = 10;
 
+Q.oldleft_leader = "Wagenknecht";
+Q.beweli_leader = "Wissler";
+Q.emali_leader = "Kipping";
+Q.pragmatist_leader = "Gysi";
+
 // secret events...
 Q.wagenknecht_left = 0;
 Q.bsw_split = 0;
