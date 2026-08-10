@@ -214,6 +214,8 @@ Q.east_cdu = 18;
 Q.east_afd = 19;
 Q.east_other = 10;
 
+
+
 Q.youth_linke_old = 11;
 Q.urban_linke_old = 10;
 Q.rural_linke_old = 8;
@@ -892,7 +894,6 @@ if (Q.percentComplete >= 100) {
     this.achieve('achievement_holy_moly');
     Q.achievement_holy_moly = 1;
 }
-
 !}
 
 set-bg: img/map_2.jpg
