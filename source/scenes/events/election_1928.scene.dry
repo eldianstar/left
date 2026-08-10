@@ -737,15 +737,15 @@ title: Economic
 subtitle: sub
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
-choose-if: leverage >= 8 
+choose-if: leverage >= 10
 view-if: economic_minister_party != "LINKE"
-on-arrival: leverage -= 8; economic_minister_party = "LINKE"; economic_minister = "Janine Wissler"
+on-arrival: leverage -= 10; economic_minister_party = "LINKE"; economic_minister = "Janine Wissler"
 go-to: ministries
 
 @justice
 title: Justice
 subtitle: sub
-unavailable-subtitle: [? if leverage < 10: We do not have enough leverage. ?]
+unavailable-subtitle: [? if leverage < 8: We do not have enough leverage. ?]
 tags: mins_1928
 choose-if: leverage >= 8
 view-if: justice_minister_party != "LINKE"
