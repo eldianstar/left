@@ -572,19 +572,19 @@ if (window && d3) {
 
 [? if linke_b >= 45 : Left majority government: [+ linke_b +]% ?]
 
-[? if rrgreen_coalition >= 40 : Red-red-green coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span>): [+ rrgreen_coalition +]% ?]
+[? if (linke_b + greens_b + spd_b) >= 40 : Red-red-green coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span>): [+ rrgreen_coalition +]% ?]
 
-[? if ampelkoalition_failed = 0 and ampelkoalition_coalition >= 40 : Traffic Light Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span>): [+ ampelkoalition_coalition +]% ?]
+[? if ampelkoalition_failed = 0 and (spd_b + greens_b + fdp_b) >= 40 : Traffic Light Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span>): [+ ampelkoalition_coalition +]% ?]
 
-[? if linke_bsw_coalition >= 40 : Socialist coalition (linke+bsw): [+ linke_bsw_coalition +]% ?]
+[? if (linke_b + bsw_b) >= 40 : Purple coalition (linke+bsw): [+ linke_bsw_coalition +]% ?]
 
-[? if groko_combo >= 40 and ampelkoalition_failed : Grand Coalition(cdu/csu+spd): [+ groko_combo +]% ?]
+[? if (spd_b + cdu_b) >= 40 and ampelkoalition_failed : Grand Coalition(cdu/csu+spd): [+ groko_combo +]% ?]
 
-[? if kenya_coalition_combo >= 45 and ampelkoalition_failed and groko_combo < 45: Kenyan coalition(cdu/csu+spd+greens): [+ kenya_coalition_combo +]% ?]
+[? if (spd_b + greens_b + cdu_b) >= 40 and ampelkoalition_failed and (spd_b + cdu_b) < 45 : Kenyan coalition(cdu/csu+spd+greens): [+ kenya_coalition_combo +]% ?]
 
-[? if brandmauer = 0 and midnight_coalition_combo >= 45 : Midnight coalition(afd+cdu/csu): [+ midnight_coalition_combo +]% ?]
+[? if brandmauer = 0 and (cdu_b + afd_b) >= 40 : Midnight coalition(afd+cdu/csu): [+ midnight_coalition_combo +]% ?]
 
-[? if brandmauer = 0 and midnight_coalition_combo < 45 and jamaica_coalition >= 45 : Jamaican coalition(afd+cdu/csu+fdp): [+ jamaica_coalition_combo +]% ?]
+[? if brandmauer = 0 and (cdu_b + afd_b) < 45 and (cdu_b + afd_b + fdp_b) >= 45 : Jamaican coalition(afd+cdu/csu+fdp): [+ jamaica_coalition_combo +]% ?]
 
 There are some potential coalition arrangements.
 
