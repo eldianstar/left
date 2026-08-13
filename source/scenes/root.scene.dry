@@ -81,6 +81,8 @@ Q.econ_moderation = 3;
 Q.social_moderation = 5;
 Q.decentralization = 4;
 
+Q.bsw_rising = 0;
+
 // organizations
 
 Q.newspapers = 0;
