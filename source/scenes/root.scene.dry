@@ -329,6 +329,15 @@ Q.midnight_coalition = 0;
 Q.jamaica_coalition = 0;
 Q.kenya_coalition = 0;
 
+
+Q.rrgreen_coalition = 0;
+Q.ampelkoalition_coalition = 0;
+Q.linke_bsw_coalition = 0;
+Q.groko_combo = 0;
+Q.jamaica_coalition_combo = 0;
+Q.midnight_coalition_combo = 0;
+Q.kenya_coalition_combo = 0;
+
 Q.brandmauer = 1;
 
 
