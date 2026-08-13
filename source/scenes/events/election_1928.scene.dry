@@ -486,7 +486,7 @@ if (window && d3) {
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 <table>
-{!<tr><td>Party</td><td>Vote share</td><td>% Change</td><td>Reichstag Seats</td><td>% Change</td></tr>!}
+{!<tr><th>Party</th><th>Vote share</th><th>% Change</th><td>Reichstag Seats</th><th>% Change</th></tr>!}
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}Left: {!</td><td>!} [+ linke_votes +]% {!</td><td>!} [+ str_votes_change_linke +] {!</td><td>!} [+ linke_b +]% {!</td><td>!} [+ str_change_linke +] {!</td></tr>!}
 [? if bsw_split: {!<tr><td><div class="box" style='background-color:#700000'> </div> !}BSW: {!</td><td>!} [+ bsw_votes +]% {!</td><td>!} [+ str_votes_change_bsw +] {!</td><td>!} [+ bsw_b +]% {!</td><td>!} [+ str_change_bsw +] {!</td></tr>!} ?]
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}SPD: {!</td><td>!} [+ spd_votes +]% {!</td><td>!} [+ str_votes_change_spd +] {!</td><td>!} [+ spd_b +]% {!</td><td>!} [+ str_change_spd +] {!</td></tr>!}
