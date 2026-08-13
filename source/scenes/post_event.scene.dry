@@ -470,7 +470,7 @@ if (Q.bsw_split && Q.bsw_rising) {
         Q.rural_linke -= 0.1;
         Q.rural_bsw += 0.1;
     } 
-if (Q.bsw_split && Q.bsw_rising = 0) {
+if (Q.bsw_split && Q.bsw_rising == 0) {
         Q.rural_linke += 0.1;
         Q.rural_bsw -= 0.1;
     }
