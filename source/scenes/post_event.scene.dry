@@ -212,7 +212,7 @@ Q.beweli_strength = 100*Q.beweli_strength/total_strength;
 Q.emali_strength = 100*Q.emali_strength/total_strength;
 Q.pragmatist_strength = 100*Q.pragmatist_strength/total_strength;
 
-var total_dissent = Q.oldleft_strength*Q.oldleft_dissent + Q.beweli_strength*Q.beweli_dissent + Q.emali_strength*Q.emali_dissent + Q.pragmaist_strength*Q.pragmist_dissent;
+var total_dissent = Q.oldleft_strength*Q.oldleft_dissent + Q.beweli_strength*Q.beweli_dissent + Q.emali_strength*Q.emali_dissent + Q.pragmatist_strength*Q.pragmatist_dissent;
 Q.dissent = 0.01*total_dissent/total_strength;
 Q.dissent_percent = Q.dissent*100;
 console.log('new dissent: ' + Q.dissent);
@@ -455,14 +455,14 @@ Q.foreign_moderation = 10
     if (Q.bsw_split && Q.social_moderation <= 1) {
         Q.pragmatist_dissent += 0.3;
     }
-if (Q.bsw_split && Q.foreign_moderation = 10) {
+if (Q.bsw_split && Q.foreign_moderation == 10) {
         Q.beweli_dissent += 0.3;
     }
     if (Q.bsw_split && Q.bsw_rising) {
         Q.east_linke -= 0.4;
         Q.east_bsw += 0.4;
     } 
-if (Q.bsw_split && Q.bsw_rising = 0) {
+if (Q.bsw_split && Q.bsw_rising == 0) {
         Q.east_linke += 0.2;
         Q.east_bsw -= 0.2;
     }
