@@ -486,23 +486,14 @@ if (window && d3) {
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td><td>Reichstag Seats</td><td>% Change</td></tr>!}
-
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}Left: {!</td><td>!} [+ linke_votes +]% {!</td><td>!} [+ str_votes_change_linke +] {!</td><td>!} [+ linke_b +]% {!</td><td>!} [+ str_change_linke +] {!</td></tr>!}
-
 [? if bsw_split: {!<tr><td><div class="box" style='background-color:#700000'> </div> !}BSW: {!</td><td>!} [+ bsw_votes +]% {!</td><td>!} [+ str_votes_change_bsw +] {!</td><td>!} [+ bsw_b +]% {!</td><td>!} [+ str_change_bsw +] {!</td></tr>!} ?]
-
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}SPD: {!</td><td>!} [+ spd_votes +]% {!</td><td>!} [+ str_votes_change_spd +] {!</td><td>!} [+ spd_b +]% {!</td><td>!} [+ str_change_spd +] {!</td></tr>!}
-
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}B90/Greens: {!</td><td>!} [+ greens_votes +]% {!</td><td>!} [+ str_votes_change_greens +] {!</td><td>!} [+ greens_b +]% {!</td><td>!} [+ str_change_greens +] {!</td></tr>!}
-
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}FDP: {!</td><td>!} [+ fdp_votes +]% {!</td><td>!} [+ str_votes_change_fdp +] {!</td><td>!} [+ fdp_b +]% {!</td><td>!} [+ str_change_fdp +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} CDU: {!</td><td>!} [+ cdu_minus_csu_votes +]% {!</td><td>!} [+ str_votes_change_cdu +] {!</td><td>!} [+ cdu_minus_csu_b +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#A2D8E0'> </div> !} CSU: {!</td><td>!} [+ csu_votes +]% {!</td><td>!} [+ str_votes_change_csu +] {!</td><td>!} [+ csu_b +]% {!</td><td>!} [+ str_change_csu +] {!</td></tr>!}
-
+{!<tr><td><div class="box" style='background-color:#000'> </div> !}CDU: {!</td><td>!} [+ cdu_minus_csu_votes +]% {!</td><td>!} [+ str_votes_change_cdu +] {!</td><td>!} [+ cdu_minus_csu_b +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#A2D8E0'> </div> !}CSU: {!</td><td>!} [+ csu_votes +]% {!</td><td>!} [+ str_votes_change_csu +] {!</td><td>!} [+ csu_b +]% {!</td><td>!} [+ str_change_csu +] {!</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}AfD: {!</td><td>!} [+ afd_votes +]% {!</td><td>!} [+ str_votes_change_afd +] {!</td><td>!} [+ afd_b +]% {!</td><td>!} [+ str_change_afd +] {!</td></tr>!}
-
 {!</table>!}
 
 {!<button class="tab_button" id="demographics_tab" onclick="window.toggleDem();">Demographic Results</button>!}
@@ -581,13 +572,13 @@ if (window && d3) {
 
 [? if linke_b >= 45 : Left majority government: [+ linke_b +]% ?]
 
-[? if greens_relation >= 60 and spd_relation >= 60 and rrgreen_coalition >= 45 : Red-red-green coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span>): [+ rrgreen_coalition +]% ?]
+[? if rrgreen_coalition >= 40 : Red-red-green coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span>): [+ rrgreen_coalition +]% ?]
 
-[? if ampelkoalition_failed = 0 and ampelkoalition_coalition >= 45 : Traffic Light Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span>): [+ ampelkoalition_coalition +]% ?]
+[? if ampelkoalition_failed = 0 and ampelkoalition_coalition >= 40 : Traffic Light Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span>): [+ ampelkoalition_coalition +]% ?]
 
-[? if bsw_relation >= 60 and linke_bsw_coalition >= 45 : Socialist coalition (linke+bsw): [+ linke_bsw_coalition +]% ?]
+[? if linke_bsw_coalition >= 40 : Socialist coalition (linke+bsw): [+ linke_bsw_coalition +]% ?]
 
-[? if groko_combo >= 45 and ampelkoalition_failed : Grand Coalition(cdu/csu+spd): [+ groko_combo +]% ?]
+[? if groko_combo >= 40 and ampelkoalition_failed : Grand Coalition(cdu/csu+spd): [+ groko_combo +]% ?]
 
 [? if kenya_coalition_combo >= 45 and ampelkoalition_failed and groko_combo < 45: Kenyan coalition(cdu/csu+spd+greens): [+ kenya_coalition_combo +]% ?]
 
