@@ -318,13 +318,13 @@ if (Q.spd_b >= Q.cdu_b && Q.spd_b >= Q.linke_b && Q.spd_b >= Q.afd_b) {
 
 // coalitions
 
-Q.rrgreen_coalition = parseFloat((Q.linke_b + Q.spd_b + Q.greens_b).toFixed(1));
-Q.ampelkoalition_coalition = parseFloat((Q.spd_b + Q.greens_b + Q.fdp_b).toFixed(1));
-Q.linke_bsw_coalition = parseFloat((Q.linke_b + Q.bsw_b).toFixed(1));
-Q.groko_combo = parseFloat((Q.spd_b + Q.cdu_b).toFixed(1));
-Q.jamaica_coalition_combo = parseFloat((Q.afd_b + Q.cdu_b + Q.fdp_b).toFixed(1));
-Q.midnight_coalition_combo = parseFloat((Q.afd_b + Q.cdu_b).toFixed(1));
-Q.kenya_coalition_combo = parseFloat((Q.spd_b + Q.greens_b + Q.cdu_b).toFixed(1));
+Q.rrgreen_coalition = (Q.linke_b + Q.spd_b + Q.greens_b);
+Q.ampelkoalition_coalition = (Q.spd_b + Q.greens_b + Q.fdp_b);
+Q.linke_bsw_coalition = (Q.linke_b + Q.bsw_b);
+Q.groko_combo = (Q.spd_b + Q.cdu_b);
+Q.jamaica_coalition_combo = (Q.afd_b + Q.cdu_b + Q.fdp_b);
+Q.midnight_coalition_combo = (Q.afd_b + Q.cdu_b);
+Q.kenya_coalition_combo = (Q.spd_b + Q.greens_b + Q.cdu_b);
 
 
 Q.leverage = Q.linke_b;
