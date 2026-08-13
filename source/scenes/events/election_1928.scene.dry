@@ -37,7 +37,7 @@ on-arrival: {!
     Q.adjustmentFactors_fdp = 1.0;
     Q.adjustmentFactors_cdu = 1.0;
     Q.adjustmentFactors_afd = 1.0;
-    Q.adjustmentFactors_other = 0.75;
+    Q.adjustmentFactors_other = 1.0;
 
     var new_party_sum = 0;
     var total_bundestag_without = 0;  // Initialize a variable to accumulate 'reichstag_without_' values
@@ -440,7 +440,7 @@ if (Q.year >= 2023) {
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Math.round(1),
+        "seats": Math.round(0.1),
     });
 }
 
