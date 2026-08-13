@@ -589,10 +589,6 @@ if (window && d3) {
 
 There are some potential coalition arrangements.
 
-- @coalition_menu
-
-@coalition_menu
-
 - @do_linke_majority
 - @do_linke_bsw
 - @rrgreen_coalition_do
