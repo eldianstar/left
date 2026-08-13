@@ -589,13 +589,7 @@ if (window && d3) {
 
 There are some potential coalition arrangements.
 
-@achievement_check_e
-on-arrival: stabile_demokratie = 1 if center_right_coalition >= 50 and weimar_coalition >= 50 and dnvp_ideology == "Moderate"
-go-to: stabile_demokratie if stabile_demokratie; coalition_menu if not stabile_demokratie
-
-@stabile_demokratie
-achievement: stabile_demokratie
-go-to: coalition_menu
+- @coalition_menu
 
 @coalition_menu
 
