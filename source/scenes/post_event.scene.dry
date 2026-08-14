@@ -484,219 +484,97 @@ Q.econ_moderation += 0.2;
 
     ///////////////////////////// change party support based on pro_republic UNTIL HERE
     // if pro_republic is less than the support of the Weimar coalition, reduce SPD support...
-    if ((Q.pro_republic < (Q.spd_votes + Q.ddp_votes + (Q.lvp_votes / 2) + Q.z_votes - Q.bvp_votes) && !Q.cvp_formed) || (Q.pro_republic < (Q.spd_votes + Q.ddp_votes + (Q.lvp_votes / 2) + (Q.z_votes / 2.5) - Q.bvp_votes) && Q.cvp_formed)) {
-        if (Q.new_middle_spd > 6) {
-            Q.new_middle_spd -= 6/12;
-            Q.new_middle_nsdap += 2/12;
-        }
-        if (Q.old_middle_spd > 4) {
-            Q.old_middle_spd -= 6/12;
-            Q.old_middle_nsdap += 2/12;
-        }
-        if (Q.rural_spd > 4) {
-            Q.rural_spd -= 6/12;
-            Q.rural_nsdap += 2/12;
-        }
-        if (Q.workers_spd_normalized > 40) {
-            Q.workers_spd -= 4/12;
-        }
-        if (Q.catholics_spd > 15) {
-            Q.catholics_spd -= 4/12;
-        }
-        if (Q.unemployed_spd_normalized > 10) {
-            Q.unemployed_spd -= 6/12;
-        }
-        Q.pro_republic += 1;
-    }
-    if (Q.other_votes < 4 && !Q.stegerwald_path && !Q.dnef_formed) {
-        Q.old_middle_other += 6/12;
-        Q.new_middle_other += 6/12;
-        Q.rural_other += 4/12;
-    }
-    if (Q.ddp_votes < 1 && !Q.dstp_dnef) {
-        Q.old_middle_ddp += 6/12;
-        Q.new_middle_ddp += 4/12;
-    }
-    if (Q.dnvp_votes < 6 && Q.dnvp_ideology == "Radical" && Q.year >= 1931 && Q.nsdap_votes >= 25) {
-        Q.new_middle_dnvp += 4/12;
-        Q.old_middle_dnvp += 4/12;
-        Q.rural_dnvp += 4/12;
-    }
-    if (Q.unemployed_spd_normalized < 10) {
-        Q.unemployed_spd += 4/12;
-    } else if (Q.unemployed_spd_normalized < 15) {
-        Q.unemployed_spd += 2/12;
-    }
-    // soft cap for nsdap workers
-    if (Q.workers_nsdap_normalized >= (Q.workers_kpd_normalized - 7) && Q.unemployed >= 15) {
-        Q.workers_nsdap -= 4/12;
-    }
-
-    Q.center_dissent_decay = 1;
-    Q.labor_dissent_decay = 1;
-    Q.left_dissent_decay = 1;
-    Q.reformist_dissent_decay = 1;
-
-    Q.center_strength_gain = 0;
-    Q.labor_strength_gain = 0;
-    Q.left_strength_gain = 0;
-    Q.reformist_strength_gain = 0;
-
-    if (Q.left_strength < 10) Q.left_dissent_decay += 1;
-    if (Q.center_strength < 10) Q.center_dissent_decay += 1;
-    if (Q.labor_strength < 10) Q.labor_dissent_decay += 1;
-    if (Q.reformist_strength < 10) Q.reformist_dissent_decay += 1;
-
-    if (Q.centrists_resign) {
-        Q.left_dissent_decay += 1;
-        Q.labor_dissent_decay += 1;
-        Q.reformist_dissent_decay += 1;
+    if (Q.pro_status_quo < (Q.spd_votes + Q.greens_votes + Q.fdp_votes + Q.cdu_votes)) {
+        Q.youth_spd -= 0.3;
+Q.youth_greens -= 0.3;
+Q.youth_fdp -= 0.3;
+Q.youth_cdu -= 0.3;
+Q.youth_linke += 0.6*(1-dissent);
+Q.youth_afd += 0.6;
+Q.rural_spd -= 0.3;
+Q.rural_greens -= 0.3;
+Q.rural_fdp -= 0.3;
+Q.rural_cdu -= 0.3;
+Q.rural_linke += 0.2*(1-dissent);
+Q.rural_afd += 1;
+Q.east_spd -= 0.4;
+Q.east_greens -= 0.4;
+Q.east_fdp -= 0.4;
+Q.east_cdu -= 0.4;
+Q.east_linke += 0.8*(1-dissent);
+Q.east_afd += 0.8;
+Q.urban_spd -= 0.3;
+Q.urban_greens -= 0.3;
+Q.urban_fdp -= 0.3;
+Q.urban_cdu -= 0.3;
+Q.urban_linke += 0.6*(1-dissent);
+Q.urban_afd += 0.6;
+Q.upper_spd -= 0.3;
+Q.upper_greens -= 0.3;
+Q.upper_fdp -= 0.3;
+Q.upper_cdu -= 0.3;
+Q.upper_linke += 0.2*(1-dissent);
+Q.upper_afd += 1;
+if (Q.bsw_split) {
+Q.urban_bsw += 0.1;
+Q.rural_bsw += 0.2;
+Q.east_bsw += 0.4;
+Q.youth_bsw += 0.1;
+}
+if (Q.bsw_split && Q.bsw_rising) {
+Q.urban_bsw += 0.3;
+Q.rural_bsw += 0.6;
+Q.east_bsw += 1.2;
+Q.youth_bsw += 0.3;
+Q.urban_linke -= 0.3;
+Q.rural_linke -= 0.6;
+Q.east_linke -= 1.2;
+Q.youth_linke -= 0.3;
+}
+Q.pro_status_quo += 1;
     }
 
-    Q.center_advisor_n = 0;
-    if (Q.hilferding_advisor) Q.center_advisor_n += 1;
-    if (Q.wels_advisor) Q.center_advisor_n += 1;
-    if (Q.muller_advisor) Q.center_advisor_n += 1;
-    if (Q.breitscheid_advisor) Q.center_advisor_n += 1;
+    Q.oldleft_dissent_decay = 1;
+    Q.beweli_dissent_decay = 1;
+    Q.emali_dissent_decay = 1;
+    Q.pragmatist_dissent_decay = 1;
 
-    var centrist_advisor_decay_effect = Q.center_advisor_n*0.3;
+    Q.oldleft_strength_gain = 0;
+    Q.beweli_strength_gain = 0;
+    Q.emali_strength_gain = 0;
+    Q.pragmatist_strength_gain = 0;
 
-    if (Q.center_advisor_n) {
-        Q.center_dissent_decay *= (1-centrist_advisor_decay_effect);
-        Q.labor_dissent_decay *= (1-centrist_advisor_decay_effect);
-        Q.left_dissent_decay *= (1-centrist_advisor_decay_effect);
-        Q.reformist_dissent_decay *= (1-centrist_advisor_decay_effect);
+    if (Q.oldleft_strength < 10) Q.oldleft_dissent_decay += 1;
+    if (Q.emali_strength < 10) Q.emali_dissent_decay += 1;
+    if (Q.beweli_strength < 10) Q.beweli_dissent_decay += 1;
+    if (Q.pragmatist_strength < 10) Q.pragmatist_dissent_decay += 1;
+
+
+    if (Q.afd_votes >= 20) {
+        Q.oldleft_dissent_decay *= 0.6;
+        Q.beweli_dissent_decay *= 0.7;
+        Q.emali_dissent_decay *= 0.8;
+        Q.pragmatist_dissent_decay *= 0.5;
     }
 
-    Q.non_factional_advisor_n = 0;
-    if (Q.baade_advisor) {
-        Q.non_factional_advisor_n += 1;
-        if (Q.land_reform) Q.non_factional_advisor_n += 1;
-    }
-    if (Q.hirschfeld_advisor) {
-        Q.non_factional_advisor_n += 1;
-        if (Q.homosexual_rights) Q.non_factional_advisor_n += 1;
-    }
-    if (Q.stampfer_advisor && Q.editorial_line == "Center") {
-        Q.non_factional_advisor_n += 1;
-        if (Q.kpd_truce) Q.non_factional_advisor_n += 1;
-    }
-    if (Q.radbruch_advisor) {
-        Q.non_factional_advisor_n += 1;
-        if (Q.judicial_reform >= 2) Q.non_factional_advisor_n += 1;
-    }
+    // SIMULATE FACTION DISSENT DECAY BASED ON ADVISORS TODO
+//     SIMULATE ADVISOR PASSIVE ACTIONS
+    Q.beweli_dissent += Q.beweli_dissent_decay;
+    Q.emali_dissent += Q.emali_dissent_decay;
+    Q.oldleft_dissent += Q.oldeft_dissent_decay;
+    Q.pragmatist_dissent += Q.pragmatist_dissent_decay;
 
-    var non_factional_advisor_decay_effect = Q.non_factional_advisor_n*0.15;
+    if (Q.emali_strength < 0) Q.emali_strength = 0;
+    if (Q.beweli_strength < 0) Q.beweli_strength = 0;
+    if (Q.oldleft_strength < 0) Q.oldleft_strength = 0;
+    if (Q.pragmatist_strength < 0) Q.pragmatist_strength = 0;
 
-    if (Q.non_factional_advisor_n) {
-        Q.center_dissent_decay *= (1-non_factional_advisor_decay_effect);
-        Q.labor_dissent_decay *= (1-non_factional_advisor_decay_effect);
-        Q.left_dissent_decay *= (1-non_factional_advisor_decay_effect);
-        Q.reformist_dissent_decay *= (1-non_factional_advisor_decay_effect);
-    }
+ if (Q.emali_dissent < 0) Q.emali_dissent = 0;
+    if (Q.beweli_dissent < 0) Q.beweli_dissent = 0;
+    if (Q.oldleft_dissent < 0) Q.oldleft_dissent = 0;
+    if (Q.pragmatist_dissent < 0) Q.pragmatist_dissent = 0;
 
-    Q.labor_advisor_n = 0;
-    if (Q.leipart_advisor) Q.labor_advisor_n += 1;
-    if (Q.aufhauser_advisor) Q.labor_advisor_n += 1;
-    if (Q.wissell_advisor) Q.labor_advisor_n += 1;
-    if (Q.woytinsky_advisor) Q.labor_advisor_n += 1;
-
-    Q.left_advisor_n = 0;
-    if (Q.levi_advisor) Q.left_advisor_n += 1;
-    if (Q.sender_advisor) Q.left_advisor_n += 1;
-    if (Q.rosenfeld_advisor) Q.left_advisor_n += 1;
-    if (Q.seydewitz_advisor) Q.left_advisor_n += 1;
-
-    Q.reformist_advisor_n = 0;
-    if (Q.severing_advisor) Q.reformist_advisor_n += 1;
-    if (Q.braun_advisor) Q.reformist_advisor_n += 1;
-    if (Q.juchacz_advisor) Q.reformist_advisor_n += 1;
-    if (Q.pfulf_advisor) Q.reformist_advisor_n += 1;
-
-    if (Q.nsdap_votes >= 20) {
-        Q.center_dissent_decay *= 0.6;
-        Q.labor_dissent_decay *= 0.7;
-        Q.left_dissent_decay *= 0.8;
-        Q.reformist_dissent_decay *= 0.5;
-    }
-
-    if (Q.chancellor == "Schleicher" && Q.schleicher_spd_influence) {
-        Q.left_dissent_decay += Q.schleicher_spd_influence*2;
-    }
-    // to represent schleicher glazers bullying lefties out of the party
-
-    if (Q.chancellor == "Schleicher" && Q.schleicher_spd_r) {
-        Q.left_dissent_decay += Q.schleicher_spd_r*2;
-        Q.center_dissent_decay += Q.schleicher_spd_r*2;
-        Q.labor_dissent_decay += Q.schleicher_spd_r;
-        Q.reformist_dissent_decay += Q.schleicher_spd_r;
-    }
-    // to represent general dissatisfaction with schleicher
-
-    if (Q.center_advisor_n) {
-        if (Q.center_advisor_n == 2) {
-            Q.center_dissent_decay = -0.25;
-        } else if (Q.center_advisor_n == 3) {
-            Q.center_dissent_decay = -0.5;
-        } else {
-            Q.center_dissent_decay = 0;
-        }
-    }
-
-    if (Q.labor_advisor_n) {
-        if (Q.labor_advisor_n == 2) {
-            Q.labor_dissent_decay = -0.25;
-        } else if (Q.labor_advisor_n == 3) {
-            Q.labor_dissent_decay = -0.5;
-        } else {
-            Q.labor_dissent_decay = 0;
-        }
-    }
-
-    if (Q.left_advisor_n) {
-        if (Q.left_advisor_n == 2) {
-            Q.left_dissent_decay = -0.25;
-        } else if (Q.left_advisor_n == 3) {
-            Q.left_dissent_decay = -0.5;
-        } else {
-            Q.left_dissent_decay = 0;
-        }
-    }
-
-    if (Q.reformist_advisor_n) {
-        if (Q.reformist_advisor_n == 2) {
-            Q.reformist_dissent_decay = -0.25;
-        } else if (Q.reformist_advisor_n == 3) {
-            Q.reformist_dissent_decay = -0.5;
-        } else {
-            Q.reformist_dissent_decay = 0;
-        }
-    }
-
-    Q.center_dissent += Q.center_dissent_decay;
-    Q.labor_dissent += Q.labor_dissent_decay;
-    Q.left_dissent += Q.left_dissent_decay;
-    Q.reformist_dissent += Q.reformist_dissent_decay;
-
-    Q.center_strength_gain += (Q.center_advisor_n / 2);
-    Q.labor_strength_gain += (Q.labor_advisor_n / 1.5);
-    Q.left_strength_gain += Q.left_advisor_n;
-    Q.reformist_strength_gain += Q.reformist_advisor_n;
-
-    if (Q.center_strength >= 40) Q.center_strength -= 0.25;
-    if (Q.center_strength >= 50) Q.center_strength -= 0.25;
-    if (Q.center_strength >= 60) Q.center_strength -= 0.25;
-    if (Q.center_strength >= 70) Q.center_strength -= 0.25;
-
-    if (Q.center_strength < 0) Q.center_strength = 0;
-    if (Q.labor_strength < 0) Q.labor_strength = 0;
-    if (Q.left_strength < 0) Q.left_strength = 0;
-    if (Q.reformist_strength < 0) Q.reformist_strength = 0;
-
-    if (Q.center_dissent < 0) Q.center_dissent = 0;
-    if (Q.labor_dissent < 0) Q.labor_dissent = 0;
-    if (Q.left_dissent < 0) Q.left_dissent = 0;
-    if (Q.reformist_dissent < 0) Q.reformist_dissent = 0;
+// UNTIL HERE
 
     Q.center_strength += Q.center_strength_gain;
     Q.labor_strength += Q.labor_strength_gain;
