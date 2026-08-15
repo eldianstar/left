@@ -24,7 +24,7 @@ text
 view-if: frozen_rents == 0
 choose-if: econ_moderation < 8
 unavailable-subtitle: econ moderation
-on-arrival: frozen_rents = 1; urban_linke += issue_cost_of_living*(1-dissent); youth_linke += (issue_cost_of_living*(1-dissent))/2; east_linke += (issue_cost_of_living*(1-dissent))/3; pro_status_quo += 1; issue_cost_of_living -= 1; upper_linke -= 2; spd_relation -= 1;
+on-arrival: frozen_rents = 1; urban_linke += issue_cost_of_living*(1-dissent); youth_linke += (issue_cost_of_living*(1-dissent))/2; east_linke += (issue_cost_of_living*(1-dissent))/3; pro_status_quo += 1; issue_cost_of_living -= 1; upper_linke -= 2; spd_relation -= 1; capital_strike_progress += 1;
 
 @circumvention
 view-if: frozen_rents == 1 and rent_circumvention == 0
@@ -42,7 +42,7 @@ on-arrival: rent_modernization = 1; urban_linke += (issue_cost_of_living*(1-diss
 view-if: rent_modernization == 1 and rent_reduction == 0
 choose-if: econ_moderation < 7
 unavailable_subtitle: econ moderation
-on-arrival: rent_reduction = 1; urban_linke += (issue_cost_of_living*(1-dissent))/2; issue_cost_of_living -= 0.5; pro_status_quo += 1; upper_linke -= 1;
+on-arrival: rent_reduction = 1; urban_linke += (issue_cost_of_living*(1-dissent))/2; issue_cost_of_living -= 0.5; pro_status_quo += 1; upper_linke -= 1; capital_strike_progress += 1;
 
 @build_housing
 subtitle: -1 budget
@@ -55,7 +55,7 @@ subtitle: -2 budget
 view-if: nationalized_housing < 3
 choose-if: budget >= 2 and econ_moderation < 6
 unavailable_subtitle: budget/econ moderation
-on-arrival: budget -= 2; urban_linke += (issue_cost_of_living*(1-dissent))*1.5; issue_cost_of_living -= 1.5; upper_linke -= 2; pro_status_quo += 1; greens_relation -= 2; spd_relation -= 2; pragmatist_dissent += 2; nationalized_housing += 1;
+on-arrival: budget -= 2; urban_linke += (issue_cost_of_living*(1-dissent))*1.5; issue_cost_of_living -= 1.5; upper_linke -= 2; pro_status_quo += 1; greens_relation -= 2; spd_relation -= 2; pragmatist_dissent += 2; nationalized_housing += 1; capital_strike_progress += 2;
 
 @noaction
 on-arrival: urban_linke -= issue_cost_of_living; econ_moderation += 0.5; oldleft_dissent += 1; beweli_dissent += 1; emali_dissent += 1;
