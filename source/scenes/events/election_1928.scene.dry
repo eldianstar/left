@@ -435,14 +435,14 @@ if (Q.afd_b) {
     });
 }
 
-if (Q.year >= 2023) {
-    data.push({
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Math.round(0.1),
-    });
-}
+// if (Q.year >= 2023) {
+//    data.push({
+//        "id": "other",
+//        "legend": "Other",
+//        "name": "Other",
+//        "seats": Math.round(0.1),
+//    });
+// }
 
 
 
@@ -471,14 +471,14 @@ if (window && d3) {
     //document.getElementById('election_history').innerHTML = svg.outerHTML;
 
     // party support records should not have so many ticks
-    if (!Q.historical_mode) {
+    
         var lines_2 = d3.linegraph(true, true,
             Q.parties_graph,
             {'linke': '#E3000F', 'greens': '#700000', 'spd': '#D3C24D', 'cdu': '#000', 'fdp': '#D5AC27', 'afd': '#3E88B3', 'other': '#a0a0a0', 'bsw': '#9B0000'},
             {'linke': 'Left', 'greens': 'B90/Greens', 'spd': 'SPD', 'cdu': 'CDU', 'afd': 'AfD', 'other': 'Others', 'bsw': 'BSW', 'fdp': 'FDP'});
     lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
-    }
+    
 }
 !}
 
