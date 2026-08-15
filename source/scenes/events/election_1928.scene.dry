@@ -332,6 +332,9 @@ Q.leverage = Q.linke_b;
 
 
 Q.coalition_dissent = 0;
+Q.greens_coalition_dissent = 0;
+Q.spd_coalition_dissent = 0;
+Q.bsw_coalition_dissent = 0;
 
 Q.linke_toleration = 0;
 Q.linke_in_government = 0;
