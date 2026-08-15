@@ -162,19 +162,19 @@ Strength: [+ oldleft_strength : strength +] <br>
 Dissent: [+ oldleft_dissent : dissent +] <br>
 Leader: [+ oldleft_leader +]
 
-{!<span class="tooltip-text" title="beweli text">Movement Left</span>!} 
-Strength: [+ beweli_strength : strength +]
-Dissent: [+ beweli_dissent : dissent +]
+{!<span class="tooltip-text" title="beweli text">Movement Left</span>!} <br>
+Strength: [+ beweli_strength : strength +] <br>
+Dissent: [+ beweli_dissent : dissent +] <br>
 Leader: [+ beweli_leader +]
 
-{!<span class="tooltip-text" title="emali text">Centre</span>!} 
-Strength: [+ emali_strength : strength +]
-Dissent: [+ emali_dissent : dissent +]
+{!<span class="tooltip-text" title="emali text">Centre</span>!} <br>
+Strength: [+ emali_strength : strength +] <br>
+Dissent: [+ emali_dissent : dissent +] <br>
 Leader: [+ emali_leader +]
 
-{!<span class="tooltip-text" title="pragmatist text">Pragmatists</span>!}
-Strength: [+ pragmatist_strength : strength +]
-Dissent: [+ pragmatist_dissent : dissent +]
+{!<span class="tooltip-text" title="pragmatist text">Pragmatists</span>!} <br>
+Strength: [+ pragmatist_strength : strength +] <br>
+Dissent: [+ pragmatist_dissent : dissent +] <br>
 Leader: [+ pragmatist_leader +]
 
 
