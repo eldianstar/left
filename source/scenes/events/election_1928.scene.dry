@@ -383,21 +383,21 @@ if (Q.linke_b) {
     });
 }
 
-if (Q.greens_b) {
-    data.push({
-        "id": "greens",
-        "legend": "B90/Greens",
-        "name": "B90/Greens",
-        "seats": Math.round(Q.greens_b * Q.bundestag_size),
-    });
-}
-
 if (Q.spd_b) {
     data.push({
         "id": "spd",
         "legend": "SPD",
         "name": "SPD",
         "seats": Math.round(Q.spd_b * Q.bundestag_size),
+    });
+}
+
+if (Q.greens_b) {
+    data.push({
+        "id": "greens",
+        "legend": "B90/Greens",
+        "name": "B90/Greens",
+        "seats": Math.round(Q.greens_b * Q.bundestag_size),
     });
 }
 
