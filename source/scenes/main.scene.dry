@@ -2608,7 +2608,7 @@ view-if: rubicon and (schleicher_spd_influence < 6 or chancellor != "Schleicher"
 card-image: img/hourglass.jpg
 is-deck: true
 
-- @rubicon_filler
+
 
 @time_2
 title: ‎ 
@@ -2616,7 +2616,7 @@ view-if: rubicon and not (schleicher_spd_influence < 6 or chancellor != "Schleic
 card-image: img/black.jpg
 is-deck: true
 
-- @rubicon_filler
+
 
 @eco
 title: Economic Policy
