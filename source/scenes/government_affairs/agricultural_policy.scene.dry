@@ -24,7 +24,7 @@ While agricultural policy has historically not been the domain of the <span styl
 @agricultural_finance
 subtitle: -1 budget - Increase financing for agricultural credit and insurance.
 choose-if: budget >= 1
-on-arrival: budget -= 1; agricultural_finance += 1; rural_linke += 5*(1-dissent); east_linke += 2*(1-dissent) rural_sol += 4; economic_growth += 0.2; beweli_dissent += 1; emali_dissent += 1;
+on-arrival: budget -= 1; agricultural_finance += 1; rural_linke += 5*(1-dissent); east_linke += 2*(1-dissent); rural_sol += 4; economic_growth += 0.2; beweli_dissent += 1; emali_dissent += 1;
 
 We have increased financial support for small farmers, providing access to credit and insurance, saving them from privation. The left and center of our party are opposed to our rural policy, seeing these policies as giveaways to petit-bourgeois farmers.
 
