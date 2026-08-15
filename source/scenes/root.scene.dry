@@ -404,6 +404,9 @@ Q.nationalized_housing = 0;
 Q.safety_reg = 0;
 Q.agri_environment = 0;
 
+Q.bike_lanes = 0;
+Q.db_rail = 0;
+Q.modern_internet;
 
 // have we reformed these institutions to be more democratic?
 Q.judicial_reform = 0;
