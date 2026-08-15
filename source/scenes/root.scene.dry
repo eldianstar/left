@@ -169,7 +169,7 @@ Q.upper_qol = 100;
 Q.east_qol = 100;
 
 Q.classes = ['youth', 'urban', 'east', 'rural', 'upper'];
-Q.parties = ['linke', 'greens', 'spd', 'fdp', 'cdu', 'afd', 'other'];
+Q.parties = ['linke', 'spd', 'greens', 'fdp', 'cdu', 'afd', 'other'];
 Q.parties_graph = ['linke', 'greens', 'spd', 'fdp', 'cdu', 'afd', 'other'];
 
 
