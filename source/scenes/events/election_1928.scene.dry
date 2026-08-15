@@ -484,7 +484,7 @@ if (window && d3) {
 
 = Election results
 
-{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>
 <table>
 {!<tr><th>Party</th><th>Vote share</th><th>% Change</th><td>Reichstag Seats</th><th>% Change</th></tr>!}
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}Left: {!</td><td>!} [+ linke_votes +]% {!</td><td>!} [+ str_votes_change_linke +] {!</td><td>!} [+ linke_b +]% {!</td><td>!} [+ str_change_linke +] {!</td></tr>!}
