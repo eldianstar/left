@@ -361,7 +361,8 @@ for (var party of Q.parties_graph) {
     election_result[party] = Q[party + '_b'];
 }
 Q.election_records.push(election_result);
-
+!}
+on-display: {!
 const data = [];
 
 if (Q.bsw_b) {
