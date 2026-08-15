@@ -65,7 +65,7 @@ Q.pragmatist_strength = 25;
 Q.pragmatist_dissent = 10;
 
 Q.oldleft_leader = "Wagenknecht";
-Q.beweli_leader = "Wissler";
+Q.beweli_leader = "Gohlke";
 Q.emali_leader = "Kipping";
 Q.pragmatist_leader = "Gysi";
 
