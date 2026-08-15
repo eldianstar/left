@@ -105,6 +105,7 @@ Q.issue_services = 4;
 Q.issue_migration = 4;
 Q.issue_antifascism = 1;
 
+
 // inter-party relations
 Q.bsw_relation = 0;
 Q.greens_relation = 50;
@@ -127,9 +128,7 @@ Q.interior_police_loyalty = 0.45;
 // The state of the country
 
 // popular opinion
-Q.pro_status_quo = 80;
-
-// issues TODO
+Q.pro_status_quo = 81;
 
 // minimum percentage of votes to be represented in the Reichstag
 Q.electoral_threshold = 5;
@@ -390,6 +389,14 @@ Q.ampelkoalition = 0;
 Q.ampelkoalition_time = 0;
 Q.ampelkoalition_failed = 0;
 
+
+// what did we achieve in government
+Q.frozen_rents = 0;
+Q.rent_modernization = 0;
+Q.rent_circumvention = 0;
+Q.rent_reduction = 0;
+Q.housing_built = 0;
+Q.nationalized_housing = 0;
 // have we reformed these institutions to be more democratic?
 Q.judicial_reform = 0;
 Q.bureaucratic_reform = 0;
