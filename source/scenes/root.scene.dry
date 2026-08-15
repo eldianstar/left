@@ -176,9 +176,9 @@ Q.parties_graph = ['linke', 'greens', 'spd', 'fdp', 'cdu', 'afd', 'other'];
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.youth_linke = 9;
-Q.youth_greens = 24;
-Q.youth_spd = 16;
-Q.youth_fdp = 19;
+Q.youth_greens = 25;
+Q.youth_spd = 17;
+Q.youth_fdp = 18;
 Q.youth_cdu = 12;
 Q.youth_afd = 8;
 Q.youth_other = 10;
@@ -188,7 +188,7 @@ Q.urban_greens = 22;
 Q.urban_spd = 25;
 Q.urban_fdp = 12;
 Q.urban_cdu = 20;
-Q.urban_afd = 7;
+Q.urban_afd = 6;
 Q.urban_other = 10;
 
 Q.rural_linke = 1;
@@ -196,7 +196,7 @@ Q.rural_greens = 6;
 Q.rural_spd = 25;
 Q.rural_fdp = 9;
 Q.rural_cdu = 29;
-Q.rural_afd = 12;
+Q.rural_afd = 11;
 Q.rural_other = 10;
 
 Q.upper_linke = 1;
