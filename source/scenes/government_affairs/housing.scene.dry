@@ -48,7 +48,7 @@ on-arrival: rent_reduction = 1; urban_linke += (issue_cost_of_living*(1-dissent)
 subtitle: -1 budget
 choose-if: budget >= 1
 unavailable_subtitle: budget
-on-arrival: budget -= 1; urban_linke += (issue_cost_of_living*(1-dissent)); issue_cost_of_living -= 1; upper_linke -= 1; pro_status_quo += 1; housing_built += 1; economic_growth += 0.2;
+on-arrival: budget -= 1; urban_linke += (issue_cost_of_living*(1-dissent)); issue_cost_of_living -= 1; upper_linke -= 1; pro_status_quo += 1; housing_built += 1; economic_growth += 0.4;
 
 @socializeover3k
 subtitle: -2 budget
