@@ -183,28 +183,28 @@ Q.youth_cdu = 12;
 Q.youth_afd = 8;
 Q.youth_other = 10;
 
-Q.urban_linke = 6;
-Q.urban_greens = 19;
+Q.urban_linke = 5;
+Q.urban_greens = 22;
 Q.urban_spd = 25;
 Q.urban_fdp = 12;
 Q.urban_cdu = 20;
 Q.urban_afd = 7;
 Q.urban_other = 10;
 
-Q.rural_linke = 4;
-Q.rural_greens = 9;
+Q.rural_linke = 1;
+Q.rural_greens = 6;
 Q.rural_spd = 25;
 Q.rural_fdp = 9;
 Q.rural_cdu = 29;
-Q.rural_afd = 14;
+Q.rural_afd = 12;
 Q.rural_other = 10;
 
-Q.upper_linke = 3;
+Q.upper_linke = 1;
 Q.upper_greens = 18;
 Q.upper_spd = 21;
-Q.upper_fdp = 17;
+Q.upper_fdp = 19;
 Q.upper_cdu = 27;
-Q.upper_afd = 7;
+Q.upper_afd = 5;
 Q.upper_other = 10;
 
 Q.east_linke = 8;
@@ -212,7 +212,7 @@ Q.east_greens = 9;
 Q.east_spd = 24;
 Q.east_fdp = 10;
 Q.east_cdu = 18;
-Q.east_afd = 19;
+Q.east_afd = 17;
 Q.east_other = 10;
 
 
