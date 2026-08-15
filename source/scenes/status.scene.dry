@@ -157,13 +157,25 @@ Bundestag Leadership: xyz
 
 = Internal Factions of the <span style="color: #c00000;">**SPD**</span>
 
-{!<span class="tooltip-text" title="oldleft text">Old Left</span>!} strength: [+ oldleft_strength : strength +], dissent: [+ oldleft_dissent : dissent +]
+{!<span class="tooltip-text" title="oldleft text">Old Left</span>!} <br>
+Strength: [+ oldleft_strength : strength +] <br>
+Dissent: [+ oldleft_dissent : dissent +] <br>
+Leader: [+ oldleft_leader +]
 
-{!<span class="tooltip-text" title="beweli text">Movement Left</span>!} strength: [+ beweli_strength : strength +], dissent: [+ beweli_dissent : dissent +]
+{!<span class="tooltip-text" title="beweli text">Movement Left</span>!} 
+Strength: [+ beweli_strength : strength +]
+Dissent: [+ beweli_dissent : dissent +]
+Leader: [+ beweli_leader +]
 
-{!<span class="tooltip-text" title="emali text">Centre</span>!} strength: [+ emali_strength : strength +], dissent: [+ emali_dissent : dissent +]
+{!<span class="tooltip-text" title="emali text">Centre</span>!} 
+Strength: [+ emali_strength : strength +]
+Dissent: [+ emali_dissent : dissent +]
+Leader: [+ emali_leader +]
 
-{!<span class="tooltip-text" title="pragmatist text">Pragmatists</span>!} strength: [+ pragmatist_strength : strength +], dissent: [+ pragmatist_dissent : dissent +]
+{!<span class="tooltip-text" title="pragmatist text">Pragmatists</span>!}
+Strength: [+ pragmatist_strength : strength +]
+Dissent: [+ pragmatist_dissent : dissent +]
+Leader: [+ pragmatist_leader +]
 
 
 @polls
