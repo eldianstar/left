@@ -1,60 +1,59 @@
-title: Internal Security
+title: Housing and Urban Development Affairs
 new-page: true
 is-card: true
 tags: govt_affairs, cabinet
-on-arrival: police_timer += 6; month_actions += 1
-view-if: spd_in_government = 1 and interior_minister_party = "SPD" and police_timer <= 0
+on-arrival: housing_timer += 6; month_actions += 1
+view-if: linke_in_government = 1 and housing_minister_party = "LINKE" and housing_timer <= 0
 card-image: img/portraits/SeveringCarl.jpg
 
-= Internal Security
+= housing/urbdev affairs
 
-The Interior Ministry controls internal security throughout the German Republic. While most police work is delegated to the states, the national security agency can perform special investigations.
+text
 
-As with the state police units and the Reichswehr, the internal police tends to be <span style="color: #808080;">reactionary</span>, and has serious issues with loyalty to the elected government of the Republic.
-
-- @loyalty: Improve the loyalty of the Interior Ministry forces.
-- @investigate_corruption: Investigate corruption by big businesses.
-- @investigate_far_right: Investigate illegal activity among the <span style="color: #7A3C00;">far</span> <span style="color: #3E88B3;">right</span>.
-- @domestic_enemies: Investigate or ban our domestic enemies.
-- @deport_hitler
-- @root: Take no action for now.
+- @rentfreeze: freeze rents
+- @circumvention: circumvention
+- @modernization: modernization
+- @rentreduction: rentreduction
+- @build_housing: build housing
+- @socializeover3k: socialize over 3k
+- @noaction: Take no action for now.
 - @easy_discard
 - @cancel_advisor_action
 
-@loyalty
-on-arrival: interior_police_loyalty += 0.1
+@rentfreeze
+view-if: frozen_rents == 0
+choose-if: econ_moderation < 8
+unavailable-subtitle: econ moderation
+on-arrival: frozen_rents = 1; urban_linke += issue_cost_of_living*(1-dissent); youth_linke += (issue_cost_of_living*(1-dissent))/2; east_linke += (issue_cost_of_living*(1-dissent))/3; pro_status_quo += 1; issue_cost_of_living -= 1; upper_linke -= 2; spd_relation -= 1;
 
-As with the Prussian state police, there are measures we can take to root out <span style="color: #808080;">reactionary</span> and anti-democratic sentiment in the police. We can improve training and recruiting procedures, and identify and remove known <span style="color: #7A3C00;">fascists</span> and the like.
+@circumvention
+view-if: frozen_rents == 1 and rent_circumvention == 0
+choose-if: econ_moderation < 7
+unavailable_subtitle: econ moderation
+on-arrival: rent_circumvention = 1; urban_linke += (issue_cost_of_living*(1-dissent))/2; issue_cost_of_living -= 0.5; pro_status_quo += 1; upper_linke -= 1;
 
-Current interior police loyalty: [+ interior_police_loyalty : loyalty +]
+@modernization
+view-if: frozen_rents == 1 and rent_modernization == 0
+choose-if: econ_moderation < 7
+unavailable_subtitle: econ moderation
+on-arrival: rent_modernization = 1; urban_linke += (issue_cost_of_living*(1-dissent))/2; issue_cost_of_living -= 0.5; pro_status_quo += 1; upper_linke -= 1;
 
+@rentreduction
+view-if: rent_modernization == 1 and rent_reduction == 0
+choose-if: econ_moderation < 7
+unavailable_subtitle: econ moderation
+on-arrival: rent_reduction = 1; urban_linke += (issue_cost_of_living*(1-dissent))/2; issue_cost_of_living -= 0.5; pro_status_quo += 1; upper_linke -= 1;
 
-@investigate_corruption
-go-to: investigate_corruption_success if interior_police_loyalty >= 0.5; investigate_corruption_failure if interior_police_loyalty < 0.5
+@build_housing
+choose-if: budget >= 1
+unavailable_subtitle: budget
+on-arrival: budget -= 1; urban_linke += (issue_cost_of_living*(1-dissent)); issue_cost_of_living -= 1; upper_linke -= 1; pro_status_quo += 1; housing_built += 1;
 
-@investigate_corruption_success
-on-arrival: investigate_corruption += 1; workers_spd += 5*(1-dissent); inflation -= 0.1 if inflation > 3; inflation -= 0.2 if inflation >= 8; dvp_relation -= 3; dvp_right += 1; ddp_relation -= 1; ddp_left += 0.5; ddp_cohesion -= 0.5; lvp_relation -= 2; lvp_right += 1
+@socializeover3k
+view-if: nationalized_housing < 3
+choose-if: budget >= 2 and econ_moderation < 6
+unavailable_subtitle: budget/econ moderation
+on-arrival: budget -= 2; urban_linke += (issue_cost_of_living*(1-dissent))*1.5; issue_cost_of_living -= 1.5; upper_linke -= 2; pro_status_quo += 1; greens_relation -= 2; spd_relation -= 2; pragmatist_dissent += 2; nationalized_housing += 1;
 
-Corruption in big business is rampant, of course. We have uncovered a number of scandals, and publicizing them brings new attention to the work of Interior Minister [+ interior_minister +], building up his popular appeal and that of the <span style="color: #c00000;">**SPD**</span>.
-
-
-@investigate_corruption_failure
-
-Unfortunately, our investigations have failed to turn up anything. Rumors are that the targets of our investigation were tipped off by infiltrators within the police.
-
-@investigate_far_right
-go-to: investigate_far_right_success if interior_police_loyalty >= 0.55; investigate_far_right_failure if interior_police_loyalty < 0.55
-
-@investigate_far_right_success
-on-arrival: investigate_far_right += 1; sa_strength *= 0.96; sa_strength *= 0.96 if investigate_far_right == 2; workers_nsdap -= 1; new_middle_nsdap -= 2; nazi_urgency += 1 if investigate_far_right == 2; nazi_urgency += 2 if investigate_far_right == 3; workers_nsdap -= 2 if investigate_far_right == 3; new_middle_nsdap -= 3 if investigate_far_right == 3; old_middle_nsdap -= 3 if investigate_far_right == 3; unemployed_spd += 3 if investigate_far_right == 3; coup_progress -= 1 if coup_progress >= 6
-
-[? if investigate_far_right == 1 : We have discovered collusion between Hjalmar Schacht, president of the Reichsbank, and the <span style="color: #7A3C00;">Nazis</span>. This is very useful information. ?]
-[? if investigate_far_right == 2 : We have discovered illegal arms smuggling by the <span style="color: #7A3C00;">**SA**</span>, the <span style="color: #7A3C00;">Nazi</span> paramilitary. ?]
-[? if investigate_far_right == 3 : We have discovered a secret cache of documents from the <span style="color: #7A3C00;">**NSDAP**</span> detailing their plan to violently take over the country if they enter into power. This is an anti-constitutional plot, and will be publicized and persecuted. ?]
-[? if investigate_far_right > 3 : Of course the <span style="color: #7A3C00;">Nazis</span> are doing crimes; everyone knows that. Now, we finally have proof. ?]
-
-[? if coup_progress >= 6: There are reports of an imminent coup by the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span>. We have attempted to disrupt some of these plans, but the threat is still present. ?]
-
-@investigate_far_right_failure
-
-Unfortunately, our investigations have failed to turn up anything. Rumors are that the targets of our investigation were tipped off by infiltrators within the police.
+@noaction
+on-arrival: urban_linke -= issue_cost_of_living; econ_moderation += 0.5; oldleft_dissent += 1; beweli_dissent += 1; emali_dissent += 1;
