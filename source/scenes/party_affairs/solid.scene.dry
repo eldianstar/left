@@ -3,8 +3,9 @@ new-page: true
 is-card: true
 tags: party_affairs
 card-image: img/reichsbanner.jpg
-on-arrival: month_actions += 1; reichsbanner_timer += 6;
+on-arrival: month_actions += 1; solid_timer += 6;
 max-visits: 6
+view-if: solid_timer <= 0
 #subtitle: subtitle text
 
 = SoLiD
