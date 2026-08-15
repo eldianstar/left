@@ -362,6 +362,7 @@ for (var party of Q.parties_graph) {
 }
 Q.election_records.push(election_result);
 
+const data = [];
 
 if (Q.bsw_b) {
     data.push({
