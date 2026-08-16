@@ -65,5 +65,5 @@ on-arrival: pro_status_quo -= 5; issue_antifascism += 0.2; cdu_relation -= 2; fd
 
 @request_afd_ban: request afd ban
 view-if: afd_certified_extremist == 1 and afd_ban_requested == 0
-choose-if: verfassungsschutz_progress >= 6 and issue_antifascism >= 4 and justice_minister_party = "LINKE" and judicial_reform >= 2
+choose-if: verfassungsschutz_progress >= 6 and issue_antifascism >= 4 and justice_minister_party = "LINKE" and judicial_reform >= 2 and spd_coalition_dissent < 1 and greens_coalition_dissent < 1
 on-arrival: afd_ban_requested += 1; pro_status_quo -= 5; issue_antifascism -= 1.5;
