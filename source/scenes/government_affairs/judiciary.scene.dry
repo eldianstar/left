@@ -1,4 +1,4 @@
-title: Judiciary Reform
+title: Judicial Affairs
 new-page: true
 is-card: true
 view-if: spd_in_government = 1 and justice_minister_party = "SPD" and judiciary_timer = 0
@@ -16,6 +16,8 @@ The Judiciary is one of the most <span style="color: #808080;">reactionary</span
 
 - @reform: Carry out substantial judicial reforms.
 - @minor_reforms: Carry out minor judicial reforms.
+- @privacy_rights: privacy rights
+- @ai_crackdown: ai crakcdown
 - @as_is: Leave the judiciary as it is.
 - @easy_discard
 - @cancel_advisor_action
@@ -24,14 +26,22 @@ The Judiciary is one of the most <span style="color: #808080;">reactionary</span
 subtitle: -1 budget
 unavailable-subtitle: Not enough budget.
 choose-if: budget >= 1
-on-arrival: budget -= 1; democratization += 2; coalition_dissent += 1 if (in_grand_coalition or (in_weimar_coalition and lvp_formed)); workers_spd += 5*(1-dissent) if democratization >= 3; judicial_reform += 2; pro_republic += 4*(1-dissent); coup_progress += 1; coalition_dissent += 1 if historical_mode; dvp_left += 2; ddp_left += 1; lvp_left += 1.5; hindenburg_angry += 5
+on-arrival: budget -= 1; youth_linke += 2*(1-dissent) if judicial_reform >= 3; judicial_reform += 2; pro_status_quo += 4*(1-dissent); cdu_relation -= 2; judiciary_timer += 6; democratization += 2;
 
 We investigate jurists who have shown themselves to have biased or corrupt behavior, and try to remove them, replacing them with more democratically-oriented jurists. This obviously raises quite a great deal of ire in conservative circles, including within our coalition. 
 
 @minor_reforms
-on-arrival: democratization += 1; workers_spd += 3*(1-dissent) if democratization >= 3; judicial_reform += 1; pro_republic += 2*(1-dissent); judiciary_timer += 6; dvp_left += 1; ddp_left += 0.5; lvp_left += 0.5
+on-arrival: youth_linke += 1*(1-dissent) if judicial_reform >= 3; judicial_reform += 1; pro_status_quo += 2*(1-dissent); judiciary_timer += 6; cdu_relation -= 1; democratization += 1;
 
 We try to remove the most obviously biased and corrupt jurists, while leaving most of the system intact. It is slow work reforming the judiciary.
+
+@privacy_rights
+view-if: privacy_rights <= 2
+on-arrival: youth_linke += 1*(1-dissent); privacy_rights += 1; pro_status_quo += 1*(1-dissent); eu_relation -= 0.3; usa_relation -= 0.3; urban_linke += 1*(1-dissent);
+
+@crackdown_ai
+view-if: privacy_rights > 2 and year >= 2025
+on-arrival: ai_crackdown += 1; youth_linke += 2*(1-dissent); capital_strike_progress += 0.5; urban_afd -= 1; east_afd -= 1; rural_afd -= 1; pro_status_quo += 2*(1-dissent);
 
 @as_is
 go-to: root
