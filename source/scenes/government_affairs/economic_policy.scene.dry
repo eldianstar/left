@@ -48,4 +48,4 @@ subtitle: -1 budget
 view-if: social_moderation < 9
 unavailable_subtitle: not enough money
 choose-if: budget >= 1
-on-arrival: green_energy_econ += 1; greens_relation += 4; greens_coalition_dissent -= 0.5; capital_strike_progress += 0.5; economic_growth += 0.4; budget -= 1; youth_linke += issue_environment*(1-dissent); issue_environment -= 0.5; fdp_relation -= 1; cdu_relation -= 1;
+on-arrival: green_energy_econ += 1; greens_relation += 4; greens_coalition_dissent -= 0.5; capital_strike_progress += 0.5; economic_growth += 0.4; budget -= 1; youth_linke += issue_environment*(1-dissent); issue_environment -= 0.5; fdp_relation -= 1; cdu_relation -= 1; oldleft_dissent += 1;
