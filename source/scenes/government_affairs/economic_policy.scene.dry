@@ -17,6 +17,7 @@ We have already formulated an economic plan. Now we have to implement it. [? if 
 
 - @wtb_2
 - @nationalize_1
+- @green_energy
 - @root: Do not implement the economic plan.
 - @easy_discard
 - @cancel_advisor_action
@@ -41,3 +42,10 @@ unavailable-subtitle: pragmatists/budget
 choose-if: econ_moderation < 7 and budget >= nationalize_budget
 on-arrival: nationalization_progress += 1; capital_strike_progress += 2; unemployed -= 3.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; urban += 2 if nationalization_progress < 2; budget -= nationalize_budget; works_program += 1; urban_linke += 6*(1-dissent); east_linke += 5*(1-dissent); spd_coalition_dissent += 1; greens_coalition_dissent += 0.5; spd_relation -= 4; greens_relation -= 2; oldleft_dissent -= 5; beweli_dissent -= 5; pragmatist_dissent += 4; upper_linke -= 3; inflation += 2; fdp_relation -= 2; cdu_relation -= 2; economic_growth += 1.7 if economic_growth < 5;
 
+@green_energy
+title: green energy invest
+subtitle: -1 budget
+view-if: social_moderation < 9
+unavailable_subtitle: not enough money
+choose-if: budget >= 1
+on-arrival: green_energy_econ += 1; greens_relation += 4; greens_coalition_dissent -= 0.5; capital_strike_progress += 0.5; economic_growth += 0.4; budget -= 1; youth_linke += issue_environment*(1-dissent); issue_environment -= 0.5; fdp_relation -= 1; cdu_relation -= 1;
