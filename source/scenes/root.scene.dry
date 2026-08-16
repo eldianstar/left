@@ -406,7 +406,7 @@ Q.agri_environment = 0;
 
 Q.bike_lanes = 0;
 Q.db_rail = 0;
-Q.modern_internet;
+Q.modern_internet = 0;
 
 Q.privacy_rights = 0;
 Q.ai_crackdown = 0;
@@ -415,6 +415,8 @@ Q.verfassungsschutz_progress = 0;
 Q.persecuted_afd = 0;
 Q.afd_certified_extremist = 0;
 Q.afd_ban_requested = 0;
+
+Q.green_energy_econ = 0;
 
 // have we reformed these institutions to be more democratic?
 Q.judicial_reform = 0;
