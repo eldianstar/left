@@ -471,7 +471,7 @@ Q.linke_no_confidence = 0;
 
 
 // Advisors/Leaders
-Q.n_advisors = 3;
+Q.n_advisors = 2;
 // timer - this decrements by 1 every turn, and is set to 5 whenever an advisor action is used, so that you can only use one advisor action every 5 months.
 // let's just put all of the timers here...
 // most party affairs and government affairs cards are on a timer.
@@ -736,47 +736,34 @@ for (let i = 0; i <= 100; i++) {
 
 
 // all the initial advisors are centrists. TODO
-Q.wels_advisor = 1; // Otto Wels
-Q.muller_advisor = 1; // Hermann Müller
-Q.muller_dead = 0;
-// okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
-Q.crispien_advisor = 0; // Arthur Crispien
-Q.hilferding_advisor = 1; // Rudolf Hilferding
+Q.hennigwellsow_advisor = 1; // susanne hennig wellsow, pragmatist
+Q.wissler_advisor = 1; // janine wissler, oldleft
 
-// left advisors
-Q.sender_advisor = 0; // Toni Sender
-Q.levi_advisor = 0; // Paul Levi
-Q.levi_dead = 0;
-Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
-Q.seydewitz_advisor = 0; // Max Seydewitz
+// oldleft
+Q.wagenknecht_advisor = 0; // sahra wagenknecht
+Q.mohamedali_advisor = 0; // amira mohamed ali
+Q.riexinger_advisor = 0; // bernd riexinger
+Q.pellmann_advisor = 0; // sören pellmann
 
-// centrist alternate advisors
-Q.pfulf_advisor = 0; // Antonie Pfülf
-Q.breitscheid_advisor = 0; // Rudolf Breitscheid
+// beweli
+Q.gohlke_advisor = 0; // nicole gohlke
+Q.schwerdtner_advisor = 0; // ines schwerdtner
+Q.pantisano_advisor = 0; // luigi pantisano
+Q.buenger_advisor = 0; // clara bünger
 
-// Reformist advisors
-Q.severing_advisor = 0; // Carl Severing
-Q.braun_advisor = 0; // Otto Braun
-Q.juchacz_advisor = 0; // Marie Juchacz
-Q.baade_advisor = 0; // Fritz Baade
+// emali
+Q.lay_advisor = 0; // caren lay
+Q.kipping_advisor = 0; // katja kipping
+Q.reichinnek_advisor = 0; // heidi reichinnek
+Q.vanaken_advisor = 0; // jan van aken
+Q.schirdewan_advisor = 0; // martin schirdewan
+Q.hoss_advisor = 0; // luke hoss
 
-// Labor advisors
-Q.leipart_advisor = 0; // Theodor Leipart
-Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
-Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
-Q.wissell_advisor = 0; // Rudolf Wissell
-
-// Revisionist advisors
-Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)
-
-Q.leber_advisor = 0; // Julius Leber (post-1930)
-Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
-Q.wirth_advisor = 0; // troll
-
-// Nonfactional advisors
-Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
-Q.radbruch_advisor = 0; // Gustav Radbruch
-Q.stampfer_advisor = 0; // Friedrich Stampfer
+// pragmatist
+Q.gysi_advisor = 0; // gregor gysi
+Q.bartsch_advisor = 0; // dietmar bartsch
+Q.ramelow_advisor = 0; // bodo ramelow
+Q.goerke_advisor = 0; // christian görke
 
 if (Q.achievement_holy_moly) {
     const content = document.getElementById('content');
