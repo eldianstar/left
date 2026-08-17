@@ -705,7 +705,7 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: interior_minister_party != "LINKE"
-on-arrival: leverage -= 5; interior_minister_party = "LINKE"; interior_minister = "Clara Bünger"; interior_minister = "Klaus Ernst" if oldleft_strength >= 55 and bsw_split = 0;
+on-arrival: leverage -= 5; interior_minister_party = "LINKE"; interior_minister = "Clara Bünger";
 go-to: ministries
 
 @finance
