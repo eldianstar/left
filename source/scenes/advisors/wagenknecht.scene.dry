@@ -1,0 +1,38 @@
+title: Sahra Wagenknecht
+is-pinned-card: true
+tags: advisor, oldleft
+card-image: img/portraits/BraunOtto.jpg
+view-if: wagenknecht_advisor = 1 and wagenknecht_left = 0
+new-page: true 
+
+= Sahra Wagenknecht
+
+Fame: [+ wagenknecht_advisor_fame +]
+Passive effect: Putinversteherin
+
+- @faction_strength
+- @old_socialism
+- @nichtwaehler
+- @snap_election
+- @root: Return to main
+
+@faction_strength
+title: faction strength
+subtitle: subt
+choose-if: advisor_action_timer <= 0 and oldleft_leader = "Wagenknecht"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if oldleft_leader != "Wagenknecht" : not the leader ?]
+on-arrival: advisor_action_timer = 6; oldleft_strength += 3*(wagenknecht_advisor_fame/100); wagenknecht_advisor_fame += 2; oldleft_dissent -= 2*(wagenknecht_advisor_fame/100);
+
+@old_socialism
+title: old socialism
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
+on-arrival: advisor_action_timer = 6; beweli_dissent += 1; emali_dissent += 1; greens_relation -= 2; social_moderation += 0.4*(wagenknecht_advisor_fame/100); foreign_moderation -= 0.4*(wagenknecht_advisor_fame/100); issue_feminism -= 0.4*(wagenknecht_advisor_fame/100); issue_antimilitarism += 0.4*(wagenknecht_advisor_fame/100); wagenknecht_advisor_fame += 2; oldleft_dissent -= 2 if oldleft_leader = "Wagenknecht";
+
+@nichtwaehler
+title: nichtwaehler
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; east_linke += 2*(wagenknecht_advisor_fame/100)*(1-dissent); urban_linke += 1*(wagenknecht_advisor_fame/100)*(1-dissent); pro_status_quo -= 1; wagenknecht_advisor_fame += 2;
