@@ -25,7 +25,7 @@ on-arrival: advisor_action_timer = 6; oldleft_strength += 3*(wagenknecht_advisor
 @old_socialism
 title: old socialism
 subtitle: subt
-choose-if: advisor_action_timer <= 0
+choose-if: advisor_action_timer <= 0 and wagenknecht_advisor = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
 on-arrival: advisor_action_timer = 6; beweli_dissent += 1; emali_dissent += 1; greens_relation -= 2; social_moderation += 0.4*(wagenknecht_advisor_fame/100); foreign_moderation -= 0.4*(wagenknecht_advisor_fame/100); issue_feminism -= 0.4*(wagenknecht_advisor_fame/100); issue_antimilitarism += 0.4*(wagenknecht_advisor_fame/100); wagenknecht_advisor_fame += 2; oldleft_dissent -= 2 if oldleft_leader = "Wagenknecht";
 
