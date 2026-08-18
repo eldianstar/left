@@ -1,0 +1,37 @@
+title: Amira Mohamed Ali
+is-pinned-card: true
+tags: advisor, oldleft
+card-image: img/portraits/BraunOtto.jpg
+view-if: wagenknecht_advisor = 1 and wagenknecht_left = 0
+new-page: true 
+
+= Amira Mohamed Ali
+
+Fame: [+ mohamedali_advisor_fame +]
+
+
+- @support_wagenknecht
+- @rrgreen_talks
+- @against_status_quo
+- @root: Return to main
+
+@support_wagenknecht
+title: support sahra
+subtitle: subt
+choose-if: advisor_action_timer <= 0 and oldleft_leader = "Wagenknecht"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if oldleft_leader != "Wagenknecht" : not the leader ?]
+on-arrival: advisor_action_timer = 6; wagenknecht_advisor_fame += 2*(mohamedali_advisor_fame/100); mohamedali_advisor_fame += 2; oldleft_strength += 1;
+
+@rrgreen_talks
+title: talks
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
+on-arrival: advisor_action_timer = 6; greens_relation += 2*(mohamedali_advisor_fame/100); pragmatist_dissent -= 1; spd_relation += 2*(mohamedali_advisor_fame/100); mohamedali_advisor_fame += 2;
+
+@against_status_quo
+title: against st.quo
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; pro_status_quo -= 2*(mohamedali_advisor_fame/100); beweli_strength += 1; oldleft_strength += 1; mohamedali_advisor_fame += 2;
