@@ -2,7 +2,7 @@ title: Amira Mohamed Ali
 is-pinned-card: true
 tags: advisor, oldleft
 card-image: img/portraits/BraunOtto.jpg
-view-if: wagenknecht_advisor = 1 and wagenknecht_left = 0
+view-if: mohamedali_advisor = 1
 new-page: true 
 
 = Amira Mohamed Ali
