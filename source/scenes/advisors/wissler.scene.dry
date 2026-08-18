@@ -5,33 +5,33 @@ card-image: img/portraits/BraunOtto.jpg
 view-if: wissler_advisor = 1
 new-page: true 
 
-= Sahra Wagenknecht
+= Janine Wissler
 
-Fame: [+ wagenknecht_advisor_fame +]
-Passive effect: Putinversteherin
+Fame: [+ wissler_advisor_fame +]
+Passive effect: Marx 21
 
-- @faction_strength
-- @old_socialism
-- @nichtwaehler
+- @radicalize_party
+- @attack_govt
+- @strengthen_sl
 - @root: Return to main
 
-@faction_strength
-title: faction strength
+@radicalize_party
+title: radicalize
 subtitle: subt
-choose-if: advisor_action_timer <= 0 and oldleft_leader = "Wagenknecht"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if oldleft_leader != "Wagenknecht" : not the leader ?]
-on-arrival: advisor_action_timer = 6; oldleft_strength += 3*(wagenknecht_advisor_fame/100); wagenknecht_advisor_fame += 2; oldleft_dissent -= 2*(wagenknecht_advisor_fame/100);
+choose-if: advisor_action_timer <= 0 and wissler_advisor == 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; foreign_moderation -= 0.5*(wissler_advisor_fame/100); social_moderation -= 0.5*(wissler_advisor_fame/100); econ_moderation -= 0.5*(wissler_advisor_fame/100); oldleft_strength += 2*(wissler_advisor_fame/100); beweli_strength += 2*(wissler_advisor_fame/100); pragmatist_dissent += 4; wissler_advisor_fame += 2;
 
-@old_socialism
-title: old socialism
-subtitle: subt
-choose-if: advisor_action_timer <= 0 and wagenknecht_advisor = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
-on-arrival: advisor_action_timer = 6; beweli_dissent += 1; emali_dissent += 1; greens_relation -= 2; social_moderation += 0.4*(wagenknecht_advisor_fame/100); foreign_moderation -= 0.4*(wagenknecht_advisor_fame/100); issue_feminism -= 0.4*(wagenknecht_advisor_fame/100); issue_antimilitarism += 0.4*(wagenknecht_advisor_fame/100); wagenknecht_advisor_fame += 2; oldleft_dissent -= 2 if oldleft_leader = "Wagenknecht";
-
-@nichtwaehler
-title: nichtwaehler
+@attack_govt
+title: attack govt
 subtitle: subt
 choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
+on-arrival: advisor_action_timer = 6; pro_status_quo -= 3*(wissler_advisor_fame/100); greens_relation -= 2; spd_relation -= 2; greens_relation -= 3 if (greens_in_government); spd_relation -= 3 if (spd_in_government); youth_linke += ((100-status_quo)/100)*(wissler_advisor_fame/100); urban_linke += ((100-status_quo)/100)*(wissler_advisor_fame/100); east_linke += ((100-status_quo)/100)*(wissler_advisor_fame/100); wissler_advisor_fame += 2;
+
+@strengthen_sl
+title: soz.li
+subtitle: subt
+choose-if: advisor_action_timer <= 0 and wissler_advisor == 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; east_linke += 2*(wagenknecht_advisor_fame/100)*(1-dissent); urban_linke += 1*(wagenknecht_advisor_fame/100)*(1-dissent); pro_status_quo -= 1; wagenknecht_advisor_fame += 2;
+on-arrival: advisor_action_timer = 6; wagenknecht_advisor_fame -= 2; tradeunion_contact += 0.6*(wissler_advisor_fame/100); urban_linke += ((100-status_quo)/100)*(wissler_advisor_fame/100); wissler_advisor_fame += 2; econ_moderation -= 0.2*(wissler_advisor_fame/100); 
