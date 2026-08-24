@@ -125,6 +125,8 @@ Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
 Q.interior_police_loyalty = 0.45;
 
+Q.police_defunds = 0;
+
 // The state of the country
 
 // popular opinion
