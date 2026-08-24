@@ -1,0 +1,37 @@
+title: Nicole Gohlke
+is-pinned-card: true
+tags: advisor, beweli
+card-image: img/portraits/BraunOtto.jpg
+view-if: gohlke_advisor = 1
+new-page: true 
+
+= Nicole Gohlke
+
+Fame: [+ gohlke_advisor_fame +]
+
+- @campaign_youth
+- @radicalize_foreign
+- @education
+- @root: Return to main
+
+@campaign_youth
+title: faction 
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; youth_linke += 2*(gohlke_advisor_fame/100); gohlke_advisor_fame += 2;
+
+@radicalize_foreign
+title: radicalize foreign
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; foreign_moderation -= 0.5*(gohlke_advisor_fame/100); gohlke_advisor_fame += 2; pragmatist_dissent += 1; issue_antimilitarism += 0.2*(gohlke_advisor_fame/100);
+
+@issues
+title: education
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; gohlke_advisor_fame += 2;
+go-to: education_science
