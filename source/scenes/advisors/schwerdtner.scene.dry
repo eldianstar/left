@@ -1,0 +1,46 @@
+title: Ines Schwerdtner
+is-pinned-card: true
+tags: advisor, beweli
+card-image: img/portraits/BraunOtto.jpg
+view-if: schwerdtner_advisor = 1
+new-page: true 
+
+= Ines Schwerdtner
+
+Fame: [+ schwerdtner_advisor_fame +]
+Passive effect: Jakobinerin
+
+- @increase_faction_beweli
+- @issues
+- @jacobin
+- @attack_govt
+- @root: Return to main
+
+@increase_faction_beweli
+title: faction 
+subtitle: subt
+choose-if: advisor_action_timer <= 0 and schwerdtner_advisor == 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; beweli_strength += 3*(schwerdtner_advisor_fame/100); schwerdtner_advisor_fame += 2; beweli_dissent -= 2*(schwerdtner_advisor_fame/100);
+
+@issues
+title: issues
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; schwerdtner_advisor_fame += 2;
+go-to: issues
+
+@jacobin
+title: jacobin
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; newspapers += 1*(schwerdtner_advisor_fame/100); urban_linke += 0.2*(schwerdtner_advisor_fame/100); schwerdtner_advisor_fame += 2;
+
+@attack_govt
+title: attack govt
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
+on-arrival: advisor_action_timer = 6; pro_status_quo -= 3*(schwerdtner_advisor_fame/100); greens_relation -= 3 if (greens_in_government); spd_relation -= 3 if (spd_in_government); cdu_relation -= 3 if (cdu_in_government); fdp_relation -= 3 if (fdp_in_government); youth_linke += ((100-status_quo)/100)*(schwerdtner_advisor_fame/100); urban_linke += ((100-status_quo)/100)*(schwerdtner_advisor_fame/100); east_linke += ((100-status_quo)/100)*(schwerdtner_advisor_fame/100); beweli_strength += 1; pragmatist_strength -= 1; schwerdtner_advisor_fame += 2;
