@@ -1,0 +1,45 @@
+title: Caren Lay
+is-pinned-card: true
+tags: advisor, beweli
+card-image: img/portraits/BraunOtto.jpg
+view-if: lay_advisor = 1
+new-page: true 
+
+= Caren Lay
+
+Fame: [+ lay_advisor_fame +]
+Passive effect: 161
+
+- @rally_housing
+- @feminism
+- @housing
+- @root: Return to main
+
+@rally_housing
+title: rally housing
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; econ_moderation -= 0.1*(lay_advisor_fame/100); urban_linke += (issue_cost_of_living/5)*(lay_advisor_fame/100); east_linke += (issue_cost_of_living/5)*(lay_advisor_fame/100); lay_advisor_fame += 2;
+
+@feminism
+title: feminism
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; issue_feminism += 0.6*(lay_advisor_fame/100); lay_advisor_fame += 2; social_moderation -= 0.1;
+
+@housing
+title: housing
+subtitle: subt
+choose-if: advisor_action_timer <= 0 and housing_minister_party = "LINKE"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if housing_minister_party != "LINKE" : We do not control the Housing Ministry. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; lay_advisor_fame += 2;
+go-to: housing
+
+@attack_right
+title: attack right
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
+on-arrival: advisor_action_timer = 6; youth_cdu -= 0.6*(lay_advisor_fame/100); youth_afd -= 0.6*(lay_advisor_fame/100); youth_linke += 1.2*(lay_advisor_fame/100); lay_advisor_fame += 2;
