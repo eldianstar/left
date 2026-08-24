@@ -1,0 +1,46 @@
+title: Katja Kipping
+is-pinned-card: true
+tags: advisor, beweli
+card-image: img/portraits/BraunOtto.jpg
+view-if: kipping_advisor = 1
+new-page: true 
+
+= Luigi kipping
+
+Fame: [+ kipping_advisor_fame +]
+Passive effect: Mittelerde
+
+- @diffuse_dissent
+- @radicalize_socioeconomic
+- @contact_greens
+- @labor_affairs
+- @root: Return to main
+
+@diffuse_dissent
+title: dissent
+subtitle: subt
+choose-if: advisor_action_timer <= 0 and kipping_advisor == 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; oldleft_dissent -= 4*(kipping_advisor_fame/100); beweli_dissent -= 4*(kipping_advisor_fame/100); emali_dissent -= 4*(kipping_advisor_fame/100); pragmatist_dissent -= 4*(kipping_advisor_fame/100); kipping_advisor_fame += 2;
+
+@radicalize_socioeconomic
+title: radicalize soc and econ
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; social_moderation -= 0.3*(kipping_advisor_fame/100); econ_moderation -= 0.3*(kipping_advisor_fame/100); pragmatist_dissent += 1; kipping_advisor_fame += 2;
+
+@contact_greens
+title: rrgreen contact
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; greens_relation += 2*(kipping_advisor_fame/100); spd_relation += 2*(kipping_advisor_fame/100); kipping_advisor_fame += 2;
+
+@labor_affairs
+title: labor
+subtitle: subt
+choose-if: advisor_action_timer <= 0 and labor_minister_party == "LINKE"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if labor_minister_party != "LINKE" : We do not control the Labor Ministry. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; kipping_advisor_fame += 2;
+go-to: labor_rights
