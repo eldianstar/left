@@ -1,8 +1,8 @@
-title: [? if not dnef_existed: Scheming?][? if dnef_existed: The House of Cards?]
+title: The Party
 new-page: true
 is-special: true
 
-= [? if not dnef_existed: Scheming?][? if dnef_existed: The House of Cards?]
+= The Party
 
 [? if not dnef_existed: <div style="text-align: center;">President: Paul von Hindenburg (<span style="color: #808080;">I</span>)</div> ?]
 [? if not dnef_existed: <div><img src="img/portraits/hindenburger.jpg" alt="Paul von Hindenburg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div> ?]
