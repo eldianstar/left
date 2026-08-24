@@ -1,0 +1,39 @@
+title: Clara Bünger
+is-pinned-card: true
+tags: advisor, beweli
+card-image: img/portraits/BraunOtto.jpg
+view-if: buenger_advisor = 1
+new-page: true 
+
+= Clara Bünger
+
+Fame: [+ buenger_advisor_fame +]
+Passive effect: Antirassismus
+
+- @promigration
+- @migration
+- @interior
+- @root: Return to main
+  
+@promigration
+title: promigration
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; issue_migration -= 0.6*(buenger_advisor_fame/100); buenger_advisor_fame += 2; 
+
+@migration
+title: migration
+subtitle: subt
+choose-if: advisor_action_timer <= 0 and interior_minister_party = "LINKE"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if interior_minister_party != "LINKE" : We do not control the Interior Ministry. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; buenger_advisor_fame += 2;
+// go-to TODO
+
+@interior
+title: interior
+subtitle: subt
+choose-if: advisor_action_timer <= 0 and interior_minister_party = "LINKE"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if interior_minister_party != "LINKE" : We do not control the Interior Ministry. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; buenger_advisor_fame += 2;
+go-to: police
