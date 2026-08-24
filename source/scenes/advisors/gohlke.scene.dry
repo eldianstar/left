@@ -28,7 +28,7 @@ choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; foreign_moderation -= 0.5*(gohlke_advisor_fame/100); gohlke_advisor_fame += 2; pragmatist_dissent += 1; issue_antimilitarism += 0.2*(gohlke_advisor_fame/100);
 
-@issues
+@education
 title: education
 subtitle: subt
 choose-if: advisor_action_timer <= 0
