@@ -13,6 +13,7 @@ The Interior Ministry controls internal security throughout the German Republic.
 As with the state police units and the Reichswehr, the internal police tends to be <span style="color: #808080;">reactionary</span>, and has serious issues with loyalty to the elected government of the Republic.
 
 - @loyalty: Improve the loyalty of the Interior Ministry forces.
+- @defund_police: defund the police
 - @investigate_corruption: Investigate corruption by big businesses.
 - @investigate_far_right: persecute far right
 - @verfassung_influence: influence verfassungschutz
@@ -26,6 +27,11 @@ As with the state police units and the Reichswehr, the internal police tends to 
 on-arrival: interior_police_loyalty += 0.1; beweli_dissent += 1; cdu_relation -= 1;
 
 Current interior police loyalty: [+ interior_police_loyalty : loyalty +]
+
+@defund_police
+view-if: social_moderation < 7 and interior_police_strength >= 7
+subtitle: +1 budget.
+on-arrival: police_defunds += 1; interior_police_strength -= 7; interior_police_loyalty -= 0.1; budget += 1; cdu_relation -= 1; bsw_relation -= 1; social_moderation -= 0.3;
 
 @investigate_corruption
 choose-if: econ_moderation < 9
