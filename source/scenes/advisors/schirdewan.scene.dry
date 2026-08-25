@@ -1,0 +1,37 @@
+title: Martin Schirdewan
+is-pinned-card: true
+tags: advisor, oldleft
+card-image: img/portraits/BraunOtto.jpg
+view-if: schirdewan_advisor = 1
+new-page: true 
+
+= Martin Schirdewan
+
+Fame: [+ schirdewan_advisor_fame +]
+
+- @moderate_foreign
+- @foreign_party
+- @ukraine
+- @root: Return to main
+
+@moderate_foreign
+title: moderate foreign
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; foreign_moderation += 0.5*(schirdewan_advisor_fame/100); schirdewan_advisor_fame += 2; greens_relation += 2;
+
+@foreign_party
+title: intern relations
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; schirdewan_advisor_fame += 2;
+go-to: international_relations
+
+@ukraine
+title: ukraine
+subtitle: subt
+choose-if: advisor_action_timer <= 0 and foreign_minister_party == "LINKE"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if foreign_minister_party != "LINKE" : We do not control the Foreign Ministry. ?]
+on-arrival: advisor_action_timer = 6; schirdewan_advisor_fame += 2; last_advisor_action = 1;
