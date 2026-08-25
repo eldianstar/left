@@ -1,0 +1,37 @@
+title: Jan van Aken
+is-pinned-card: true
+tags: advisor, emali
+card-image: img/portraits/BraunOtto.jpg
+view-if: vanaken_advisor = 1
+new-page: true 
+
+= Jan van Aken
+
+Fame: [+ vanaken_advisor_fame +]
+Passive effect: Ökosozialismus
+
+- @environ
+- @rally_foreign
+- @environ_affairs
+- @root: Return to main
+
+@environ
+title: environ
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; issue_environment += 0.6*(vanaken_advisor_fame/100); youth_linke += 0.1*(vanaken_advisor_fame/100); vanaken_advisor_fame += 2;
+
+@rally_foreign
+title: rally foreign
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; youth_linke += (0.1+issue_antimilitarism)*(vanaken_advisor_fame/100)*(10-social_moderation)/20; east_linke += (0.1+issue_antimilitarism)*(vanaken_advisor_fame/100)*(10-social_moderation)/40; urban_linke += (0.1+issue_antimilitarism)*(vanaken_advisor_fame/100)*(10-social_moderation)/50; vanaken_advisor_fame += 2;
+
+@environ_affairs
+title: environ affairs
+subtitle: subt
+choose-if: advisor_action_timer <= 0 and environment_minister_party == "LINKE"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if environment_minister_party != "LINKE" : We do not control the Ministry of Environmental Affairs. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1;
