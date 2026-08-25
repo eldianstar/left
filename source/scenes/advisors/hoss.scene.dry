@@ -1,0 +1,21 @@
+title: Luke Hoss
+is-pinned-card: true
+tags: advisor, emali
+card-image: img/portraits/BraunOtto.jpg
+view-if: hoss_advisor = 1
+new-page: true 
+
+= Luke Hoss
+
+Fame: [+ hoss_advisor_fame +]
+
+- @justice
+- @root: Return to main
+
+@justice
+title: justice
+subtitle: subt
+choose-if: advisor_action_timer <= 0 and justice_minister_party == "LINKE"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if justice_minister_party != "LINKE" : We do not control the Foreign Ministry. ?]
+on-arrival: advisor_action_timer = 6; hoss_advisor_fame += 2; last_advisor_action = 1;
+go-to: judiciary
