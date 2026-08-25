@@ -377,7 +377,7 @@ if (Q.bsw_b) {
     });
 }
 
-if (Q.linke_b) {
+if (Q.linke_b >= 5) {
     data.push({
         "id": "linke",
         "legend": "Left",
