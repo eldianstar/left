@@ -127,9 +127,9 @@ on-arrival: {!
         Q['old_' + party + '_b'] = Q[party + '_b']; // Store the original b value for comparison
         
         // Handle constitutional reform logic: set the party's share to 0 based on conditions
-        if ((Q.constitutional_reform > 0 &&
+        if (Q.constitutional_reform > 0 &&
              (Q[party + '_votes'] < Q.electoral_threshold || 
-             (Q.electoral_threshold > 1 && party === 'other'))) 
+             (Q.electoral_threshold > 1 && party === 'other')) 
             || Q[party + '_banned']) {
             Q[party + '_b'] = 0;
         } else {
