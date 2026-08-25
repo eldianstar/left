@@ -139,7 +139,7 @@ p {
 }
 
 p.dnvp {
-  display: none;
+  display: block;
 }
 
 p.other {
@@ -258,7 +258,7 @@ blockquote+blockquote.attribution {
 .tools.right {
   float: right;
   right: 0.4em;
-  display: none;
+  display: block;
   margin-right: -6em;
 }
 
@@ -339,7 +339,7 @@ blockquote+blockquote.attribution {
 }
 
 #scheming_tab {
-  display: none;
+  display: block;
 }
 
 
@@ -621,7 +621,7 @@ img {
   }
 
   .tools.right {
-    display: none;
+    display: block;
     float: none;
     right: 0;
     marginRight: -6em;
