@@ -108,7 +108,7 @@ on-arrival:
 [? if dnef_existed: </div> ?]
 
 - @party_leadership
-- #advisors
+- #advisor
 
 @party_leadership
 title: Party Affairs
