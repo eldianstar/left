@@ -5,7 +5,7 @@ on-arrival:
 
 = Party Leadership
 
-[? if advisor_action_timer <= 0 : Advisors - an action is available ?][? if advisor_action_timer == 1 : Advisors - next action available in 1 month ?][? if advisor_action_timer > 1 : Advisors - next action available in [+ Q.advisor_action_timer +] months ?]  
+[? if advisor_action_timer <= 0 : Advisors - an action is available ?][? if advisor_action_timer == 1 : Advisors - next action available in 1 month ?][? if advisor_action_timer > 1 : Advisors - next action available in [+ advisor_action_timer +] months ?]  
 
 #advisor
 
