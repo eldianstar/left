@@ -1,6 +1,27 @@
 
 
-= Images (general):
+= Images (eldianstar/linke mod):
+
+ReichinnekHeidi.jpg: https://upload.wikimedia.org/wikipedia/commons/1/1f/2025-01-18_Au%C3%9Ferordentlicher_Bundesparteitag_Die_Linke_2025_in_Berlin_by_Sandro_Halank%E2%80%93197.jpg?utm_source=de.wikipedia.org&utm_campaign=index&utm_content=original
+
+WagenknechtSahra.jpg: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/2018-06-09_Bundesparteitag_Die_Linke_2018_in_Leipzig_by_Sandro_Halank%E2%80%93126.jpg/1280px-2018-06-09_Bundesparteitag_Die_Linke_2018_in_Leipzig_by_Sandro_Halank%E2%80%93126.jpg?utm_source=de.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+
+MohamedAliAmira.jpg: https://www.bundestag.de/resource/image/864512/3x4/864/1152/3b30decd2472b111b51d41423729e624/043A7281ADF6F82814D990E2BA5F4473/mohamed_ali_amira_gross.jpg
+
+WisslerJanine.jpg: https://www.fr.de/assets/images/25/116/25116480-janine-wissler-hier-auf-dem-landesparteitag-der-linken-in-thueringen-im-september-2020-3Xec.jpg
+
+RiexingerBernd.jpg: https://upload.wikimedia.org/wikipedia/commons/a/a1/2018-06-09_Bundesparteitag_Die_Linke_2018_in_Leipzig_by_Sandro_Halank%E2%80%93085.jpg?utm_source=de.wikipedia.org&utm_campaign=index&utm_content=original
+
+PellmannSoeren.jpg: https://www.zdf.de/assets/teaser-phoenix-soeren-pellmann-linke-vor-uns-liegen-harte-kaempfe-5211386-100~640x720?cb=1781897130635
+
+GohlkeNicole.jpg: https://www.bundestag.de/resource/image/1052596/3x4/864/1152/8dcddc1ed093523467a25676cf983a27/572BEDD23E9C4FEE9D10567F12496A26/gohlke_nicole_gross.jpg
+
+SchwerdtnerInes.jpg: https://www.bundestag.de/resource/image/1062006/3x4/864/1152/13f9ad993222ddd706e6a876116623d3/2BC550CCE48B200772E94CC196EAC1FF/schwerdtner_ines.jpg
+
+PantisanoLuigi.jpg: https://upload.wikimedia.org/wikipedia/commons/6/68/Luigi_Pantisano_speaking_at_Erneuerbare_Energien_verteidigen_demonstration_Berlin_2026-04-18_01_%28cropped_2%29.jpg?utm_source=de.wikipedia.org&utm_campaign=index&utm_content=original
+
+
+= Images (redautumn&originn0 code):
 
 map.jpg, map_2.jpg: Anonymous. Meyers Blitz-Lexikon. English:  scanned by User:LA2 in September 2005, Wikimedia Commons, https://commons.wikimedia.org/wiki/File:LA2-Blitz-0083.jpg. Accessed 3 Feb. 2024. Public Domain
 
