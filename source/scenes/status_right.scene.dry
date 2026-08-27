@@ -7,6 +7,7 @@ on-arrival:
 
 [? if advisor_action_timer <= 0 : Advisors - an action is available ?][? if advisor_action_timer == 1 : Advisors - next action available in 1 month ?][? if advisor_action_timer > 1 : Advisors - next action available in [+ advisor_action_timer +] months ?]  
 
+<button type="button" onclick="go-to: wissler.scene.dry">Click Me!</button>
 
 [? if not dnef_existed: <div style="text-align: center;">President: Paul von Hindenburg (<span style="color: #808080;">I</span>)</div> ?]
 [? if not dnef_existed: <div><img src="img/portraits/hindenburger.jpg" alt="Paul von Hindenburg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div> ?]
