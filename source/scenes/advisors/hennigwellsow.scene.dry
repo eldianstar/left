@@ -1,0 +1,36 @@
+title: Susanne Hennig-Wellsow
+is-pinned-card: true
+tags: advisor, pragmatist
+card-image: img/portraits/BraunOtto.jpg
+view-if: hennigwellsow_advisor = 1
+new-page: true 
+
+= Susanne Hennig-Wellsow
+
+Fame: [+ hennigwellsow_advisor_fame +]
+
+- @rrgreen
+- @moderate_foreign
+- @defend_democracy
+- @root: Return to main
+
+@rrgreen
+title: rrgreen contact
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; greens_relation += 2.5*(bartsch_advisor_fame/100); spd_relation += 2.5*(bartsch_advisor_fame/100); bartsch_advisor_fame += 2;
+
+@moderate_foreign
+title: moderate
+subtitle: subt
+choose-if: advisor_action_timer <= 0 and hennigwellsow_advisor == 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
+on-arrival: advisor_action_timer = 6; foreign_moderation += 0.5*(hennigwellsow_advisor_fame/100); pragmatist_dissent -= 1*(hennigwellsow_advisor_fame/100); greens_relation += 2*(hennigwellsow_advisor_fame/100); spd_relation += 1*(hennigwellsow_advisor_fame/100); cdu_relation += 1*(hennigwellsow_advisor_fame/100); issue_antimilitarism -= 0.2; hennigwellsow_advisor_fame += 2;
+
+@defend_democracy
+title: radical realpolitik
+subtitle: subt
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; pragmatist_strength += 1*(hennigwellsow_advisor_fame/100); pro_status_quo += 5*(hennigwellsow_advisor_fame/100); hennigwellsow_advisor_fame += 2;
