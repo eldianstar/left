@@ -20,28 +20,34 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-<span style="color: #c00000;">**Left**</span> position: [? if linke_toleration : toleration ?][? if linke_in_government : in government - ?][? if linke_toleration == 0 and linke_in_government == 0 : opposition ?]
-[? if in_rrgreen_coalition and linke_in_government: <span style="color: #000000;">Red</span><span style="color: #DD0000;">red</span><span style="color: #FFCC00;">green</span> Coalition ?][? if in_left_front and linke_in_government: <span style="color: #c00000;">Socialist</span>-<span style="color: #000000;">coalitionc</span> ?][? if in_linke_majority and linke_in_government: <span style="color: #c00000;">**Linke**</span> majority ?]
+<span style="color: #BC2D72;">**Die Linke**</span> position: [? if linke_toleration : toleration ?][? if linke_in_government : in government - ?][? if linke_toleration == 0 and linke_in_government == 0 : opposition ?]
+[? if in_rrgreen_coalition and linke_in_government: <span style="color: #BC2D72;">Red</span><span style="color: #E3000F;">red</span><span style="color: #1AA037;">green</span> Coalition ?][? if in_left_front and linke_in_government: <span style="color: #BC2D72;">Socialist</span>-<span style="color: #4C0B5F;">coalitionc</span> ?][? if in_linke_majority and linke_in_government: <span style="color: #BC2D72;">**Linke**</span> majority ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [+ president +]
+President: **[+ president +]**
 
-Chancellor: [+ chancellor +]
+Chancellor: [? if chancellor_party = 'LINKE' : <span style="color: #BC2D72;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'BSW' : <span style="color: #4C0B5F;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'Greens' : <span style="color: #1AA037;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'SPD' : <span style="color: #E3000F;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'FDP' : <span style="color: #FFD600;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'CDU' : <span style="color: #000000;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'CSU' : <span style="color: #003863;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'AfD' : <span style="color: #0489db;">**[+ chancellor +]**</span> ?]
 
 Bundestag composition:
 
 # 1928: 30, 1930: 25, 1932: 22
 
-<span class="tooltip-text" title="The Left" style="color: #c00000;">**Left**</span>: [+ linke_b +]%
-[? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: #c00000;">**BSW**</span>: [+ bsw_b +]% ?]
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**SPD**</span>: [+ spd_b +]%
-<span class="tooltip-text" title="Alliance 90/The Greens" style="color: #c00000;">**B90/Greens**</span>: [+ greens_b +]%
-<span class="tooltip-text" title="Free Democratic Party" style="color: #c00000;">**FDP**</span>: [+ fdp_b +]%
-<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #c00000;">**CDU/CSU**</span>: [+ cdu_b +]%
-<span class="tooltip-text" title="Alternative for Germany" style="color: #c00000;">**AfD**</span>: [+ afd_b +]%
+<span class="tooltip-text" title="The Left" style="color: #BC2D72;">**Linke**</span>: [+ linke_b +]%
+
+[? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: #4C0B5F;">**BSW**</span>: [+ bsw_b +]% ?]
+
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #E3000F;">**SPD**</span>: [+ spd_b +]%
+
+<span class="tooltip-text" title="Alliance 90/The Greens" style="color: #1AA037;">**B90/Greens**</span>: [+ greens_b +]%
+
+<span class="tooltip-text" title="Free Democratic Party" style="color: #FFD600;">**FDP**</span>: [+ fdp_b +]%
+
+<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #000000;">**CDU/CSU**</span>: [+ cdu_b +]%
+
+<span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: [+ afd_b +]%
 
 # 1928: 9, 1930: 10
 **Others**: [+ other_b +]%
@@ -62,17 +68,17 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
-[? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: #c00000;">**BSW**</span>: [+ bsw_relation : relationships +] ?]
+[? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: #4C0B5F;">**BSW**</span>: [+ bsw_relation : relationships +] ?]
 
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**SPD**</span>: [+ spd_relation : relationships +]
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #E3000F;">**SPD**</span>: [+ spd_relation : relationships +]
 
-<span class="tooltip-text" title="Alliance 90/The Greens" style="color: #c00000;">**B90/Greens**</span>: [+ greens_relation : relationships +]
+<span class="tooltip-text" title="Alliance 90/The Greens" style="color: #1AA037;">**B90/Greens**</span>: [+ greens_relation : relationships +]
 
-<span class="tooltip-text" title="Free Democratic Party" style="color: #c00000;">**FDP**</span>: [+ fdp_relation : relationships +]
+<span class="tooltip-text" title="Free Democratic Party" style="color: #FFD600;">**FDP**</span>: [+ fdp_relation : relationships +]
 
-<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #c00000;">**CDU/CSU**</span>: [+ cdu_relation : relationships +]
+<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #000000;">**CDU/CSU**</span>: [+ cdu_relation : relationships +]
 
-<span class="tooltip-text" title="Alternative for Germany" style="color: #c00000;">**AfD**</span>: [+ afd_relation : relationships +]
+<span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: [+ afd_relation : relationships +]
 
 = Party Leadership
 
@@ -136,47 +142,8 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if nvf_exist: <span class="tooltip-text" title="National People's Front" style="color: #142e20;">**NVF**</span>: none ?]
 
-= Internal Factions of the <span style="color: #c00000;">**SPD**</span>
-
-{!<span class="tooltip-text" title="oldleft text">Old Left</span>!} strength: [+ oldleft_strength : strength +], dissent: [+ oldleft_dissent : dissent +]
-
-{!<span class="tooltip-text" title="beweli text">Movement Left</span>!} strength: [+ beweli_strength : strength +], dissent: [+ beweli_dissent : dissent +]
-
-{!<span class="tooltip-text" title="emali text">Centre</span>!} strength: [+ emali_strength : strength +], dissent: [+ emali_dissent : dissent +]
-
-{!<span class="tooltip-text" title="pragmatist text">Pragmatists</span>!} strength: [+ pragmatist_strength : strength +], dissent: [+ pragmatist_dissent : dissent +]
-
 @paramilitaries
 title: Party
-
-= Party Leadership
-
-Party Leadership: xyz
-
-Bundestag Leadership: xyz
-
-= Internal Factions of the <span style="color: #c00000;">**SPD**</span>
-
-{!<span class="tooltip-text" title="oldleft text">Old Left</span>!} <br>
-Strength: [+ oldleft_strength : strength +] <br>
-Dissent: [+ oldleft_dissent : dissent +] <br>
-Leader: [+ oldleft_leader +]
-
-{!<span class="tooltip-text" title="beweli text">Movement Left</span>!} <br>
-Strength: [+ beweli_strength : strength +] <br>
-Dissent: [+ beweli_dissent : dissent +] <br>
-Leader: [+ beweli_leader +]
-
-{!<span class="tooltip-text" title="emali text">Centre</span>!} <br>
-Strength: [+ emali_strength : strength +] <br>
-Dissent: [+ emali_dissent : dissent +] <br>
-Leader: [+ emali_leader +]
-
-{!<span class="tooltip-text" title="pragmatist text">Pragmatists</span>!} <br>
-Strength: [+ pragmatist_strength : strength +] <br>
-Dissent: [+ pragmatist_dissent : dissent +] <br>
-Leader: [+ pragmatist_leader +]
-
 
 @polls
 on-arrival: {!
@@ -187,13 +154,13 @@ Q.pro_status_quo_disp = Math.floor(Q.pro_status_quo);
 
 (if the election were to be held now):
 
-<span class="tooltip-text" title="The Left" style="color: #c00000;">**Left**</span>: [+ linke_votes +]%
-[? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: #c00000;">**BSW**</span>: [+ bsw_votes +]% ?]
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**SPD**</span>: [+ spd_votes +]%
-<span class="tooltip-text" title="Alliance 90/The Greens" style="color: #c00000;">**B90/Greens**</span>: [+ greens_votes +]%
-<span class="tooltip-text" title="Free Democratic Party" style="color: #c00000;">**FDP**</span>: [+ fdp_votes +]%
-<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #c00000;">**CDU/CSU**</span>: [+ cdu_votes +]%
-<span class="tooltip-text" title="Alternative for Germany" style="color: #c00000;">**AfD**</span>: [+ afd_votes +]%
+<span class="tooltip-text" title="The Left" style="color: #BC2D72;">**Linke**</span>: [+ linke_votes +]% <br>
+[? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: #4C0B5F;">**BSW**</span>: [+ bsw_votes +]% ?] <br>
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #E3000F;">**SPD**</span>: [+ spd_votes +]% <br>
+<span class="tooltip-text" title="Alliance 90/The Greens" style="color: #1AA037;">**B90/Greens**</span>: [+ greens_votes +]% <br>
+<span class="tooltip-text" title="Free Democratic Party" style="color: #FFD600;">**FDP**</span>: [+ fdp_votes +]% <br>
+<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #000000;">**CDU/CSU**</span>: [+ cdu_votes +]% <br>
+<span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: [+ afd_votes +]% <br>
 **Others**: [+ other_votes +]%
 
 Support for the Status Quo: [+ pro_status_quo_disp +]%
