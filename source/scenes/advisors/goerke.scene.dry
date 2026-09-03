@@ -12,7 +12,7 @@ Fame: [+ goerke_advisor_fame +]
 - @finance_affairs
 - @root: Return to main
 
-@faction_strength
+@finance_affairs
 title: faction
 subtitle: subt
 choose-if: advisor_action_timer <= 0 and finance_minister_party = "LINKE"
