@@ -1,0 +1,21 @@
+title: Christian Görke
+is-pinned-card: true
+tags: advisor, pragmatist
+card-image: img/portraits/BraunOtto.jpg
+view-if: goerke_advisor = 1
+new-page: true 
+
+= Christian Görke
+
+Fame: [+ goerke_advisor_fame +]
+
+- @finance_affairs
+- @root: Return to main
+
+@faction_strength
+title: faction
+subtitle: subt
+choose-if: advisor_action_timer <= 0 and finance_minister_party = "LINKE"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if finance_minister_party != "LINKE" : We do not control the Finance Ministry. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; goerke_advisor_fame += 2;
+go-to: fiscal_policy
