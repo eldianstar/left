@@ -5,6 +5,31 @@ on-arrival:
 
 = Party Leadership
 
+= Bundestag Leadership
+
+= Internal Factions
+
+{!<span class="tooltip-text" title="oldleft text" style="color: #4C0B5F;">Old Left</span>!} <br>
+Strength: [+ oldleft_strength : strength +] <br>
+Dissent: [+ oldleft_dissent : dissent +] <br>
+Leader: [+ oldleft_leader +]
+
+{!<span class="tooltip-text" title="beweli text" style="color: #BC2D72;">Movement Left</span>!} <br>
+Strength: [+ beweli_strength : strength +] <br>
+Dissent: [+ beweli_dissent : dissent +] <br>
+Leader: [+ beweli_leader +]
+
+{!<span class="tooltip-text" title="emali text" style="color: #E3000F;">Centre</span>!} <br>
+Strength: [+ emali_strength : strength +] <br>
+Dissent: [+ emali_dissent : dissent +] <br>
+Leader: [+ emali_leader +]
+
+{!<span class="tooltip-text" title="pragmatist text" style="color: #ff5500;">Pragmatists</span>!} <br>
+Strength: [+ pragmatist_strength : strength +] <br>
+Dissent: [+ pragmatist_dissent : dissent +] <br>
+Leader: [+ pragmatist_leader +]
+
+
 [? if not dnef_existed: <div style="text-align: center;">President: Paul von Hindenburg (<span style="color: #808080;">I</span>)</div> ?]
 [? if not dnef_existed: <div><img src="img/portraits/hindenburger.jpg" alt="Paul von Hindenburg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div> ?]
 [? if not dnef_existed: <p style="text-align: center;margin-bottom: 0;">Favorite: [? if schleicher_strength >= papen_strength: Kurt von Schleicher?][? if schleicher_strength < papen_strength: Franz von Papen?]</p> ?]
