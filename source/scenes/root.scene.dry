@@ -307,6 +307,18 @@ Q.party_support_records = [];
 Q.economic_records = [];
 
 
+
+// colors
+// linke #BC2D72
+// bsw #4C0B5F
+// spd #E3000F
+// greens #1AA037
+// fdp #FFD600
+// cdu #000000
+// csu #003863
+// afd #0489db
+// ssw #00277E
+
 // State of the government
 Q.president = "Steinmeier";
 // starting chancellor: Wilhelm Marx
