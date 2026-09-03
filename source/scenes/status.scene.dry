@@ -170,18 +170,18 @@ Support for the Status Quo: [+ pro_status_quo_disp +]%
             {!<th style = "font-size: 0.65em;">East</th>!}
         {!</tr>!}
         {!<tr>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_linke_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ urban_linke_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ rural_linke_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ upper_linke_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ east_linke_display +]%{!</td>!}
+            {!<td style="background-color: rgba(188, 45, 114, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_linke_display +]%{!</td>!}
+            {!<td style="background-color: rgba(188, 45, 114, 0.1); font-size: 0.85em;">!}[+ urban_linke_display +]%{!</td>!}
+            {!<td style="background-color: rgba(188, 45, 114, 0.1); font-size: 0.85em;">!}[+ rural_linke_display +]%{!</td>!}
+            {!<td style="background-color: rgba(188, 45, 114, 0.1); font-size: 0.85em;">!}[+ upper_linke_display +]%{!</td>!}
+            {!<td style="background-color: rgba(188, 45, 114, 0.1); font-size: 0.85em;">!}[+ east_linke_display +]%{!</td>!}
         {!</tr>!}
 [? if bsw_split :            
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_bsw_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ urban_bsw_display +]%{!</td>!}{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ rural_bsw_display +]%{!</td>!}{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ upper_bsw_display +]%{!</td>!}{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ east_bsw_display +]%{!</td>!}{!</td>!}
+            {!<td style="background-color: rgba(76, 11, 95, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_bsw_display +]%{!</td>!}
+            {!<td style="background-color: rgba(76, 11, 95, 0.1); font-size: 0.85em;">!}[+ urban_bsw_display +]%{!</td>!}{!</td>!}
+            {!<td style="background-color: rgba(76, 11, 95, 0.1); font-size: 0.85em;">!}[+ rural_bsw_display +]%{!</td>!}{!</td>!}
+            {!<td style="background-color: rgba(76, 11, 95, 0.1); font-size: 0.85em;">!}[+ upper_bsw_display +]%{!</td>!}{!</td>!}
+            {!<td style="background-color: rgba(76, 11, 95, 0.1); font-size: 0.85em;">!}[+ east_bsw_display +]%{!</td>!}{!</td>!}
         {!</tr>!} ?]
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_spd_display +]%{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ urban_spd_display +]%{!</td>!}
@@ -189,28 +189,28 @@ Support for the Status Quo: [+ pro_status_quo_disp +]%
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ upper_spd_display +]%{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ east_spd_display +]%{!</td>!}
         {!</tr>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_greens_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ urban_greens_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ rural_greens_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ upper_greens_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ east_greens_display +]%{!</td>!}
+            {!<td style="background-color: rgba(26, 160, 55, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_greens_display +]%{!</td>!}
+            {!<td style="background-color: rgba(26, 160, 55, 0.1); font-size: 0.85em;">!}[+ urban_greens_display +]%{!</td>!}
+            {!<td style="background-color: rgba(26, 160, 55, 0.1); font-size: 0.85em;">!}[+ rural_greens_display +]%{!</td>!}
+            {!<td style="background-color: rgba(26, 160, 55, 0.1); font-size: 0.85em;">!}[+ upper_greens_display +]%{!</td>!}
+            {!<td style="background-color: rgba(26, 160, 55, 0.1); font-size: 0.85em;">!}[+ east_greens_display +]%{!</td>!}
         {!</tr>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_fdp_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ urban_fdp_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ rural_fdp_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ upper_fdp_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ east_fdp_display +]%{!</td>!}
+            {!<td style="background-color: rgba(255, 214, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_fdp_display +]%{!</td>!}
+            {!<td style="background-color: rgba(255, 214, 0, 0.1); font-size: 0.85em;">!}[+ urban_fdp_display +]%{!</td>!}
+            {!<td style="background-color: rgba(255, 214, 0, 0.1); font-size: 0.85em;">!}[+ rural_fdp_display +]%{!</td>!}
+            {!<td style="background-color: rgba(255, 214, 0, 0.1); font-size: 0.85em;">!}[+ upper_fdp_display +]%{!</td>!}
+            {!<td style="background-color: rgba(255, 214, 0, 0.1); font-size: 0.85em;">!}[+ east_fdp_display +]%{!</td>!}
         {!</tr>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_cdu_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ urban_cdu_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ rural_cdu_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ upper_cdu_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ east_cdu_display +]%{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_cdu_display +]%{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 0, 0.1); font-size: 0.85em;">!}[+ urban_cdu_display +]%{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 0, 0.1); font-size: 0.85em;">!}[+ rural_cdu_display +]%{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 0, 0.1); font-size: 0.85em;">!}[+ upper_cdu_display +]%{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 0, 0.1); font-size: 0.85em;">!}[+ east_cdu_display +]%{!</td>!}
         {!</tr>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_afd_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ urban_afd_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ rural_afd_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ upper_afd_display +]%{!</td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ east_afd_display +]%{!</td>!}
+            {!<td style="background-color: rgba(4, 137, 219, 0.1); font-size: 0.85em; padding: 10px">!}[+ youth_afd_display +]%{!</td>!}
+            {!<td style="background-color: rgba(4, 137, 219, 0.1); font-size: 0.85em;">!}[+ urban_afd_display +]%{!</td>!}
+            {!<td style="background-color: rgba(4, 137, 219, 0.1); font-size: 0.85em;">!}[+ rural_afd_display +]%{!</td>!}
+            {!<td style="background-color: rgba(4, 137, 219, 0.1); font-size: 0.85em;">!}[+ upper_afd_display +]%{!</td>!}
+            {!<td style="background-color: rgba(4, 137, 219, 0.1); font-size: 0.85em;">!}[+ east_afd_display +]%{!</td>!}
         {!</tr>!}
     </table>
