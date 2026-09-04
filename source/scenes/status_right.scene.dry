@@ -9,22 +9,33 @@ on-arrival:
 
 = Internal Factions
 
-{!<span class="tooltip-text" title="oldleft text" style="color: #4C0B5F;">Old Left</span>!} <br>
+{!<span class="tooltip-text" title="oldleft text" style="color: #4C0B5F;">**Old Left**</span>!} <br>
+<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
+<img src="img/LogoAufstehen.jpg" alt="Aufstehen" style="width: 50%;">
+<img src="img/portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 50%;">
+</div>
+<div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
+<div style="flex: 1;">
+<p style="font-weight: bold;margin-bottom: 2px;">Aufstehen</p>
+</div>
+<div style="flex: 1;">
+<p style="font-weight: bold;margin-bottom: 2px;">Sahra Wagenknecht</p>
+</div>
 Strength: [+ oldleft_strength : strength +] <br>
 Dissent: [+ oldleft_dissent : dissent +] <br>
 Leader: [+ oldleft_leader +]
 
-{!<span class="tooltip-text" title="beweli text" style="color: #BC2D72;">Movement Left</span>!} <br>
+{!<span class="tooltip-text" title="beweli text" style="color: #BC2D72;">**Movement Left**</span>!} <br>
 Strength: [+ beweli_strength : strength +] <br>
 Dissent: [+ beweli_dissent : dissent +] <br>
 Leader: [+ beweli_leader +]
 
-{!<span class="tooltip-text" title="emali text" style="color: #E3000F;">Centre</span>!} <br>
+{!<span class="tooltip-text" title="emali text" style="color: #E3000F;">**Centre**</span>!} <br>
 Strength: [+ emali_strength : strength +] <br>
 Dissent: [+ emali_dissent : dissent +] <br>
 Leader: [+ emali_leader +]
 
-{!<span class="tooltip-text" title="pragmatist text" style="color: #ff5500;">Pragmatists</span>!} <br>
+{!<span class="tooltip-text" title="pragmatist text" style="color: #ff5500;">**Pragmatists**</span>!} <br>
 Strength: [+ pragmatist_strength : strength +] <br>
 Dissent: [+ pragmatist_dissent : dissent +] <br>
 Leader: [+ pragmatist_leader +]
