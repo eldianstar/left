@@ -1,7 +1,7 @@
 title: Sahra Wagenknecht
 is-pinned-card: true
 tags: advisor, oldleft
-card-image: img/portraits/BraunOtto.jpg
+card-image: img/_portraits/WagenknechtSahra.jpg
 view-if: wagenknecht_advisor = 1 and wagenknecht_left = 0
 new-page: true 
 
