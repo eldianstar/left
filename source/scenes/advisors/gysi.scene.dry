@@ -1,7 +1,7 @@
 title: Gregor Gysi
 is-pinned-card: true
 tags: advisor, pragmatist
-card-image: img/portraits/BraunOtto.jpg
+card-image: img/_portraits/GysiGregor.jpg
 view-if: gysi_advisor = 1
 new-page: true 
 
