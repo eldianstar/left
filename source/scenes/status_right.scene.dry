@@ -22,7 +22,7 @@ on-arrival:
 <div style="flex: 1;">
 <p style="font-weight: bold;margin-bottom: 2px;">Sahra Wagenknecht</p>
 </div>
-</div>
+</div> <br>
 
 Strength: [+ oldleft_strength : strength +] <br>
 Dissent: [+ oldleft_dissent : dissent +] <br>
