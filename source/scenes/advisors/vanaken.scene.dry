@@ -1,7 +1,7 @@
 title: Jan van Aken
 is-pinned-card: true
 tags: advisor, emali
-card-image: img/portraits/VanAkenJan.jpg
+card-image: img/_portraits/VanAkenJan.jpg
 view-if: vanaken_advisor = 1
 new-page: true 
 
