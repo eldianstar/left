@@ -20,6 +20,7 @@ SchwerdtnerInes.jpg: https://www.bundestag.de/resource/image/1062006/3x4/864/115
 
 PantisanoLuigi.jpg: https://upload.wikimedia.org/wikipedia/commons/6/68/Luigi_Pantisano_speaking_at_Erneuerbare_Energien_verteidigen_demonstration_Berlin_2026-04-18_01_%28cropped_2%29.jpg?utm_source=de.wikipedia.org&utm_campaign=index&utm_content=original
 
+LogoAufstehen.jpg: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Aufstehen_logo.svg/500px-Aufstehen_logo.svg.png?utm_source=de.wikipedia.org&utm_campaign=parser&utm_content=thumbnail
 
 = Images (redautumn&originn0 code):
 
