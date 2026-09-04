@@ -1,7 +1,7 @@
 title: Martin Schirdewan
 is-pinned-card: true
 tags: advisor, emali
-card-image: img/portraits/SchirdewanMartin.jpg
+card-image: img/_portraits/SchirdewanMartin.jpg
 view-if: schirdewan_advisor = 1
 new-page: true 
 
