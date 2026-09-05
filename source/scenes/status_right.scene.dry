@@ -10,7 +10,6 @@ on-arrival:
 = Internal Factions
 
 {!<span class="tooltip-text" title="oldleft text" style="text-align: center;font-weight: bold;color: #4C0B5F;">Old Left</span>!} <br>
-
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/LogoAufstehen.jpg" alt="Aufstehen" style="width: 50%;">
 <img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 50%;">
@@ -28,6 +27,7 @@ on-arrival:
 **Dissent: [+ oldleft_dissent : dissent +]** <br>
 
 {!<span class="tooltip-text" title="beweli text" style="text-align: center;font-weight: bold;color: #BC2D72;">Movement Left</span>!} <br>
+<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/LogoBewegungslinke.jpg" alt="Bewegungslinke" style="width: 50%;">
 <img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 50%;">
 </div>
@@ -43,6 +43,7 @@ on-arrival:
 **Dissent: [+ beweli_dissent : dissent +]** <br>
 
 {!<span class="tooltip-text" title="emali text" style="text-align: center;font-weight: bold;color: #E3000F;">Centre</span>!} <br>
+<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/LogoEmali.jpg" alt="Ema.Li" style="width: 50%;">
 <img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 50%;">
 </div>
@@ -58,6 +59,7 @@ on-arrival:
 **Dissent: [+ emali_dissent : dissent +]** <br>
 
 {!<span class="tooltip-text" title="pragmatist text" style="text-align: center;font-weight: bold;color: #ff5500;">Pragmatists</span>!} <br>
+<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/LogoFDS.jpg" alt="FDS" style="width: 50%;">
 <img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 50%;">
 </div>
