@@ -10,8 +10,8 @@ body {
   --tab-bg-color: #dedede;
   --tab-color: #ddd;
   --tab-hover-color: #ececec;
-  --card-border-color: #a86385; 
-  --card-bg-color: #e89eb5; 
+  --card-border-color: #9e8390; 
+  --card-bg-color: #f5d5df; 
   font-family: "Tahoma", Verdana, sans-serif;
   background-color: var(--bg-color);
   padding: 0;
