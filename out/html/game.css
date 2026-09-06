@@ -258,7 +258,7 @@ blockquote+blockquote.attribution {
 .tools.right {
   float: right;
   right: 0.4em;
-  display: block;
+  display: none;
   margin-right: -6em;
 }
 
@@ -625,7 +625,7 @@ img {
   }
 
   .tools.right {
-    display: block;
+    display: none;
     float: none;
     right: 0;
     marginRight: -6em;
