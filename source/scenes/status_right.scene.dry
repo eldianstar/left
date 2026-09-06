@@ -22,7 +22,6 @@ on-arrival:
 <p style="text-align: center;margin-bottom: 2px;">Wagenknecht</p>
 </div>
 </div> <br>
-
 Strength: [+ oldleft_strength : strength +] <br>
 Dissent: [+ oldleft_dissent : dissent +] <br>
 
@@ -39,7 +38,6 @@ Dissent: [+ oldleft_dissent : dissent +] <br>
 <p style="text-align: center;margin-bottom: 2px;">Gohlke</p>
 </div>
 </div> <br>
-
 Strength: [+ beweli_strength : strength +] <br>
 Dissent: [+ beweli_dissent : dissent +] <br>
 
@@ -56,7 +54,6 @@ Dissent: [+ beweli_dissent : dissent +] <br>
 <p style="text-align: center;margin-bottom: 2px;">Kipping</p>
 </div>
 </div> <br>
-
 Strength: [+ emali_strength : strength +] <br>
 Dissent: [+ emali_dissent : dissent +] <br>
 
@@ -73,7 +70,6 @@ Dissent: [+ emali_dissent : dissent +] <br>
 <p style="text-align: center;margin-bottom: 2px;">Gysi</p>
 </div>
 </div> <br>
-
 Strength: [+ pragmatist_strength : strength +] <br>
 Dissent: [+ pragmatist_dissent : dissent +] <br>
 
