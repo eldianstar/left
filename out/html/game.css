@@ -342,6 +342,10 @@ blockquote+blockquote.attribution {
   display: block;
 }
 
+#factions_tab {
+  display: block;
+}
+
 
 .overlay {
   background: rgba(0, 0, 0, 0.7);
