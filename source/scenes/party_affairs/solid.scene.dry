@@ -2,7 +2,7 @@ title: Linksjugend Solid
 new-page: true
 is-card: true
 tags: party_affairs
-card-image: img/reichsbanner.jpg
+card-image: img/LinksjugendSolid.jpg
 on-arrival: month_actions += 1; solid_timer += 6;
 max-visits: 6
 view-if: solid_timer <= 0
