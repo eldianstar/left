@@ -44,6 +44,8 @@ nd.jpg: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Neues_Deutschla
 
 antifa.jpg: https://bilder.deutschlandfunk.de/FI/LE/_3/96/FILE_39618bdcdb915fbe1fb7691baa39f262/000-14g9qq-jpg-100-1920x1080.jpg
 
+wahlplakat_1.jpg: https://www.die-linke.de/fileadmin/user_upload/Preise.png
+
 = Images (redautumn&originn0 code):
 
 map.jpg, map_2.jpg: Anonymous. Meyers Blitz-Lexikon. English:  scanned by User:LA2 in September 2005, Wikimedia Commons, https://commons.wikimedia.org/wiki/File:LA2-Blitz-0083.jpg. Accessed 3 Feb. 2024. Public Domain
