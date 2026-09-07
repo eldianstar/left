@@ -170,6 +170,8 @@ Q.inflation = 3.1;
 // economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
 Q.economic_growth = 2.9;
 
+Q.unemployed = 3.6;
+
 // quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
 Q.urban_qol = 100;
 Q.rural_qol = 100;
