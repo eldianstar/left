@@ -20,7 +20,25 @@ SchwerdtnerInes.jpg: https://www.bundestag.de/resource/image/1062006/3x4/864/115
 
 PantisanoLuigi.jpg: https://upload.wikimedia.org/wikipedia/commons/6/68/Luigi_Pantisano_speaking_at_Erneuerbare_Energien_verteidigen_demonstration_Berlin_2026-04-18_01_%28cropped_2%29.jpg?utm_source=de.wikipedia.org&utm_campaign=index&utm_content=original
 
+// some advisor photos are missing
+
 LogoAufstehen.jpg: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Aufstehen_logo.svg/500px-Aufstehen_logo.svg.png?utm_source=de.wikipedia.org&utm_campaign=parser&utm_content=thumbnail
+
+LogoBewegungslinke.jpg: https://yt3.googleusercontent.com/BriPQsDQ2OtK4XYdktgH1LOVHjnYamAIUypIVzHXxrn7UCyFm9LP5eqGrkcOJwkVp_oEhqI-=s900-c-k-c0x00ffffff-no-rj
+
+LogoEmali.jpg: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZen_ssljftDVqJcr56qzL28GvDhQEeY5Rq33uqBCfw1Sy2xYVX5CRWQGh&s=10
+
+LogoFDS.jpg: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKdU2EznM1qc2LyAaBRnqsmUelA__pAqyEijBScq3Q5VUikhOCv5o3jby6&s=10
+
+LinksjugendSolid.jpg: https://img.br.de/cd687865-7179-4133-bd9f-d86ac966f18a.jpeg?q=80&rect=1663,0,5196,2926
+
+LinkeParteitag.jpg: https://img.br.de/11626fc5-486f-4a74-837f-9f0bddec01f6.jpeg?q=80&rect=1334,530,5540,3113
+
+merzleckeier.jpg: https://image.stern.de/37459240/t/xo/v5/w1440/r1/-/friedrich-merz.jpg
+
+map_2.jpg: https://theworldofmaps.com/wp-content/uploads/2024/06/ENG_ST_GE_1564_web-scaled.jpg
+
+gysi_wagenknecht_kuss.jpg: https://www.tagesspiegel.de/images/9549356/alternates/BASE_4_3_W1000/1690204295000/sondersitzungen-der-bundestagsfraktionen-zur-griechenland-krise.jpeg
 
 = Images (redautumn&originn0 code):
 
