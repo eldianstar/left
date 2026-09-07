@@ -62,17 +62,14 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
-[? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: #4C0B5F;">**BSW**</span>: [+ bsw_relation : relationships +] ?]
-
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #E3000F;">**SPD**</span>: [+ spd_relation : relationships +]
-
-<span class="tooltip-text" title="Alliance 90/The Greens" style="color: #1AA037;">**B90/Greens**</span>: [+ greens_relation : relationships +]
-
-<span class="tooltip-text" title="Free Democratic Party" style="color: #FFD600;">**FDP**</span>: [+ fdp_relation : relationships +]
-
-<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #000000;">**CDU/CSU**</span>: [+ cdu_relation : relationships +]
-
-<span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: [+ afd_relation : relationships +]
+<table>
+   [? if bsw_split : <tr> <td> <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: #4C0B5F;">**BSW**</span>: </td> <td> [+ bsw_relation : relationships +] </td> </tr> ?]
+   <tr> <td> <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #E3000F;">**SPD**</span>: </td> <td> [+ spd_relation : relationships +] </td> </tr>
+   <tr> <td> <span class="tooltip-text" title="Alliance 90/The Greens" style="color: #1AA037;">**B90/Greens**</span>: </td> <td> [+ greens_relation : relationships +] </td> </tr>
+   <tr> <td> <span class="tooltip-text" title="Free Democratic Party" style="color: #FFD600;">**FDP**</span>: </td> <td> [+ fdp_relation : relationships +] </td> </tr>
+   <tr> <td> <span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #000000;">**CDU/CSU**</span>: </td> <td> [+ cdu_relation : relationships +] </td> </tr>
+   <tr> <td> <span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: </td> <td> [+ afd_relation : relationships +] </td> </tr>
+</table>
 
 = Party Leadership
 
