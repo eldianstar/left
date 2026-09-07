@@ -967,9 +967,17 @@ if (Q.percentComplete >= 100) {
 set-bg: img/map_2.jpg
 new-page: true
 
-text text text 
+> *"The Communists turn their attention chiefly to Germany, because that country is on the eve of a bourgeois revolution that is bound to be carried out under more advanced conditions of European civilisation and with a much more developed proletariat than that of England was in the seventeenth, and France in the eighteenth century, and because the bourgeois revolution in Germany will be but the prelude to an immediately following proletarian revolution."*
+ - Karl Marx, *The Manifesto of the Communist Party*, 1848
 
-- @1928_mod_mode: Begin (<span style="color: #0077FF;">dynamic</span> mode)
+This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
+
+For more information on the politics and government of the Federal Republic of Germany, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
+
+**If you are playing this mod via the Mod Loader in base game, there will be various items missing (parliament colours, images, arrows, etc.). For the intended experience, please play using <a href="https://eldianstar.github.io/left/" style="color: #0077FF">this</a> link.**
+
+
+- @1928_mod_mode: Begin (normal difficulty)
 
 @1928_mod_mode
 subtitle: Intended way of experiencing this mod.
