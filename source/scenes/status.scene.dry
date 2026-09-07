@@ -76,65 +76,34 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Party Leadership
 
-[? if dnef_formed: <span class="tooltip-text" title="German National Unity Front" style="color: #BFC8CC;">**DNEF**</span>: [? if dnef_ideology == "Left": Syncretic?][? if dnef_ideology == "Moderate": Syncretic?][? if dnef_ideology == "Right": Syncretic?] ([+ dnef_leader +])?]
+<span class="tooltip-text" title="The Left" style="color: #BC2D72;">**Die Linke**</span>: Democratic Socialism
 
-[? if not ddp_name: UNINITIALIZED ?][? if ddp_name != 0: [? if z_party_name != "CVP": <span class="tooltip-text" title="Center Party" style="color: #000000;">**[+ z_party_name +]**</span>?][? if z_party_name == "CVP": <span class="tooltip-text" title="Christian People's Party" style="color: #000000;">**[+ z_party_name +]**</span>?]: [? if not cvp_formed: [? if z_ideology == "Right" and not cvp_kvp_formed and z_leader != "Joos" and z_leader != "Bracht": Center to Center-Right?][? if z_ideology == "Right" and cvp_kvp_formed: Christian Democracy?][? if z_leader == "Joos": Center-Left to Center-Right?][? if z_leader == "Kaiser": Center-Left to Center?][? if z_leader == "Bracht": Catholic Conservatism?]?][? if cvp_formed: [? if cvp_leader == "Lambach": Christian Corporatism?][? if cvp_leader == "Stegerwald": Paternalistic Conservatism?][? if cvp_leader == "Gereke": Agrarian Conservatism?][? if cvp_leader == "Westarp" or cvp_leader == "Goerdeler" or cvp_leader = "Lejeune-Jung" or cvp_leader == "Lettow-Vorbeck": National Conservatism?][? if cvp_leader == "Adenauer": Christian Democracy?][? if cvp_leader == "Bolz": Christian Conservatism?][? if cvp_leader == "Treviranus": Tory Democracy?]?] ([? if not cvp_formed:[+ z_leader +]?][? if cvp_formed:[+ cvp_leader +]?])?]
+[? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: #4C0B5F;">**BSW**</span>: Left-wing Conservatism ?]
 
-[? if not ddp_name and not lvp_formed: UNINITIALIZED ?][? if not lvp_formed and ddp_name != 0 and not dstp_dnef: [? if ddp_name = "DDP" and ddp_ideology == "Right":<span class="tooltip-text" title="German Democratic Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>: Classical Liberalism ([+ ddp_leader +])?][? if ddp_name = "DDP" and ddp_ideology == "Moderate":<span class="tooltip-text" title="German Democratic Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>: Left Liberalism ([+ ddp_leader +])?][? if ddp_name = "DDP" and ddp_ideology == "Left":<span class="tooltip-text" title="German Democratic Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>: Progressive Liberalism ([+ ddp_leader +])?]?][? if not lvp_formed and ddp_name = "DDP" and dstp_dnef: <span class="tooltip-text" title="German Democratic Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>: Liberal Corporatism ([+ ddp_leader +])?]
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #E3000F;">**SPD**</span>: Third Way Social Democracy ([+ spd_leader +])
 
-[? if ddp_name = "DStP" and not lvp_formed and (not dstp_collapsed or dstp_dnef):<span class="tooltip-text" title="German State Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>: Liberal Corporatism ([+ ddp_leader +])?][? if ddp_name = "DStP" and not lvp_formed and dstp_collapsed and not dstp_dnef:<span class="tooltip-text" title="German State Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>: [? if ddp_ideology == "Right": Statist Liberalism ?][? if ddp_ideology == "Moderate": Classical Liberalism ?][? if ddp_ideology == "Left": Left Liberalism?] ([+ ddp_leader +])?]
+<span class="tooltip-text" title="Alliance 90/The Greens" style="color: #1AA037;">**B90/Greens**</span>: Green Progressivism ([+ greens_leader +]
 
-[? if lvp_formed and not lvp_dnef: <span class="tooltip-text" title="Liberal People's Party" style="color: #FFCC00;">**LVP**</span>: [? if lvp_ideology == "Left": Left Liberalism ([+ lvp_leader +])?][? if lvp_ideology == "Moderate": Classical Liberalism ([+ lvp_leader +])?][? if lvp_ideology == "Right": National Liberalism ([+ lvp_leader +])?]?]
+<span class="tooltip-text" title="Free Democratic Party" style="color: #FFD600;">**FDP**</span>: Classical Liberalism ([+ fdp_leader +])
 
-[? if lvp_formed and lvp_dnef: <span class="tooltip-text" title="Liberal People's Party" style="color: #FFCC00;">**LVP**</span>: Liberal Corporatism ([+ lvp_leader +])?]
+<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #000000;">**CDU/CSU**</span>: Moderate Conservatism ([+ cdu_leader +])
 
-[? if not ddp_name and not lvp_formed: UNINITIALIZED ?][? if not lvp_formed and dvp_exist and ddp_name != 0 and not dvp_dnef: [? if ddp_name != 0 and dvp_leader != "Thiel" and dvp_leader != "Glatzel": <span class="tooltip-text" title="German People's Party" style="color: #C0A054;">**DVP**</span>: [? if dvp_ideology = "Left": Classical Liberalism ?][? if dvp_ideology = "Moderate": Conservative Liberalism?][? if dvp_ideology = "Right" and (dvp_right - dvp_left < 10 or dvp_leader == "Stresemann"): National Liberalism?][? if dvp_ideology = "Right" and dvp_right - dvp_left >= 10 and dvp_leader != "Stresemann": National Capitalism?] ([+ dvp_leader +])?][? if ddp_name != 0 and (dvp_leader == "Thiel" or dvp_leader == "Glatzel"): <span class="tooltip-text" title="German People's Party" style="color: #C0A054;">**DVP**</span>: Paternalistic Liberalism ([+ dvp_leader +])?]?]
-
-[? if not lvp_formed and dvp_exist and ddp_name != 0 and dvp_dnef: <span class="tooltip-text" title="German People's Party" style="color: #C0A054;">**DVP**</span>: National Liberalism ([+ dvp_leader +])?]
-
-[? if not ddp_name: UNINITIALIZED ?][? if ddp_name != 0: <span class="tooltip-text" title="Communist Party of Germany" style="color: #700000;">**KPD**</span>: [? if kpd_leader = "Conciliators": United Front Marxism-Leninism?][? if kpd_leader = "Thälmann": Third Period Marxism-Leninism?] ([+ kpd_leader +])?]
-
-[? if kvp_formed and not dnvp_dvp_formed: <span class="tooltip-text" title="Conservative People's Party" style="color: #0087DC;">**KVP**</span>: [? if not kvp_dnef: Christian Conservatism?][? if kvp_dnef: National Conservatism?] ([+ kvp_leader +])?]
-
-[? if dnvp_dvp_formed: <span class="tooltip-text" title="Free Conserative Party" style="color: #00C0FF;">**FKP**</span>: [+ fkp_ideology +]: ([+ fkp_leader +])?]
-
-[? if not ddp_name: UNINITIALIZED ?][? if ddp_name != 0 and not cvp_formed and not dnvp_dnef and not dnvp_defunct: <span class="tooltip-text" title="German National People's Party" style="color: #3E88B3;">**DNVP**</span>: [? if dnvp_leader = "Hugenberg" or dnvp_leader = "Triumvirate": Authoritarian Conservatism?][? if dnvp_leader = "Westarp" or dnvp_leader = "Hergt" or dnvp_leader == "Lejeune-Jung" or dnvp_leader == "Keudell": National Conservatism?][? if dnvp_leader = "Lambach": Christian Corporatism?][? if dnvp_leader = "Treviranus" and not true_christian_democracy: National Conservatism?][? if dnvp_leader = "Treviranus" and true_christian_democracy: Tory Democracy?][? if dnvp_leader = "Schiele": Agrarian Conservatism?] ([+ dnvp_leader +])?]
-
-[? if ddp_name != 0 and not cvp_formed and dnvp_dnef: <span class="tooltip-text" title="German National People's Party" style="color: #3E88B3;">**DNVP**</span>: [? if dnvp_leader == "Lambach": Christian Corporatism?][? if dnvp_leader == "Treviranus": National Conservatism?] ([+ dnvp_leader +])?]
-
-[? if dnf_formed : <span class="tooltip-text" title="German National Front" style="color: #003755;">**DNF**</span>: Authoritarian Conservatism (Hugenberg) ?]
-
-[? if dsu_exist: <span class="tooltip-text" title="German Social Union" style="color: #6A1E1E;">**DSU**</span>: [? if not dsu_alt: Strasserism?][? if dsu_alt: Center Nazism?] ([+ dsu_leader +])?]
-
-[? if not ddp_name: UNINITIALIZED ?][? if ddp_name != 0: <span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)" style="color: #7A3C00;">**NSDAP**</span>: National Socialism ([+ nsdap_leader +])?]
-
-[? if nvf_exist: <span class="tooltip-text" title="National People's Front" style="color: #142e20;">**NVF**</span>: Revolutionary Volkism (Röhm)?]
+<span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: Fascism ([+ afd_leader +])
 
 = Industrial Backing
 
-[? if dnef_formed: <span class="tooltip-text" title="German National Unity Front" style="color: #BFC8CC;">**DNEF**</span>: [? if industrial_dnef_backing == 3: high?][? if industrial_dnef_backing == 4: highest?] ?]
+[? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: #4C0B5F;">**BSW**</span>: [? if industrial_bsw_backing == 0: none?][? if industrial_bsw_backing == 1: low?][? if industrial_bsw_backing == 2: medium?][? if industrial_bsw_backing == 3: high?][? if industrial_bsw_backing == 4: highest?] ?]
 
-[? if z_party_name == "CVP": <span class="tooltip-text" title="Christian People's Party" style="color: #000000;">**[+ z_party_name +]**</span>: [? if industrial_z_backing == 3: high?][? if industrial_z_backing == 4: highest?]  ?]
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #E3000F;">**SPD**</span>: [? if industrial_sdp_backing == 0: none?][? if industrial_sdp_backing == 1: low?][? if industrial_sdp_backing == 2: medium?][? if industrial_spd_backing == 3: high?][? if industrial_spd_backing == 4: highest?]
 
-[? if not lvp_formed: [? if ddp_name == "DStP": <span class="tooltip-text" title="German State Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if ddp_name == "DDP": <span class="tooltip-text" title="German Democratic Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>?]: [? if industrial_ddp_backing == 0: none?][? if industrial_ddp_backing == 1: low?][? if industrial_ddp_backing == 2: medium?]  ?]
+<span class="tooltip-text" title="Alliance 90/The Greens" style="color: #1AA037;">**B90/Greens**</span>: [? if industrial_greens_backing == 0: none?][? if industrial_greens_backing == 1: low?][? if industrial_greens_backing == 2: medium?][? if industrial_greens_backing == 3: high?][? if industrial_greens_backing == 4: highest?]
 
-[? if lvp_formed: <span class="tooltip-text" title="Liberal People's Party" style="color: #FFCC00;">**LVP**</span>: [? if industrial_lvp_backing == 2: medium?][? if industrial_lvp_backing == 3: high?][? if industrial_lvp_backing == 4: highest?] ?]
+<span class="tooltip-text" title="Free Democratic Party" style="color: #FFD600;">**FDP**</span>: [? if industrial_fdp_backing == 0: none?][? if industrial_fdp_backing == 1: low?][? if industrial_fdp_backing == 2: medium?][? if industrial_fdp_backing == 3: high?][? if industrial_fdp_backing == 4: highest?]
 
-[? if not lvp_formed and dvp_exist: <span class="tooltip-text" title="German People's Party" style="color: #C0A054;">**DVP**</span>: [? if industrial_dvp_backing == 1: low?][? if industrial_dvp_backing == 2: medium?][? if industrial_dvp_backing == 3: high?] ?]
+<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #000000;">**CDU/CSU**</span>: [? if industrial_cdu_backing == 0: none?][? if industrial_cdu_backing == 1: low?][? if industrial_cdu_backing == 2: medium?][? if industrial_cdu_backing == 3: high?][? if industrial_cdu_backing == 4: highest?]
 
-[? if not cvp_formed and not dnvp_defunct: <span class="tooltip-text" title="German National People's Party" style="color: #3E88B3;">**DNVP**</span>: [? if industrial_dnvp_backing == 4: highest?][? if industrial_dnvp_backing == 3: high?][? if industrial_dnvp_backing == 2: medium?][? if industrial_dnvp_backing == 1: low?][? if industrial_dnvp_backing == 0: [? if dnvp_ideology == "Moderate": none?][? if dnvp_ideology == "Radical": Hugenberg funded?]?]?]
+<span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: [? if industrial_afd_backing == 0: none?][? if industrial_afd_backing == 1: low?][? if industrial_afd_backing == 2: medium?][? if industrial_afd_backing == 3: high?][? if industrial_afd_backing == 4: highest?]
 
-[? if dnvp_ideology == "Moderate": <span class="tooltip-text" title="German National Front" style="color: #003755;">**DNF**</span>: Hugenberg funded ?]
-
-[? if kvp_formed and not dnvp_dvp_formed: <span class="tooltip-text" title="Conservative People's Party" style="color: #0087DC;">**KVP**</span>: high ?]
-
-[? if dnvp_dvp_formed: <span class="tooltip-text" title="Free Conserative Party" style="color: #00C0FF;">**FKP**</span>: high ?] 
-
-[? if dsu_exist: <span class="tooltip-text" title="German Social Union" style="color: #6A1E1E;">**DSU**</span>: none ?]
-
-<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)" style="color: #7A3C00;">**NSDAP**</span>: [? if industrial_nsdap_backing == 0: none?][? if industrial_nsdap_backing == 1: low?][? if industrial_nsdap_backing == 2: medium?]
-
-[? if nvf_exist: <span class="tooltip-text" title="National People's Front" style="color: #142e20;">**NVF**</span>: none ?]
 
 @polls
 on-arrival: {!
