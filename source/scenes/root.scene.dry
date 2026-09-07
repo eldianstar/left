@@ -122,6 +122,13 @@ Q.fdp_leader = "Lindner";
 Q.cdu_leader = "Laschet";
 Q.afd_leader = "Weidel/Chrupalla";
 
+Q.industrial_bsw_backing = 0;
+Q.industrial_spd_backing = 1;
+Q.industrial_greens_backing = 2;
+Q.industrial_fdp_backing = 4;
+Q.industrial_cdu_backing = 3;
+Q.industrial_afd_backing = 1;
+
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
 Q.interior_police_loyalty = 0.45;
