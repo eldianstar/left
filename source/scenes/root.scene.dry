@@ -749,7 +749,7 @@ for (let i = 0; i <= 100; i++) {
 }
 
 
-// all the initial advisors are centrists. TODO
+// all the initial advisors are centrists.
 Q.hennigwellsow_advisor = 1; // susanne hennig wellsow, pragmatist
 Q.hennigwellsow_advisor_fame = 150;
 Q.wissler_advisor = 1; // janine wissler, oldleft
