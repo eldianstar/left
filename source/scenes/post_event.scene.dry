@@ -557,10 +557,10 @@ Q.youth_linke -= ((10 - Q.party_moderation)/50);
     Q.emali_strength_gain = 0;
     Q.pragmatist_strength_gain = 0;
 
-    if (Q.oldleft_strength < 10) { Q.oldleft_dissent_decay += 1; }
-    if (Q.emali_strength < 10) { Q.emali_dissent_decay += 1; }
-    if (Q.beweli_strength < 10) { Q.beweli_dissent_decay += 1; }
-    if (Q.pragmatist_strength < 10) { Q.pragmatist_dissent_decay += 1; }
+    if (Q.oldleft_strength < 10) Q.oldleft_dissent_decay += 1;
+    if (Q.emali_strength < 10) Q.emali_dissent_decay += 1;
+    if (Q.beweli_strength < 10) Q.beweli_dissent_decay += 1;
+    if (Q.pragmatist_strength < 10) Q.pragmatist_dissent_decay += 1;
 
 
     if (Q.afd_votes >= 20) {
@@ -572,87 +572,86 @@ Q.youth_linke -= ((10 - Q.party_moderation)/50);
 
 // faction dissent based on advisors
 
-if (Q.wagenknecht_advisor == 1) { Q.oldleft_dissent -= 0.5; }
-if (Q.wissler_advisor == 1 and Q.beweli_leader != "Wissler") { Q.oldleft_dissent -= 0.5; }
-if (Q.mohamedali_advisor == 1) { Q.oldleft_dissent -= 0.5; }
-if (Q.pellmann_advisor == 1) { Q.oldleft_dissent -= 0.5; }
-if (Q.riexinger_advisor == 1 and Q.beweli_leader != "Wissler") { Q.oldleft_dissent -= 0.5; }
-if (Q.gohlke_advisor == 1) { Q.beweli_dissent -= 0.5; }
-if (Q.schwerdtner_advisor == 1) { Q.beweli_dissent -= 0.5; }
-if (Q.buenger_advisor == 1) { Q.beweli_dissent -= 0.5; }
-if (Q.pantisano_advisor == 1) { Q.beweli_dissent -= 0.5; }
-if (Q.wissler_advisor == 1 and Q.beweli_leader == "Wissler") { Q.beweli_dissent -= 0.5; }
-if (Q.riexinger_advisor == 1 and Q.beweli_leader == "Wissler") { Q.beweli_dissent -= 0.5; }
-if (Q.reichinnek_advisor == 1) { Q.emali_dissent -= 0.5; }
-if (Q.kipping_advisor == 1) { Q.emali_dissent -= 0.5; }
-if (Q.vanaken_advisor == 1) { Q.emali_dissent -= 0.5; }
-if (Q.schirdewan_advisor == 1) { Q.emali_dissent -= 0.5; }
-if (Q.lay_advisor == 1) { Q.emali_dissent -= 0.5; }
-if (Q.hoss_advisor == 1) { Q.emali_dissent -= 0.5; }
-if (Q.gysi_advisor == 1) { Q.pragmatist_dissent -= 0.5; }
-if (Q.bartsch_advisor == 1) { Q.pragmatist_dissent -= 0.5; }
-if (Q.ramelow_advisor == 1) { Q.pragmatist_dissent -= 0.5; }
-if (Q.hennigwellsow_advisor == 1) { Q.pragmatist_dissent -= 0.5; }
-if (Q.goerke_advisor == 1) { Q.pragmatist_dissent -= 0.5; }
+if (Q.wagenknecht_advisor == 1) Q.oldleft_dissent -= 0.5;
+if (Q.wissler_advisor == 1 and Q.beweli_leader != "Wissler") Q.oldleft_dissent -= 0.5;
+if (Q.mohamedali_advisor == 1) Q.oldleft_dissent -= 0.5;
+if (Q.pellmann_advisor == 1) Q.oldleft_dissent -= 0.5;
+if (Q.riexinger_advisor == 1 and Q.beweli_leader != "Wissler") Q.oldleft_dissent -= 0.5;
+if (Q.gohlke_advisor == 1) Q.beweli_dissent -= 0.5;
+if (Q.schwerdtner_advisor == 1) Q.beweli_dissent -= 0.5;
+if (Q.buenger_advisor == 1) Q.beweli_dissent -= 0.5;
+if (Q.pantisano_advisor == 1) Q.beweli_dissent -= 0.5;
+if (Q.wissler_advisor == 1 and Q.beweli_leader == "Wissler") Q.beweli_dissent -= 0.5;
+if (Q.riexinger_advisor == 1 and Q.beweli_leader == "Wissler") Q.beweli_dissent -= 0.5;
+if (Q.reichinnek_advisor == 1) Q.emali_dissent -= 0.5;
+if (Q.kipping_advisor == 1) Q.emali_dissent -= 0.5;
+if (Q.vanaken_advisor == 1) Q.emali_dissent -= 0.5;
+if (Q.schirdewan_advisor == 1) Q.emali_dissent -= 0.5;
+if (Q.lay_advisor == 1) Q.emali_dissent -= 0.5;
+if (Q.hoss_advisor == 1) Q.emali_dissent -= 0.5;
+if (Q.gysi_advisor == 1) Q.pragmatist_dissent -= 0.5;
+if (Q.bartsch_advisor == 1) Q.pragmatist_dissent -= 0.5;
+if (Q.ramelow_advisor == 1) Q.pragmatist_dissent -= 0.5;
+if (Q.hennigwellsow_advisor == 1) Q.pragmatist_dissent -= 0.5;
+if (Q.goerke_advisor == 1) Q.pragmatist_dissent -= 0.5;
 
 // fame increase advisors
 
-if (Q.wagenknecht_advisor == 1) { Q.wagenknecht_advisor_fame += 0.2; }
-if (Q.wissler_advisor == 1) { Q.wissler_advisor_fame += 0.2; }
-if (Q.mohamedali_advisor == 1) { Q.mohamedali_advisor_fame += 0.2; }
-if (Q.pellmann_advisor == 1) { Q.pellmann_advisor_fame += 0.2; }
-if (Q.riexinger_advisor == 1) { Q.riexinger_advisor_fame += 0.2; }
-if (Q.gohlke_advisor == 1) { Q.gohlke_advisor_fame += 0.2; }
-if (Q.schwerdtner_advisor == 1) { Q.schwerdtner_advisor_fame += 0.2; }
-if (Q.buenger_advisor == 1) { Q.buenger_advisor_fame += 0.2; }
-if (Q.pantisano_advisor == 1) { Q.pantisano_advisor_fame += 0.2; }
-if (Q.reichinnek_advisor == 1) { Q.reichinnek_advisor_fame += 0.2; }
-if (Q.kipping_advisor == 1) { Q.kipping_advisor_fame += 0.2; }
-if (Q.vanaken_advisor == 1) { Q.vanaken_advisor_fame += 0.2; }
-if (Q.schirdewan_advisor == 1) { Q.schirdewan_advisor_fame += 0.2; }
-if (Q.lay_advisor == 1) { Q.lay_advisor_fame += 0.2; }
-if (Q.hoss_advisor == 1) { Q.hoss_advisor_fame += 0.2; }
-if (Q.gysi_advisor == 1) { Q.gysi_advisor_fame += 0.2; }
-if (Q.bartsch_advisor == 1) { Q.bartsch_advisor_fame += 0.2; }
-if (Q.ramelow_advisor == 1) { Q.ramelow_advisor_fame += 0.2; }
-if (Q.hennigwellsow_advisor == 1) { Q.hennigwellsow_advisor_fame += 0.2; }
-if (Q.goerke_advisor == 1) { Q.goerke_advisor_fame += 0.2; }
+if (Q.wagenknecht_advisor == 1) Q.wagenknecht_advisor_fame += 0.2;
+if (Q.wissler_advisor == 1) Q.wissler_advisor_fame += 0.2;
+if (Q.mohamedali_advisor == 1) Q.mohamedali_advisor_fame += 0.2;
+if (Q.pellmann_advisor == 1) Q.pellmann_advisor_fame += 0.2;
+if (Q.riexinger_advisor == 1) Q.riexinger_advisor_fame += 0.2;
+if (Q.gohlke_advisor == 1) Q.gohlke_advisor_fame += 0.2;
+if (Q.schwerdtner_advisor == 1) Q.schwerdtner_advisor_fame += 0.2;
+if (Q.buenger_advisor == 1) Q.buenger_advisor_fame += 0.2;
+if (Q.pantisano_advisor == 1) Q.pantisano_advisor_fame += 0.2;
+if (Q.reichinnek_advisor == 1) Q.reichinnek_advisor_fame += 0.2;
+if (Q.kipping_advisor == 1) Q.kipping_advisor_fame += 0.2;
+if (Q.vanaken_advisor == 1) Q.vanaken_advisor_fame += 0.2;
+if (Q.schirdewan_advisor == 1) Q.schirdewan_advisor_fame += 0.2;
+if (Q.lay_advisor == 1) Q.lay_advisor_fame += 0.2;
+if (Q.hoss_advisor == 1) Q.hoss_advisor_fame += 0.2;
+if (Q.gysi_advisor == 1) Q.gysi_advisor_fame += 0.2;
+if (Q.bartsch_advisor == 1) Q.bartsch_advisor_fame += 0.2;
+if (Q.ramelow_advisor == 1) Q.ramelow_advisor_fame += 0.2;
+if (Q.hennigwellsow_advisor == 1) Q.hennigwellsow_advisor_fame += 0.2;
+if (Q.goerke_advisor == 1) Q.goerke_advisor_fame += 0.2;
 
 // passive actions
 
-if (Q.wagenknecht_advisor == 1) { Q.united_russia += 0.1; }
-if (Q.wissler_advisor == 1) { Q.tradeunion_contact += 0.05; }
-if (Q.wissler_advisor == 1) { Q.pro_status_quo -= 0.1; }
-if (Q.riexinger_advisor == 1) { Q.tradeunion_contact += 0.1; }
-if (Q.schwerdtner_advisor == 1) { Q.newspapers += 0.1; }
-if (Q.buenger_advisor == 1) { Q.issue_antifascism += 0.05; }
-if (Q.pantisano_advisor == 1) { Q.youth_linke += (Q.afd_votes/80)*(1 - Q.dissent); }
-if (Q.reichinnek_advisor == 1) { Q.youth_linke += (Q.afd_votes/100)*(1 + Q.social_media)*(1 - Q.dissent); }
-if (Q.reichinnek_advisor == 1) { Q.social_media += 0.1; }
-if (Q.kipping_advisor == 1) { Q.oldleft_dissent -= 0.2; }
-if (Q.kipping_advisor == 1) { Q.beweli_dissent -= 0.2; }
-if (Q.kipping_advisor == 1) { Q.emali_dissent -= 0.2; }
-if (Q.kipping_advisor == 1) { Q.pragmatist_dissent -= 0.2; }
-if (Q.vanaken_advisor == 1) { Q.issue_environmentalism += 0.1; }
-if (Q.schirdewan_advisor == 1) { Q.eu_relation += 0.1; }
-if (Q.lay_advisor == 1) { Q.youth_linke += (Q.afd_votes/80)*(1 - Q.dissent); }
-if (Q.ramelow_advisor == 1) { Q.east_linke += 0.3*(1 - Q.dissent); }
+if (Q.wagenknecht_advisor == 1) Q.united_russia += 0.1;
+if (Q.wissler_advisor == 1) Q.tradeunion_contact += 0.05;
+if (Q.wissler_advisor == 1) Q.pro_status_quo -= 0.1;
+if (Q.riexinger_advisor == 1) Q.tradeunion_contact += 0.1;
+if (Q.schwerdtner_advisor == 1) Q.newspapers += 0.1;
+if (Q.buenger_advisor == 1) Q.issue_antifascism += 0.05;
+if (Q.pantisano_advisor == 1) Q.youth_linke += (Q.afd_votes/80)*(1 - Q.dissent);
+if (Q.reichinnek_advisor == 1) Q.youth_linke += (Q.afd_votes/100)*(1 + Q.social_media)*(1 - Q.dissent);
+if (Q.reichinnek_advisor == 1) Q.social_media += 0.1;
+if (Q.kipping_advisor == 1) Q.oldleft_dissent -= 0.2;
+if (Q.kipping_advisor == 1) Q.beweli_dissent -= 0.2;
+if (Q.kipping_advisor == 1) Q.emali_dissent -= 0.2;
+if (Q.kipping_advisor == 1) Q.pragmatist_dissent -= 0.2;
+if (Q.vanaken_advisor == 1) Q.issue_environmentalism += 0.1;
+if (Q.schirdewan_advisor == 1) Q.eu_relation += 0.1;
+if (Q.lay_advisor == 1) Q.youth_linke += (Q.afd_votes/80)*(1 - Q.dissent);
+if (Q.ramelow_advisor == 1) Q.east_linke += 0.3*(1 - Q.dissent);
 
     Q.beweli_dissent += Q.beweli_dissent_decay;
     Q.emali_dissent += Q.emali_dissent_decay;
     Q.oldleft_dissent += Q.oldeft_dissent_decay;
     Q.pragmatist_dissent += Q.pragmatist_dissent_decay;
 
-    if (Q.emali_strength < 0) { Q.emali_strength = 0; }
-    if (Q.beweli_strength < 0) { Q.beweli_strength = 0; }
-    if (Q.oldleft_strength < 0) { Q.oldleft_strength = 0; }
-    if (Q.pragmatist_strength < 0) { Q.pragmatist_strength = 0; }
+    if (Q.emali_strength < 0) Q.emali_strength = 0;
+    if (Q.beweli_strength < 0) Q.beweli_strength = 0;
+    if (Q.oldleft_strength < 0) Q.oldleft_strength = 0;
+    if (Q.pragmatist_strength < 0) Q.pragmatist_strength = 0;
 
- if (Q.emali_dissent < 0) { Q.emali_dissent = 0; }
-    if (Q.beweli_dissent < 0) { Q.beweli_dissent = 0; }
-    if (Q.oldleft_dissent < 0) { Q.oldleft_dissent = 0; }
-    if (Q.pragmatist_dissent < 0) { Q.pragmatist_dissent = 0; }
-
+ if (Q.emali_dissent < 0) Q.emali_dissent = 0;
+    if (Q.beweli_dissent < 0) Q.beweli_dissent = 0;
+    if (Q.oldleft_dissent < 0) Q.oldleft_dissent = 0;
+    if (Q.pragmatist_dissent < 0) Q.pragmatist_dissent = 0;
 
 // changes faction strength
 
