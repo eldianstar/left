@@ -94,13 +94,6 @@ Economic growth: [+ economic_growth_2 +]%
 <tr> <td> <span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: </td> <td> [? if industrial_afd_backing == 0: none?][? if industrial_afd_backing == 1: low?][? if industrial_afd_backing == 2: medium?][? if industrial_afd_backing == 3: high?][? if industrial_afd_backing == 4: highest?] </td> </tr>
 </table>
 
-<style>
-  .wrap {
-    white-space: normal;
-    overflow-wrap: break-word;
-  }
-</style>
-
 @polls
 on-arrival: {!
 Q.pro_status_quo_disp = Math.floor(Q.pro_status_quo);
