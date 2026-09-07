@@ -46,6 +46,18 @@ antifa.jpg: https://bilder.deutschlandfunk.de/FI/LE/_3/96/FILE_39618bdcdb915fbe1
 
 wahlplakat_1.jpg: https://www.die-linke.de/fileadmin/user_upload/Preise.png
 
+wahlplakat_mitglied.jpg: https://d2j6dbq0eux0bg.cloudfront.net/images/29827085/products/201538564/1442709631.jpg
+
+rrgreen.jpg: https://cdn.prod.www.manager-magazin.de/images/f8aa7756-db8b-485c-9d10-86ac050bde54_w1200_r1_fpx52_fpy50.jpg
+
+bundestagfraktion.jpg: https://taz.de/picture/7616589/1200/Partei-die-Linke-Fraktion-Bundestag-Strategie--1.webp
+
+parteivorstand.jpg: https://www.die-linke.de/fileadmin/user_upload/52174481845_24855f9f8b_c.jpg
+
+protest.jpg: https://cloudfront-eu-central-1.images.arcpublishing.com/madsack/TJLTA6NMNFDBFGLHQM7BIXN7DI.jpeg
+
+
+
 = Images (redautumn&originn0 code):
 
 map.jpg, map_2.jpg: Anonymous. Meyers Blitz-Lexikon. English:  scanned by User:LA2 in September 2005, Wikimedia Commons, https://commons.wikimedia.org/wiki/File:LA2-Blitz-0083.jpg. Accessed 3 Feb. 2024. Public Domain
