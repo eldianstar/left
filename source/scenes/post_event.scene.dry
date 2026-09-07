@@ -537,7 +537,7 @@ Q.pro_status_quo += 1;
 
 // calculates moderation
 
- Q.party_moderation = (foreign_moderation + social_moderation + econ_moderation);
+ Q.party_moderation = (Q.foreign_moderation + Q.social_moderation + Q.econ_moderation);
 
 // popularity change based on moderation
 
