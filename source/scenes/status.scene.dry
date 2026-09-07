@@ -269,8 +269,10 @@ Support for the Status Quo: [+ pro_status_quo_disp +]%
 
 {!<span class="tooltip-text" title="oldleft text" style="text-align: center;font-weight: bold;color: #4C0B5F;">Old Left</span>!} <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
-<img src="img/LogoAufstehen.jpg" alt="Aufstehen" style="width: 50%;">
-<img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 50%;">
+<img src="img/LogoAufstehen.jpg" alt="Aufstehen" style="width: 25%;">
+<img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 25%;">
+Strength: [+ oldleft_strength : strength +] <br>
+Dissent: [+ oldleft_dissent : dissent +] 
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
@@ -280,8 +282,7 @@ Support for the Status Quo: [+ pro_status_quo_disp +]%
 <p style="text-align: center;margin-bottom: 2px;">Wagenknecht</p>
 </div>
 </div>
-Strength: [+ oldleft_strength : strength +] <br>
-Dissent: [+ oldleft_dissent : dissent +] <br>
+<br>
 
 {!<span class="tooltip-text" title="beweli text" style="text-align: center;font-weight: bold;color: #BC2D72;">Movement Left</span>!} <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
