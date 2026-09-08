@@ -7,14 +7,16 @@ new-page: true
 
 = Christian Görke
 
+Christian Görke is one of our main finance experts.
+
 Fame: [+ goerke_advisor_fame +]
 
 - @finance_affairs
 - @root: Return to main
 
 @finance_affairs
-title: faction
-subtitle: subt
+title: Fiscal Policy
+subtitle: As Finance Minister, Görke can set our policy on fiscal affairs.
 choose-if: advisor_action_timer <= 0 and finance_minister_party = "LINKE"
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if finance_minister_party != "LINKE" : We do not control the Finance Ministry. ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1; goerke_advisor_fame += 2;
