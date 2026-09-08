@@ -157,7 +157,7 @@ Q.upper = 20;
 Q.urban = 23;
 Q.rural = 24;
 Q.east = 18;
-
+Q.baden_wurttemberg_election_seen = 0;
 
 
 // income 
