@@ -7,6 +7,8 @@ new-page: true
 
 = Gregor Gysi
 
+Gysi is an Eastern politician and the most important figure on our right wing.
+
 Fame: [+ gysi_advisor_fame +]
 
 - @faction_strength
@@ -15,22 +17,28 @@ Fame: [+ gysi_advisor_fame +]
 - @root: Return to main
 
 @faction_strength
-title: faction
-subtitle: subt
+title: Building the right
+subtitle: Build up our party's right wing.
 choose-if: advisor_action_timer <= 0 and gysi_advisor == 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; pragmatist_strength += 3*(gysi_advisor_fame/100); pragmatist_dissent -= 1*(gysi_advisor_fame/100); gysi_advisor_fame += 2;
+on-arrival: advisor_action_timer = 6; pragmatist_strength += 1.5*(gysi_advisor_fame/100); pragmatist_dissent -= 1*(gysi_advisor_fame/100); gysi_advisor_fame += 2; beweli_dissent += 1.5; oldleft_dissent += 1.5;
+
+We have strengthened the party's right wing, favoring a pragmatist and reform-oriented approach to politics. While our move has found many supporters, our left wing feels under attack.
 
 @moderate_party
-title: moderate
-subtitle: subt
+title: Moderate our stance
+subtitle: Push <span style="color: #BC2D72;">Die Linke</span> towards the center.
 choose-if: advisor_action_timer <= 0 and gysi_advisor == 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
-on-arrival: advisor_action_timer = 6; social_moderation += 0.4*(gysi_advisor_fame/100); foreign_moderation += 0.6*(gysi_advisor_fame/100); econ_moderation += 0.6*(gysi_advisor_fame/100); pragmatist_dissent -= 1*(gysi_advisor_fame/100); greens_relation += 2*(gysi_advisor_fame/100); spd_relation += 2*(gysi_advisor_fame/100); cdu_relation += 1*(gysi_advisor_fame/100); gysi_advisor_fame += 2;
+on-arrival: advisor_action_timer = 6; social_moderation += 0.4*(gysi_advisor_fame/100); foreign_moderation += 0.6*(gysi_advisor_fame/100); econ_moderation += 0.6*(gysi_advisor_fame/100); pragmatist_dissent -= 1*(gysi_advisor_fame/100); greens_relation += 2*(gysi_advisor_fame/100); spd_relation += 2*(gysi_advisor_fame/100); cdu_relation += 1*(gysi_advisor_fame/100); beweli_dissent += 4; oldleft_dissent += 4; gysi_advisor_fame += 2;
+
+We have slightly moderated our views, bringing ourselves closer to the center. The moderate parties notice and appreciate our move, but our left wing disapproves.
 
 @defend_democracy
-title: democracy
-subtitle: subt
+title: Promote democracy
+subtitle: Democracy and our Constitution come before all, even socialism.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; pragmatist_strength += 1*(gysi_advisor_fame/100); emali_strength += 1*(gysi_advisor_fame/100); pro_status_quo += 5*(gysi_advisor_fame/100); gysi_advisor_fame += 2;
+on-arrival: advisor_action_timer = 6; pragmatist_strength += 1*(gysi_advisor_fame/100); emali_strength += 1*(gysi_advisor_fame/100); pro_status_quo += 2*(gysi_advisor_fame/100); gysi_advisor_fame += 2; oldleft_dissent += 2; spd_relation += 0.5*(gysi_advisor_fame/100); 
+
+We have reasserted our committment to democracy. The moderate parties approve.
