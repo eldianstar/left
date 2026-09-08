@@ -7,6 +7,8 @@ new-page: true
 
 = Dietmar Bartsch
 
+Bartsch is a member of parliament and prominent exponent of the Eastern pragmatist group.
+
 Fame: [+ bartsch_advisor_fame +]
 
 - @faction_strength
@@ -15,22 +17,30 @@ Fame: [+ bartsch_advisor_fame +]
 - @root: Return to main
 
 @faction_strength
-title: faction
-subtitle: subt
+title: Building the right
+subtitle: Build up the party's right wing.
 choose-if: advisor_action_timer <= 0 and bartsch_advisor == 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; pragmatist_strength += 2.5*(bartsch_advisor_fame/100); pragmatist_dissent -= 1*(bartsch_advisor_fame/100); bartsch_advisor_fame += 2;
+on-arrival: advisor_action_timer = 6; pragmatist_strength += 1.5*(bartsch_advisor_fame/100); pragmatist_dissent -= 0.7*(bartsch_advisor_fame/100); oldleft_dissent += 0.5; beweli_dissent += 0.5; bartsch_advisor_fame += 2;
+
+We have strengthened the party's right wing, favoring a pragmatist and reform-oriented approach to politics. While our move has found many supporters, our left wing feels under attack.
 
 @moderate_foreign
-title: moderate
-subtitle: subt
+title: Moderate our foreign policy
+subtitle: Push <span style="color: #BC2D72;">Die Linke</span> towards a more friendly view of the West.
 choose-if: advisor_action_timer <= 0 and bartsch_advisor == 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
-on-arrival: advisor_action_timer = 6; foreign_moderation += 0.8*(bartsch_advisor_fame/100); pragmatist_dissent -= 1*(bartsch_advisor_fame/100); greens_relation += 2*(bartsch_advisor_fame/100); cdu_relation += 1*(bartsch_advisor_fame/100); oldleft_dissent += 1; issue_antimilitarism -= 0.3; bartsch_advisor_fame += 2;
+on-arrival: advisor_action_timer = 6; foreign_moderation += 0.6*(bartsch_advisor_fame/100); pragmatist_dissent -= 0.5*(bartsch_advisor_fame/100); greens_relation += 1.5*(bartsch_advisor_fame/100); cdu_relation += 0.7*(bartsch_advisor_fame/100); oldleft_dissent += 1; issue_antimilitarism -= 0.3; bartsch_advisor_fame += 2;
+
+We have slightly moderated our foreign policy, bringing ourselves closer to NATO and the EU. The moderate parties notice and appreciate our move, but our left wing disapproves.
 
 @rrgreen
-title: rrgreen contact
-subtitle: subt
+title: Contact the <span style="color: #E3000F;">moderate</span> <span style="color: #1AA037;">left</span>
+subtitle: It will promote left unity and maybe allow us entry into government.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; greens_relation += 2.5*(bartsch_advisor_fame/100); spd_relation += 2.5*(bartsch_advisor_fame/100); bartsch_advisor_fame += 2;
+on-arrival: advisor_action_timer = 6; greens_relation += 2.5*(bartsch_advisor_fame/100); spd_relation += 2.5*(bartsch_advisor_fame/100); bartsch_advisor_fame += 2; oldleft_dissent += 0.5; beweli_dissent += 0.4;
+
+We have improved our relations with the <span style="color: #E3000F;">moderate</span> <span style="color: #1AA037;">left</span>. We may gain powerful allies, but our left wing disapproves.
+
+We have
