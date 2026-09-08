@@ -512,6 +512,7 @@ a.card:hover .card-tooltip {
   /*max-height: 180px;*/
   margin-right: 1em;
   margin-bottom: 0.5em;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -523,6 +524,7 @@ a.card:hover .card-tooltip {
   /*max-height: 180px;*/
   margin-right: 1em;
   margin-bottom: 0.5em;
+  border-radius: 8px;
   overflow: hidden;
 }
 
