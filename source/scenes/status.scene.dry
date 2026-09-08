@@ -246,11 +246,14 @@ Decentralization: [+ decentralization +]
 {!<span class="tooltip-text" title="oldleft text" style="text-align: center;font-weight: bold;color: #4C0B5F;">Old Left</span>!} <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/LogoAufstehen.jpg" alt="Aufstehen" style="width: 50%;">
-<div style="display:flex; gap:1em; justify-content: center; text-align: center"> <span> <img src="img/_portraits/WagenknechtSarah" style="width: 50%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"> <span class="card-caption">Sahra Wagenknecht<div></span></span></div><div>
+<img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 50%;">
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
 <p style="text-align: center;margin-bottom: 2px;">Aufstehen</p>
+</div>
+<div style="flex: 1;">
+<p style="text-align: center;margin-bottom: 2px;">Wagenknecht</p>
 </div>
 </div>
 Strength: [+ oldleft_strength : strength +] <br>
@@ -259,11 +262,14 @@ Dissent: [+ oldleft_dissent : dissent +] <br>
 {!<span class="tooltip-text" title="beweli text" style="text-align: center;font-weight: bold;color: #BC2D72;">Movement Left</span>!} <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/LogoBewegungslinke.jpg" alt="Bewegungslinke" style="width: 45%;">
-<div style="display:flex; gap:1em; justify-content: center; text-align: center"> <span> <img src="img/_portraits/GohlkeNicole" style="width: 50%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"> <span class="card-caption">Nicole Gohlke<div></span></span></div><div>
+<img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 50%;">
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
 <p style="text-align: center;margin-bottom: 2px;">Bewegungslinke</p>
+</div>
+<div style="flex: 1;">
+<p style="text-align: center;margin-bottom: 2px;">Gohlke</p>
 </div>
 </div>
 Strength: [+ beweli_strength : strength +] <br>
@@ -272,11 +278,14 @@ Dissent: [+ beweli_dissent : dissent +] <br>
 {!<span class="tooltip-text" title="emali text" style="text-align: center;font-weight: bold;color: #E3000F;">Centre</span>!} <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/LogoEmali.jpg" alt="Ema.Li" style="width: 50%;">
-<div style="display:flex; gap:1em; justify-content: center; text-align: center"> <span> <img src="img/_portraits/KippingKatja" style="width: 50%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"> <span class="card-caption">Katja Kipping<div></span></span></div><div>
+<img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 50%;">
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
 <p style="text-align: center;margin-bottom: 2px;">Ema.Li</p>
+</div>
+<div style="flex: 1;">
+<p style="text-align: center;margin-bottom: 2px;">Kipping</p>
 </div>
 </div>
 Strength: [+ emali_strength : strength +] <br>
@@ -285,11 +294,14 @@ Dissent: [+ emali_dissent : dissent +] <br>
 {!<span class="tooltip-text" title="pragmatist text" style="text-align: center;font-weight: bold;color: #ff5500;">Pragmatists</span>!} <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/LogoFDS.jpg" alt="FDS" style="width: 50%;">
-<div style="display:flex; gap:1em; justify-content: center; text-align: center"> <span> <img src="img/_portraits/GysiGregor" style="width: 50%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"> <span class="card-caption">Gregor Gysi<div></span></span></div><div>
+<img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 50%;">
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
 <p style="text-align: center;margin-bottom: 2px;">FDS</p>
+</div>
+<div style="flex: 1;">
+<p style="text-align: center;margin-bottom: 2px;">Gysi</p>
 </div>
 </div>
 Strength: [+ pragmatist_strength : strength +] <br>
