@@ -41,7 +41,7 @@ Bundestag composition:
 <span class="tooltip-text" title="Alliance 90/The Greens" style="color: #1AA037;">**B90/Greens**</span>: [+ greens_b +]% <br>
 <span class="tooltip-text" title="Free Democratic Party" style="color: #FFD600;">**FDP**</span>: [+ fdp_b +]% <br>
 <span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #000000;">**CDU/CSU**</span>: [+ cdu_b +]% <br>
-<span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**A*f*D**</span>: [+ afd_b +]% <br>
+<span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: [+ afd_b +]% <br>
 
 # 1928: 9, 1930: 10
 **Others**: [+ other_b +]%
@@ -80,7 +80,7 @@ bundestag seats:
    <tr> <td> <span class="tooltip-text" title="Alliance 90/The Greens" style="color: #1AA037;">**B90/Greens**</span>: </td> <td> [+ greens_relation : relationships +] </td> </tr>
    <tr> <td> <span class="tooltip-text" title="Free Democratic Party" style="color: #FFD600;">**FDP**</span>: </td> <td> [+ fdp_relation : relationships +] </td> </tr>
    <tr> <td> <span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #000000;">**CDU/CSU**</span>: </td> <td> [+ cdu_relation : relationships +] </td> </tr>
-   <tr> <td> <span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**A*f*D**</span>: </td> <td> [+ afd_relation : relationships +] </td> </tr>
+   <tr> <td> <span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: </td> <td> [+ afd_relation : relationships +] </td> </tr>
 </table>
 
 = Party Leadership
@@ -92,7 +92,7 @@ bundestag seats:
 <span class="tooltip-text" title="Greens" style="color: #1AA037;">**B90/Greens**</span>: Green Progressivism ([+ greens_leader +]) <br>
 <span class="tooltip-text" title="Free Democratic Party" style="color: #FFD600;">**FDP**</span>: Classical Liberalism ([+ fdp_leader +]) <br>
 <span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #000000;">**CDU/CSU**</span>: </td> <td> Conservatism ([+ cdu_leader +]) <br>
-<span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**A*f*D**</span>: Fascism ([+ afd_leader +]) <br>
+<span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: Fascism ([+ afd_leader +]) <br>
 
 
 = Industrial Backing
@@ -103,7 +103,7 @@ bundestag seats:
 <tr> <td> <span class="tooltip-text" title="Alliance 90/The Greens" style="color: #1AA037;">**B90/Greens**</span>: </td> <td> [? if industrial_greens_backing == 0: none?][? if industrial_greens_backing == 1: low?][? if industrial_greens_backing == 2: medium?][? if industrial_greens_backing == 3: high?][? if industrial_greens_backing == 4: highest?] </td> </tr>
 <tr> <td> <span class="tooltip-text" title="Free Democratic Party" style="color: #FFD600;">**FDP**</span>: </td> <td> [? if industrial_fdp_backing == 0: none?][? if industrial_fdp_backing == 1: low?][? if industrial_fdp_backing == 2: medium?][? if industrial_fdp_backing == 3: high?][? if industrial_fdp_backing == 4: highest?] </td> </tr>
 <tr> <td> <span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #000000;">**CDU/CSU**</span>: </td> <td> [? if industrial_cdu_backing == 0: none?][? if industrial_cdu_backing == 1: low?][? if industrial_cdu_backing == 2: medium?][? if industrial_cdu_backing == 3: high?][? if industrial_cdu_backing == 4: highest?] </td> </tr>
-<tr> <td> <span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**A*f*D**</span>: </td> <td> [? if industrial_afd_backing == 0: none?][? if industrial_afd_backing == 1: low?][? if industrial_afd_backing == 2: medium?][? if industrial_afd_backing == 3: high?][? if industrial_afd_backing == 4: highest?] </td> </tr>
+<tr> <td> <span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: </td> <td> [? if industrial_afd_backing == 0: none?][? if industrial_afd_backing == 1: low?][? if industrial_afd_backing == 2: medium?][? if industrial_afd_backing == 3: high?][? if industrial_afd_backing == 4: highest?] </td> </tr>
 </table>
 
 @polls
@@ -121,7 +121,7 @@ Q.pro_status_quo_disp = Math.floor(Q.pro_status_quo);
 <span class="tooltip-text" title="Alliance 90/The Greens" style="color: #1AA037;">**B90/Greens**</span>: [+ greens_votes +]% <br>
 <span class="tooltip-text" title="Free Democratic Party" style="color: #FFD600;">**FDP**</span>: [+ fdp_votes +]% <br>
 <span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #000000;">**CDU/CSU**</span>: [+ cdu_votes +]% <br>
-<span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**A*f*D**</span>: [+ afd_votes +]% <br>
+<span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: [+ afd_votes +]% <br>
 **Others**: [+ other_votes +]%
 
 Support for the Status Quo: [+ pro_status_quo_disp +]%
