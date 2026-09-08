@@ -594,6 +594,7 @@ if (Q.ramelow_advisor == 1) { Q.pragmatist_dissent -= 0.5; }
 if (Q.hennigwellsow_advisor == 1) { Q.pragmatist_dissent -= 0.5; }
 if (Q.goerke_advisor == 1) { Q.pragmatist_dissent -= 0.5; }
 
+<<<<<<< HEAD
 // fame increase advisors
 
 if (Q.wagenknecht_advisor == 1) { Q.wagenknecht_advisor_fame += 0.2; }
@@ -637,6 +638,8 @@ if (Q.schirdewan_advisor == 1) { Q.eu_relation += 0.1; }
 if (Q.lay_advisor == 1) { Q.youth_linke += (afd_votes/80)*(1-dissent); }
 if (Q.ramelow_advisor == 1) { Q.east_linke += 0.3*(1-dissent); }
 
+=======
+>>>>>>> parent of 5e371545 (Update post_event.scene.dry)
 
 
     Q.beweli_dissent += Q.beweli_dissent_decay;
