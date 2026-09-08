@@ -341,13 +341,6 @@ blockquote+blockquote.attribution {
   width: 100%;
 }
 
-
-.wrap {
-    white-space: normal;
-    overflow-wrap: break-word;
-}
-
-
 /* #scheming_tab {
   display: block;
 }
