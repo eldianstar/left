@@ -190,75 +190,88 @@ Q.spd_r_berlin = (Q.spd_r_berlin != undefined ? parseFloat(Q.spd_r_berlin.toFixe
 
 !}
 on-display: {!
+var data = [];
+
 if (Q.linke_r_berlin >= 5) {
-    data = [{
+    data.push({
         "id": "linke",
         "legend": "Left",
         "name": "Left",
-        "seats": Math.round(Q.linke_r_berlin * 0.96),
-    }];
-
-    if (Q.spd_r_berlin >= 5) {
-        data.push({
-            "id": "spd",
-            "legend": "SPD",
-            "name": "SPD",
-            "seats": Math.round(Q.spd_r_berlin * 0.96),
-        });
-    }
-
-    if (Q.greens_r_berlin >= 5) {
-        data.push({
-            "id": "greens",
-            "legend": "B90/Greens",
-            "name": "B90/Greens",
-            "seats": Math.round(Q.greens_r_berlin * 0.96),
-        });
-    }
-
-    if (Q.fdp_r_berlin >= 5) {
-        data.push({
-            "id": "fdp",
-            "legend": "FDP",
-            "name": "FDP",
-            "seats": Math.round(Q.fdp_r_berlin * 0.96),
-        });
-    }
-
-    if (Q.cdu_r_berlin >= 5) {
-        data.push({
-            "id": "cdu",
-            "legend": "CDU",
-            "name": "CDU",
-            "seats": Math.round(Q.cdu_r_berlin * 0.96),
-        });
-    }
-
-    if (Q.afd_r_berlin >= 5) {
-        data.push({
-            "id": "afd",
-            "legend": "AfD",
-            "name": "AfD",
-            "seats": Math.round(Q.afd_r_berlin * 0.96),
-        });
-    }
+        "seats": Math.round(Q.linke_r_berlin * 0.96)
+    });
 }
 
-if (window && d3) {
-    var width = 500;
-    var height = 500;
-    var screenWidth = document.getElementById('content').offsetWidth;
-    if (screenWidth < width - 50) {
-        width = screenWidth - 50;
-        height = width;
-        document.getElementById("berlin_landtag").style.height = screenWidth/2 + "px";
-    }
-    var parliament = d3.parliament();
-    parliament.width(width).height(height).innerRadiusCoef(0.4);
-    parliament.enter.fromCenter(true).smallToBig(true);
-    parliament.exit.toCenter(false).bigToSmall(true);
-    d3.select("#berlin_landtag").datum(data).call(parliament);
+if (Q.spd_r_berlin >= 5) {
+    data.push({
+        "id": "spd",
+        "legend": "SPD",
+        "name": "SPD",
+        "seats": Math.round(Q.spd_r_berlin * 0.96)
+    });
 }
+
+if (Q.greens_r_berlin >= 5) {
+    data.push({
+        "id": "greens",
+        "legend": "B90/Greens",
+        "name": "B90/Greens",
+        "seats": Math.round(Q.greens_r_berlin * 0.96)
+    });
+}
+
+if (Q.fdp_r_berlin >= 5) {
+    data.push({
+        "id": "fdp",
+        "legend": "FDP",
+        "name": "FDP",
+        "seats": Math.round(Q.fdp_r_berlin * 0.96)
+    });
+}
+
+if (Q.cdu_r_berlin >= 5) {
+    data.push({
+        "id": "cdu",
+        "legend": "CDU",
+        "name": "CDU",
+        "seats": Math.round(Q.cdu_r_berlin * 0.96)
+    });
+}
+
+if (Q.afd_r_berlin >= 5) {
+    data.push({
+        "id": "afd",
+        "legend": "AfD",
+        "name": "AfD",
+        "seats": Math.round(Q.afd_r_berlin * 0.96)
+    });
+}
+setTimeout(function() {
+    if (window && window.d3) {
+        var width = 500;
+        var height = 500;
+        var contentDiv = document.getElementById('content');
+
+        if (!contentDiv) return; 
+
+        var screenWidth = contentDiv.offsetWidth;
+        if (screenWidth < width - 50) {
+            width = screenWidth - 50;
+            height = width;
+            var svgElement = document.getElementById("berlin_landtag");
+            if (svgElement) {
+                svgElement.style.height = (screenWidth / 2) + "px";
+            }
+        }
+
+        var parliament = d3.parliament();
+        parliament.width(width).height(height).innerRadiusCoef(0.4);
+        parliament.enter.fromCenter(true).smallToBig(true);
+        parliament.exit.toCenter(false).bigToSmall(true);
+
+        d3.select("#berlin_landtag").selectAll("*").remove();
+        d3.select("#berlin_landtag").datum(data).call(parliament);
+    }
+}, 100);
 !}
 
 **Berlin results:**
