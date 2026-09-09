@@ -214,18 +214,23 @@ go-to: coalition_menu
 
 @coalition_menu
 
-The prominent issue in the conference becomes clear as the left around Toni Sender and Siegfried Aufhäuser propose a resolution that would explicitly state that the class struggle can only be waged from opposition. In opposition are the reformists on the party right, as well as the bulk of the center and the trade unions, though with Aufhäuser joining in the push an understanding between the unions and the left against the [? if center_c+reformist_c >= left_c : dominating ?] pragmatists may be possible.
+The prominent issue in the conference is clearly the war in Ukraine and our stance towards both Russia and Western aid to Ukraine.
 
-- @oppositionist: The resolution is adopted, rejecting the notion of government participation.
+- @oppositionist: The party remarks its support for the Ukrainian people against Russian aggression.
+- @avoid_decision
 - @participationist: The resolution is defeated, and instead one in support is adopted.
 
 @oppositionist
-choose-if: left_c >= 50 or (pragmatic_unity < 50 and dvp_relation < 40 and z_relation < 50)
-subtitle: The Left ([+ left_c +]%) [? if left_c < 50 : - though the Left lacks a majority, the trade unions could be won over. ?]
-on-arrival: coalition_dissent += 5; left_strength += 20; reformist_strength -= 10; reformist_dissent += 30; center_dissent += 15; labor_dissent += ((z_relation+dvp_relation)/10); marx_relation -= 10; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 15; kpd_relation += 10; communist_coalition += 1
+choose-if: right_leadership >= 50 or foreign_moderation >= 5 or oldleft_c < 20
+subtitle: Russian imperialism is clearly at fault for the war. We must stand with Ukraine in these dark times.
+on-arrival: foreign_moderation += 2; pragmatist_strength += 2; oldleft_strength -= 2; oldleft_dissent += 30; greens_relation += 3; spd_relation += 1; cdu_relation += 1;
 go-to: unions
 
-The resolution expressly rejecting government participation as a means of class struggle is accepted by the conference, much to the uproar of the party right. 
+We have remarked our support for Ukraine. While our right wing cheers this outcome and the moderate parties are pleased by our decision, the Old Left sees this as a betrayal and feels increasingly sidelined. Some people talk about a party split. 
+
+@avoid_decision
+choose-if: right_leadership < 40 and oldleft_strength >= 20 and oldleft_strength < 40 and foreign_moderation < 7 and foreign_moderation >= 3
+on-arrival: oldleft_dissent += 5; pragmatist_dissent += 5; emali_dissent += 5;
 
 @participationist
 choose-if: left_c < 50
