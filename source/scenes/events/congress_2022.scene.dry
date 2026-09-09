@@ -274,20 +274,35 @@ on-arrival: oldleft_dissent += 10; emali_dissent += 10; beweli_dissent += 10; pr
 
 @oldleft_advisor_choice
 
-- #oldleft_advisor
+- @add_wagenknecht
+- @add_mohamedali
+- @add_pellmann
+- @add_wissler
+- @add_riexinger
 
 @beweli_advisor_choice
 
-- #beweli_advisor
+- @add_wissler
+- @add_riexinger
+- @add_gohlke
+- @add_pantisano
+- @add_buenger
+- @add_schwerdtner
 
 @emali_advisor_choice
 
-- #emali_advisor
+- @add_lay
+- @add_kipping
+- @add_reichinnek
+- @add_hoss
 
 @pragmatist_advisor_choice
 
-- #pragmatist_advisor
-
+- @add_gysi
+- @add_ramelow
+- @add_bartsch
+- @add_hennig_wellsow
+- @add_goerke
 
 @add_wagenknecht
 title: Sahra Wagenknecht
@@ -368,7 +383,7 @@ is-card: true
 card-image: img/_portraits/RiexingerBernd.jpg
 view-if: (n_advisors_woman = 1 or n_advisors = 0) and beweli_leader == "Wissler"
 tags: beweli_advisor
-on-arrival: beweli_advisor = 1; n_advisors += 1; beweli_dissent -= 2*(riexinger_advisor_fame/100);
+on-arrival: riexinger_advisor = 1; n_advisors += 1; beweli_dissent -= 2*(riexinger_advisor_fame/100);
 go-to: emali_advisor_choice if in_left_leadership = 1;
 
 Bernd Riexinger is now an advisor.
