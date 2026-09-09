@@ -20,11 +20,11 @@ on-arrival: {!
 
 var berlin_adjustment_factors = {
     spd: 1.0,
-    linke: 0.92,
+    linke: 1.0,
     fdp: 0.95,
-    cdu: 1.0,
-    afd: 0.85,
-    greens: 0.62,
+    cdu: 0.98,
+    afd: 0.95,
+    greens: 1.05,
 };
 
 Q.spd_r_berlin = 0;
@@ -88,11 +88,11 @@ if (Q.cdu_berlin_elections_vote >= 1.4) Q.cdu_r_berlin = Q.cdu_berlin_elections_
 
 var berlin_adjustment_r_factors = {
     spd: 1.0,
-    linke: 0.92,
+    linke: 1.0,
     fdp: 0.95,
-    cdu: 1.0,
-    afd: 0.85,
-    greens: 0.62,
+    cdu: 0.98,
+    afd: 0.95,
+    greens: 1.05,
 };
 
 if (Q.young_linke_normalized + Q.urban_linke_normalized >= 30) berlin_adjustment_r_factors.linke += 0.1;
