@@ -1,24 +1,24 @@
-title: Landtagswahl Baden-Württemberg
-subtitle: The people of Baden-Württemberg go to vote..
-view-if: (year == 2021 and month == 8 and not baden_wurttemberg_election_seen) or (baden_wurttemberg_election_2_trigger_time == time and baden_wurttemberg_election_seen_time != time)
+title: Wahl zum Berlin Abgeordnetenhaus
+subtitle: The people of Berlin head to the polls..
+view-if: (year == 2021 and month == 9 and not berlin_election_seen) or (berlin_election_2_trigger_time == time and berlin_election_seen_time != time)
 new-page: true
 tags: event
-on-arrival: baden_wurttemberg_election_seen += 1 if baden_wurttemberg_election_seen; baden_wurttemberg_election_seen = 1 if not baden_wurttemberg_election_seen; baden_wurttemberg_election_seen_time = time; baden_wurttemberg_most_recent = time; baden_wurttemberg_groko = 0; baden_wurttemberg_traffic_light = 0; baden_wurttemberg_jamaica = 0; baden_wurttemberg_rot_rot = 0; baden_wurttemberg_kenya = 0; baden_wurttemberg_schwarz_blau = 0; baden_wurttemberg_tigerenten = 0; baden_wurttemberg_kiwi = 0; baden_wurttemberg_die_linke_maj = 0; baden_wurttemberg_afd_maj = 0; baden_wurttemberg_rot_grun = 0; baden_wurttemberg_spd_maj = 0; baden_wurttemberg_green_maj = 0; baden_wurttemberg_cdu_maj = 0
+on-arrival: berlin_election_seen += 1 if berlin_election_seen; berlin_election_seen = 1 if not berlin_election_seen; berlin_election_seen_time = time; berlin_most_recent = time; berlin_groko = 0; berlin_traffic_light = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0;
 priority: 2
-face-image: img/baden_wurttemberg_flag.webp
+face-image: img/berlin.png
 
-= Landtagswahl Baden-Württemberg, [+ month : month +] [+ year +]
+= Wahl zum Berlin Abgeordnetenhaus, [+ month : month +] [+ year +]
 
-Baden-Württemberg has been a relatively stable state under Winfried Kretschmann of the <span style="color: #1AA037;">**B90/Greens**</span>, with the <span style="color: #c00000;">**SPD**</span>/<span style="color: #1AA037;">**B90/Greens**</span> government losing its majority in 2016, however the <span style="color: #000000;">**CDU**</span> would provide support to the Kretschmann government, abandoning the <span style="color: #c00000;">**SPD**</span> and forming a <span style="color: #000000;">Schwarz</span>-<span style="color: #1AA037;">Grün</span> coalition. 
+The regularly scheduled elections for the Berlin Abgeordnetenhaus are to take place. The incumbent government is a <span style="color: [+ linke_colour +];">Rot</span>-<span style="color: [+ spd_colour +];">Rot</span>-<span style="color: [+ greens_colour +];">Grün</span> government, with our party being in government, led by Michael Müller. 
   
-The <span style="color: #1AA037;">Greens</span> are expected to make healthy gains in the election.
+Concurrent to this, a expropiation referendum which will affect 12 businesses will take place, and we are confident that it will end in a victory for the Yes side. The Borough council elections are also held in the same day. Lot of things. Now, we have to go to the voting..
 
-- @baden_wurttemberg: May we do our best...
+- @berlin: May we do our best...
 
-@baden_wurttemberg
+@berlin
 on-arrival: {!
 
-var baden_wurttemberg_adjustment_factors = {
+var berlin_adjustment_factors = {
     spd: 1.25,
     linke: 1.0,
     fdp: 1.25,
