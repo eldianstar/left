@@ -52,6 +52,17 @@ Q.dues = 5;
 Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
+// colours, credit to kurtrosenfeld
+
+Q.linke_colour = '#BC2D72';
+Q.spd_colour = '#E3000F';
+Q.bsw_colour = '#4C0B5F';
+Q.greens_colour = '#1AA037';
+Q.fdp_colour = '#FFD600';
+Q.afd_colour = '#0489db';
+Q.csu_colour = '#003863';
+Q.cdu_colour = '#000000';
+
 // factions
 Q.factions = ['oldleft', 'beweli', 'emali', 'pragmatist'];
 // should this be normalized to 100%?
