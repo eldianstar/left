@@ -199,7 +199,7 @@ data = [{
 }];
 
 if (Q.spd_r_berlin >= 5) {
-data = data.concat([{
+data = data.concat({
     "id": "spd",
     "legend": "SPD",
     "name": "SPD",
