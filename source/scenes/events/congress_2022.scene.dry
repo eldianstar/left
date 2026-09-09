@@ -25,22 +25,22 @@ Q.emali_votes = 0;
 
 Q.oldleft_urban = 0.9;
 Q.oldleft_rural = 1;
-Q.oldleft_youth = 0.3;
+Q.oldleft_youth = 0.4;
 if (oldleft_leader = "Wissler") {
-Q.oldleft_youth += 0.4 
+Q.oldleft_youth += 0.3; 
 }
 Q.oldleft_upper = 0.3;
-Q.oldleft_east = 1.1;
+Q.oldleft_east = 1.2;
 
-Q.beweli_urban = 0.7;
-Q.beweli_rural = 0.3;
-Q.beweli_youth = 1.2;
-Q.beweli_upper = 0.3;
-Q.beweli_east = 0.5;
+Q.beweli_urban = 0.6;
+Q.beweli_rural = 0.1;
+Q.beweli_youth = 1;
+Q.beweli_upper = 0.2;
+Q.beweli_east = 0.4;
 
 Q.emali_urban = 0.9;
 Q.emali_rural = 0.4;
-Q.emali_youth = 1;
+Q.emali_youth = 0.9;
 Q.emali_upper = 0.4;
 Q.emali_east = 0.6;
 
