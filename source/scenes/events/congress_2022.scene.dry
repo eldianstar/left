@@ -274,35 +274,19 @@ on-arrival: oldleft_dissent += 10; emali_dissent += 10; beweli_dissent += 10; pr
 
 @oldleft_advisor_choice
 
-- @add_wagenknecht
-- @add_mohamedali
-- @add_pellmann
-- @add_wissler
-- @add_riexinger
+- #oldleft_advisor
 
 @beweli_advisor_choice
 
-- @add_wissler
-- @add_riexinger
-- @add_gohlke
-- @add_pantisano
-- @add_buenger
-- @add_schwerdtner
+- #beweli_advisor
 
 @emali_advisor_choice
 
-- @add_lay
-- @add_kipping
-- @add_reichinnek
-- @add_hoss
+- #emali_advisor
 
 @pragmatist_advisor_choice
 
-- @add_gysi
-- @add_ramelow
-- @add_bartsch
-- @add_hennig_wellsow
-- @add_goerke
+- #pragmatist_advisor
 
 @add_wagenknecht
 title: Sahra Wagenknecht
