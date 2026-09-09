@@ -75,6 +75,50 @@ Q.emali_dissent = 0;
 Q.pragmatist_strength = 25;
 Q.pragmatist_dissent = 10;
 
+Q.oldleft_votes = 0;
+Q.beweli_votes = 0;
+Q.emali_votes = 0;
+Q.pragmatist_votes = 0;
+
+Q.oldleft_urban = 0;
+Q.oldleft_rural = 0;
+Q.oldleft_youth = 0;
+Q.oldleft_upper = 0;
+Q.oldleft_east = 0;
+
+Q.beweli_urban = 0;
+Q.beweli_rural = 0;
+Q.beweli_youth = 0;
+Q.beweli_upper = 0;
+Q.beweli_east = 0;
+
+Q.emali_urban = 0;
+Q.emali_rural = 0;
+Q.emali_youth = 0;
+Q.emali_upper = 0;
+Q.emali_east = 0;
+
+Q.pragmatist_urban = 0;
+Q.pragmatist_rural = 0;
+Q.pragmatist_youth = 0;
+Q.pragmatist_upper = 0;
+Q.pragmatist_east = 0;
+
+Q.oldleft_c = 0;
+Q.beweli_c = 0;
+Q.emali_c = 0;
+Q.pragmatist_c = 0;
+
+Q.left_leadership = 0;
+Q.progressive_leadership = 0;
+Q.right_leadership = 0;
+Q.hufeisen_leadership = 0;
+
+Q.in_left_leadership = 0;
+Q.in_progressive_leadership = 0;
+Q.in_right_leadership = 0;
+Q.in_hufeisen_leadership = 0;
+
 Q.oldleft_leader = "Wagenknecht";
 Q.beweli_leader = "Gohlke";
 Q.emali_leader = "Kipping";
@@ -507,6 +551,7 @@ Q.linke_no_confidence = 0;
 
 // Advisors/Leaders
 Q.n_advisors = 2;
+Q.n_advisors_woman = 2;
 // timer - this decrements by 1 every turn, and is set to 5 whenever an advisor action is used, so that you can only use one advisor action every 5 months.
 // let's just put all of the timers here...
 // most party affairs and government affairs cards are on a timer.
