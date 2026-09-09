@@ -217,68 +217,66 @@ go-to: coalition_menu
 The prominent issue in the conference is clearly the war in Ukraine and our stance towards both Russia and Western aid to Ukraine.
 
 - @oppositionist: The party remarks its support for the Ukrainian people against Russian aggression.
-- @avoid_decision
-- @participationist: The resolution is defeated, and instead one in support is adopted.
+- @avoid_decision: Defer making a decision.
+- @participationist: The party declares absolute neutrality.
 
 @oppositionist
-choose-if: right_leadership >= 50 or foreign_moderation >= 5 or oldleft_c < 20
+choose-if: right_leadership >= 50 or foreign_moderation >= 5 or oldleft_c < 25
 subtitle: Russian imperialism is clearly at fault for the war. We must stand with Ukraine in these dark times.
 on-arrival: foreign_moderation += 2; pragmatist_strength += 2; oldleft_strength -= 2; oldleft_dissent += 30; greens_relation += 3; spd_relation += 1; cdu_relation += 1;
-go-to: unions
+go-to: leadership_election
 
 We have remarked our support for Ukraine. While our right wing cheers this outcome and the moderate parties are pleased by our decision, the Old Left sees this as a betrayal and feels increasingly sidelined. Some people talk about a party split. 
 
 @avoid_decision
-choose-if: right_leadership < 40 and oldleft_strength >= 20 and oldleft_strength < 40 and foreign_moderation < 7 and foreign_moderation >= 3
+subtitle: We must avoid taking a definitive side.
+choose-if: right_leadership < 40 and oldleft_c >= 20 and oldleft_c < 45 and foreign_moderation < 7 and foreign_moderation >= 3
 on-arrival: oldleft_dissent += 5; pragmatist_dissent += 5; emali_dissent += 5;
+go-to: leadership_election
 
 @participationist
-choose-if: left_c < 50
-subtitle: The Center and the Right ([+ pragmatic_unity +]%) [? if pragmatic_unity < 50 : - though they lack a majority, the trade unions could be won over. ?]
-on-arrival: left_dissent += 5; dvp_relation += 10; z_relation += 10; ddp_relation += 10; reformist_dissent -= 5; left_strength -= 5; labor_dissent += 5 if dvp_relation < 40 and z_relation < 50
-go-to: unions
+choose-if: oldleft_c >= 45 or (oldleft_c >= 35 and foreign_moderation < 2)
+subtitle: After all, we mustn't forget that Russia was initially provoked by NATO imperialism.
+on-arrival: oldleft_strength += 5; oldleft_dissent -= 5; pragmatist_dissent += 30; emali_dissent += 15; greens_relation -= 5; spd_relation -= 2; cdu_relation -= 2; foreign_moderation -= 2;
+go-to: leadership_election
 
-The resolution is, as expected, rejected by the conference, to the disappointment of the [? if left_c < 15 : increasingly sidelined ?] left.
+Unexpectedly, the delegates have decided to maintain a neutral stance between Ukraine and Russia. While our left wing cheers, the moderate parties and our right wing are greatly disappointed by the party's decision.
 
-@unions
+@leadership_election
+title: Now, let us choose the Party Leadership.
 
-With the major polarizing issue out of the way, the next proposal to be voted on is a resolution of support for the trade unions and expression of solidarity with the new middle class, perhaps engineered to satisfy those unions upset by the adoption of the previous resolution.
+- @left_leadership: The left wing of the party takes power.
+- @progressive_leadership: The new leadership will represent the progressive centrist wings of the party.
+- @right_leadership: The right wing of the party takes power.
+- @hufeisen_leadership: The left and right wings have settled on a horshoe power sharing agreement.
+- @vote_stalled: The vote reaches a deadlock
 
-- @union_support: The resolution is adopted.
-- @nah: The resolution is rejected.
+@left_leadership
+choose-if: left_leadership >= 50 and (issue_feminism < 5 or oldleft_leader != "Wagenknecht")
+on-arrival: in_left_leadership = 1; beweli_dissent -= 5; oldleft_dissent -= 5;
+go-to: oldleft_advisor_choice
 
-@union_support
-subtitle: -1 resource - Labor ([+ labor_c +]%)
-choose-if: resources >= 1
-on-arrival: resources -= 1; labor_dissent -= 10; labor_strength += 5; new_middle_spd += 3*(1-dissent)
-go-to: agriculture_program
+@progressive_leadership
+choose-if: progressive_leadership >= 50
+on-arrival: in_progressive_leadership = 1; beweli_dissent -= 5; emali_dissent -= 5;
+go-to: beweli_advisor_choice
 
-The resolution is adopted, expressing and providing support to the trade unions as the defenders of working class prosperity, including that of the new middle class.
+@right_leadership
+choose-if: right_leadership >= 50
+on-arrival: in_right_leadership = 1; emali_dissent -= 5; pragmatist_dissent -= 5;
+go-to: emali_advisor_choice
 
-@nah
-subtitle: There are greater priorities.
-choose-if: labor_strength < 50 or resources < 1
-on-arrival: labor_dissent += 5; labor_strength -= 5
-go-to: agriculture_program
+@hufeisen_leadership
+choose-if: hufeisen_leadership >= 50 and (issue_antimilitarism < 5 or (oldleft_dissent < 10 and emali_dissent < 10))
+on-arrival: in_hufeisen_leadership = 1; oldleft_dissent -= 5; emali_dissent -= 5;
+go-to: oldleft_advisor_choice
 
-The resolution is ultimately rejected, with the conference considering support for the unions and the new middle class to not be a pressing priority.
+@vote_stalled
+choose-if: (hufeisen_leadership < 50 or (issue_antimilitarism >= 5 and (oldleft_dissent >= 10 or emali_dissent >= 10))) and (left_leadership < 50 and (issue_feminism >= 5 or oldleft_leader == "Wagenknecht")) and progressive_leadership < 50 and right_leadership < 50
+on-arrival: oldleft_dissent += 10; emali_dissent += 10; beweli_dissent += 10; pragmatist_dissent += 10;
 
-@agriculture_program
+@oldleft_advisor_choice
 
-Finally to be voted on is the agricultural programme proposed by Fritz Baade, published in January. The program is a step towards the SPD expanding its voteshare beyond simply the urban working class, but into other working class groups too. Some on the left worry, however, that this opens the door to revisionist "Volkspartei" rhetoric or that it would result in the SPD supporting petty bourgeois producers.
+@beweli_advisor_choice
 
-- @program_adopted: The agricultural programme is adopted.
-- @program_refused: The agricultural programme is rejected.
-
-@program_adopted
-subtitle: The Right ([+ reformist_c +]%) [? if reformist_c < 50 : - though the reformists lack a majority, much of the center and trade unions are sympathetic. ?]
-choose-if: left_c < 50
-on-arrival: peoples_party_support += 1
-
-The programme is adopted. Perhaps this will enable the SPD to breach into the rural regions that the DNVP currently dominates.
-
-@program_refused
-subtitle: The Left ([+ left_c +]%) [? if left_c < 50 : - though the left lacks a majority, much of the center and trade unions are sympathetic. ?]
-choose-if: reformist_c < 50
-
-The programme is rejected. It seems the SPD shall continue to remain a strictly urban working class party.
+@emali_advisor_choice
