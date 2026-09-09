@@ -197,7 +197,7 @@ if (Q.linke_berlin_elections_vote >= 5) {
         "id": "linke",
         "legend": "Left",
         "name": "Left",
-        "seats": Math.round(Q.linke_r_berlin * 0.96)
+        "seats": Math.round(Q.linke_r_berlin * 1.47)
     });
 }
 
@@ -206,7 +206,7 @@ if (Q.spd_berlin_elections_vote >= 5) {
         "id": "spd",
         "legend": "SPD",
         "name": "SPD",
-        "seats": Math.round(Q.spd_r_berlin * 0.96)
+        "seats": Math.round(Q.spd_r_berlin * 1.47)
     });
 }
 
@@ -215,7 +215,7 @@ if (Q.greens_berlin_elections_vote >= 5) {
         "id": "greens",
         "legend": "B90/Greens",
         "name": "B90/Greens",
-        "seats": Math.round(Q.greens_r_berlin * 0.96)
+        "seats": Math.round(Q.greens_r_berlin * 1.47)
     });
 }
 
@@ -224,7 +224,7 @@ if (Q.fdp_berlin_elections_vote >= 5) {
         "id": "fdp",
         "legend": "FDP",
         "name": "FDP",
-        "seats": Math.round(Q.fdp_r_berlin * 0.96)
+        "seats": Math.round(Q.fdp_r_berlin * 1.47)
     });
 }
 
@@ -233,7 +233,7 @@ if (Q.cdu_berlin_elections_vote >= 5) {
         "id": "cdu",
         "legend": "CDU",
         "name": "CDU",
-        "seats": Math.round(Q.cdu_r_berlin * 0.96)
+        "seats": Math.round(Q.cdu_r_berlin * 1.47)
     });
 }
 
@@ -242,7 +242,7 @@ if (Q.afd_berlin_elections_vote >= 5) {
         "id": "afd",
         "legend": "AfD",
         "name": "AfD",
-        "seats": Math.round(Q.afd_r_berlin * 0.96)
+        "seats": Math.round(Q.afd_r_berlin * 1.47)
     });
 }
 setTimeout(function() {
