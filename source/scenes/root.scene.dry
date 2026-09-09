@@ -64,6 +64,35 @@ Q.emali_dissent = 0;
 Q.pragmatist_strength = 25;
 Q.pragmatist_dissent = 10;
 
+Q.oldleft_votes = 0;
+Q.beweli_votes = 0;
+Q.emali_votes = 0;
+Q.pragmatist_votes = 0;
+
+Q.oldleft_urban = 0;
+Q.oldleft_rural = 0;
+Q.oldleft_youth = 0;
+Q.oldleft_upper = 0;
+Q.oldleft_east = 0;
+
+Q.beweli_urban = 0;
+Q.beweli_rural = 0;
+Q.beweli_youth = 0;
+Q.beweli_upper = 0;
+Q.beweli_east = 0;
+
+Q.emali_urban = 0;
+Q.emali_rural = 0;
+Q.emali_youth = 0;
+Q.emali_upper = 0;
+Q.emali_east = 0;
+
+Q.pragmatist_urban = 0;
+Q.pragmatist_rural = 0;
+Q.pragmatist_youth = 0;
+Q.pragmatist_upper = 0;
+Q.pragmatist_east = 0;
+
 Q.oldleft_leader = "Wagenknecht";
 Q.beweli_leader = "Gohlke";
 Q.emali_leader = "Kipping";
