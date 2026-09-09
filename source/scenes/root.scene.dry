@@ -93,6 +93,21 @@ Q.pragmatist_youth = 0;
 Q.pragmatist_upper = 0;
 Q.pragmatist_east = 0;
 
+Q.oldleft_c = 0;
+Q.beweli_c = 0;
+Q.emali_c = 0;
+Q.pragmatist_c = 0;
+
+Q.left_leadership = 0;
+Q.progressive_leadership = 0;
+Q.right_leadership = 0;
+Q.hufeisen_leadership = 0;
+
+Q.in_left_leadership = 0;
+Q.in_progressive_leadership = 0;
+Q.in_right_leadership = 0;
+Q.in_hufeisen_leadership = 0;
+
 Q.oldleft_leader = "Wagenknecht";
 Q.beweli_leader = "Gohlke";
 Q.emali_leader = "Kipping";
