@@ -239,7 +239,7 @@ if (Q.afd_r_berlin >= 5) {
         "legend": "AfD",
         "name": "AfD",
         "seats": Math.round(Q.afd_r_berlin * 0.96),
-}, ]);
+});
 
 if (window && d3) {
     var width = 500;
