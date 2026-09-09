@@ -271,7 +271,7 @@ setTimeout(function() {
         d3.select("#berlin_landtag").selectAll("*").remove();
         d3.select("#berlin_landtag").datum(data).call(parliament);
     }
-}, 100);
+}, 147);
 !}
 
 **Berlin results:**
