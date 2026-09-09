@@ -290,7 +290,7 @@ setTimeout(function() {
 
 {!<tr><td><div class="box" style='background-color:#C43988'> </div> !}CDU: {!</td><td>!} [+ cdu_berlin_elections_vote +]% {!</td><td>!} [+ cdu_r_berlin +]%  {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D3C24D'> </div> !} AfD: {!</td><td>!} [+ afd_berlin_elections_vote +]% {!</td><td>!} [+ afd_r_berlin +]%  {!</td></tr>!} ?]
+{!<tr><td><div class="box" style='background-color:#D3C24D'> </div> !} AfD: {!</td><td>!} [+ afd_berlin_elections_vote +]% {!</td><td>!} [+ afd_r_berlin +]%  {!</td></tr>!} 
 
 {!</table>!}
 <hr id="read-marker">
