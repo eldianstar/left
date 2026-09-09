@@ -288,6 +288,8 @@ on-arrival: oldleft_dissent += 10; emali_dissent += 10; beweli_dissent += 10; pr
 
 - #pragmatist_advisor
 
+# oldleft
+
 @add_wagenknecht
 title: Sahra Wagenknecht
 subtitle: Sahra Wagenknecht is [? if oldleft_leader == "Wagenknecht" : the Eastern leader of our traditional left wing. ?][? if oldleft_leader != "Wagenknecht" : a prominent Eastern figure in our traditional left wing. ?] {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
@@ -347,6 +349,8 @@ on-arrival: pellmann_advisor = 1; n_advisors += 1; oldleft_dissent -= 2*(pellman
 go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
 
 Sören Pellmann is now an advisor.
+
+# beweli
 
 @add_wissler_bwl
 title: Janine Wissler
@@ -417,6 +421,8 @@ go-to: emali_advisor_choice if in_left_leadership = 1;
 
 Clara Bünger is now an advisor.
 
+# emali
+
 @add_lay
 title: Caren Lay
 subtitle: Caren Lay is a Western politician and our primary figure in housing-related themes. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
@@ -486,6 +492,7 @@ go-to: pragmatist_advisor_choice if in_right_leadership = 1;
 
 Luke Hoss is now an advisor.
 
+# pragmatist
 
 @add_gysi
 title: Gregor Gysi
