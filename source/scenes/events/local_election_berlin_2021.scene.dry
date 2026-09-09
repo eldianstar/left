@@ -87,12 +87,12 @@ if (Q.afd_berlin_elections_vote >= 1.4) Q.afd_r_berlin = Q.afd_berlin_elections_
 if (Q.cdu_berlin_elections_vote >= 1.4) Q.cdu_r_berlin = Q.cdu_berlin_elections_vote;
 
 var berlin_adjustment_r_factors = {
-    spd: 1.0,
-    linke: 1.0,
-    fdp: 0.95,
-    cdu: 0.98,
-    afd: 0.95,
-    greens: 1.05,
+    spd: 0.86,
+    linke: 2.0,
+    fdp: 0.75,
+    cdu: 0.95,
+    afd: 0.85,
+    greens: 1.09,
 };
 
 if (Q.young_linke_normalized + Q.urban_linke_normalized >= 30) berlin_adjustment_r_factors.linke += 0.1;
