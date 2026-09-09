@@ -280,17 +280,17 @@ setTimeout(function() {
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>Landtag Seats</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **Die Linke:** {!</td><td>!} **[+ linke_berlin_elections_vote +]%** {!</td><td>!} [+ linke_r_berlin +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#BC2D72; outline: 2px; outline-style: solid;'> </div> !} <span style="color: [+ linke_colour +];">**Die Linke**</span>: {!</td><td>!} **[+ linke_berlin_elections_vote +]%** {!</td><td>!} [+ linke_r_berlin +]% {!</td></tr>!}
 
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}SPD: {!</td><td>!} [+ spd_berlin_elections_vote +]% {!</td><td>!} [+ spd_r_berlin +]% {!</td></tr>!} ?]
+{!<tr><td><div class="box" style='background-color:#E3000F'> </div> !}<span style="color: [+ spd_colour +];">**SPD**</span>: {!</td><td>!} [+ spd_berlin_elections_vote +]% {!</td><td>!} [+ spd_r_berlin +]% {!</td></tr>!} 
 
-{!<tr><td><div class="box" style='background-color:#fe9e00'> </div> !}B90/Greens: {!</td><td>!} [+ greens_berlin_elections_vote +]% {!</td><td>!} [+ greens_r_berlin +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#1AA037'> </div> !}<span style="color: [+ greens_colour +];">**B90/Greens**</span>: {!</td><td>!} [+ greens_berlin_elections_vote +]% {!</td><td>!} [+ greens_r_berlin +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#700000'> </div> !}FDP: {!</td><td>!} [+ fdp_berlin_elections_vote +]% {!</td><td>!} [+ fdp_r_berlin +]%  {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FFD600'> </div> !}<span style="color: [+ fdp_colour +];">**FDP**</span>: {!</td><td>!} [+ fdp_berlin_elections_vote +]% {!</td><td>!} [+ fdp_r_berlin +]%  {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#C43988'> </div> !}CDU: {!</td><td>!} [+ cdu_berlin_elections_vote +]% {!</td><td>!} [+ cdu_r_berlin +]%  {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000000'> </div> !}<span style="color: [+ cdu_colour +];">**CDU**</span>: {!</td><td>!} [+ cdu_berlin_elections_vote +]% {!</td><td>!} [+ cdu_r_berlin +]%  {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D3C24D'> </div> !} AfD: {!</td><td>!} [+ afd_berlin_elections_vote +]% {!</td><td>!} [+ afd_r_berlin +]%  {!</td></tr>!} 
+{!<tr><td><div class="box" style='background-color:#0489db'> </div> !} <span style="color: [+ afd_colour +];">**AfD**</span>: {!</td><td>!} [+ afd_berlin_elections_vote +]% {!</td><td>!} [+ afd_r_berlin +]%  {!</td></tr>!} 
 
 {!</table>!}
 <hr id="read-marker">
