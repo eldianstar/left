@@ -742,6 +742,19 @@ th {
   fill: #0489db;
 }
 
+.seat.oldleft {
+  fill: #4C0B5F;
+}
+.seat.beweli {
+  fill: #BC2D72;
+}
+.seat.emali {
+  fill: #E3000F;
+}
+.seat.pragmatist {
+  fill: #ff5500;
+}
+
 .tooltip-text {
   text-decoration: underline;
   text-decoration-style: dotted;
