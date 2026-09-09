@@ -1,0 +1,279 @@
+title: Erfurt Conference
+subtitle: The Left holds its 8th Party Congress in Erfurt
+new-page: true
+tags: event
+view-if: year == 2022 and month >= 6
+set-jump: post_congress
+max-visits: 1
+
+# the low priority means that this event is only seen after all other events are resolved for the month.
+# note: z_coalition = z_celation + (pro_cepublic/2); z_coalition *= 1.25 if z_faction_leader == "Joos";
+
+= Erfurt Congress
+
+Die Linke is holding its annual congress in Erfurt, where the party is expected to formulate a definitive stance on the war in Ukraine and on social issues.
+
+- @faction_algorithm: The delegates enter...
+
+@faction_algorithm
+on-arrival: {!
+
+Q.oldleft_votes = 0;
+Q.beweli_votes = 0;
+Q.pragmatist_votes = 0;
+Q.emali_votes = 0;
+
+Q.oldleft_urban = 0.9;
+Q.oldleft_rural = 1;
+Q.oldleft_youth = 0.3;
+if (oldleft_leader = "Wissler") {
+Q.oldleft_youth += 0.4 
+}
+Q.oldleft_upper = 0.3;
+Q.oldleft_east = 1.1;
+
+Q.beweli_urban = 0.7;
+Q.beweli_rural = 0.3;
+Q.beweli_youth = 1.2;
+Q.beweli_upper = 0.3;
+Q.beweli_east = 0.5;
+
+Q.emali_urban = 0.9;
+Q.emali_rural = 0.4;
+Q.emali_youth = 1;
+Q.emali_upper = 0.4;
+Q.emali_east = 0.6;
+
+Q.pragmatist_urban = 0.9;
+Q.pragmatist_rural = 0.7;
+Q.pragmatist_youth = 0.3;
+Q.pragmatist_upper = 0.8;
+Q.pragmatist_east = 1;
+
+var total_linke = 0;
+var total_factions = 0;
+
+// Calculate performance
+var linke_performance = Q.linke_votes - Q.old_linke_performance;
+if (Q.old_linke_performance) {
+    Q.old_linke_performance = Q.linke_votes;
+} else {
+    Q.old_linke_performance = 26;
+}
+if (!linke_performance) {
+    linke_performance = Q.linke_votes - Q.old_linke_performance;
+}
+
+console.log("linke performance delta:", linke_performance);
+
+// Sum linke-normalized votes across all classes
+for (var c of Q.classes) {
+    total_linke += (Q[c + '_linke_normalized'] * Q[c]);
+}
+console.log("Total Linke weighted class vote:", total_linke);
+
+// Loop through factions and classes
+for (var faction of Q.factions) {
+    Q[faction + '_votes'] = 0; // Ensure clean start
+
+    for (var c of Q.classes) {
+        var base_vote = ((Q[faction + '_strength'] / 100) * Q[faction + '_' + c]) * ((Q[c + '_linke_normalized'] * Q[c]) / total_linke);
+        var dissent = Q[faction + '_dissent'] || 0;
+        var dissent_modifier = 1 + (dissent / 60) * (-linke_performance / 10) * 5;
+
+        console.log(`[${faction}] + [${c}]`);
+        console.log("  Base vote:", base_vote.toFixed(4));
+        console.log("  Dissent:", dissent);
+        console.log("  Dissent modifier:", dissent_modifier.toFixed(4));
+
+        if (dissent_modifier < 0.1) {
+            dissent_modifier = 0.1;
+        }
+
+        Q[faction + '_votes'] += base_vote * dissent_modifier;
+    }
+
+    console.log(`[${faction}] total votes before normalization:`, Q[faction + '_votes'].toFixed(2));
+
+    total_factions += Q[faction + '_votes'];
+}
+
+// Normalize to percentage
+for (var faction of Q.factions) {
+    Q[faction + '_votes'] = Math.round((Q[faction + '_votes'] / total_factions) * 100);
+    console.log(`[${faction}] normalized vote %:`, Q[faction + '_votes']);
+}
+!}
+go-to: post_congress
+
+@post_congress
+on-arrival: {!
+// set old results
+// election threshold constitutional reform
+// banning parties
+var new_faction_sum = 0;
+for (var faction of Q.factions) {
+    Q['old_' + faction + '_c'] = Q[faction + '_c'];
+    Q[faction + '_c'] = Q[faction + '_votes'];
+        // if we use decimals, then we might want to truncate the numbers
+    if (Q.use_decimals) {
+        Q[faction + '_c_disp'] = Q[faction+'_c'].toFixed(1);
+    }  else {
+            Q[faction + '_c_disp'] = Q[faction+'_c'];
+    }
+    Q['change_' + faction + '_c'] = Q[faction + '_c'] - Q['old_' + faction + '_c'];
+    var sign = Q['change_' + faction + '_c'] > 0 ? '+'  : '';
+    Q['str_change_' + faction] = sign + Q['change_' + faction + '_c'];//.toFixed(1);
+}
+// calculate new faction sum if electoral reform
+if (Q.electoral_threshold && Q.electoral_threshold > 0 || Q.faction_bans) {
+    for (var faction of Q.parties) {
+        if (Q[faction + '_c'] > 0) {
+            if (Q.use_decimals) {
+                Q[faction + '_c'] = Math.round(Q[faction + '_c']*1000/new_faction_sum)/10;
+            } else {
+                Q[faction + '_c'] = Math.round(Q[faction + '_c']*100/new_faction_sum);
+            }
+        }
+        if (Q.use_decimals) {
+            Q[faction + '_c_disp'] = Q[faction+'_c'].toFixed(1);
+        } else {
+            Q[faction + '_c_disp'] = Q[faction+'_c'];
+        }
+        Q['change_' + faction + '_c'] = Q[faction + '_c'] - Q['old_' + faction + '_c'];
+        var sign = Q['change_' + faction + '_c'] > 0 ? '+'  : '';
+        Q['str_change_' + faction] = sign + Q['change_' + faction + '_c'];//.toFixed(1);
+    }
+}
+
+Q.left_leadership = Q.oldleft_c+Q.beweli_c;
+Q.progressive_leadership = Q.beweli_c+Q.emali_c;
+Q.right_leadership = Q.emali_c+Q.pragmatist_c;
+Q.hufeisen_leadership = Q.oldleft_c+Q.emali_c;
+!}
+on-display: {!
+if (!Q.neorevisionism) {
+    data = [
+        {   "id": "oldleft",
+            "legend": "Old Left",
+            "name": "Old Left",
+            "seats": Math.round(Q.oldleft_c*4.15),
+        },
+        {
+            "id": "beweli",
+            "legend": "Movement Left",
+            "name": "Movement Left",
+            "seats": Math.round(Q.beweli_c*4.15),
+        },
+        {
+            "id": "emali",
+            "legend": "Center",
+            "name": "Center",
+            "seats": Math.round(Q.emali_c*4.15),
+        },
+        {
+            "id": "pragmatist",
+            "legend": "Pragmatists",
+            "name": "Pragmatists",
+            "seats": Math.round(Q.pragmatist_c*4.15),
+        },
+];
+}
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#reichstag").datum(data).call(parliament);
+}
+!}
+go-to: coalition_menu
+
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table>!} 
+{!<tr><td>Party</td><td>Vote share</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#4C0B5F'> </div> !} Old Left: {!</td><td>!} [+ oldleft_c +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#BC2D72'> </div> !} Movement Left: {!</td><td>!} [+ beweli_c +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#ff681d'> </div> !} Center: {!</td><td>!} [+ emali_c +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#ff5500'> </div> !} Pragmatists: {!</td><td>!} [+ pragmatist_c +]% {!</td></tr>!}
+
+@coalition_menu
+
+The prominent issue in the conference becomes clear as the left around Toni Sender and Siegfried Aufhäuser propose a resolution that would explicitly state that the class struggle can only be waged from opposition. In opposition are the reformists on the party right, as well as the bulk of the center and the trade unions, though with Aufhäuser joining in the push an understanding between the unions and the left against the [? if center_c+reformist_c >= left_c : dominating ?] pragmatists may be possible.
+
+- @oppositionist: The resolution is adopted, rejecting the notion of government participation.
+- @participationist: The resolution is defeated, and instead one in support is adopted.
+
+@oppositionist
+choose-if: left_c >= 50 or (pragmatic_unity < 50 and dvp_relation < 40 and z_relation < 50)
+subtitle: The Left ([+ left_c +]%) [? if left_c < 50 : - though the Left lacks a majority, the trade unions could be won over. ?]
+on-arrival: coalition_dissent += 5; left_strength += 20; reformist_strength -= 10; reformist_dissent += 30; center_dissent += 15; labor_dissent += ((z_relation+dvp_relation)/10); marx_relation -= 10; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 15; kpd_relation += 10; communist_coalition += 1
+go-to: unions
+
+The resolution expressly rejecting government participation as a means of class struggle is accepted by the conference, much to the uproar of the party right. 
+
+@participationist
+choose-if: left_c < 50
+subtitle: The Center and the Right ([+ pragmatic_unity +]%) [? if pragmatic_unity < 50 : - though they lack a majority, the trade unions could be won over. ?]
+on-arrival: left_dissent += 5; dvp_relation += 10; z_relation += 10; ddp_relation += 10; reformist_dissent -= 5; left_strength -= 5; labor_dissent += 5 if dvp_relation < 40 and z_relation < 50
+go-to: unions
+
+The resolution is, as expected, rejected by the conference, to the disappointment of the [? if left_c < 15 : increasingly sidelined ?] left.
+
+@unions
+
+With the major polarizing issue out of the way, the next proposal to be voted on is a resolution of support for the trade unions and expression of solidarity with the new middle class, perhaps engineered to satisfy those unions upset by the adoption of the previous resolution.
+
+- @union_support: The resolution is adopted.
+- @nah: The resolution is rejected.
+
+@union_support
+subtitle: -1 resource - Labor ([+ labor_c +]%)
+choose-if: resources >= 1
+on-arrival: resources -= 1; labor_dissent -= 10; labor_strength += 5; new_middle_spd += 3*(1-dissent)
+go-to: agriculture_program
+
+The resolution is adopted, expressing and providing support to the trade unions as the defenders of working class prosperity, including that of the new middle class.
+
+@nah
+subtitle: There are greater priorities.
+choose-if: labor_strength < 50 or resources < 1
+on-arrival: labor_dissent += 5; labor_strength -= 5
+go-to: agriculture_program
+
+The resolution is ultimately rejected, with the conference considering support for the unions and the new middle class to not be a pressing priority.
+
+@agriculture_program
+
+Finally to be voted on is the agricultural programme proposed by Fritz Baade, published in January. The program is a step towards the SPD expanding its voteshare beyond simply the urban working class, but into other working class groups too. Some on the left worry, however, that this opens the door to revisionist "Volkspartei" rhetoric or that it would result in the SPD supporting petty bourgeois producers.
+
+- @program_adopted: The agricultural programme is adopted.
+- @program_refused: The agricultural programme is rejected.
+
+@program_adopted
+subtitle: The Right ([+ reformist_c +]%) [? if reformist_c < 50 : - though the reformists lack a majority, much of the center and trade unions are sympathetic. ?]
+choose-if: left_c < 50
+on-arrival: peoples_party_support += 1
+
+The programme is adopted. Perhaps this will enable the SPD to breach into the rural regions that the DNVP currently dominates.
+
+@program_refused
+subtitle: The Left ([+ left_c +]%) [? if left_c < 50 : - though the left lacks a majority, much of the center and trade unions are sympathetic. ?]
+choose-if: reformist_c < 50
+
+The programme is rejected. It seems the SPD shall continue to remain a strictly urban working class party.
