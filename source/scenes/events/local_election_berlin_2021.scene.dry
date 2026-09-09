@@ -19,12 +19,12 @@ Concurrent to this, a expropiation referendum which will affect 12 businesses wi
 on-arrival: {!
 
 var berlin_adjustment_factors = {
-    spd: 1.25,
-    linke: 1.0,
-    fdp: 1.25,
+    spd: 1.0,
+    linke: 0.92,
+    fdp: 0.95,
     cdu: 1.0,
-    afd: 1.5,
-    greens: 0.06,
+    afd: 0.85,
+    greens: 0.62,
 };
 
 Q.spd_r_berlin = 0;
@@ -87,12 +87,12 @@ if (Q.afd_berlin_elections_vote >= 1.4) Q.afd_r_berlin = Q.afd_berlin_elections_
 if (Q.cdu_berlin_elections_vote >= 1.4) Q.cdu_r_berlin = Q.cdu_berlin_elections_vote;
 
 var berlin_adjustment_r_factors = {
-    spd: 1.25,
-    linke: 1.0,
-    fdp: 1.25,
+    spd: 1.0,
+    linke: 0.92,
+    fdp: 0.95,
     cdu: 1.0,
-    afd: 1.5,
-    green: 0.06,
+    afd: 0.85,
+    greens: 0.62,
 };
 
 if (Q.young_linke_normalized + Q.urban_linke_normalized >= 30) berlin_adjustment_r_factors.linke += 0.1;
