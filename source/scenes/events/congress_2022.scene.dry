@@ -276,20 +276,6 @@ on-arrival: oldleft_dissent += 10; emali_dissent += 10; beweli_dissent += 10; pr
 
 - #oldleft_advisor
 
-@beweli_advisor_choice
-
-- #beweli_advisor
-
-@emali_advisor_choice
-
-- #emali_advisor
-
-@pragmatist_advisor_choice
-
-- #pragmatist_advisor
-
-# oldleft
-
 @add_wagenknecht
 title: Sahra Wagenknecht
 subtitle: Sahra Wagenknecht is [? if oldleft_leader == "Wagenknecht" : the Eastern leader of our traditional left wing. ?][? if oldleft_leader != "Wagenknecht" : a prominent Eastern figure in our traditional left wing. ?] {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
@@ -350,7 +336,9 @@ go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if 
 
 Sören Pellmann is now an advisor.
 
-# beweli
+@beweli_advisor_choice
+
+- #beweli_advisor
 
 @add_wissler_bwl
 title: Janine Wissler
@@ -421,7 +409,9 @@ go-to: emali_advisor_choice if in_left_leadership = 1;
 
 Clara Bünger is now an advisor.
 
-# emali
+@emali_advisor_choice
+
+- #emali_advisor
 
 @add_lay
 title: Caren Lay
@@ -492,7 +482,11 @@ go-to: pragmatist_advisor_choice if in_right_leadership = 1;
 
 Luke Hoss is now an advisor.
 
-# pragmatist
+@pragmatist_advisor_choice
+
+- #pragmatist_advisor
+
+
 
 @add_gysi
 title: Gregor Gysi
