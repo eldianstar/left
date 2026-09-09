@@ -1,6 +1,6 @@
 title: Landtagswahl Baden-Württemberg
 subtitle: The people of Baden-Württemberg go to vote..
-view-if: (year == 2021 and month == 3 and not baden_wurttemberg_election_seen) or (baden_wurttemberg_election_2_trigger_time == time and baden_wurttemberg_election_seen_time != time)
+view-if: (year == 2021 and month == 8 and not baden_wurttemberg_election_seen) or (baden_wurttemberg_election_2_trigger_time == time and baden_wurttemberg_election_seen_time != time)
 new-page: true
 tags: event
 on-arrival: baden_wurttemberg_election_seen += 1 if baden_wurttemberg_election_seen; baden_wurttemberg_election_seen = 1 if not baden_wurttemberg_election_seen; baden_wurttemberg_election_seen_time = time; baden_wurttemberg_most_recent = time; baden_wurttemberg_groko = 0; baden_wurttemberg_traffic_light = 0; baden_wurttemberg_jamaica = 0; baden_wurttemberg_rot_rot = 0; baden_wurttemberg_kenya = 0; baden_wurttemberg_schwarz_blau = 0; baden_wurttemberg_tigerenten = 0; baden_wurttemberg_kiwi = 0; baden_wurttemberg_die_linke_maj = 0; baden_wurttemberg_afd_maj = 0; baden_wurttemberg_rot_grun = 0; baden_wurttemberg_spd_maj = 0; baden_wurttemberg_green_maj = 0; baden_wurttemberg_cdu_maj = 0
