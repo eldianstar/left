@@ -348,40 +348,28 @@ tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_adv
 frequency: 1
 
 
-- @centrist: Add Centrists
-- @left: Add Leftists
-- @reformist: Add Reformists
-- @labor: Add Labor
-- @neorev: Add Neorevisionists
-- @nonfactional: Add non-factional advisors
+- @oldleft_advisor_choice: Add Old Leftists
+- @beweli_advisor_choice: Add Movement Leftists
+- @emali_advisor_choice: Add Centrists
+- @pragmatist_advisor_choice: Add Pragmatists
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
 
-@centrist
-subtitle: The glue holding the party together. Reduces faction loyalty decay by 30% for each advisor appointed.
-view-if: n_advisors < 3
+@oldleft_advisor_choice
 
-- #center_advisor
+- #oldleft_advisor
 
-@reformist
-view-if: n_advisors < 3
+@beweli_advisor_choice
 
-- #reformist_advisor
+- #beweli_advisor
 
-@left
-view-if: n_advisors < 3
+@emali_advisor_choice
 
-- #left_advisor
+- #emali_advisor
 
-@labor
-view-if: n_advisors < 3
+@pragmatist_advisor_choice
 
-- #labor_advisor
-
-@neorev
-view-if: neorevisionism > 0 and n_advisors < 3
-
-- #neorev_advisor
+- #pragmatist_advisor
 
 @nonfactional
 subtitle: Generally disinterested in internal struggles. Reduces faction loyalty decay by 10% for each advisor appointed.
@@ -389,326 +377,260 @@ view-if: n_advisors < 3
 
 - #nonfactional_advisor
 
-@add_hilferding
-title: Rudolf Hilferding
-subtitle: Rudolf Hilferding is an economist and one of our chief Marxist theoreticians. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+@add_wagenknecht
+title: Sahra Wagenknecht
+subtitle: Sahra Wagenknecht is [? if oldleft_leader == "Wagenknecht" : the Eastern leader of our traditional left wing. ?][? if oldleft_leader != "Wagenknecht" : a prominent Eastern figure in our traditional left wing. ?] {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/HilferdingRudolf.jpg
-tags: center_advisor
-view-if: hilferding_advisor = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: hilferding_advisor = 1; n_advisors += 1; center_dissent -= 7; center_strength += 5
-go-to: advisor_menu
+card-image: img/_portraits/WagenknechtSahra.jpg
+tags: oldleft_advisor
+view-if: wagenknecht_left == 0
+on-arrival: wagenknecht_advisor = 1; n_advisors += 1; n_advisors_woman += 1; oldleft_dissent -= 2*(wagenknecht_advisor_fame/100);
+go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
 
-Rudolf Hilferding is now an advisor.
+Sahra Wagenknecht is now an advisor.
 
-@add_wels
-title: Otto Wels
-subtitle: Otto Wels is a long-time party organizer and member of the leadership, serving under Friedrich Ebert. {!<br><br>!}[? if difficulty < 0 : Actions -  Clear the Agenda, Party Discipline, Emergency Fundraising ?]
+@add_wissler
+title: Janine Wissler
+subtitle: Janine Wissler is [? if oldleft_leader == "Wissler" : the leader of our traditional left wing ?][? if oldleft_leader != "Wissler" : a prominent figure in our traditional left wing ?], known for bridging together the syndicalist SL and the intersectional BWL. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/WelsRudolf.jpg
-tags: center_advisor
-view-if: wels_advisor = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: wels_advisor = 1; n_advisors += 1; center_dissent -= 7; center_strength += 5
-go-to: advisor_menu
+card-image: img/_portraits/WisslerJanine.jpg
+view-if: beweli_leader != "Wissler"
+tags: oldleft_advisor
+on-arrival: wissler_advisor = 1; n_advisors += 1; n_advisors_woman += 1; oldleft_dissent -= 2*(wissler_advisor_fame/100);
+go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
 
-Otto Wels is now an advisor.
+Janine Wissler is now an advisor.
 
-@add_muller
-title: Hermann Müller
-subtitle: Hermann Müller is the last <span style="color: #c00000;">Social Democratic</span> Chancellor. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Defending Toleration ?]
+@add_riexinger
+title: Bernd Riexinger
+subtitle: Bernd Riexinger is [? if oldleft_leader == "Riexinger" : the leader of our traditional left wing ?][? if oldleft_leader != "Riexinger" : a prominent figure in our traditional left wing ?] with deep support in the worker-oriented SL. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/MüllerHermann.jpg
-tags: center_advisor
-view-if: muller_advisor = 0 and muller_dead = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: muller_advisor = 1; n_advisors += 1; center_dissent -= 7; center_strength += 5
-go-to: advisor_menu
+card-image: img/_portraits/RiexingerBernd.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0) and beweli_leader != "Wissler"
+tags: oldleft_advisor
+on-arrival: riexinger_advisor = 1; n_advisors += 1; oldleft_dissent -= 2*(riexinger_advisor_fame/100);
+go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
 
-Hermann Müller is now an advisor.
+Bernd Riexinger is now an advisor.
 
-@add_breitscheid
-title: Rudolf Breitscheid
-subtitle: Rudolf Breitscheid comes from a well-educated background and is one of our foreign policy leaders. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
+@add_mohamedali
+title: Amira Mohamed Ali
+subtitle: Amira Mohamed Ali is a Western half-Egyptian lawyer in our traditional left wing. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/BreitscheidRudolf.jpg
-view-if: breitscheid_advisor = 0 and n_advisors < 3
-on-arrival: breitscheid_advisor = 1; n_advisors += 1; center_dissent -= 7; center_strength += 5
-go-to: advisor_menu
-tags: center_advisor
+card-image: img/_portraits/MohamedAliAmira.jpg
+tags: oldleft_advisor
+view-if: wagenknecht_left == 0
+on-arrival: mohamedali_advisor = 1; n_advisors += 1; n_advisors_woman += 1; oldleft_dissent -= 2*(mohamedali_advisor_fame/100);
+go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
 
-Rudolf Breitscheid is now an advisor.
+Amira Mohamed Ali is now an advisor.
 
-# reformist
-
-
-@add_severing
-title: Carl Severing
-subtitle: Carl Severing is a one-time Prussian interior minister and police reformer. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
+@add_pellmann
+title: Sören Pellmann
+subtitle: Sören Pellmann is an important Saxon parliamentarian belonging to our left wing. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/SeveringCarl.jpg
-tags: reformist_advisor
-view-if: severing_advisor = 0 and n_advisors < 3
-on-arrival: severing_advisor = 1; n_advisors += 1; reformist_strength += 5; reformist_dissent -= 7
-go-to: advisor_menu
+card-image: img/_portraits/PellmannSoeren.jpg
+view-if: n_advisors_woman = 1 or n_advisors = 0
+tags: oldleft_advisor
+on-arrival: pellmann_advisor = 1; n_advisors += 1; oldleft_dissent -= 2*(pellmann_advisor_fame/100);
+go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
 
-Carl Severing is now an advisor.
+Sören Pellmann is now an advisor.
 
-@add_braun
-title: Otto Braun
-subtitle: Otto Braun is the Minister-President of Prussia, and one of the most recognizable and well-known <span style="color: #c00000;">Social Democratic</span> leaders. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
+# beweli
+
+@add_wissler_bwl
+title: Janine Wissler
+subtitle: Janine Wissler is [? if oldleft_leader == "Wissler" : the leader of our traditional left wing ?][? if oldleft_leader != "Wissler" : a prominent figure in our left wing ?], known for bridging together the syndicalist SL and the intersectional BWL. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/BraunOtto.jpg
-tags: reformist_advisor
-view-if: braun_advisor = 0 and n_advisors < 3
-on-arrival: braun_advisor = 1; n_advisors += 1; reformist_strength += 5; reformist_dissent -= 7
-go-to: advisor_menu
+card-image: img/_portraits/WisslerJanine.jpg
+view-if: beweli_leader == "Wissler"
+tags: beweli_advisor
+on-arrival: wissler_advisor = 1; n_advisors += 1; n_advisors_woman += 1; beweli_dissent -= 2*(wissler_advisor_fame/100);
+go-to: emali_advisor_choice if in_progressive_leadership = 1;
 
-Otto Braun is now an advisor.
+Janine Wissler is now an advisor.
 
-@add_juchacz
-title: Marie Juchacz
-subtitle: Marie Juchacz is the founder of Worker's Welfare, a mutual-aid organization. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
+@add_riexinger_bwl
+title: Bernd Riexinger
+subtitle: Bernd Riexinger is [? if oldleft_leader == "Riexinger" : the leader of our traditional left wing ?][? if oldleft_leader != "Riexinger" : a prominent figure in our left wing ?] with deep support in the worker-oriented SL. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/JuchaczMarie.jpg
-view-if: juchacz_advisor = 0 and n_advisors < 3
-on-arrival: juchacz_advisor = 1; n_advisors += 1; reformist_strength += 5; reformist_dissent -= 7
-go-to: advisor_menu
-tags: reformist_advisor
+card-image: img/_portraits/RiexingerBernd.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0) and beweli_leader == "Wissler"
+tags: beweli_advisor
+on-arrival: riexinger_advisor = 1; n_advisors += 1; beweli_dissent -= 2*(riexinger_advisor_fame/100);
+go-to: emali_advisor_choice if in_left_leadership = 1;
 
-Marie Juchacz is now an advisor.
+Bernd Riexinger is now an advisor.
 
-@add_pfulf
-title: Antonie Pfülf
-subtitle: Antonie Pfülf is a leader in social policy and women's rights. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Women's Rights ?]
+@add_gohlke
+title: Nicole Gohlke
+subtitle: Nicole Gohlke is a prominent Western figure in both BWL and SL with strong ties to anti-imperialist activism. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/PfülfAntonie.jpg
-view-if: pfulf_advisor = 0 and n_advisors < 3
-on-arrival: pfulf_advisor = 1; n_advisors += 1; reformist_strength += 5; reformist_dissent -= 7
-go-to: advisor_menu
-tags: reformist_advisor
+card-image: img/_portraits/GohlkeNicole.jpg
+tags: beweli_advisor
+on-arrival: gohlke_advisor = 1; n_advisors += 1; n_advisors_woman += 1; beweli_dissent -= 2*(gohlke_advisor_fame/100);
+go-to: emali_advisor_choice if in_left_leadership = 1;
 
-Antonie Pfülf is now an advisor.
+Nicole Gohlke is now an advisor.
 
-
-
-# left
-
-@add_levi
-title: Paul Levi
-subtitle: Paul Levi is a former <span style="color: #700000;">**KPD**</span> leader who was purged for criticizing <span style="color: #700000;">**Communist**</span> policies. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the <span style="color: #700000;">**KPD**</span> ?]
+@add_schwerdtner
+title: Ines Schwerdtner
+subtitle: Ines Schwerdtner is a Jacobin editor and cost-of-living focused activist. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/LeviPaul.jpg
-view-if: levi_advisor = 0 and levi_dead = 0 and n_advisors < 3 and left_split = 0
-on-arrival: levi_advisor = 1; n_advisors += 1; left_strength += 5; left_dissent -= 7
-go-to: advisor_menu
-tags: left_advisor
+card-image: img/_portraits/SchwerdtnerInes.jpg
+tags: beweli_advisor
+on-arrival: schwerdtner_advisor = 1; n_advisors += 1; n_advisors_woman += 1; beweli_dissent -= 2*(schwerdtner_advisor_fame/100);
+go-to: emali_advisor_choice if in_left_leadership = 1;
 
-Paul Levi is now an advisor.
+Ines Schwerdtner is now an advisor.
 
-@add_sender
-title: Toni Sender
-subtitle: Toni Sender is an anti-war and womens' rights advocate, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Left-Center Unity, Organizing Women, Against Toleration, Addressing the Economic Crisis ?]
+@add_pantisano
+title: Luigi Pantisano
+subtitle: Luigi Pantisano is a prominent antifascist activist. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/SenderToni.jpg
-view-if: sender_advisor = 0 and n_advisors < 3
-on-arrival: sender_advisor = 1; n_advisors += 1; left_strength += 5; left_dissent -= 4
-go-to: advisor_menu
-tags: left_advisor
+card-image: img/_portraits/PantisanoLuigi.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0)
+tags: beweli_advisor
+on-arrival: pantisano_advisor = 1; n_advisors += 1; beweli_dissent -= 2*(pantisano_advisor_fame/100);
+go-to: emali_advisor_choice if in_left_leadership = 1;
 
-Toni Sender is now an advisor.
+Luigi Pantisano is now an advisor.
 
-@add_rosenfeld
-title: Kurt Rosenfeld
-subtitle: Kurt Rosenfeld is a lawyer, anti-militarist activist, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the <span style="color: #700000;">**KPD**</span>, Against Toleration ?]
+@add_buenger
+title: Clara Bünger
+subtitle: Clara Bünger is a Western lawyer and parliamentarian in our intersectional left wing. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/RosenfeldKurt.jpg
-view-if: rosenfeld_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: rosenfeld_advisor = 1; n_advisors += 1; left_strength += 5; left_dissent -= 4
-go-to: advisor_menu
-tags: left_advisor
+card-image: img/_portraits/BuengerClara.jpg
+tags: beweli_advisor
+on-arrival: buenger_advisor = 1; n_advisors += 1; n_advisors_woman += 1; beweli_dissent -= 2*(buenger_advisor_fame/100);
+go-to: emali_advisor_choice if in_left_leadership = 1;
 
-Kurt Rosenfeld is now an advisor.
+Clara Bünger is now an advisor.
 
-@add_seydewitz
-title: Max Seydewitz
-subtitle: Max Seydewitz is a former leader of the youth wing, current supporter of the left wing of the <span style="color: #c00000;">**SPD**</span>, and advocates for class struggle. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Socialist Youth, Against Toleration ?]
+# emali
+
+@add_lay
+title: Caren Lay
+subtitle: Caren Lay is a Western politician and our primary figure in housing-related themes. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/SeydewitzMax.jpg
-view-if: seydewitz_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: seydewitz_advisor = 1; n_advisors += 1; left_strength += 5; left_dissent -= 4
-go-to: advisor_menu
-tags: left_advisor
+card-image: img/_portraits/LayCaren.jpg
+tags: emali_advisor
+on-arrival: lay_advisor = 1; n_advisors += 1; n_advisors_woman += 1; emali_dissent -= 2*(lay_advisor_fame/100);
+go-to: pragmatist_advisor_choice if in_right_leadership = 1;
 
-Max Seydewitz is now an advisor.
+Caren Lay is now an advisor.
 
-@add_siemsen
-title: Anna Siemsen
-subtitle: Anna Siemsen is an and educational reform advocate and pacifist, who was one of the few German women to receive a PhD in the pre-war period. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
+@add_kipping
+title: Katja Kipping
+subtitle: Katja Kipping is a prominent Western figure at the intersectional center of our party and founder of the Ema.Li. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/SiemsenAnna.jpg
-view-if: siemsen_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: siemsen_advisor = 1; n_advisors += 1; left_strength += 5; left_dissent -= 4
-go-to: advisor_menu
-tags: left_advisor
+card-image: img/_portraits/KippingKatja.jpg
+tags: emali_advisor
+on-arrival: kipping_advisor = 1; n_advisors += 1; n_advisors_woman += 1; emali_dissent -= 2*(kipping_advisor_fame/100);
+go-to: pragmatist_advisor_choice if in_right_leadership = 1;
 
-Anna Siemsen is now an advisor.
+Katja Kipping is now an advisor.
 
-
-
-# labor
-
-@add_leipart
-title: Theodor Leipart
-subtitle: Theodor Leipart is the leader of the ADGB, the German Trade Union Federation. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing Workers, Addressing the Economic Crisis[? if red_general_unlock and rubicon:, Negotiating with the Red General?]?]
+@add_reichinnek
+title: Heidi Reichinnek
+subtitle: Heidi Reichinnek is a prominent younger figure in our moderate intersectional wing, with a strong appeal among younger voters. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/LeipartTheodor.jpg
-tags: labor_advisor
-view-if: leipart_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: leipart_advisor = 1; n_advisors += 1; labor_strength += 5; labor_dissent -= 8
-go-to: advisor_menu
+card-image: img/_portraits/ReichinnekHeidi.jpg
+tags: emali_advisor
+on-arrival: reichinnek_advisor = 1; n_advisors += 1; n_advisors_woman += 1; emali_dissent -= 2*(reichinnek_advisor_fame/100);
+go-to: pragmatist_advisor_choice if in_right_leadership = 1;
 
-Theodor Leipart is now an advisor.
+Heidi Reichinnek is now an advisor.
 
-@add_aufhauser
-title: Siegfried Aufhäuser
-subtitle: Siegfried Aufhäuser is the leader of the AfA-Bund, the white-collar trade union federation. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing White-Collar Workers, Union-Party Coordination, Addressing the Economic Crisis ?]
+@add_vanaken
+title: Jan van Aken
+subtitle: Jan van Aken is an important activist focused on internationalism and peace activism, known for its broad appeal among all factions. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/AufhäuserSiegfried.jpg
-tags: labor_advisor
-view-if: aufhauser_advisor = 0 and n_advisors < 3
-on-arrival: aufhauser_advisor = 1; n_advisors += 1; labor_strength += 5; labor_dissent -= 8
-go-to: advisor_menu
+card-image: img/_portraits/VanAkenJan.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0)
+tags: emali_advisor
+on-arrival: vanaken_advisor = 1; n_advisors += 1; emali_dissent -= 2*(vanaken_advisor_fame/100);
+go-to: pragmatist_advisor_choice if in_right_leadership = 1;
 
-Siegfried Aufhäuser is now an advisor.
+Jan van Aken is now an advisor.
 
-@add_wissell
-title: Rudolf Wissell
-subtitle: Rudolf Wissell is an economist who has been the Labor Minister, and is an advocate for the interests of labor within the government. {!<br><br>!}[? if difficulty < 0 : Actions - Union-Party Coordination, Labor Rights ?]
+@add_schirdewan
+title: Martin Schirdewan
+subtitle: Martin Schirdewan is a European politician with ties to both the BWL and the Pragmatists. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/WissellRudolf.jpg
-tags: labor_advisor
-view-if: wissell_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: wissell_advisor = 1; n_advisors += 1; labor_strength += 3; labor_dissent -= 4
-go-to: advisor_menu
+card-image: img/_portraits/SchirdewanMartin.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0)
+tags: emali_advisor
+on-arrival: schirdewan_advisor = 1; n_advisors += 1; emali_dissent -= 2*(schirdewan_advisor_fame/100);
+go-to: pragmatist_advisor_choice if in_right_leadership = 1;
 
-Rudolf Wissell is now an advisor.
+Martin Schirdewan is now an advisor.
 
-
-@add_woytinsky
-title: Wladimir Woytinsky
-subtitle: Wladimir Woytinsky is a former Russian Menshevik who is now the lead trade union economist. {!<br><br>!}[? if difficulty < 0 : Actions - Addressing the Economic Crisis, Carrying Out the Economic Plan ?]
+@add_hoss
+title: Luke Hoss
+subtitle: Luke Hoss is a jurist and activist as well as a former member of the Greens. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/WoytinskyWladimir.jpg
-tags: labor_advisor
-view-if: woytinsky_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: woytinsky_advisor = 1; n_advisors += 1; labor_strength += 3; labor_dissent -= 4
-go-to: advisor_menu
+card-image: img/_portraits/HossLuke.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0)
+tags: emali_advisor
+on-arrival: hoss_advisor = 1; n_advisors += 1; emali_dissent -= 2*(hoss_advisor_fame/100);
+go-to: pragmatist_advisor_choice if in_right_leadership = 1;
 
-Wladimir Woytinsky is now an advisor.
+Luke Hoss is now an advisor.
 
+# pragmatist
 
-# neorevisionist leaders
-
-@add_mierendorff
-title: Carlo Mierendorff
-subtitle: Carlo Mierendorff is one of the youngest members of the Reichstag, and the originator of the "Neo-Revisionist" movement. He is an anti-Nazi strategist. {!<br><br>!}[? if difficulty < 0 : Actions - Build the <span style="color: #c00000;">Iron</span> <span style="color: #1A1A1A;">Front</span>, Warning About the <span style="color: #7A3C00;">Nazis</span> ?]
+@add_gysi
+title: Gregor Gysi
+subtitle: Gregor Gysi is a long-time Eastern parliamentarian and the most influential figure of our right wing. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/MierendorffCarlo.jpg
-view-if: mierendorff_advisor = 0 and n_advisors < 3
-on-arrival: mierendorff_advisor = 1; n_advisors += 1; neorevisionist_strength += 5; neorevisionist_dissent -= 7
-go-to: advisor_menu
-tags: neorev_advisor
+card-image: img/_portraits/GysiGregor.jpg
+tags: pragmatist_advisor
+on-arrival: gysi_advisor = 1; n_advisors += 1; pragmatist_dissent -= 2*(gysi_advisor_fame/100);
 
-Carlo Mierendorff is now an advisor.
+Gregor Gysi is now an advisor.
 
-@add_schumacher
-title: Kurt Schumacher
-subtitle: Kurt Schumacher is a Great War veteran and energetic speaker for the <span style="color: #c00000;">social-democratic</span> cause, and favors reformist policies. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Building the Reichsbanner, Addressing the Economic Crisis ?]
+@add_bartsch
+title: Dietmar Bartsch
+subtitle: Dietmar Bartsch is an Eastern parliamentarian with strong reformist views. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/SchumacherKurt.jpg
-tags: neorev_advisor
-view-if: schumacher_advisor = 0 and n_advisors < 3
-on-arrival: schumacher_advisor = 1; n_advisors += 1; neorevisionist_strength += 5; neorevisionist_dissent -= 4
-go-to: advisor_menu
+card-image: img/_portraits/BartschDietmar.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0)
+tags: pragmatist_advisor
+on-arrival: bartsch_advisor = 1; n_advisors += 1; pragmatist_dissent -= 2*(bartsch_advisor_fame/100);
 
-Kurt Schumacher is now an advisor.
+Dietmar Bartsch is now an advisor.
 
-@add_leber
-title: Julius Leber
-subtitle: Julius Leber is a former Reichswehr officer who resigned in opposition to the Kapp coup attempt. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Democracy, Military Affairs, Building a People's Party ?]
+@add_ramelow
+title: Bodo Ramelow
+subtitle: Bodo Ramelow is a Thuringian politician and the only ever Die Linke member to have served as state governor. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/LeberJulius.jpg
-view-if: leber_advisor = 0 and n_advisors < 3
-on-arrival: leber_advisor = 1; n_advisors += 1; neorevisionist_strength += 5; neorevisionist_dissent -= 4
-go-to: advisor_menu
-tags: neorev_advisor
+card-image: img/_portraits/RamelowBodo.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0)
+tags: pragmatist_advisor
+on-arrival: ramelow_advisor = 1; n_advisors += 1; pragmatist_dissent -= 2*(ramelow_advisor_fame/100);
 
-Julius Leber is now an advisor.
+Bodo Ramelow is now an advisor.
 
-# Nonfactional advisors
-
-@add_wirth
-title: Joseph Wirth
-subtitle: Joseph Wirth is a former member of the <span style="color: #000000;">Center</span>'s left wing and a former chancellor, known for his ardent <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> convictions.
+@add_goerke
+title: Christian Görke
+subtitle: Christian Görke is a reformist politician and one of our only finance experts. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/wirth.jpg
-view-if: wirth_advisor = 0 and wirth_spd and n_advisors < 3
-on-arrival: wirth_advisor = 1; n_advisors += 1; neorevisionist_strength += 5; neorevisionist_dissent -= 8
-go-to: advisor_menu
-tags: neorev_advisor
+card-image: img/_portraits/GoerkeChristian.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0)
+tags: pragmatist_advisor
+on-arrival: goerke_advisor = 1; n_advisors += 1; pragmatist_dissent -= 2*(goerke_advisor_fame/100);
 
-Joseph Wirth is now an advisor.
+Christian Görke is now an advisor.
 
-# Nonfactional advisors
-
-@add_baade
-title: Fritz Baade
-subtitle: Fritz Baade is one of the few agricultural policy experts in the <span style="color: #c00000;">**SPD**</span>. {!<br><br>!}[? if difficulty < 0 : Actions - Agricultural Policy, Rural Campaigning, Addressing the Economic Crisis ?]
+@add_hennigwellsow
+title: Susanne Hennig-Wellsow
+subtitle: Susanne Hennig-Wellsow is a moderate Thuringian politician. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
-card-image: img/portraits/BaadeFritz.jpg
-view-if: baade_advisor = 0 and n_advisors < 3
-on-arrival: baade_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
+card-image: img/_portraits/HennigWellsowSusanne.jpg
+tags: pragmatist_advisor
+on-arrival: hennigwellsow_advisor = 1; n_advisors += 1; n_advisors_woman += 1; pragmatist_dissent -= 2*(hennigwellsow_advisor_fame/100);
 
-Fritz Baade is now an advisor.
-
-
-@add_hirschfeld
-title: Magnus Hirschfeld
-subtitle: Magnus Hirschfeld is the founder of the Institut für Sexualwissenschaft and an advocate for the rights of sexual minorities. {!<br><br>!}[? if difficulty < 0 : Actions - Homosexual Rights, Women's Rights, Science Funding ?]
-is-card: true
-card-image: img/portraits/HirschfeldMagnus.jpg
-view-if: hirschfeld_advisor = 0 and n_advisors < 3
-on-arrival: hirschfeld_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Magnus Hirschfeld is now an advisor.
-
-
-@add_radbruch
-title: Gustav Radbruch
-subtitle: Gustav Radbruch is a renowned legal scholar and long-time <span style="color: #c00000;">**SPD**</span> justice minister. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Affairs, Constitutional Reform ?]
-is-card: true
-card-image: img/portraits/RadbruchGustav.jpg
-view-if: radbruch_advisor = 0 and n_advisors < 3
-on-arrival: radbruch_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Gustav Radbruch is now an advisor.
-
-
-@add_stampfer
-title: Friedrich Stampfer
-subtitle: Friedrich Stampfer is the long-time editor-in-chief of Vorwärts, our party newspaper. {!<br><br>!}[? if difficulty < 0 : Actions - Media, Editorial Line, Cooperation with the <span style="color: #700000;">KPD</span> ?]
-is-card: true
-card-image: img/portraits/StampferFriedrich.jpg
-view-if: stampfer_advisor = 0 and n_advisors < 3 and not stampfer_killed
-on-arrival: stampfer_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Friedrich Stampfer is now an advisor.
-
+Susanne Hennig-Wellsow is now an advisor.
 
