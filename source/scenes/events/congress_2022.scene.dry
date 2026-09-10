@@ -288,259 +288,259 @@ on-arrival: oldleft_dissent += 10; emali_dissent += 10; beweli_dissent += 10; pr
 
 - #pragmatist_advisor
 
-// @add_wagenknecht
-// title: Sahra Wagenknecht
-// subtitle: Sahra Wagenknecht is [? if oldleft_leader == "Wagenknecht" : the Eastern leader of our traditional left wing. ?][? if oldleft_leader != "Wagenknecht" : a prominent Eastern figure in our traditional left wing. ?] {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/WagenknechtSahra.jpg
-// tags: oldleft_advisor
-// view-if: wagenknecht_left == 0
-// on-arrival: wagenknecht_advisor = 1; n_advisors += 1; n_advisors_woman += 1; oldleft_dissent -= 2*(wagenknecht_advisor_fame/100);
-// go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
+@add_wagenknecht
+title: Sahra Wagenknecht
+subtitle: Sahra Wagenknecht is [? if oldleft_leader == "Wagenknecht" : the Eastern leader of our traditional left wing. ?][? if oldleft_leader != "Wagenknecht" : a prominent Eastern figure in our traditional left wing. ?] {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/WagenknechtSahra.jpg
+tags: oldleft_advisor
+view-if: wagenknecht_left == 0
+on-arrival: wagenknecht_advisor = 1; n_advisors += 1; n_advisors_woman += 1; oldleft_dissent -= 2*(wagenknecht_advisor_fame/100);
+go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
 
-// Sahra Wagenknecht is now an advisor.
+Sahra Wagenknecht is now an advisor.
 
-// @add_wissler
-// title: Janine Wissler
-// subtitle: Janine Wissler is [? if oldleft_leader == "Wissler" : the leader of our traditional left wing ?][? if oldleft_leader != "Wissler" : a prominent figure in our traditional left wing ?], known for bridging together the syndicalist SL and the intersectional BWL. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/WisslerJanine.jpg
-// view-if: beweli_leader != "Wissler"
-// tags: oldleft_advisor
-// on-arrival: wissler_advisor = 1; n_advisors += 1; n_advisors_woman += 1; oldleft_dissent -= 2*(wissler_advisor_fame/100);
-// go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
+@add_wissler
+title: Janine Wissler
+subtitle: Janine Wissler is [? if oldleft_leader == "Wissler" : the leader of our traditional left wing ?][? if oldleft_leader != "Wissler" : a prominent figure in our traditional left wing ?], known for bridging together the syndicalist SL and the intersectional BWL. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/WisslerJanine.jpg
+view-if: beweli_leader != "Wissler"
+tags: oldleft_advisor
+on-arrival: wissler_advisor = 1; n_advisors += 1; n_advisors_woman += 1; oldleft_dissent -= 2*(wissler_advisor_fame/100);
+go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
 
-// Janine Wissler is now an advisor.
+Janine Wissler is now an advisor.
 
-// @add_riexinger
-// title: Bernd Riexinger
-// subtitle: Bernd Riexinger is [? if oldleft_leader == "Riexinger" : the leader of our traditional left wing ?][? if oldleft_leader != "Riexinger" : a prominent figure in our traditional left wing ?] with deep support in the worker-oriented SL. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/RiexingerBernd.jpg
-// view-if: (n_advisors_woman = 1 or n_advisors = 0) and beweli_leader != "Wissler"
-// tags: oldleft_advisor
-// on-arrival: riexinger_advisor = 1; n_advisors += 1; oldleft_dissent -= 2*(riexinger_advisor_fame/100);
-// go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
+@add_riexinger
+title: Bernd Riexinger
+subtitle: Bernd Riexinger is [? if oldleft_leader == "Riexinger" : the leader of our traditional left wing ?][? if oldleft_leader != "Riexinger" : a prominent figure in our traditional left wing ?] with deep support in the worker-oriented SL. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/RiexingerBernd.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0) and beweli_leader != "Wissler"
+tags: oldleft_advisor
+on-arrival: riexinger_advisor = 1; n_advisors += 1; oldleft_dissent -= 2*(riexinger_advisor_fame/100);
+go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
 
-// Bernd Riexinger is now an advisor.
+Bernd Riexinger is now an advisor.
 
-// @add_mohamedali
-// title: Amira Mohamed Ali
-// subtitle: Amira Mohamed Ali is a Western half-Egyptian lawyer in our traditional left wing. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/MohamedAliAmira.jpg
-// tags: oldleft_advisor
-// view-if: wagenknecht_left == 0
-// on-arrival: mohamedali_advisor = 1; n_advisors += 1; n_advisors_woman += 1; oldleft_dissent -= 2*(mohamedali_advisor_fame/100);
-// go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
+@add_mohamedali
+title: Amira Mohamed Ali
+subtitle: Amira Mohamed Ali is a Western half-Egyptian lawyer in our traditional left wing. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/MohamedAliAmira.jpg
+tags: oldleft_advisor
+view-if: wagenknecht_left == 0
+on-arrival: mohamedali_advisor = 1; n_advisors += 1; n_advisors_woman += 1; oldleft_dissent -= 2*(mohamedali_advisor_fame/100);
+go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
 
-// Amira Mohamed Ali is now an advisor.
+Amira Mohamed Ali is now an advisor.
 
-// @add_pellmann
-// title: Sören Pellmann
-// subtitle: Sören Pellmann is an important Saxon parliamentarian belonging to our left wing. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/PellmannSoeren.jpg
-// view-if: n_advisors_woman = 1 or n_advisors = 0
-// tags: oldleft_advisor
-// on-arrival: pellmann_advisor = 1; n_advisors += 1; oldleft_dissent -= 2*(pellmann_advisor_fame/100);
-// go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
+@add_pellmann
+title: Sören Pellmann
+subtitle: Sören Pellmann is an important Saxon parliamentarian belonging to our left wing. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/PellmannSoeren.jpg
+view-if: n_advisors_woman = 1 or n_advisors = 0
+tags: oldleft_advisor
+on-arrival: pellmann_advisor = 1; n_advisors += 1; oldleft_dissent -= 2*(pellmann_advisor_fame/100);
+go-to: beweli_advisor_choice if in_left_leadership = 1; emali_advisor_choice if in_hufeisen_leadership = 1;
 
-// Sören Pellmann is now an advisor.
+Sören Pellmann is now an advisor.
 
-// # beweli
+# beweli
 
-// @add_wissler_bwl
-// title: Janine Wissler
-// subtitle: Janine Wissler is [? if oldleft_leader == "Wissler" : the leader of our traditional left wing ?][? if oldleft_leader != "Wissler" : a prominent figure in our left wing ?], known for bridging together the syndicalist SL and the intersectional BWL. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/WisslerJanine.jpg
-// view-if: beweli_leader == "Wissler"
-// tags: beweli_advisor
-// on-arrival: wissler_advisor = 1; n_advisors += 1; n_advisors_woman += 1; beweli_dissent -= 2*(wissler_advisor_fame/100);
-// go-to: emali_advisor_choice if in_progressive_leadership = 1;
+@add_wissler_bwl
+title: Janine Wissler
+subtitle: Janine Wissler is [? if oldleft_leader == "Wissler" : the leader of our traditional left wing ?][? if oldleft_leader != "Wissler" : a prominent figure in our left wing ?], known for bridging together the syndicalist SL and the intersectional BWL. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/WisslerJanine.jpg
+view-if: beweli_leader == "Wissler"
+tags: beweli_advisor
+on-arrival: wissler_advisor = 1; n_advisors += 1; n_advisors_woman += 1; beweli_dissent -= 2*(wissler_advisor_fame/100);
+go-to: emali_advisor_choice if in_progressive_leadership = 1;
 
-// Janine Wissler is now an advisor.
+Janine Wissler is now an advisor.
 
-// @add_riexinger_bwl
-// title: Bernd Riexinger
-// subtitle: Bernd Riexinger is [? if oldleft_leader == "Riexinger" : the leader of our traditional left wing ?][? if oldleft_leader != "Riexinger" : a prominent figure in our left wing ?] with deep support in the worker-oriented SL. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/RiexingerBernd.jpg
-// view-if: (n_advisors_woman = 1 or n_advisors = 0) and beweli_leader == "Wissler"
-// tags: beweli_advisor
-// on-arrival: riexinger_advisor = 1; n_advisors += 1; beweli_dissent -= 2*(riexinger_advisor_fame/100);
-// go-to: emali_advisor_choice if in_left_leadership = 1;
+@add_riexinger_bwl
+title: Bernd Riexinger
+subtitle: Bernd Riexinger is [? if oldleft_leader == "Riexinger" : the leader of our traditional left wing ?][? if oldleft_leader != "Riexinger" : a prominent figure in our left wing ?] with deep support in the worker-oriented SL. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/RiexingerBernd.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0) and beweli_leader == "Wissler"
+tags: beweli_advisor
+on-arrival: riexinger_advisor = 1; n_advisors += 1; beweli_dissent -= 2*(riexinger_advisor_fame/100);
+go-to: emali_advisor_choice if in_left_leadership = 1;
 
-// Bernd Riexinger is now an advisor.
+Bernd Riexinger is now an advisor.
 
-// @add_gohlke
-// title: Nicole Gohlke
-// subtitle: Nicole Gohlke is a prominent Western figure in both BWL and SL with strong ties to anti-imperialist activism. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/GohlkeNicole.jpg
-// tags: beweli_advisor
-// on-arrival: gohlke_advisor = 1; n_advisors += 1; n_advisors_woman += 1; beweli_dissent -= 2*(gohlke_advisor_fame/100);
-// go-to: emali_advisor_choice if in_left_leadership = 1;
+@add_gohlke
+title: Nicole Gohlke
+subtitle: Nicole Gohlke is a prominent Western figure in both BWL and SL with strong ties to anti-imperialist activism. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/GohlkeNicole.jpg
+tags: beweli_advisor
+on-arrival: gohlke_advisor = 1; n_advisors += 1; n_advisors_woman += 1; beweli_dissent -= 2*(gohlke_advisor_fame/100);
+go-to: emali_advisor_choice if in_left_leadership = 1;
 
-// Nicole Gohlke is now an advisor.
+Nicole Gohlke is now an advisor.
 
-// @add_schwerdtner
-// title: Ines Schwerdtner
-// subtitle: Ines Schwerdtner is a Jacobin editor and cost-of-living focused activist. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/SchwerdtnerInes.jpg
-// tags: beweli_advisor
-// on-arrival: schwerdtner_advisor = 1; n_advisors += 1; n_advisors_woman += 1; beweli_dissent -= 2*(schwerdtner_advisor_fame/100);
-// go-to: emali_advisor_choice if in_left_leadership = 1;
+@add_schwerdtner
+title: Ines Schwerdtner
+subtitle: Ines Schwerdtner is a Jacobin editor and cost-of-living focused activist. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/SchwerdtnerInes.jpg
+tags: beweli_advisor
+on-arrival: schwerdtner_advisor = 1; n_advisors += 1; n_advisors_woman += 1; beweli_dissent -= 2*(schwerdtner_advisor_fame/100);
+go-to: emali_advisor_choice if in_left_leadership = 1;
 
-// Ines Schwerdtner is now an advisor.
+Ines Schwerdtner is now an advisor.
 
-// @add_pantisano
-// title: Luigi Pantisano
-// subtitle: Luigi Pantisano is a prominent antifascist activist. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/PantisanoLuigi.jpg
-// view-if: (n_advisors_woman = 1 or n_advisors = 0)
-// tags: beweli_advisor
-// on-arrival: pantisano_advisor = 1; n_advisors += 1; beweli_dissent -= 2*(pantisano_advisor_fame/100);
-// go-to: emali_advisor_choice if in_left_leadership = 1;
+@add_pantisano
+title: Luigi Pantisano
+subtitle: Luigi Pantisano is a prominent antifascist activist. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/PantisanoLuigi.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0)
+tags: beweli_advisor
+on-arrival: pantisano_advisor = 1; n_advisors += 1; beweli_dissent -= 2*(pantisano_advisor_fame/100);
+go-to: emali_advisor_choice if in_left_leadership = 1;
 
-// Luigi Pantisano is now an advisor.
+Luigi Pantisano is now an advisor.
 
-// @add_buenger
-// title: Clara Bünger
-// subtitle: Clara Bünger is a Western lawyer and parliamentarian in our intersectional left wing. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/BuengerClara.jpg
-// tags: beweli_advisor
-// on-arrival: buenger_advisor = 1; n_advisors += 1; n_advisors_woman += 1; beweli_dissent -= 2*(buenger_advisor_fame/100);
-// go-to: emali_advisor_choice if in_left_leadership = 1;
+@add_buenger
+title: Clara Bünger
+subtitle: Clara Bünger is a Western lawyer and parliamentarian in our intersectional left wing. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/BuengerClara.jpg
+tags: beweli_advisor
+on-arrival: buenger_advisor = 1; n_advisors += 1; n_advisors_woman += 1; beweli_dissent -= 2*(buenger_advisor_fame/100);
+go-to: emali_advisor_choice if in_left_leadership = 1;
 
-// Clara Bünger is now an advisor.
+Clara Bünger is now an advisor.
 
-// # emali
+# emali
 
-// @add_lay
-// title: Caren Lay
-// subtitle: Caren Lay is a Western politician and our primary figure in housing-related themes. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/LayCaren.jpg
-// tags: emali_advisor
-// on-arrival: lay_advisor = 1; n_advisors += 1; n_advisors_woman += 1; emali_dissent -= 2*(lay_advisor_fame/100);
-// go-to: pragmatist_advisor_choice if in_right_leadership = 1;
+@add_lay
+title: Caren Lay
+subtitle: Caren Lay is a Western politician and our primary figure in housing-related themes. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/LayCaren.jpg
+tags: emali_advisor
+on-arrival: lay_advisor = 1; n_advisors += 1; n_advisors_woman += 1; emali_dissent -= 2*(lay_advisor_fame/100);
+go-to: pragmatist_advisor_choice if in_right_leadership = 1;
 
-// Caren Lay is now an advisor.
+Caren Lay is now an advisor.
 
-// @add_kipping
-// title: Katja Kipping
-// subtitle: Katja Kipping is a prominent Western figure at the intersectional center of our party and founder of the Ema.Li. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/KippingKatja.jpg
-// tags: emali_advisor
-// on-arrival: kipping_advisor = 1; n_advisors += 1; n_advisors_woman += 1; emali_dissent -= 2*(kipping_advisor_fame/100);
-// go-to: pragmatist_advisor_choice if in_right_leadership = 1;
+@add_kipping
+title: Katja Kipping
+subtitle: Katja Kipping is a prominent Western figure at the intersectional center of our party and founder of the Ema.Li. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/KippingKatja.jpg
+tags: emali_advisor
+on-arrival: kipping_advisor = 1; n_advisors += 1; n_advisors_woman += 1; emali_dissent -= 2*(kipping_advisor_fame/100);
+go-to: pragmatist_advisor_choice if in_right_leadership = 1;
 
-// Katja Kipping is now an advisor.
+Katja Kipping is now an advisor.
 
-// @add_reichinnek
-// title: Heidi Reichinnek
-// subtitle: Heidi Reichinnek is a prominent younger figure in our moderate intersectional wing, with a strong appeal among younger voters. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/ReichinnekHeidi.jpg
-// tags: emali_advisor
-// on-arrival: reichinnek_advisor = 1; n_advisors += 1; n_advisors_woman += 1; emali_dissent -= 2*(reichinnek_advisor_fame/100);
-// go-to: pragmatist_advisor_choice if in_right_leadership = 1;
+@add_reichinnek
+title: Heidi Reichinnek
+subtitle: Heidi Reichinnek is a prominent younger figure in our moderate intersectional wing, with a strong appeal among younger voters. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/ReichinnekHeidi.jpg
+tags: emali_advisor
+on-arrival: reichinnek_advisor = 1; n_advisors += 1; n_advisors_woman += 1; emali_dissent -= 2*(reichinnek_advisor_fame/100);
+go-to: pragmatist_advisor_choice if in_right_leadership = 1;
 
-// Heidi Reichinnek is now an advisor.
+Heidi Reichinnek is now an advisor.
 
-// @add_vanaken
-// title: Jan van Aken
-// subtitle: Jan van Aken is an important activist focused on internationalism and peace activism, known for its broad appeal among all factions. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/VanAkenJan.jpg
-// view-if: (n_advisors_woman = 1 or n_advisors = 0)
-// tags: emali_advisor
-// on-arrival: vanaken_advisor = 1; n_advisors += 1; emali_dissent -= 2*(vanaken_advisor_fame/100);
-// go-to: pragmatist_advisor_choice if in_right_leadership = 1;
+@add_vanaken
+title: Jan van Aken
+subtitle: Jan van Aken is an important activist focused on internationalism and peace activism, known for its broad appeal among all factions. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/VanAkenJan.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0)
+tags: emali_advisor
+on-arrival: vanaken_advisor = 1; n_advisors += 1; emali_dissent -= 2*(vanaken_advisor_fame/100);
+go-to: pragmatist_advisor_choice if in_right_leadership = 1;
 
-// Jan van Aken is now an advisor.
+Jan van Aken is now an advisor.
 
-// @add_schirdewan
-// title: Martin Schirdewan
-// subtitle: Martin Schirdewan is a European politician with ties to both the BWL and the Pragmatists. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/SchirdewanMartin.jpg
-// view-if: (n_advisors_woman = 1 or n_advisors = 0)
-// tags: emali_advisor
-// on-arrival: schirdewan_advisor = 1; n_advisors += 1; emali_dissent -= 2*(schirdewan_advisor_fame/100);
-// go-to: pragmatist_advisor_choice if in_right_leadership = 1;
+@add_schirdewan
+title: Martin Schirdewan
+subtitle: Martin Schirdewan is a European politician with ties to both the BWL and the Pragmatists. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/SchirdewanMartin.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0)
+tags: emali_advisor
+on-arrival: schirdewan_advisor = 1; n_advisors += 1; emali_dissent -= 2*(schirdewan_advisor_fame/100);
+go-to: pragmatist_advisor_choice if in_right_leadership = 1;
 
-// Martin Schirdewan is now an advisor.
+Martin Schirdewan is now an advisor.
 
-// @add_hoss
-// title: Luke Hoss
-// subtitle: Luke Hoss is a jurist and activist as well as a former member of the Greens. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/HossLuke.jpg
-// view-if: (n_advisors_woman = 1 or n_advisors = 0)
-// tags: emali_advisor
-// on-arrival: hoss_advisor = 1; n_advisors += 1; emali_dissent -= 2*(hoss_advisor_fame/100);
-// go-to: pragmatist_advisor_choice if in_right_leadership = 1;
+@add_hoss
+title: Luke Hoss
+subtitle: Luke Hoss is a jurist and activist as well as a former member of the Greens. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/HossLuke.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0)
+tags: emali_advisor
+on-arrival: hoss_advisor = 1; n_advisors += 1; emali_dissent -= 2*(hoss_advisor_fame/100);
+go-to: pragmatist_advisor_choice if in_right_leadership = 1;
 
-// Luke Hoss is now an advisor.
+Luke Hoss is now an advisor.
 
-// # pragmatist
+# pragmatist
 
-// @add_gysi
-// title: Gregor Gysi
-// subtitle: Gregor Gysi is a long-time Eastern parliamentarian and the most influential figure of our right wing. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/GysiGregor.jpg
-// tags: pragmatist_advisor
-// on-arrival: gysi_advisor = 1; n_advisors += 1; pragmatist_dissent -= 2*(gysi_advisor_fame/100);
+@add_gysi
+title: Gregor Gysi
+subtitle: Gregor Gysi is a long-time Eastern parliamentarian and the most influential figure of our right wing. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/GysiGregor.jpg
+tags: pragmatist_advisor
+on-arrival: gysi_advisor = 1; n_advisors += 1; pragmatist_dissent -= 2*(gysi_advisor_fame/100);
 
-// Gregor Gysi is now an advisor.
+Gregor Gysi is now an advisor.
 
-// @add_bartsch
-// title: Dietmar Bartsch
-// subtitle: Dietmar Bartsch is an Eastern parliamentarian with strong reformist views. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/BartschDietmar.jpg
-// view-if: (n_advisors_woman = 1 or n_advisors = 0)
-// tags: pragmatist_advisor
-// on-arrival: bartsch_advisor = 1; n_advisors += 1; pragmatist_dissent -= 2*(bartsch_advisor_fame/100);
+@add_bartsch
+title: Dietmar Bartsch
+subtitle: Dietmar Bartsch is an Eastern parliamentarian with strong reformist views. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/BartschDietmar.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0)
+tags: pragmatist_advisor
+on-arrival: bartsch_advisor = 1; n_advisors += 1; pragmatist_dissent -= 2*(bartsch_advisor_fame/100);
 
-// Dietmar Bartsch is now an advisor.
+Dietmar Bartsch is now an advisor.
 
-// @add_ramelow
-// title: Bodo Ramelow
-// subtitle: Bodo Ramelow is a Thuringian politician and the only ever Die Linke member to have served as state governor. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/RamelowBodo.jpg
-// view-if: (n_advisors_woman = 1 or n_advisors = 0)
-// tags: pragmatist_advisor
-// on-arrival: ramelow_advisor = 1; n_advisors += 1; pragmatist_dissent -= 2*(ramelow_advisor_fame/100);
+@add_ramelow
+title: Bodo Ramelow
+subtitle: Bodo Ramelow is a Thuringian politician and the only ever Die Linke member to have served as state governor. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/RamelowBodo.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0)
+tags: pragmatist_advisor
+on-arrival: ramelow_advisor = 1; n_advisors += 1; pragmatist_dissent -= 2*(ramelow_advisor_fame/100);
 
-// Bodo Ramelow is now an advisor.
+Bodo Ramelow is now an advisor.
 
-// @add_goerke
-// title: Christian Görke
-// subtitle: Christian Görke is a reformist politician and one of our only finance experts. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/GoerkeChristian.jpg
-// view-if: (n_advisors_woman = 1 or n_advisors = 0)
-// tags: pragmatist_advisor
-// on-arrival: goerke_advisor = 1; n_advisors += 1; pragmatist_dissent -= 2*(goerke_advisor_fame/100);
+@add_goerke
+title: Christian Görke
+subtitle: Christian Görke is a reformist politician and one of our only finance experts. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/GoerkeChristian.jpg
+view-if: (n_advisors_woman = 1 or n_advisors = 0)
+tags: pragmatist_advisor
+on-arrival: goerke_advisor = 1; n_advisors += 1; pragmatist_dissent -= 2*(goerke_advisor_fame/100);
 
-// Christian Görke is now an advisor.
+Christian Görke is now an advisor.
 
-// @add_hennigwellsow
-// title: Susanne Hennig-Wellsow
-// subtitle: Susanne Hennig-Wellsow is a moderate Thuringian politician. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
-// is-card: true
-// card-image: img/_portraits/HennigWellsowSusanne.jpg
-// tags: pragmatist_advisor
-// on-arrival: hennigwellsow_advisor = 1; n_advisors += 1; n_advisors_woman += 1; pragmatist_dissent -= 2*(hennigwellsow_advisor_fame/100);
+@add_hennigwellsow
+title: Susanne Hennig-Wellsow
+subtitle: Susanne Hennig-Wellsow is a moderate Thuringian politician. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+is-card: true
+card-image: img/_portraits/HennigWellsowSusanne.jpg
+tags: pragmatist_advisor
+on-arrival: hennigwellsow_advisor = 1; n_advisors += 1; n_advisors_woman += 1; pragmatist_dissent -= 2*(hennigwellsow_advisor_fame/100);
 
-// Susanne Hennig-Wellsow is now an advisor.
+Susanne Hennig-Wellsow is now an advisor.
