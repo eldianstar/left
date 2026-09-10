@@ -356,26 +356,24 @@ frequency: 1
 - @remove_none: Stop changing advisors.
 
 @oldleft_advisor_choice
+view-if: n_advisor < 3
 
 - #oldleft_advisor
 
 @beweli_advisor_choice
+view-if: n_advisor < 3
 
 - #beweli_advisor
 
 @emali_advisor_choice
+view-if: n_advisor < 3
 
 - #emali_advisor
 
 @pragmatist_advisor_choice
+view-if: n_advisor < 3
 
 - #pragmatist_advisor
-
-@nonfactional
-subtitle: Generally disinterested in internal struggles. Reduces faction loyalty decay by 10% for each advisor appointed.
-view-if: n_advisors < 3
-
-- #nonfactional_advisor
 
 @add_wagenknecht
 title: Sahra Wagenknecht
