@@ -192,29 +192,29 @@ Decentralization: [+ decentralization +]
 
 = Party Leadership
 
-<div style="display:flex; gap:1em; justify-content: center; text-align: center"> <span> <img src="[+ king_img +]" style="width:125px;height:170px;object-fit:cover;object-position:top;border:4px ridge #8B7355;"> <span class="card-caption">Monarch: [+ king +]</span></span></div><div>
+<div style="display:flex; gap:1em; justify-content: center; text-align: center"> <span> <img src="[+ king_img +]" style="width:125px;height:170px;object-fit:cover;object-position:top;border:2px"> <span class="card-caption">Monarch: [+ king +]</span></span></div><div>
 
 <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 5px; margin-left: -3px;"> 
-[? if wagenknecht_advisor : <div style="flex: 1;"><img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if mohamedali_advisor : <div style="flex: 1;"><img src="img/_portraits/MohamedAliAmira.jpg" alt="Amira Mohamed Ali" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if wissler_advisor : <div style="flex: 1;"><img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if pellmann_advisor : <div style="flex: 1;"><img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if riexinger_advisor : <div style="flex: 1;"><img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if gohlke_advisor : <div style="flex: 1;"><img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if schwerdtner_advisor : <div style="flex: 1;"><img src="img/_portraits/SchwerdtnerInes.jpg" alt="Ines Schwerdtner" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if pantisano_advisor : <div style="flex: 1;"><img src="img/_portraits/PantisanoLuigi.jpg" alt="Luigi Pantisano" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if buenger_advisor : <div style="flex: 1;"><img src="img/_portraits/BüngerClara.jpg" alt="Clara Bünger" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if kipping_advisor : <div style="flex: 1;"><img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if vanaken_advisor : <div style="flex: 1;"><img src="img/_portraits/VanAkenJan.jpg" alt="Jan Van Aken" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if reichinnek_advisor : <div style="flex: 1;"><img src="img/_portraits/ReichinnekHeidi.jpg" alt="Heidi Reichinnek" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if lay_advisor : <div style="flex: 1;"><img src="img/_portraits/LayCaren.jpg" alt="Caren Lay" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if schirdewan_advisor : <div style="flex: 1;"><img src="img/_portraits/SchirdewanMartin.jpg" alt="Martin Schirdewan" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if hoss_advisor : <div style="flex: 1;"><img src="img/_portraits/HossLuke.jpg" alt="Luke Hoß" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if gysi_advisor : <div style="flex: 1;"><img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if ramelow_advisor : <div style="flex: 1;"><img src="img/_portraits/RamelowBodo.jpg" alt="Bodo Ramelow" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if bartsch_advisor : <div style="flex: 1;"><img src="img/_portraits/BartschDietmar.jpg" alt="Dietmar Bartsch" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if hennigwellsow_advisor : <div style="flex: 1;"><img src="img/_portraits/HennigWellsowSusanne.jpg" alt="Susanne Hennig-Wellsow" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
-[? if goerke_advisor : <div style="flex: 1;"><img src="img/_portraits/GörkeChristian.jpg" alt="Christian Görke" style="width: 100%;object-fit:cover;object-position:top;border:4px ridge #8B7355;"></div> ?] 
+[? if wagenknecht_advisor : <div style="flex: 1;"><img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if mohamedali_advisor : <div style="flex: 1;"><img src="img/_portraits/MohamedAliAmira.jpg" alt="Amira Mohamed Ali" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if wissler_advisor : <div style="flex: 1;"><img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if pellmann_advisor : <div style="flex: 1;"><img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if riexinger_advisor : <div style="flex: 1;"><img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if gohlke_advisor : <div style="flex: 1;"><img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if schwerdtner_advisor : <div style="flex: 1;"><img src="img/_portraits/SchwerdtnerInes.jpg" alt="Ines Schwerdtner" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if pantisano_advisor : <div style="flex: 1;"><img src="img/_portraits/PantisanoLuigi.jpg" alt="Luigi Pantisano" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if buenger_advisor : <div style="flex: 1;"><img src="img/_portraits/BüngerClara.jpg" alt="Clara Bünger" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if kipping_advisor : <div style="flex: 1;"><img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if vanaken_advisor : <div style="flex: 1;"><img src="img/_portraits/VanAkenJan.jpg" alt="Jan Van Aken" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if reichinnek_advisor : <div style="flex: 1;"><img src="img/_portraits/ReichinnekHeidi.jpg" alt="Heidi Reichinnek" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if lay_advisor : <div style="flex: 1;"><img src="img/_portraits/LayCaren.jpg" alt="Caren Lay" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if schirdewan_advisor : <div style="flex: 1;"><img src="img/_portraits/SchirdewanMartin.jpg" alt="Martin Schirdewan" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if hoss_advisor : <div style="flex: 1;"><img src="img/_portraits/HossLuke.jpg" alt="Luke Hoß" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if gysi_advisor : <div style="flex: 1;"><img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if ramelow_advisor : <div style="flex: 1;"><img src="img/_portraits/RamelowBodo.jpg" alt="Bodo Ramelow" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if bartsch_advisor : <div style="flex: 1;"><img src="img/_portraits/BartschDietmar.jpg" alt="Dietmar Bartsch" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if hennigwellsow_advisor : <div style="flex: 1;"><img src="img/_portraits/HennigWellsowSusanne.jpg" alt="Susanne Hennig-Wellsow" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
+[? if goerke_advisor : <div style="flex: 1;"><img src="img/_portraits/GörkeChristian.jpg" alt="Christian Görke" style="width: 100%;object-fit:cover;object-position:top;border:2px"></div> ?] 
 </div> 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 5px; margin-bottom: 5px;"> 
 [? if wagenknecht_advisor : <div style="flex: 1;"><p style="text-align: center; margin-bottom: 2px;">Sahra Wagenknecht</p></div> ?] 
@@ -247,8 +247,8 @@ Decentralization: [+ decentralization +]
 
 {!<span class="tooltip-text" title="oldleft text" style="text-align: center;font-weight: bold;color: #4C0B5F;">Old Left</span>!} <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
-<img src="img/LogoAufstehen.jpg" alt="Aufstehen" style="width: 50%;object-fit:contain;">
-<img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 50%;object-fit:cover;object-position:top;border:4px ridge #8B7355;">
+<img src="img/LogoAufstehen.jpg" alt="Aufstehen" style="width: 45%;object-fit:contain;">
+<img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 50%;object-fit:cover;object-position:top;border:2px">
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
@@ -264,7 +264,7 @@ Dissent: [+ oldleft_dissent : dissent +] <br>
 {!<span class="tooltip-text" title="beweli text" style="text-align: center;font-weight: bold;color: #BC2D72;">Movement Left</span>!} <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/LogoBewegungslinke.jpg" alt="Bewegungslinke" style="width: 45%;object-fit:contain;">
-<img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 50%;object-fit:cover;object-position:top;border:4px ridge #8B7355;">
+<img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 50%;object-fit:cover;object-position:top;border:2px">
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
@@ -279,8 +279,8 @@ Dissent: [+ beweli_dissent : dissent +] <br>
 
 {!<span class="tooltip-text" title="emali text" style="text-align: center;font-weight: bold;color: #E3000F;">Centre</span>!} <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
-<img src="img/LogoEmali.jpg" alt="Ema.Li" style="width: 50%;object-fit:contain;">
-<img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 50%;object-fit:cover;object-position:top;border:4px ridge #8B7355;">
+<img src="img/LogoEmali.jpg" alt="Ema.Li" style="width: 45%;object-fit:contain;">
+<img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 50%;object-fit:cover;object-position:top;border:2px">
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
@@ -295,8 +295,8 @@ Dissent: [+ emali_dissent : dissent +] <br>
 
 {!<span class="tooltip-text" title="pragmatist text" style="text-align: center;font-weight: bold;color: #ff5500;">Pragmatists</span>!} <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
-<img src="img/LogoFDS.jpg" alt="FDS" style="width: 50%;object-fit:contain;">
-<img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 50%;object-fit:cover;object-position:top;border:4px ridge #8B7355;">
+<img src="img/LogoFDS.jpg" alt="FDS" style="width: 45%;object-fit:contain;">
+<img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 50%;object-fit:cover;object-position:top;border:2px">
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
