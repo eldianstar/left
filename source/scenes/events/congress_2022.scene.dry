@@ -1,4 +1,4 @@
-title: Erfurt Conference
+title: 2022 Erfurt Conference
 subtitle: The Left holds its 8th Party Congress in Erfurt
 new-page: true
 tags: event
@@ -11,7 +11,7 @@ max-visits: 1
 
 = Erfurt Congress
 
-Die Linke is holding its annual congress in Erfurt, where the party is expected to formulate a definitive stance on the war in Ukraine and on social issues.
+Die Linke is holding its annual congress in Erfurt, where the party is expected to formulate a definitive stance on the war in Ukraine.
 
 - @faction_algorithm: The delegates enter...
 
@@ -250,22 +250,22 @@ title: Now, let us choose the Party Leadership.
 
 @left_leadership
 choose-if: left_leadership >= 50 and (issue_feminism < 5 or oldleft_leader != "Wagenknecht")
-on-arrival: in_left_leadership = 1; beweli_dissent -= 5; oldleft_dissent -= 5; hennigwellsow_advisor = 0; wissler_advisor = 0; wagenknecht_advisor = 0; mohamedali_advisor = 0; riexinger_advisor = 0; pellmann_advisor = 0; gohlke_advisor = 0; schwerdtner_advisor = 0; pantisano_advisor = 0; buenger_advisor = 0; lay_advisor = 0; kipping_advisor = 0; reichinnek_advisor = 0; vanaken_advisor = 0; schirdewan_advisor = 0; hoss_advisor = 0; gysi_advisor = 0; bartsch_advisor = 0; ramelow_advisor = 0; goerke_advisor = 0;
+on-arrival: in_left_leadership = 1; beweli_dissent -= 5; oldleft_dissent -= 5; hennigwellsow_advisor = 0; wissler_advisor = 0; wagenknecht_advisor = 0; mohamedali_advisor = 0; riexinger_advisor = 0; pellmann_advisor = 0; gohlke_advisor = 0; schwerdtner_advisor = 0; pantisano_advisor = 0; buenger_advisor = 0; lay_advisor = 0; kipping_advisor = 0; reichinnek_advisor = 0; vanaken_advisor = 0; schirdewan_advisor = 0; hoss_advisor = 0; gysi_advisor = 0; bartsch_advisor = 0; ramelow_advisor = 0; goerke_advisor = 0; n_advisors = 0; n_advisors_woman = 0;
 go-to: oldleft_advisor_choice
 
 @progressive_leadership
 choose-if: progressive_leadership >= 50
-on-arrival: in_progressive_leadership = 1; beweli_dissent -= 5; emali_dissent -= 5; hennigwellsow_advisor = 0; wissler_advisor = 0; wagenknecht_advisor = 0; mohamedali_advisor = 0; riexinger_advisor = 0; pellmann_advisor = 0; gohlke_advisor = 0; schwerdtner_advisor = 0; pantisano_advisor = 0; buenger_advisor = 0; lay_advisor = 0; kipping_advisor = 0; reichinnek_advisor = 0; vanaken_advisor = 0; schirdewan_advisor = 0; hoss_advisor = 0; gysi_advisor = 0; bartsch_advisor = 0; ramelow_advisor = 0; goerke_advisor = 0;
+on-arrival: in_progressive_leadership = 1; beweli_dissent -= 5; emali_dissent -= 5; hennigwellsow_advisor = 0; wissler_advisor = 0; wagenknecht_advisor = 0; mohamedali_advisor = 0; riexinger_advisor = 0; pellmann_advisor = 0; gohlke_advisor = 0; schwerdtner_advisor = 0; pantisano_advisor = 0; buenger_advisor = 0; lay_advisor = 0; kipping_advisor = 0; reichinnek_advisor = 0; vanaken_advisor = 0; schirdewan_advisor = 0; hoss_advisor = 0; gysi_advisor = 0; bartsch_advisor = 0; ramelow_advisor = 0; goerke_advisor = 0; n_advisors = 0; n_advisors_woman = 0;
 go-to: beweli_advisor_choice
 
 @right_leadership
 choose-if: right_leadership >= 50
-on-arrival: in_right_leadership = 1; emali_dissent -= 5; pragmatist_dissent -= 5; hennigwellsow_advisor = 0; wissler_advisor = 0; wagenknecht_advisor = 0; mohamedali_advisor = 0; riexinger_advisor = 0; pellmann_advisor = 0; gohlke_advisor = 0; schwerdtner_advisor = 0; pantisano_advisor = 0; buenger_advisor = 0; lay_advisor = 0; kipping_advisor = 0; reichinnek_advisor = 0; vanaken_advisor = 0; schirdewan_advisor = 0; hoss_advisor = 0; gysi_advisor = 0; bartsch_advisor = 0; ramelow_advisor = 0; goerke_advisor = 0;
+on-arrival: in_right_leadership = 1; emali_dissent -= 5; pragmatist_dissent -= 5; hennigwellsow_advisor = 0; wissler_advisor = 0; wagenknecht_advisor = 0; mohamedali_advisor = 0; riexinger_advisor = 0; pellmann_advisor = 0; gohlke_advisor = 0; schwerdtner_advisor = 0; pantisano_advisor = 0; buenger_advisor = 0; lay_advisor = 0; kipping_advisor = 0; reichinnek_advisor = 0; vanaken_advisor = 0; schirdewan_advisor = 0; hoss_advisor = 0; gysi_advisor = 0; bartsch_advisor = 0; ramelow_advisor = 0; goerke_advisor = 0; n_advisors = 0; n_advisors_woman = 0;
 go-to: emali_advisor_choice
 
 @hufeisen_leadership
 choose-if: hufeisen_leadership >= 50 and (issue_antimilitarism < 5 or (oldleft_dissent < 10 and emali_dissent < 10))
-on-arrival: in_hufeisen_leadership = 1; oldleft_dissent -= 5; emali_dissent -= 5; hennigwellsow_advisor = 0; wissler_advisor = 0; wagenknecht_advisor = 0; mohamedali_advisor = 0; riexinger_advisor = 0; pellmann_advisor = 0; gohlke_advisor = 0; schwerdtner_advisor = 0; pantisano_advisor = 0; buenger_advisor = 0; lay_advisor = 0; kipping_advisor = 0; reichinnek_advisor = 0; vanaken_advisor = 0; schirdewan_advisor = 0; hoss_advisor = 0; gysi_advisor = 0; bartsch_advisor = 0; ramelow_advisor = 0; goerke_advisor = 0;
+on-arrival: in_hufeisen_leadership = 1; oldleft_dissent -= 5; emali_dissent -= 5; hennigwellsow_advisor = 0; wissler_advisor = 0; wagenknecht_advisor = 0; mohamedali_advisor = 0; riexinger_advisor = 0; pellmann_advisor = 0; gohlke_advisor = 0; schwerdtner_advisor = 0; pantisano_advisor = 0; buenger_advisor = 0; lay_advisor = 0; kipping_advisor = 0; reichinnek_advisor = 0; vanaken_advisor = 0; schirdewan_advisor = 0; hoss_advisor = 0; gysi_advisor = 0; bartsch_advisor = 0; ramelow_advisor = 0; goerke_advisor = 0; n_advisors = 0; n_advisors_woman = 0;
 go-to: oldleft_advisor_choice
 
 @vote_stalled
@@ -495,6 +495,7 @@ Luke Hoss is now an advisor.
 title: Gregor Gysi
 subtitle: Gregor Gysi is a long-time Eastern parliamentarian and the most influential figure of our right wing. {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
 is-card: true
+view-if: (n_advisors_woman = 1 or n_advisors = 0)
 card-image: img/_portraits/GysiGregor.jpg
 tags: pragmatist_advisor
 on-arrival: gysi_advisor = 1; n_advisors += 1; pragmatist_dissent -= 2*(gysi_advisor_fame/100);
