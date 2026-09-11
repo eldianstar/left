@@ -250,22 +250,22 @@ title: Now, let us choose the Party Leadership.
 
 @left_leadership
 choose-if: left_leadership >= 50 and (issue_feminism < 5 or oldleft_leader != "Wagenknecht")
-on-arrival: in_left_leadership = 1; beweli_dissent -= 5; oldleft_dissent -= 5;
+on-arrival: in_left_leadership = 1; beweli_dissent -= 5; oldleft_dissent -= 5; Q.hennigwellsow_advisor = 0; Q.wissler_advisor = 0; Q.wagenknecht_advisor = 0; Q.mohamedali_advisor = 0; Q.riexinger_advisor = 0; Q.pellmann_advisor = 0; Q.gohlke_advisor = 0; Q.schwerdtner_advisor = 0; Q.pantisano_advisor = 0; Q.buenger_advisor = 0; Q.lay_advisor = 0; Q.kipping_advisor = 0; Q.reichinnek_advisor = 0; Q.vanaken_advisor = 0; Q.schirdewan_advisor = 0; Q.hoss_advisor = 0; Q.gysi_advisor = 0; Q.bartsch_advisor = 0; Q.ramelow_advisor = 0; Q.goerke_advisor = 0;
 go-to: oldleft_advisor_choice
 
 @progressive_leadership
 choose-if: progressive_leadership >= 50
-on-arrival: in_progressive_leadership = 1; beweli_dissent -= 5; emali_dissent -= 5;
+on-arrival: in_progressive_leadership = 1; beweli_dissent -= 5; emali_dissent -= 5; Q.hennigwellsow_advisor = 0; Q.wissler_advisor = 0; Q.wagenknecht_advisor = 0; Q.mohamedali_advisor = 0; Q.riexinger_advisor = 0; Q.pellmann_advisor = 0; Q.gohlke_advisor = 0; Q.schwerdtner_advisor = 0; Q.pantisano_advisor = 0; Q.buenger_advisor = 0; Q.lay_advisor = 0; Q.kipping_advisor = 0; Q.reichinnek_advisor = 0; Q.vanaken_advisor = 0; Q.schirdewan_advisor = 0; Q.hoss_advisor = 0; Q.gysi_advisor = 0; Q.bartsch_advisor = 0; Q.ramelow_advisor = 0; Q.goerke_advisor = 0;
 go-to: beweli_advisor_choice
 
 @right_leadership
 choose-if: right_leadership >= 50
-on-arrival: in_right_leadership = 1; emali_dissent -= 5; pragmatist_dissent -= 5;
+on-arrival: in_right_leadership = 1; emali_dissent -= 5; pragmatist_dissent -= 5; Q.hennigwellsow_advisor = 0; Q.wissler_advisor = 0; Q.wagenknecht_advisor = 0; Q.mohamedali_advisor = 0; Q.riexinger_advisor = 0; Q.pellmann_advisor = 0; Q.gohlke_advisor = 0; Q.schwerdtner_advisor = 0; Q.pantisano_advisor = 0; Q.buenger_advisor = 0; Q.lay_advisor = 0; Q.kipping_advisor = 0; Q.reichinnek_advisor = 0; Q.vanaken_advisor = 0; Q.schirdewan_advisor = 0; Q.hoss_advisor = 0; Q.gysi_advisor = 0; Q.bartsch_advisor = 0; Q.ramelow_advisor = 0; Q.goerke_advisor = 0;
 go-to: emali_advisor_choice
 
 @hufeisen_leadership
 choose-if: hufeisen_leadership >= 50 and (issue_antimilitarism < 5 or (oldleft_dissent < 10 and emali_dissent < 10))
-on-arrival: in_hufeisen_leadership = 1; oldleft_dissent -= 5; emali_dissent -= 5;
+on-arrival: in_hufeisen_leadership = 1; oldleft_dissent -= 5; emali_dissent -= 5; Q.hennigwellsow_advisor = 0; Q.wissler_advisor = 0; Q.wagenknecht_advisor = 0; Q.mohamedali_advisor = 0; Q.riexinger_advisor = 0; Q.pellmann_advisor = 0; Q.gohlke_advisor = 0; Q.schwerdtner_advisor = 0; Q.pantisano_advisor = 0; Q.buenger_advisor = 0; Q.lay_advisor = 0; Q.kipping_advisor = 0; Q.reichinnek_advisor = 0; Q.vanaken_advisor = 0; Q.schirdewan_advisor = 0; Q.hoss_advisor = 0; Q.gysi_advisor = 0; Q.bartsch_advisor = 0; Q.ramelow_advisor = 0; Q.goerke_advisor = 0;
 go-to: oldleft_advisor_choice
 
 @vote_stalled
