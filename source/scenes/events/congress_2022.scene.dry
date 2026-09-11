@@ -291,6 +291,7 @@ on-arrival: oldleft_dissent += 10; emali_dissent += 10; beweli_dissent += 10; pr
 @add_wagenknecht
 title: Sahra Wagenknecht
 subtitle: Sahra Wagenknecht is [? if oldleft_leader == "Wagenknecht" : the Eastern leader of our traditional left wing. ?][? if oldleft_leader != "Wagenknecht" : a prominent Eastern figure in our traditional left wing. ?] {!<br><br>!}[? if difficulty < 0 : Actions - text ?]
+card-image: img/_portraits/WagenknechtSahra.jpg
 tags: oldleft_advisor
 view-if: wagenknecht_left == 0
 on-arrival: wagenknecht_advisor = 1; n_advisors += 1; n_advisors_woman += 1; oldleft_dissent -= 2*(wagenknecht_advisor_fame/100);
