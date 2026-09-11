@@ -73,7 +73,22 @@ console.log("Total Linke weighted class vote:", total_linke);
 for (var faction of Q.factions) {
     Q[faction + '_votes'] = 0; // Ensure clean start
 
-    Q[faction + 'votes'] += Q[faction + '_strength'];
+    for (var c of Q.classes) {
+        var base_vote = ((Q[faction + '_strength'] / 100) * Q[faction + '_' + c]) * ((Q[c + '_linke_normalized'] * Q[c]) / total_linke);
+        var dissent = Q[faction + '_dissent'] || 0;
+        var dissent_modifier = 1 + (dissent / 60) * (-linke_performance / 10) * 5;
+
+        console.log(`[${faction}] + [${c}]`);
+        console.log("  Base vote:", base_vote.toFixed(4));
+        console.log("  Dissent:", dissent);
+        console.log("  Dissent modifier:", dissent_modifier.toFixed(4));
+
+        if (dissent_modifier < 0.1) {
+            dissent_modifier = 0.1;
+        }
+
+        Q[faction + '_votes'] += base_vote * dissent_modifier;
+    }
 
     console.log(`[${faction}] total votes before normalization:`, Q[faction + '_votes'].toFixed(2));
 
