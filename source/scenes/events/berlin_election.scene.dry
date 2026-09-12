@@ -167,22 +167,22 @@ for (const party in allocatedSeats) {
     Q[party] = parseFloat(((allocatedSeats[party] * 100) / 147).toFixed(1));
 }
 
-Q.groko_berlin = parseFloat((Q.spd_r_berlin + Q.cdu_r_berlin).toFixed(1));
-Q.traffic_light_berlin = parseFloat((Q.fdp_r_berlin + Q.spd_r_berlin + Q.greens_r_berlin).toFixed(1));
-Q.jamaica_berlin = parseFloat((Q.greens_r_berlin + Q.cdu_r_berlin + Q.fdp_r_berlin).toFixed(1));
-Q.rot_rot_berlin = parseFloat((Q.linke_r_berlin + Q.spd_r_berlin).toFixed(1));
-Q.tigerenten_berlin = parseFloat((Q.cdu_r_berlin + Q.fdp_r_berlin).toFixed(1));
-Q.kiwi_berlin = parseFloat((Q.cdu_r_berlin + Q.greens_r_berlin).toFixed(1));
-Q.tigerenten_berlin = parseFloat((Q.cdu_r_berlin + Q.fdp_r_berlin).toFixed(1));
-Q.die_linke_maj_berlin = parseFloat((Q.linke_r_berlin).toFixed(1));
-Q.die_linke_maj_berlin = parseFloat((Q.linke_r_berlin).toFixed(1));
-Q.afd_maj_berlin = parseFloat((Q.afd_r_berlin).toFixed(1));
-Q.rot_grun_berlin = parseFloat((Q.spd_r_berlin + Q.greens_r_berlin).toFixed(1));
-Q.rot_rot_grun_berlin = parseFloat((Q.spd_r_berlin + Q.greens_r_berlin + Q.linke_r_berlin).toFixed(1));
-Q.spd_maj_berlin = parseFloat((Q.spd_r_berlin).toFixed(1));
-Q.green_maj_berlin = parseFloat((Q.greens_r_berlin).toFixed(1));
-Q.cdu_maj_berlin = parseFloat((Q.cdu_r_berlin).toFixed(1));
-Q.weimar_but_different_berlin = parseFloat((Q.cdu_r_berlin + Q.fdp_r_berlin + Q.spd_r_berlin).toFixed(1));
+Q.berlin_pot_groko = parseFloat((Q.spd_r_berlin + Q.cdu_r_berlin).toFixed(1));
+Q.berlin_pot_traffic_light = parseFloat((Q.fdp_r_berlin + Q.spd_r_berlin + Q.greens_r_berlin).toFixed(1));
+Q.berlin_pot_jamaica = parseFloat((Q.greens_r_berlin + Q.cdu_r_berlin + Q.fdp_r_berlin).toFixed(1));
+Q.berlin_pot_rot_rot = parseFloat((Q.linke_r_berlin + Q.spd_r_berlin).toFixed(1));
+Q.berlin_pot_tigerenten = parseFloat((Q.cdu_r_berlin + Q.fdp_r_berlin).toFixed(1));
+Q.berlin_pot_kiwi = parseFloat((Q.cdu_r_berlin + Q.greens_r_berlin).toFixed(1));
+Q.berlin_pot_tigerenten = parseFloat((Q.cdu_r_berlin + Q.fdp_r_berlin).toFixed(1));
+Q.berlin_pot_die_linke_maj = parseFloat((Q.linke_r_berlin).toFixed(1));
+Q.berlin_pot_die_linke_maj = parseFloat((Q.linke_r_berlin).toFixed(1));
+Q.berlin_pot_afd_maj = parseFloat((Q.afd_r_berlin).toFixed(1));
+Q.berlin_pot_rot_grun = parseFloat((Q.spd_r_berlin + Q.greens_r_berlin).toFixed(1));
+Q.berlin_pot_rot_rot_grun = parseFloat((Q.spd_r_berlin + Q.greens_r_berlin + Q.linke_r_berlin).toFixed(1));
+Q.berlin_pot_spd_maj = parseFloat((Q.spd_r_berlin).toFixed(1));
+Q.berlin_pot_green_maj = parseFloat((Q.greens_r_berlin).toFixed(1));
+Q.berlin_pot_cdu_maj = parseFloat((Q.cdu_r_berlin).toFixed(1));
+Q.berlin_pot_weimar_but_different = parseFloat((Q.cdu_r_berlin + Q.fdp_r_berlin + Q.spd_r_berlin).toFixed(1));
 
 Q.linke_berlin_elections_vote = (Q.linke_berlin_elections_vote != undefined ? parseFloat(Q.linke_berlin_elections_vote.toFixed(1)) : 0);
 Q.spd_berlin_elections_vote = (Q.spd_berlin_elections_vote != undefined ? parseFloat(Q.spd_berlin_elections_vote.toFixed(1)) : 0);
@@ -272,6 +272,7 @@ setTimeout(function() {
         d3.select("#berlin_landtag").datum(data).call(parliament);
     }
 }, 147);
+
 !}
 
 **Berlin results:**
@@ -295,34 +296,35 @@ setTimeout(function() {
 {!</table>!}
 <hr id="read-marker">
 
-Grand Coalition (<span style="color: #000000;">CDU</span> + <span style="color: #c00000;">SPD</span>): [+ berlin_pot_groko +]%
+Grand Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span>): [+ berlin_pot_groko +]%
 
-Traffic Light Coalition (<span style="color: #c00000;">SPD</span> + <span style="color: #fe9e00;">FDP</span> + <span style="color: #11aa11;">Greens</span>): [+ berlin_pot_traffic_light +]%
+Traffic Light Coalition (<span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ fdp_color +];">FDP</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_traffic_light +]%
 
-Red-Red-Green Coalition (<span style="color: #700000;">The Left</span> + <span style="color: #c00000;">SPD</span> + <span style="color: #11aa11;">Greens</span>): [+ berlin_pot_rot_rot_grun +]%
+Red-Red-Green Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_rot_rot_grun +]%
 
-Jamaica Coalition (<span style="color: #000000;">CDU</span> + <span style="color: #fe9e00;">FDP</span> + <span style="color: #11aa11;">Greens</span>): [+ berlin_pot_jamaica +]%
+Jamaica Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ fdp_color +];">FDP</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_jamaica +]%
 
-Red-Red Coalition (<span style="color: #700000;">The Left</span> + <span style="color: #c00000;">SPD</span>): [+ berlin_pot_rot_rot +]%
+Red-Red Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ spd_color +];">SPD</span>): [+ berlin_pot_rot_rot +]%
 
-Kenya Coalition (<span style="color: #000000;">CDU</span> + <span style="color: #c00000;">SPD</span> + <span style="color: #11aa11;">Greens</span>): [+ berlin_pot_kenya +]%
+Kenya Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_kenya +]%
 
-Black-Blue Coalition (<span style="color: #000000;">CDU</span> + <span style="color: #0066cc;">AfD</span>): [+ berlin_pot_schwarz_blau +]%
+Black-Blue Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ afd_color +];">AfD</span>): [+ berlin_pot_schwarz_blau +]%
 
-Tiger Duck Coalition (<span style="color: #000000;">CDU</span> + <span style="color: #fe9e00;">FDP</span>): [+ berlin_pot_tigerenten +]%
+Tiger Duck Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ fdp_color +];">FDP</span>): [+ berlin_pot_tigerenten +]%
 
-Kiwi Coalition (<span style="color: #11aa11;">Greens</span> + <span style="color: #000000;">CDU</span>): [+ berlin_pot_kiwi +]%
+Kiwi Coalition (<span style="color: #11aa11;">Greens</span> + <span style="color: [+ cdu_color +];">CDU</span>): [+ berlin_pot_kiwi +]%
 
-Red-Green Coalition (<span style="color: #c00000;">SPD</span> + <span style="color: #11aa11;">Greens</span>): [+ berlin_pot_rot_grun +]%
+Red-Green Coalition (<span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_rot_grun +]%
 
-Left Majority (<span style="color: #700000;">The Left</span>): [+ berlin_pot_die_linke_maj +]%
+Germany Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ fdp_color +];">FDP</span>): [+ berlin_pot_weimar_but_different +]%
 
-AfD Majority (<span style="color: #0066cc;">AfD</span>): [+ berlin_pot_afd_maj +]%
+Left Majority (<span style="color: [+ linke_color +];">The Left</span>): [+ berlin_pot_die_linke_maj +]%
 
-SPD Majority (<span style="color: #c00000;">SPD</span>): [+ berlin_pot_spd_maj +]%
+AfD Majority (<span style="color: [+ afd_color +];">AfD</span>): [+ berlin_pot_afd_maj +]%
 
-Green Majority (<span style="color: #11aa11;">Greens</span>): [+ berlin_pot_green_maj +]%
+SPD Majority (<span style="color: [+ spd_color +];">SPD</span>): [+ berlin_pot_spd_maj +]%
 
-CDU Majority (<span style="color: #000000;">CDU</span>): [+ berlin_pot_cdu_maj +]%
+Green Majority (<span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_green_maj +]%
 
-Germany Coalition (<span style="color: #000000;">CDU</span> + <span style="color: #c00000;">SPD</span> + <span style="color: #fe9e00;">FDP</span>): [+ berlin_pot_weimar_but_different +]%
+CDU Majority (<span style="color: [+ cdu_color +];">CDU</span>): [+ berlin_pot_cdu_maj +]%
+
