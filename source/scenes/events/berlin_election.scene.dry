@@ -1,9 +1,14 @@
 title: Berlin state election
 subtitle: The people of Berlin head to the polls..
-view-if: (year == 2021 and month == 9 and not berlin_election_seen) or (berlin_election_2_trigger_time == time and berlin_election_seen_time != time)
+view-if: (year = next_election_year_berlin and month >= next_election_month_berlin) or (year > next_election_year_berlin)
 new-page: true
 tags: event
 on-arrival: berlin_election_seen += 1; berlin_election_seen_time = time; berlin_most_recent = time; berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0;
+on-departure: {! 
+Q.next_election_year_berlin = Q.next_election_year_berlin + 4; 
+Q.n_elections_berlin += 1;
+Q.next_election_time_berlin = Q.time + 48;
+!}
 priority: 2
 face-image: img/berlin.png
 
@@ -310,7 +315,7 @@ setTimeout(function() {
 
 [? if berlin_pot_kenya >= 45 : Kenya Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_kenya +]% ?]
 
-[? if berlin_pot_schwarz_blau >= 45 : Black-Blue Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ afd_color +];">AfD</span>): [+ berlin_pot_schwarz_blau +]% ?]
+[? if berlin_pot_schwarz_blau >= 45 : Midnight Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ afd_color +];">AfD</span>): [+ berlin_pot_schwarz_blau +]% ?]
 
 [? if berlin_pot_tigerenten >= 45 : Tiger Duck Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ fdp_color +];">FDP</span>): [+ berlin_pot_tigerenten +]% ?]
 
@@ -329,3 +334,52 @@ setTimeout(function() {
 [? if berlin_pot_green_maj >= 45 : Green Majority (<span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_green_maj +]% ?]
 
 [? if berlin_pot_cdu_maj >= 45 : CDU Majority (<span style="color: [+ cdu_color +];">CDU</span>): [+ berlin_pot_cdu_maj +]% ?]
+
+- @left_maj: We can form a majority government!
+- @redred: Form a <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">red</span> coalition ([+ berlin_pot_rot_rot +]%)
+- @rrgreen: Form a <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">red</span>-<span style="color: [+ greens_color +];">green</span> coalition ([+ berlin_pot_rot_rot_grun +]%)
+- @groko: Let a <span style="color: [+ cdu_color +];">Grand</span> <span style="color: [+ spd_color +];">coalition</span> be formed ([+ berlin_pot_groko +]%).
+- @ampel: Let a <span style="color: [+ spd_color +];">Traffic</span> <span style="color: [+ greens_color +];">Light</span> <span style="color: [+ fdp_color +];">coalition</span> be formed ([+ berlin_pot_traffic_light +]%).
+- @jamaica: Let a <span style="color: [+ cdu_color +];">Ja</span><span style="color: [+ greens_color +];">mai</span><span style="color: [+ fdp_color +];">can</span> coalition be formed ([+ berlin_pot_jamaica +]%).
+- @kenya: Let a <span style="color: [+ cdu_color +];">Ken</span><span style="color: [+ spd_color +];">yan co</span><span style="color: [+ greens_color +];">alition</span> be formed ([+ berlin_pot_kenya +]%).
+- @midnight: Let a <span style="color: [+ cdu_color +];">Mid</span><span style="color: [+ afd_color +];">night</span> coalition be formed ([+ berlin_pot_schwarz_blau +]%).
+- @tigerente: Let a <span style="color: [+ cdu_color +];">Tiger</span><span style="color: [+ fdp_color +];">ente</span> coalition be formed ([+ berlin_pot_tigerente +]%).
+- @kiwi: Let a <span style="color: [+ cdu_color +];">Ki</span><span style="color: [+ greens_color +];">wi</span> coalition be formed ([+ berlin_pot_kiwi +]%).
+- @redgreen: Let a <span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ greens_color +];">green</span> coalition be formed ([+ berlin_pot_rot_grun +]%).
+- @germany: Let a <span style="color: [+ cdu_color +];">Ger</span><span style="color: [+ spd_color +];">ma</span><span style="color: [+ fdp_color +];">ny</span> coalition be formed ([+ berlin_pot_weimar_but_different +]%).
+- @afd_maj: The <span style="color: [+ afd_color +];">AfD</span> secures a majority.
+- @cdu_maj: The <span style="color: [+ cdu_color +];">CDU</span> secures a majority.
+- @spd_maj: The <span style="color: [+ spd_color +];">SPD</span> secures a majority.
+- @greens_maj: The <span style="color: [+ greens_color +];">Greens</span> secure a majority.
+
+@left_maj
+
+@redred
+
+@rrgreen
+
+@groko
+
+@ampel
+
+@jamaica
+
+@kenya
+
+@midnight
+
+@tigerente
+
+@kiwi
+
+@regreen
+
+@germany
+
+@afd_maj
+
+@cdu_maj
+
+@spd_maj
+
+@greens_maj
