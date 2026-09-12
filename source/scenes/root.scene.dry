@@ -53,6 +53,7 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // colours, credit to kurtrosenfeld
+// used by spdsocialdemocracy, im using the other ones
 
 Q.linke_colour = '#BC2D72';
 Q.spd_colour = '#E3000F';
@@ -243,6 +244,10 @@ Q.classes = ['youth', 'urban', 'east', 'rural', 'upper'];
 Q.parties = ['linke', 'spd', 'greens', 'fdp', 'cdu', 'afd', 'other'];
 Q.parties_graph = ['linke', 'greens', 'spd', 'fdp', 'cdu', 'afd', 'other'];
 
+
+//////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// VOTES, SEATS, SUPPORT /////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
