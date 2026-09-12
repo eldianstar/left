@@ -3,7 +3,7 @@ subtitle: The people of Berlin head to the polls..
 view-if: (year = next_election_year_berlin and month >= next_election_month_berlin) or (year > next_election_year_berlin)
 new-page: true
 tags: event
-on-arrival: berlin_election_seen += 1; berlin_election_seen_time = time; berlin_most_recent = time; berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0;
+on-arrival: berlin_election_seen += 1; berlin_election_seen_time = time; berlin_most_recent = time;
 on-departure: {! 
 Q.next_election_year_berlin = Q.next_election_year_berlin + 4; 
 Q.n_elections_berlin += 1;
@@ -30,6 +30,7 @@ var berlin_adjustment_factors = {
     cdu: 0.95,
     afd: 0.85,
     greens: 1.09,
+    bsw: 1,
 };
 
 Q.spd_r_berlin = 0;
@@ -38,6 +39,7 @@ Q.cdu_r_berlin = 0;
 Q.greens_r_berlin = 0;
 Q.afd_r_berlin = 0;
 Q.fdp_r_berlin = 0;
+Q.bsw_r_berlin = 0;
 
 Q.spd_berlin_elections_vote = 0;
 Q.linke_berlin_elections_vote = 0;
@@ -45,6 +47,7 @@ Q.fdp_berlin_elections_vote = 0;
 Q.afd_berlin_elections_vote = 0;
 Q.greens_berlin_elections_vote = 0;
 Q.cdu_berlin_elections_vote = 0;
+Q.bsw_berlin_elections_vote = 0;
 
 if (Q.youth_linke_normalized + Q.urban_linke_normalized >= 30) berlin_adjustment_factors.linke += 0.1;
 if (Q.urban_linke_normalized >= 70) berlin_adjustment_factors.linke += 0.1;
@@ -56,8 +59,9 @@ Q.afd_berlin_elections_vote = Q.afd_votes*berlin_adjustment_factors.afd;
 Q.cdu_berlin_elections_vote = Q.cdu_votes*berlin_adjustment_factors.cdu;
 if (Q.issue_environment >= 5) berlin_adjustment_factors.greens += 0.1;
 Q.greens_berlin_elections_vote = Q.greens_votes*berlin_adjustment_factors.greens;
+Q.bsw_berlin_elections_vote = Q.bsw_votes*berlin_adjustment_factors.bsw;
 
-Q.total_votes_berlin = Q.spd_berlin_elections_vote + Q.linke_berlin_elections_vote + Q.greens_berlin_elections_vote + Q.fdp_berlin_elections_vote + Q.cdu_berlin_elections_vote + Q.afd_berlin_elections_vote;
+Q.total_votes_berlin = Q.spd_berlin_elections_vote + Q.linke_berlin_elections_vote + Q.greens_berlin_elections_vote + Q.fdp_berlin_elections_vote + Q.cdu_berlin_elections_vote + Q.afd_berlin_elections_vote + Q.bsw_berlin_elections_vote;
 
 if (Q.total_votes_berlin > 0) {
     Q.spd_berlin_elections_vote = (Q.spd_berlin_elections_vote / Q.total_votes_berlin) * 100;
@@ -66,6 +70,7 @@ if (Q.total_votes_berlin > 0) {
     Q.fdp_berlin_elections_vote = (Q.fdp_berlin_elections_vote / Q.total_votes_berlin) * 100;
     Q.afd_berlin_elections_vote = (Q.afd_berlin_elections_vote / Q.total_votes_berlin) * 100;
     Q.cdu_berlin_elections_vote = (Q.cdu_berlin_elections_vote / Q.total_votes_berlin) * 100;
+    Q.bsw_berlin_elections_vote = (Q.bsw_berlin_elections_vote / Q.total_votes_berlin) * 100;
     let target = 14;
     Q.linke_berlin_elections_vote = Math.round((Q.linke_berlin_elections_vote + (target - Q.linke_berlin_elections_vote) * 0.35) * 10) / 10;
     Q.total_votes_berlin = Q.spd_berlin_elections_vote + Q.linke_berlin_elections_vote + Q.greens_berlin_elections_vote + Q.fdp_berlin_elections_vote + Q.afd_berlin_elections_vote + Q.cdu_berlin_elections_vote;
@@ -75,6 +80,7 @@ if (Q.total_votes_berlin > 0) {
     Q.fdp_berlin_elections_vote = (Q.fdp_berlin_elections_vote / Q.total_votes_berlin) * 100;
     Q.afd_berlin_elections_vote = (Q.afd_berlin_elections_vote / Q.total_votes_berlin) * 100;
     Q.cdu_berlin_elections_vote = (Q.cdu_berlin_elections_vote / Q.total_votes_berlin) * 100;
+    Q.bsw_berlin_elections_vote = (Q.bsw_berlin_elections_vote / Q.total_votes_berlin) * 100;
 }
 
 Q.spd_berlin_elections_vote = (Q.spd_berlin_elections_vote != undefined ? parseFloat(Q.spd_berlin_elections_vote.toFixed(1)) : 0);
@@ -83,6 +89,7 @@ Q.greens_berlin_elections_vote = (Q.greens_berlin_elections_vote != undefined ? 
 Q.fdp_berlin_elections_vote = (Q.fdp_berlin_elections_vote != undefined ? parseFloat(Q.fdp_berlin_elections_vote.toFixed(1)) : 0);
 Q.afd_berlin_elections_vote = (Q.afd_berlin_elections_vote != undefined ? parseFloat(Q.afd_berlin_elections_vote.toFixed(1)) : 0);
 Q.cdu_berlin_elections_vote = (Q.cdu_berlin_elections_vote != undefined ? parseFloat(Q.cdu_berlin_elections_vote.toFixed(1)) : 0);
+Q.bsw_berlin_elections_vote = (Q.bsw_berlin_elections_vote != undefined ? parseFloat(Q.bsw_berlin_elections_vote.toFixed(1)) : 0);
 
 if (Q.spd_berlin_elections_vote >= 1.4) Q.spd_r_berlin = Q.spd_berlin_elections_vote;
 if (Q.linke_berlin_elections_vote >= 1.4) Q.linke_r_berlin = Q.linke_berlin_elections_vote;
@@ -90,6 +97,7 @@ if (Q.greens_berlin_elections_vote >= 1.4) Q.greens_r_berlin = Q.greens_berlin_e
 if (Q.fdp_berlin_elections_vote >= 1.4) Q.fdp_r_berlin = Q.fdp_berlin_elections_vote;
 if (Q.afd_berlin_elections_vote >= 1.4) Q.afd_r_berlin = Q.afd_berlin_elections_vote;
 if (Q.cdu_berlin_elections_vote >= 1.4) Q.cdu_r_berlin = Q.cdu_berlin_elections_vote;
+if (Q.bsw_berlin_elections_vote >= 1.4) Q.bsw_r_berlin = Q.bsw_berlin_elections_vote;
 
 var berlin_adjustment_r_factors = {
     spd: 0.86,
@@ -98,6 +106,7 @@ var berlin_adjustment_r_factors = {
     cdu: 0.95,
     afd: 0.85,
     greens: 1.09,
+    bsw: 1,
 };
 
 if (Q.youth_linke_normalized + Q.urban_linke_normalized >= 30) berlin_adjustment_r_factors.linke += 0.1;
@@ -110,6 +119,7 @@ Q.afd_r_berlin = Q.afd_votes*berlin_adjustment_r_factors.afd;
 Q.cdu_r_berlin = Q.cdu_votes*berlin_adjustment_r_factors.cdu;
 if (Q.issue_environment >= 5) berlin_adjustment_r_factors.greens += 0.1;
 Q.greens_r_berlin = Q.greens_votes*berlin_adjustment_r_factors.greens;
+Q.bsw_r_berlin = Q.bsw_votes*berlin_adjustment_r_factors.bsw;
 
 Q.total_r_berlin = 0;
 
@@ -119,6 +129,7 @@ if (Q.greens_r_berlin) Q.total_r_berlin += Q.greens_r_berlin;
 if (Q.fdp_r_berlin) Q.total_r_berlin += Q.fdp_r_berlin;
 if (Q.afd_r_berlin) Q.total_r_berlin += Q.afd_r_berlin;
 if (Q.cdu_r_berlin) Q.total_r_berlin += Q.cdu_r_berlin;
+if (Q.bsw_r_berlin) Q.total_r_berlin += Q.bsw_r_berlin;
 
 if (Q.total_r_berlin > 0) {
     Q.spd_r_berlin = (Q.spd_r_berlin / Q.total_r_berlin) * 100;
@@ -127,6 +138,7 @@ if (Q.total_r_berlin > 0) {
     Q.fdp_r_berlin = (Q.fdp_r_berlin / Q.total_r_berlin) * 100;
     Q.afd_r_berlin = (Q.afd_r_berlin / Q.total_r_berlin) * 100;
     Q.cdu_r_berlin = (Q.cdu_r_berlin / Q.total_r_berlin) * 100;
+    Q.bsw_r_berlin = (Q.bsw_r_berlin / Q.total_r_berlin) * 100;
 }
 
 function allocateSeats(percentages, totalSeats = 147) {
@@ -164,6 +176,7 @@ const inputPercentages = {
     fdp_r_berlin: Q.fdp_r_berlin,
     afd_r_berlin: Q.afd_r_berlin,
     cdu_r_berlin: Q.cdu_r_berlin,
+    bsw_r_berlin: Q.bsw_r_berlin,
 };
 
 const allocatedSeats = allocateSeats(inputPercentages);
@@ -190,6 +203,9 @@ Q.berlin_pot_cdu_maj = parseFloat((Q.cdu_r_berlin).toFixed(1));
 Q.berlin_pot_weimar_but_different = parseFloat((Q.cdu_r_berlin + Q.fdp_r_berlin + Q.spd_r_berlin).toFixed(1));
 Q.berlin_pot_kenya = parseFloat((Q.cdu_r_berlin + Q.greens_r_berlin + Q.spd_r_berlin).toFixed(1));
 Q.berlin_pot_schwarz_blau = parseFloat((Q.cdu_r_berlin + Q.afd_r_berlin).toFixed(1));
+Q.berlin_pot_red_purple = parseFloat((Q.bsw_r_berlin + Q.linke_r_berlin).toFixed(1));
+Q.berlin_pot_brombeer = parseFloat((Q.bsw_r_berlin + Q.cdu_r_berlin + Q.spd_r_berlin).toFixed(1));
+Q.berlin_pot_querfront = parseFloat((Q.bsw_r_berlin + Q.afd_r_berlin).toFixed(1));
 
 Q.linke_berlin_elections_vote = (Q.linke_berlin_elections_vote != undefined ? parseFloat(Q.linke_berlin_elections_vote.toFixed(1)) : 0);
 Q.spd_berlin_elections_vote = (Q.spd_berlin_elections_vote != undefined ? parseFloat(Q.spd_berlin_elections_vote.toFixed(1)) : 0);
@@ -198,6 +214,15 @@ Q.spd_r_berlin = (Q.spd_r_berlin != undefined ? parseFloat(Q.spd_r_berlin.toFixe
 !}
 on-display: {!
 var data = [];
+
+if (Q.bsw_berlin_elections_vote >= 5) {
+    data.push({
+        "id": "bsw",
+        "legend": "BSW",
+        "name": "BSW",
+        "seats": Math.round(Q.bsw_r_berlin * 1.47)
+    });
+}
 
 if (Q.linke_berlin_elections_vote >= 5) {
     data.push({
@@ -290,6 +315,8 @@ setTimeout(function() {
 {!<tr><td>Party</td><td>Vote share</td><td>Landtag Seats</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#BC2D72; outline: 2px; outline-style: solid;'> </div> !} <span style="color: [+ linke_color +];">**Die Linke**</span>: {!</td><td>!} **[+ linke_berlin_elections_vote +]%** {!</td><td>!} [+ linke_r_berlin +]% {!</td></tr>!}
 
+{!<tr><td><div class="box" style='background-color:#E3000F'> </div> !}<span style="color: [+ bsw_color +];">**BSW**</span>: {!</td><td>!} [+ bsw_berlin_elections_vote +]% {!</td><td>!} [+ bsw_r_berlin +]% {!</td></tr>!} 
+
 {!<tr><td><div class="box" style='background-color:#E3000F'> </div> !}<span style="color: [+ spd_color +];">**SPD**</span>: {!</td><td>!} [+ spd_berlin_elections_vote +]% {!</td><td>!} [+ spd_r_berlin +]% {!</td></tr>!} 
 
 {!<tr><td><div class="box" style='background-color:#1AA037'> </div> !}<span style="color: [+ greens_color +];">**B90/Greens**</span>: {!</td><td>!} [+ greens_berlin_elections_vote +]% {!</td><td>!} [+ greens_r_berlin +]% {!</td></tr>!}
@@ -312,6 +339,10 @@ setTimeout(function() {
 [? if berlin_pot_jamaica >= 45 : Jamaica Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ fdp_color +];">FDP</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_jamaica +]% ?]
 
 [? if berlin_pot_rot_rot >= 45 : Red-Red Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ spd_color +];">SPD</span>): [+ berlin_pot_rot_rot +]% ?]
+
+[? if berlin_pot_red_purple >= 45 and bsw_split = 1 : Red-Purple Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ bsw_color +];">BSW</span>): [+ berlin_pot_red_purple +]% ?]
+
+[? if berlin_pot_brombeer >= 45 : Blackberry Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ bsw_color +];">BSW</span>): [+ berlin_pot_brombeer +]% ?]
 
 [? if berlin_pot_kenya >= 45 : Kenya Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_kenya +]% ?]
 
@@ -338,7 +369,9 @@ setTimeout(function() {
 - @left_maj: We can form a majority government!
 - @redred: Form a <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">red</span> coalition ([+ berlin_pot_rot_rot +]%)
 - @rrgreen: Form a <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">red</span>-<span style="color: [+ greens_color +];">green</span> coalition ([+ berlin_pot_rot_rot_grun +]%)
+- @red_purple: Form a <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ bsw_color +];">purple</span> coalition ([+ berlin_pot_red_purple +]%)
 - @groko: Let a <span style="color: [+ cdu_color +];">Grand</span> <span style="color: [+ spd_color +];">coalition</span> be formed ([+ berlin_pot_groko +]%).
+- @brombeer: Let a <span style="color: [+ cdu_color +];">Black</span> + <span style="color: [+ spd_color +];">berry</span> + <span style="color: [+ bsw_color +];">coalition</span> take power ([+ berlin_pot_brombeer +]%).
 - @ampel: Let a <span style="color: [+ spd_color +];">Traffic</span> <span style="color: [+ greens_color +];">Light</span> <span style="color: [+ fdp_color +];">coalition</span> be formed ([+ berlin_pot_traffic_light +]%).
 - @jamaica: Let a <span style="color: [+ cdu_color +];">Ja</span><span style="color: [+ greens_color +];">mai</span><span style="color: [+ fdp_color +];">can</span> coalition be formed ([+ berlin_pot_jamaica +]%).
 - @kenya: Let a <span style="color: [+ cdu_color +];">Ken</span><span style="color: [+ spd_color +];">yan co</span><span style="color: [+ greens_color +];">alition</span> be formed ([+ berlin_pot_kenya +]%).
@@ -347,39 +380,127 @@ setTimeout(function() {
 - @kiwi: Let a <span style="color: [+ cdu_color +];">Ki</span><span style="color: [+ greens_color +];">wi</span> coalition be formed ([+ berlin_pot_kiwi +]%).
 - @redgreen: Let a <span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ greens_color +];">green</span> coalition be formed ([+ berlin_pot_rot_grun +]%).
 - @germany: Let a <span style="color: [+ cdu_color +];">Ger</span><span style="color: [+ spd_color +];">ma</span><span style="color: [+ fdp_color +];">ny</span> coalition be formed ([+ berlin_pot_weimar_but_different +]%).
+- @querfront: The <span style="color: [+ bsw_color +];">BSW</span> will tolerate the <span style="color: [+ afd_color +];">AfD</span>.
 - @afd_maj: The <span style="color: [+ afd_color +];">AfD</span> secures a majority.
 - @cdu_maj: The <span style="color: [+ cdu_color +];">CDU</span> secures a majority.
 - @spd_maj: The <span style="color: [+ spd_color +];">SPD</span> secures a majority.
 - @greens_maj: The <span style="color: [+ greens_color +];">Greens</span> secure a majority.
 
 @left_maj
+view-if: berlin_pot_die_linke_maj >= 50
+on-arrival: east_linke += 0.3; berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 1; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
+Our campaign has paid off, and we can finally form a majority government! This is a historic moment for our party.
 
 @redred
+view-if: berlin_pot_rot_rot >= 50
+choose-if: spd_relation >= 50
+unavailable_subtitle: Our relations with the SPD aren't good enough.
+on-arrival: berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 1; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
+We have decided to form a coalition with the <span style="color: [+ spd_color +];">**SPD**</span>.
 
 @rrgreen
+view-if: berlin_pot_rot_rot_grun >= 50
+choose-if: spd_relation >= 50 and greens_relation >= 50
+unavailable-subtitle: Our relations with the moderate left aren't good enough.
+on-arrival: berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 1; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
+We have formed a <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">red</span>-<span style="color: [+ greens_color +];">green</span> coalition with the moderate left.
+
+@red_purple
+view-if: berlin_pot_red_purple >= 50
+choose-if: bsw_relation >= 50
+unavailable-subtitle: Our relations with Wagenknecht aren't good enough.
+on-arrival: berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 1; berlin_brombeer = 0; berlin_querfront = 0;
+
+We have formed a Red-purple coalition with the BSW.
 
 @groko
+view-if: berlin_pot_groko >= 50 and berlin_pot_spd_maj < 50 and berlin_pot_cdu_maj < 50
+on-arrival: berlin_groko = 1; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
+A Grand Coalition has been formed.
+
+@brombeer
+view-if: berlin_pot_brombeer >= 50 and berlin_pot_groko < 50 and bsw_split
+on-arrival: berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 1; berlin_querfront = 0;
+
+A Blackberry coalition has been formed.
 
 @ampel
+view-if: berlin_pot_traffic_light >= 50 and ampelkoalition_failed = 0
+on-arrival: berlin_groko = 0; berlin_traffic_light = 1; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
+A Traffic Light coalition has been formed.
 
 @jamaica
+view-if: berlin_pot_jamaica >= 50 and berlin_pot_kiwi < 50 and berlin_pot_tigerente < 50
+on-arrival: berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 1; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
+A Jamaican coalition has been formed.
 
 @kenya
+view-if: berlin_pot_kenya >= 50 and berlin_pot_groko < 50 and berlin_pot_kiwi < 50
+on-arrival: berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 1; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
+A Kenyan coalition has been formed.
 
 @midnight
+view-if: berlin_pot_schwarz_blau >= 50 and brandmauer = 0
+on-arrival: berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 1; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
+A Midnight coalition has been formed. The Fascists are in power.
 
 @tigerente
+view-if: berlin_pot_tigerente >= 50
+on-arrival: berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 1; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
+A liberal-conservative Tiger-duck coalition has been formed.
 
 @kiwi
+view-if: berlin_pot_kiwi >= 50 and berlin_pot_tigerente < 50 and berlin_pot_schwarz_blau < 50
+on-arrival: berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 1; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
+A Kiwi coalition has been formed.
 
 @redgreen
+view-if: berlin_pot_rot_grun >= 50 and berlin_pot_green_maj < 50 and berlin_pot_spd_maj < 50
+berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 1; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
+A center-left Red-green coalition has been formed.
 
 @germany
+view-if: berlin_pot_weimar_but_different >= 50 and berlin_pot_groko < 50
+berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 1; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
+A centrist Germany coalition has been formed.
 
 @afd_maj
+view-if: berlin_pot_afd_maj >= 50
+berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 1; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
+The AfD has won a majority. The Fascists are in power.
 
 @cdu_maj
+view-if: berlin_pot_cdu_maj >= 50
+on-arrival: berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 1; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
+The CDU has won a majority.
 
 @spd_maj
+view-if: berlin_pot_spd_maj >= 50
+on-arrival: berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 1; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+The SPD has won a majority.
 
 @greens_maj
+view-if: berlin_pot_green_maj >= 50
+on-arrival: berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 1; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
+The Greens have won a majority.
+
+@querfront
+view-if: berlin_pot_querfront >= 50 and brandmauer = 0 and berlin_pot_afd_maj < 50 and berlin_pot_schwarz_blau < 50
+on-arrival: berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 1;
+
+The BSW is providing toleration to the AfD. The Fascists are in power.
