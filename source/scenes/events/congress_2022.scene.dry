@@ -2,7 +2,7 @@ title: 2022 Erfurt Conference
 subtitle: The Left holds its 8th Party Congress in Erfurt
 new-page: true
 tags: event
-view-if: year == 2021 and month >= 6
+view-if: year == 2022 and month >= 6
 set-jump: post_congress
 max-visits: 1
 
