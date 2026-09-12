@@ -191,20 +191,20 @@ We must decide our course of action regarding the upcoming European elections. O
 @oppositionist
 choose-if: right_leadership >= 50 or foreign_moderation >= 6 or oldleft_c < 25
 subtitle: These anti-European critics are all Russian shills anyway...
-on-arrival: foreign_moderation += 2; pragmatist_strength += 2; oldleft_strength -= 2; oldleft_dissent += 30; greens_relation += 3; spd_relation += 1; cdu_relation += 1;
+on-arrival: foreign_moderation += 2; pragmatist_strength += 2; oldleft_strength -= 2; oldleft_dissent += 10; pragmatist_dissent -= 8; greens_relation += 1; spd_relation += 2; cdu_relation += 1; foreign_moderation += 1.5;
 
 We have decided to limit our attacks on the EU and instead focus on wealth inequality and economic policy. Our moderate wing is pleased.
 
 @avoid_decision
 subtitle: Who cares about war and taxes when there's children drowing in the sea and our planet is in flames?
 choose-if: progressive_leadership >= 50 or (progressive_leadership >= 40 and social_moderation < 7)
-on-arrival: oldleft_dissent += 5; pragmatist_dissent += 5; emali_dissent += 5;
+on-arrival: oldleft_dissent += 5; pragmatist_dissent += 2; emali_dissent -= 4; beweli_dissent -= 2; issue_environment += 1; greens_relation += 3;
 
 We have decided to make climate and migration policy the centerpiece of our European campaign. The progressives in our party cheer our championing of social themes.
 
 @participationist
 choose-if: oldleft_c >= 50 or (oldleft_c >= 40 and foreign_moderation < 2)
 subtitle: Down with the EU and long live peace and solidarity!
-on-arrival: oldleft_strength += 5; oldleft_dissent -= 5; pragmatist_dissent += 30; emali_dissent += 15; greens_relation -= 5; spd_relation -= 2; cdu_relation -= 2; foreign_moderation -= 2;
+on-arrival: oldleft_strength += 5; oldleft_dissent -= 5; pragmatist_dissent += 10; emali_dissent += 7; greens_relation -= 2; spd_relation -= 2; cdu_relation -= 2; foreign_moderation -= 2;
 
 We have decided to adopt a strongly Eurosceptic stance in sight of the elections. Many in our party' right wing feel unmoored.
