@@ -515,6 +515,25 @@ Q.berlin_green_maj = 0;
 Q.berlin_cdu_maj = 0; 
 Q.berlin_weimar_but_different = 0;
 
+// coalition potential seats
+
+Q.berlin_pot_groko = 0; 
+Q.berlin_pot_traffic_light = 0; 
+Q.berlin_pot_rot_rot_grun = 0; 
+Q.berlin_pot_jamaica = 0; 
+Q.berlin_pot_rot_rot = 0; 
+Q.berlin_pot_kenya = 0; 
+Q.berlin_pot_schwarz_blau = 0; 
+Q.berlin_pot_tigerenten = 0;
+Q.berlin_pot_kiwi = 0; 
+Q.berlin_pot_die_linke_maj = 0;
+Q.berlin_pot_afd_maj = 0;
+Q.berlin_pot_rot_grun = 0; 
+Q.berlin_pot_spd_maj = 0; 
+Q.berlin_pot_green_maj = 0; 
+Q.berlin_pot_cdu_maj = 0; 
+Q.berlin_pot_weimar_but_different = 0;
+
 // seats
 Q.spd_r_berlin = 0;
 Q.linke_r_berlin = 0;
