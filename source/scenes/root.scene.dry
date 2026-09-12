@@ -131,6 +131,9 @@ Q.beweli_left = 0;
 Q.emali_left = 0;
 Q.pragmatist_left = 0;
 
+Q.wagenknecht_power_consolidated = 0;
+Q.wagenknecht_power_reduced = 0;
+Q.wagenknecht_power_lost = 0;
 Q.wagenknecht_left_congress = 0;
 
 Q.foreign_moderation = 3;
