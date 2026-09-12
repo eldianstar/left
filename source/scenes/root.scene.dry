@@ -552,7 +552,10 @@ Q.afd_berlin_elections_vote = 0;
 Q.greens_berlin_elections_vote = 0;
 Q.cdu_berlin_elections_vote = 0;
 
-
+Q.next_election_year_berlin = 2021;
+Q.next_election_month_berlin = 9;
+Q.n_elections_berlin = 0;
+Q.next_election_time_berlin = 4;
 
 
 
