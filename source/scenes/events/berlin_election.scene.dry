@@ -491,6 +491,7 @@ The CDU has won a majority.
 @spd_maj
 view-if: berlin_pot_spd_maj >= 50
 on-arrival: berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 1; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
+
 The SPD has won a majority.
 
 @greens_maj
