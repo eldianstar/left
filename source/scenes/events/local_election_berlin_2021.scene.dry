@@ -1,17 +1,17 @@
-title: Wahl zum Berlin Abgeordnetenhaus
+title: Berlin state election
 subtitle: The people of Berlin head to the polls..
 view-if: (year == 2021 and month == 9 and not berlin_election_seen) or (berlin_election_2_trigger_time == time and berlin_election_seen_time != time)
 new-page: true
 tags: event
-on-arrival: berlin_election_seen += 1 if berlin_election_seen; berlin_election_seen = 1 if not berlin_election_seen; berlin_election_seen_time = time; berlin_most_recent = time; berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0;
+on-arrival: berlin_election_seen += 1; berlin_election_seen_time = time; berlin_most_recent = time; berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0;
 priority: 2
 face-image: img/berlin.png
 
-= Wahl zum Berlin Abgeordnetenhaus, [+ month : month +] [+ year +]
+= Berlin state election, [+ month : month +] [+ year +]
 
-The regularly scheduled elections for the Berlin Abgeordnetenhaus are to take place. The incumbent government is a <span style="color: [+ linke_colour +];">Rot</span>-<span style="color: [+ spd_colour +];">Rot</span>-<span style="color: [+ greens_colour +];">Grün</span> government, with our party being in government, led by Michael Müller. 
+The regularly scheduled elections for the Berlin Abgeordnetenhaus are to take place. The incumbent government is a [? if Q.berlin_groko = 1 : <span style="color: [+ cdu_color +];">Black</span>-<span style="color: [+ spd_color +];">Red</span> ?][? if Q.berlin_traffic_light = 1 : <span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ fdp_color +];">Yellow</span>-<span style="color: [+ greens_color +];">Green</span> ?][? if Q.berlin_rot_rot_grun = 1 : <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ greens_color +];">Green</span> ?][? if Q.berlin_jamaica = 1 : <span style="color: [+ cdu_color +];">Black</span>-<span style="color: [+ fdp_color +];">Yellow</span>-<span style="color: [+ greens_color +];">Green</span> ?][? if Q.berlin_rot_rot = 1 : <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">Red</span> ?][? if Q.berlin_kenya = 1 : <span style="color: [+ cdu_color +];">Black</span>-<span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ greens_color +];">Green</span> ?][? if Q.berlin_schwarz_blau = 1 : <span style="color: [+ cdu_color +];">Black</span>-<span style="color: [+ afd_color +];">Blue</span> ?][? if Q.berlin_tigerenten = 1 : <span style="color: [+ cdu_color +];">Black</span>-<span style="color: [+ fdp_color +];">Yellow</span> ?][? if Q.berlin_kiwi = 1 : <span style="color: [+ greens_color +];">Green</span>-<span style="color: [+ cdu_color +];">Black</span> ?][? if Q.berlin_die_linke_maj = 1 : <span style="color: [+ linke_color +];">Red</span> ?][? if Q.berlin_afd_maj = 1 : <span style="color: [+ afd_color +];">Blue</span> ?][? if Q.berlin_rot_grun = 1 : <span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ greens_color +];">Green</span> ?][? if Q.berlin_spd_maj = 1 : <span style="color: [+ spd_color +];">Red</span> ?][? if Q.berlin_green_maj = 1 : <span style="color: [+ greens_color +];">Green</span> ?][? if Q.berlin_cdu_maj = 1 : <span style="color: [+ cdu_color +];">Black</span> ?][? if Q.berlin_weimar_but_different = 1 : <span style="color: [+ cdu_color +];">Black</span>-<span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ fdp_color +];">Yellow</span> ?] government.
   
-Concurrent to this, a expropiation referendum which will affect 12 businesses will take place, and we are confident that it will end in a victory for the Yes side. The Borough council elections are also held in the same day. Lot of things. Now, we have to go to the voting..
+[? if year < 2023 : Concurrent to this, a expropiation referendum which will affect 12 businesses will take place, and we are confident that it will end in a victory for the Yes side. The Borough council elections are also held in the same day. Lot of things. ?] Now, we have to go to the voting..
 
 - @berlin: May we do our best...
 
@@ -41,8 +41,8 @@ Q.afd_berlin_elections_vote = 0;
 Q.greens_berlin_elections_vote = 0;
 Q.cdu_berlin_elections_vote = 0;
 
-if (Q.young_linke_normalized + Q.urban_linke_normalized >= 30) berlin_adjustment_factors.linke += 0.1;
-if (Q.workers_linke_normalized >= 70) berlin_adjustment_factors.linke += 0.1;
+if (Q.youth_linke_normalized + Q.urban_linke_normalized >= 30) berlin_adjustment_factors.linke += 0.1;
+if (Q.urban_linke_normalized >= 70) berlin_adjustment_factors.linke += 0.1;
 Q.spd_berlin_elections_vote = Q.spd_votes*berlin_adjustment_factors.spd;
 Q.linke_berlin_elections_vote = Q.linke_votes*berlin_adjustment_factors.linke;
 Q.fdp_berlin_elections_vote = Q.fdp_votes*berlin_adjustment_factors.fdp;
@@ -95,8 +95,8 @@ var berlin_adjustment_r_factors = {
     greens: 1.09,
 };
 
-if (Q.young_linke_normalized + Q.urban_linke_normalized >= 30) berlin_adjustment_r_factors.linke += 0.1;
-if (Q.workers_linke_normalized >= 70) berlin_adjustment_r_factors.linke += 0.1;
+if (Q.youth_linke_normalized + Q.urban_linke_normalized >= 30) berlin_adjustment_r_factors.linke += 0.1;
+if (Q.urban_linke_normalized >= 70) berlin_adjustment_r_factors.linke += 0.1;
 Q.spd_r_berlin = Q.spd_votes*berlin_adjustment_r_factors.spd;
 Q.linke_r_berlin = Q.linke_votes*berlin_adjustment_r_factors.linke;
 Q.fdp_r_berlin = Q.fdp_votes*berlin_adjustment_r_factors.fdp;
@@ -280,17 +280,17 @@ setTimeout(function() {
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>Landtag Seats</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#BC2D72; outline: 2px; outline-style: solid;'> </div> !} <span style="color: [+ linke_colour +];">**Die Linke**</span>: {!</td><td>!} **[+ linke_berlin_elections_vote +]%** {!</td><td>!} [+ linke_r_berlin +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#BC2D72; outline: 2px; outline-style: solid;'> </div> !} <span style="color: [+ linke_color +];">**Die Linke**</span>: {!</td><td>!} **[+ linke_berlin_elections_vote +]%** {!</td><td>!} [+ linke_r_berlin +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#E3000F'> </div> !}<span style="color: [+ spd_colour +];">**SPD**</span>: {!</td><td>!} [+ spd_berlin_elections_vote +]% {!</td><td>!} [+ spd_r_berlin +]% {!</td></tr>!} 
+{!<tr><td><div class="box" style='background-color:#E3000F'> </div> !}<span style="color: [+ spd_color +];">**SPD**</span>: {!</td><td>!} [+ spd_berlin_elections_vote +]% {!</td><td>!} [+ spd_r_berlin +]% {!</td></tr>!} 
 
-{!<tr><td><div class="box" style='background-color:#1AA037'> </div> !}<span style="color: [+ greens_colour +];">**B90/Greens**</span>: {!</td><td>!} [+ greens_berlin_elections_vote +]% {!</td><td>!} [+ greens_r_berlin +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#1AA037'> </div> !}<span style="color: [+ greens_color +];">**B90/Greens**</span>: {!</td><td>!} [+ greens_berlin_elections_vote +]% {!</td><td>!} [+ greens_r_berlin +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#FFD600'> </div> !}<span style="color: [+ fdp_colour +];">**FDP**</span>: {!</td><td>!} [+ fdp_berlin_elections_vote +]% {!</td><td>!} [+ fdp_r_berlin +]%  {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FFD600'> </div> !}<span style="color: [+ fdp_color +];">**FDP**</span>: {!</td><td>!} [+ fdp_berlin_elections_vote +]% {!</td><td>!} [+ fdp_r_berlin +]%  {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000000'> </div> !}<span style="color: [+ cdu_colour +];">**CDU**</span>: {!</td><td>!} [+ cdu_berlin_elections_vote +]% {!</td><td>!} [+ cdu_r_berlin +]%  {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000000'> </div> !}<span style="color: [+ cdu_color +];">**CDU**</span>: {!</td><td>!} [+ cdu_berlin_elections_vote +]% {!</td><td>!} [+ cdu_r_berlin +]%  {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#0489db'> </div> !} <span style="color: [+ afd_colour +];">**AfD**</span>: {!</td><td>!} [+ afd_berlin_elections_vote +]% {!</td><td>!} [+ afd_r_berlin +]%  {!</td></tr>!} 
+{!<tr><td><div class="box" style='background-color:#0489db'> </div> !} <span style="color: [+ afd_color +];">**AfD**</span>: {!</td><td>!} [+ afd_berlin_elections_vote +]% {!</td><td>!} [+ afd_r_berlin +]%  {!</td></tr>!} 
 
 {!</table>!}
 <hr id="read-marker">
