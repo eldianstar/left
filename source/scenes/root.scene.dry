@@ -514,6 +514,9 @@ Q.berlin_spd_maj = 0;
 Q.berlin_green_maj = 0; 
 Q.berlin_cdu_maj = 0; 
 Q.berlin_weimar_but_different = 0;
+Q.berlin_red_purple = 0;
+Q.berlin_brombeer = 0;
+Q.berlin_querfront = 0;
 
 // coalition potential seats
 
@@ -533,6 +536,9 @@ Q.berlin_pot_spd_maj = 0;
 Q.berlin_pot_green_maj = 0; 
 Q.berlin_pot_cdu_maj = 0; 
 Q.berlin_pot_weimar_but_different = 0;
+Q.berlin_pot_red_purple = 0;
+Q.berlin_pot_brombeer = 0;
+Q.berlin_pot_querfront = 0;
 
 // seats
 Q.spd_r_berlin = 0;
@@ -541,6 +547,7 @@ Q.cdu_r_berlin = 0;
 Q.greens_r_berlin = 0;
 Q.afd_r_berlin = 0;
 Q.fdp_r_berlin = 0;
+Q.bsw_r_berlin = 0;
 
 Q.total_r_berlin = 0;
 
@@ -551,6 +558,7 @@ Q.fdp_berlin_elections_vote = 0;
 Q.afd_berlin_elections_vote = 0;
 Q.greens_berlin_elections_vote = 0;
 Q.cdu_berlin_elections_vote = 0;
+Q.bsw_berlin_elections_vote = 0;
 
 Q.next_election_year_berlin = 2021;
 Q.next_election_month_berlin = 9;
@@ -559,10 +567,10 @@ Q.next_election_time_berlin = 4;
 
 
 
-/////////////////////////////////////////////////////////////////////////////////
-///////////////////////// GOVERNMENT ACTIONS ////////////////////////////////////
-/////////////////////// what did we achieve? ////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////// GOVERNMENT ACTIONS ////////////////////////////////////
+////////////////////////////////////////// what did we achieve? ////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Q.frozen_rents = 0;
 Q.rent_modernization = 0;
@@ -643,6 +651,11 @@ Q.linke_no_confidence = 0;
 // Advisors/Leaders
 Q.n_advisors = 2;
 Q.n_advisors_woman = 2;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////// TIMERS /////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // timer - this decrements by 1 every turn, and is set to 5 whenever an advisor action is used, so that you can only use one advisor action every 5 months.
 // let's just put all of the timers here...
 // most party affairs and government affairs cards are on a timer.
