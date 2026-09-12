@@ -71,18 +71,12 @@ console.log("Total Linke weighted class vote:", total_linke);
 
 // Loop through factions and classes
 for (var faction of Q.factions) {
-    Q[faction + '_votes'] = 0; // Ensure clean start
-
-    for (var c of Q.classes) {
-        var base_vote = ((Q[faction + '_strength'] / 100) * Q[faction + '_' + c]) * ((Q[c + '_linke_normalized'] * Q[c]) / total_linke);
-
-        console.log(`[${faction}] + [${c}]`);
-        console.log("  Base vote:", base_vote.toFixed(4));
-
-        Q[faction + '_votes'] += base_vote;
-    }
-
-    console.log(`[${faction}] total votes before normalization:`, Q[faction + '_votes'].toFixed(2));
+    Q[faction + '_votes'] = Q[faction + '_strength'];
+    
+    console.log(
+        `[${faction}] strength:`,
+        Q[faction + '_strength']
+    );
 
     total_factions += Q[faction + '_votes'];
 }
