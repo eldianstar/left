@@ -131,6 +131,8 @@ Q.beweli_left = 0;
 Q.emali_left = 0;
 Q.pragmatist_left = 0;
 
+Q.wagenknecht_left_congress = 0;
+
 Q.foreign_moderation = 3;
 Q.econ_moderation = 3;
 Q.social_moderation = 5;
