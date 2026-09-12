@@ -315,7 +315,7 @@ setTimeout(function() {
 {!<tr><td>Party</td><td>Vote share</td><td>Landtag Seats</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#BC2D72; outline: 2px; outline-style: solid;'> </div> !} <span style="color: [+ linke_color +];">**Die Linke**</span>: {!</td><td>!} **[+ linke_berlin_elections_vote +]%** {!</td><td>!} [+ linke_r_berlin +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#E3000F'> </div> !}<span style="color: [+ bsw_color +];">**BSW**</span>: {!</td><td>!} [+ bsw_berlin_elections_vote +]% {!</td><td>!} [+ bsw_r_berlin +]% {!</td></tr>!} 
+[? if bsw_split : {!<tr><td><div class="box" style='background-color:#4C0B5F'> </div> !}<span style="color: [+ bsw_color +];">**BSW**</span>: {!</td><td>!} [+ bsw_berlin_elections_vote +]% {!</td><td>!} [+ bsw_r_berlin +]% {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#E3000F'> </div> !}<span style="color: [+ spd_color +];">**SPD**</span>: {!</td><td>!} [+ spd_berlin_elections_vote +]% {!</td><td>!} [+ spd_r_berlin +]% {!</td></tr>!} 
 
@@ -342,7 +342,7 @@ setTimeout(function() {
 
 [? if berlin_pot_red_purple >= 45 and bsw_split = 1 : Red-Purple Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ bsw_color +];">BSW</span>): [+ berlin_pot_red_purple +]% ?]
 
-[? if berlin_pot_brombeer >= 45 : Blackberry Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ bsw_color +];">BSW</span>): [+ berlin_pot_brombeer +]% ?]
+[? if berlin_pot_brombeer >= 45 and bsw_split = 1 : Blackberry Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ bsw_color +];">BSW</span>): [+ berlin_pot_brombeer +]% ?]
 
 [? if berlin_pot_kenya >= 45 : Kenya Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_kenya +]% ?]
 
