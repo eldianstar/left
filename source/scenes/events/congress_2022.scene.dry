@@ -8,12 +8,19 @@ max-visits: 1
 
 = 2022 Erfurt Congress
 
-Die Linke is holding its annual congress in Erfurt, where the party is expected to formulate a definitive stance on the war in Ukraine.
+Die Linke is holding its annual congress in Erfurt, where the party is expected to formulate a definitive stance on the war in Ukraine[? if wagenknecht_left == 1 and wagenknecht_left_congress == 0 :  as well as the exit of Sahra Wagenknecht from the party ?].
 
 - @faction_algorithm: The delegates enter...
 
 @faction_algorithm
 on-arrival: {!
+
+if (Q.wagenknecht_left == 1 && wagenknecht_left_congress == 0) {
+   Q.beweli_dissent -= 6;
+   Q.emali_dissent -= 6;
+   Q.pragmatist_dissent -= 6;
+   Q.wagenknecht_left_congress = 1;
+}
 
 Q.oldleft_votes = 0;
 Q.beweli_votes = 0;
