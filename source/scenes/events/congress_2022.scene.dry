@@ -198,7 +198,7 @@ We have remarked our support for Ukraine. While our right wing cheers this outco
 
 @avoid_decision
 subtitle: We must avoid taking a definitive side.
-choose-if: right_leadership < 50 and oldleft_c >= 20 and oldleft_c < 45 and foreign_moderation < 7 and foreign_moderation >= 3
+choose-if: right_leadership < 50 and oldleft_c >= 20 and oldleft_c < 45 or (foreign_moderation < 7 and foreign_moderation >= 3)
 on-arrival: oldleft_dissent += 5; pragmatist_dissent += 5; emali_dissent += 5;
 go-to: leadership_election
 
