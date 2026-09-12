@@ -296,35 +296,34 @@ setTimeout(function() {
 {!</table>!}
 <hr id="read-marker">
 
-Grand Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span>): [+ berlin_pot_groko +]%
+[? if berlin_pot_groko >= 45 : Grand Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span>): [+ berlin_pot_groko +]% ?]
 
-Traffic Light Coalition (<span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ fdp_color +];">FDP</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_traffic_light +]%
+[? if berlin_pot_traffic_light >= 45 : Traffic Light Coalition (<span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ fdp_color +];">FDP</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_traffic_light +]% ?]
 
-Red-Red-Green Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_rot_rot_grun +]%
+[? if berlin_pot_rot_rot_grun >= 45 : Red-Red-Green Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_rot_rot_grun +]% ?]
 
-Jamaica Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ fdp_color +];">FDP</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_jamaica +]%
+[? if berlin_pot_jamaica >= 45 : Jamaica Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ fdp_color +];">FDP</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_jamaica +]% ?]
 
-Red-Red Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ spd_color +];">SPD</span>): [+ berlin_pot_rot_rot +]%
+[? if berlin_pot_rot_rot >= 45 : Red-Red Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ spd_color +];">SPD</span>): [+ berlin_pot_rot_rot +]% ?]
 
-Kenya Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_kenya +]%
+[? if berlin_pot_kenya >= 45 : Kenya Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_kenya +]% ?]
 
-Black-Blue Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ afd_color +];">AfD</span>): [+ berlin_pot_schwarz_blau +]%
+[? if berlin_pot_schwarz_blau >= 45 : Black-Blue Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ afd_color +];">AfD</span>): [+ berlin_pot_schwarz_blau +]% ?]
 
-Tiger Duck Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ fdp_color +];">FDP</span>): [+ berlin_pot_tigerenten +]%
+[? if berlin_pot_tigerenten >= 45 : Tiger Duck Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ fdp_color +];">FDP</span>): [+ berlin_pot_tigerenten +]% ?]
 
-Kiwi Coalition (<span style="color: #11aa11;">Greens</span> + <span style="color: [+ cdu_color +];">CDU</span>): [+ berlin_pot_kiwi +]%
+[? if berlin_pot_kiwi >= 45 : Kiwi Coalition (<span style="color: [+ greens_color +];">Greens</span> + <span style="color: [+ cdu_color +];">CDU</span>): [+ berlin_pot_kiwi +]% ?]
 
-Red-Green Coalition (<span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_rot_grun +]%
+[? if berlin_pot_rot_grun >= 45 : Red-Green Coalition (<span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_rot_grun +]% ?]
 
-Germany Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ fdp_color +];">FDP</span>): [+ berlin_pot_weimar_but_different +]%
+[? if berlin_pot_weimar_but_different >= 45 : Germany Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ fdp_color +];">FDP</span>): [+ berlin_pot_weimar_but_different +]% ?]
 
-Left Majority (<span style="color: [+ linke_color +];">The Left</span>): [+ berlin_pot_die_linke_maj +]%
+[? if berlin_pot_die_linke_maj >= 45 : Left Majority (<span style="color: [+ linke_color +];">The Left</span>): [+ berlin_pot_die_linke_maj +]% ?]
 
-AfD Majority (<span style="color: [+ afd_color +];">AfD</span>): [+ berlin_pot_afd_maj +]%
+[? if berlin_pot_afd_maj >= 45 : AfD Majority (<span style="color: [+ afd_color +];">AfD</span>): [+ berlin_pot_afd_maj +]% ?]
 
-SPD Majority (<span style="color: [+ spd_color +];">SPD</span>): [+ berlin_pot_spd_maj +]%
+[? if berlin_pot_spd_maj >= 45 : SPD Majority (<span style="color: [+ spd_color +];">SPD</span>): [+ berlin_pot_spd_maj +]% ?]
 
-Green Majority (<span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_green_maj +]%
+[? if berlin_pot_green_maj >= 45 : Green Majority (<span style="color: [+ greens_color +];">Greens</span>): [+ berlin_pot_green_maj +]% ?]
 
-CDU Majority (<span style="color: [+ cdu_color +];">CDU</span>): [+ berlin_pot_cdu_maj +]%
-
+[? if berlin_pot_cdu_maj >= 45 : CDU Majority (<span style="color: [+ cdu_color +];">CDU</span>): [+ berlin_pot_cdu_maj +]% ?]
