@@ -6,9 +6,6 @@ view-if: year == 2021 and month >= 6
 set-jump: post_congress
 max-visits: 1
 
-# the low priority means that this event is only seen after all other events are resolved for the month.
-# note: z_coalition = z_celation + (pro_cepublic/2); z_coalition *= 1.25 if z_faction_leader == "Joos";
-
 = 2022 Erfurt Congress
 
 Die Linke is holding its annual congress in Erfurt, where the party is expected to formulate a definitive stance on the war in Ukraine.
@@ -197,6 +194,8 @@ subtitle: We must avoid taking a definitive side.
 choose-if: right_leadership < 50 and oldleft_c >= 20 and oldleft_c < 45 and foreign_moderation < 7 and foreign_moderation >= 3
 on-arrival: oldleft_dissent += 5; pragmatist_dissent += 5; emali_dissent += 5;
 go-to: leadership_election
+
+We have decided to stall our decision. We are not yet ready to formulate a party line.
 
 @participationist
 choose-if: oldleft_c >= 45 or (oldleft_c >= 35 and foreign_moderation < 2)
