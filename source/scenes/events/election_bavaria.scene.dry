@@ -428,7 +428,7 @@ setTimeout(function() {
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>Landtag Seats</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#BC2D72; outline: 2px; outline-style: solid;'> </div> !} <span style="color: [+ linke_color +];">**Die Linke**</span>: {!</td><td>!} **[+ linke_bavaria_elections_vote +]%** {!</td><td>!} [+ linke_r_bavaria +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:[+ linke_color +]; outline: 2px; outline-style: solid;'> </div> !} <span style="color: [+ linke_color +];">**Die Linke**</span>: {!</td><td>!} **[+ linke_bavaria_elections_vote +]%** {!</td><td>!} [+ linke_r_bavaria +]% {!</td></tr>!}
 
 [? if bsw_split : {!<tr><td><div class="box" style='background-color:#4C0B5F'> </div> !}<span style="color: [+ bsw_color +];">**BSW**</span>: {!</td><td>!} [+ bsw_bavaria_elections_vote +]% {!</td><td>!} [+ bsw_r_bavaria +]% {!</td></tr>!} ?]
 
@@ -436,7 +436,7 @@ setTimeout(function() {
 
 {!<tr><td><div class="box" style='background-color:#1AA037'> </div> !}<span style="color: [+ greens_color +];">**B90/Greens**</span>: {!</td><td>!} [+ greens_bavaria_elections_vote +]% {!</td><td>!} [+ greens_r_bavaria +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#FFD600'> </div> !}<span style="color: [+ fw_color +];">**Free Voters**</span>: {!</td><td>!} [+ fw_bavaria_elections_vote +]% {!</td><td>!} [+ fw_r_bavaria +]%  {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:[+ fw_color +]'> </div> !}<span style="color: [+ fw_color +];">**Free Voters**</span>: {!</td><td>!} [+ fw_bavaria_elections_vote +]% {!</td><td>!} [+ fw_r_bavaria +]%  {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#000000'> </div> !}<span style="color: [+ csu_color +];">**CSU**</span>: {!</td><td>!} [+ csu_bavaria_elections_vote +]% {!</td><td>!} [+ csu_r_bavaria +]%  {!</td></tr>!}
 
@@ -491,7 +491,7 @@ setTimeout(function() {
 - @jamaica: Let a Bavarian <span style="color: [+ csu_color +];">Ja</span><span style="color: [+ greens_color +];">mai</span><span style="color: [+ fw_color +];">can</span> coalition be formed ([+ bavaria_pot_jamaica +]%).
 - @kenya: Let a <span style="color: [+ csu_color +];">Ken</span><span style="color: [+ spd_color +];">yan co</span><span style="color: [+ greens_color +];">alition</span> be formed ([+ bavaria_pot_kenya +]%).
 - @midnight: Let a <span style="color: [+ csu_color +];">Mid</span><span style="color: [+ afd_color +];">night</span> coalition be formed ([+ bavaria_pot_schwarz_blau +]%).
-- @tigerente: Let a <span style="color: [+ csu_color +];">Spe</span><span style="color: [+ fw_color +];">zi</span> coalition be formed ([+ bavaria_pot_tigerente +]%).
+- @tigerente: Let a <span style="color: [+ csu_color +];">Spe</span><span style="color: [+ fw_color +];">zi</span> coalition be formed ([+ bavaria_pot_tigerenten +]%).
 - @kiwi: Let a <span style="color: [+ csu_color +];">Ki</span><span style="color: [+ greens_color +];">wi</span> coalition be formed ([+ bavaria_pot_kiwi +]%).
 - @redgreen: Let a <span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ greens_color +];">green</span> coalition be formed ([+ bavaria_pot_rot_grun +]%).
 - @germany: Let a Bavarian-<span style="color: [+ csu_color +];">Ger</span><span style="color: [+ spd_color +];">ma</span><span style="color: [+ fw_color +];">ny</span> coalition be formed ([+ bavaria_pot_weimar_but_different +]%).
@@ -532,7 +532,7 @@ on-arrival: bsw_relation += 1; youth_linke -= 0.5; youth_greens += 0.5; bavaria_
 We have formed a Red-purple coalition with the BSW.
 
 @groko
-view-if: bavaria_pot_groko >= 50 and bavaria_pot_spd_maj < 50 and bavaria_pot_csu_maj < 50
+view-if: bavaria_pot_groko >= 50 and bavaria_pot_spd_maj < 50 and bavaria_pot_csu_maj < 50 and bavaria_pot_tigerenten < 50
 on-arrival: youth_spd -= 0.4; youth_linke += 0.2; youth_greens += 0.2; bavaria_groko = 1; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
 
 A Grand Coalition has been formed.
@@ -550,31 +550,31 @@ on-arrival: spd_relation -= 1; greens_relation -= 1; bavaria_groko = 0; bavaria_
 A Traffic Light coalition has been formed.
 
 @jamaica
-view-if: bavaria_pot_jamaica >= 50 and bavaria_pot_kiwi < 50 and bavaria_pot_tigerente < 50 and (bavaria_pot_traffic_light < 50 or ampelkoalition_failed = 1)
+view-if: bavaria_pot_jamaica >= 50 and bavaria_pot_kiwi < 50 and bavaria_pot_tigerenten < 50 and (bavaria_pot_traffic_light < 50 or ampelkoalition_failed = 1)
 on-arrival: greens_relation -= 1; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 1; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
 
 A Jamaican coalition has been formed.
 
 @kenya
-view-if: bavaria_pot_kenya >= 50 and bavaria_pot_groko < 50 and bavaria_pot_kiwi < 50 and (bavaria_pot_traffic_light < 50 or ampelkoalition_failed = 1) and bavaria_pot_tigerente < 50
+view-if: bavaria_pot_kenya >= 50 and bavaria_pot_groko < 50 and bavaria_pot_kiwi < 50 and (bavaria_pot_traffic_light < 50 or ampelkoalition_failed = 1) and bavaria_pot_tigerenten < 50
 on-arrival: greens_relation -= 1; spd_relation -= 1; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 1; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
 
 A Kenyan coalition has been formed.
 
 @midnight
-view-if: bavaria_pot_schwarz_blau >= 50 and brandmauer = 0 and bavaria_pot_tigerente < 50
+view-if: bavaria_pot_schwarz_blau >= 50 and brandmauer = 0 and bavaria_pot_tigerenten < 50
 on-arrival: csu_relation -= 2; rural_csu -= 0.5; rural_fdp += 0.5; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 1; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
 
 A Midnight coalition has been formed. The Fascists are in power.
 
 @tigerente
-view-if: bavaria_pot_tigerente >= 50
+view-if: bavaria_pot_tigerenten >= 50
 on-arrival: fw_relation -= 1; spd_relation += 1; greens_relation += 1; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 1; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
 
 A liberal-conservative Spezi coalition has been formed. This is the usual Bavarian governing arrangement.
 
 @kiwi
-view-if: bavaria_pot_kiwi >= 50 and bavaria_pot_tigerente < 50 and bavaria_pot_groko < 50
+view-if: bavaria_pot_kiwi >= 50 and bavaria_pot_tigerenten < 50 and bavaria_pot_groko < 50
 on-arrival: greens_relation -= 1; youth_greens -= 0.4; youth_spd += 0.4; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 1; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
 
 A Kiwi coalition has been formed.
