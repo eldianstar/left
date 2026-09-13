@@ -145,14 +145,6 @@ Q.afd_bawu_elections_vote = (Q.afd_bawu_elections_vote != undefined ? parseFloat
 Q.cdu_bawu_elections_vote = (Q.cdu_bawu_elections_vote != undefined ? parseFloat(Q.cdu_bawu_elections_vote.toFixed(1)) : 0);
 Q.bsw_bawu_elections_vote = (Q.bsw_bawu_elections_vote != undefined ? parseFloat(Q.bsw_bawu_elections_vote.toFixed(1)) : 0);
 
-if (Q.spd_bawu_elections_vote >= 1.4) Q.spd_r_bawu = Q.spd_bawu_elections_vote;
-if (Q.linke_bawu_elections_vote >= 1.4) Q.linke_r_bawu = Q.linke_bawu_elections_vote;
-if (Q.greens_bawu_elections_vote >= 1.4) Q.greens_r_bawu = Q.greens_bawu_elections_vote;
-if (Q.fdp_bawu_elections_vote >= 1.4) Q.fdp_r_bawu = Q.fdp_bawu_elections_vote;
-if (Q.afd_bawu_elections_vote >= 1.4) Q.afd_r_bawu = Q.afd_bawu_elections_vote;
-if (Q.cdu_bawu_elections_vote >= 1.4) Q.cdu_r_bawu = Q.cdu_bawu_elections_vote;
-if (Q.bsw_bawu_elections_vote >= 1.4) Q.bsw_r_bawu = Q.bsw_bawu_elections_vote;
-
 /////////////////////////// adj factors seats ////////////////////////////
 
 var bawu_adjustment_r_factors = {
@@ -231,6 +223,14 @@ Q.cdu_r_bawu = Q.cdu_votes*bawu_adjustment_r_factors.cdu;
 if (Q.issue_environment >= 5) bawu_adjustment_r_factors.greens += 0.1;
 Q.greens_r_bawu = Q.greens_votes*bawu_adjustment_r_factors.greens;
 Q.bsw_r_bawu = Q.bsw_votes*bawu_adjustment_r_factors.bsw;
+
+if (Q.spd_bawu_elections_vote < 5) Q.spd_r_bawu = 0;
+if (Q.linke_bawu_elections_vote < 5) Q.linke_r_bawu = 0;
+if (Q.greens_bawu_elections_vote < 5) Q.greens_r_bawu = 0;
+if (Q.fdp_bawu_elections_vote < 5) Q.fdp_r_bawu = 0;
+if (Q.afd_bawu_elections_vote < 5) Q.afd_r_bawu = 0;
+if (Q.cdu_bawu_elections_vote < 5) Q.cdu_r_bawu = 0;
+if (Q.bsw_bawu_elections_vote < 5) Q.bsw_r_bawu = 0;
 
 Q.total_r_bawu = 0;
 
