@@ -445,31 +445,31 @@ setTimeout(function() {
 {!</table>!}
 <hr id="read-marker">
 
-[? if bavaria_pot_groko >= 45 : Grand Coalition (<span style="color: [+ csu_color +];">csu</span> + <span style="color: [+ spd_color +];">SPD</span>): [+ bavaria_pot_groko +]% ?]
+[? if bavaria_pot_groko >= 45 : Grand Coalition (<span style="color: [+ csu_color +];">CSU</span> + <span style="color: [+ spd_color +];">SPD</span>): [+ bavaria_pot_groko +]% ?]
 
 [? if bavaria_pot_traffic_light >= 45 : Traffic Light Coalition (<span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ fw_color +];">fw</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ bavaria_pot_traffic_light +]% ?]
 
 [? if bavaria_pot_rot_rot_grun >= 45 : Red-Red-Green Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ bavaria_pot_rot_rot_grun +]% ?]
 
-[? if bavaria_pot_jamaica >= 45 : Jamaica Coalition (<span style="color: [+ csu_color +];">csu</span> + <span style="color: [+ fw_color +];">fw</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ bavaria_pot_jamaica +]% ?]
+[? if bavaria_pot_jamaica >= 45 : Jamaica Coalition (<span style="color: [+ csu_color +];">CSU</span> + <span style="color: [+ fw_color +];">fw</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ bavaria_pot_jamaica +]% ?]
 
 [? if bavaria_pot_rot_rot >= 45 : Red-Red Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ spd_color +];">SPD</span>): [+ bavaria_pot_rot_rot +]% ?]
 
 [? if bavaria_pot_red_purple >= 45 and bsw_split = 1 : Red-Purple Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ bsw_color +];">BSW</span>): [+ bavaria_pot_red_purple +]% ?]
 
-[? if bavaria_pot_brombeer >= 45 and bsw_split = 1 : Blackberry Coalition (<span style="color: [+ csu_color +];">csu</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ bsw_color +];">BSW</span>): [+ bavaria_pot_brombeer +]% ?]
+[? if bavaria_pot_brombeer >= 45 and bsw_split = 1 : Blackberry Coalition (<span style="color: [+ csu_color +];">CSU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ bsw_color +];">BSW</span>): [+ bavaria_pot_brombeer +]% ?]
 
-[? if bavaria_pot_kenya >= 45 : Kenya Coalition (<span style="color: [+ csu_color +];">csu</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ bavaria_pot_kenya +]% ?]
+[? if bavaria_pot_kenya >= 45 : Kenya Coalition (<span style="color: [+ csu_color +];">CSU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ bavaria_pot_kenya +]% ?]
 
-[? if bavaria_pot_schwarz_blau >= 45 : Midnight Coalition (<span style="color: [+ csu_color +];">csu</span> + <span style="color: [+ afd_color +];">AfD</span>): [+ bavaria_pot_schwarz_blau +]% ?]
+[? if bavaria_pot_schwarz_blau >= 45 : Midnight Coalition (<span style="color: [+ csu_color +];">CSU</span> + <span style="color: [+ afd_color +];">AfD</span>): [+ bavaria_pot_schwarz_blau +]% ?]
 
-[? if bavaria_pot_tigerenten >= 45 : Spezi Coalition (<span style="color: [+ csu_color +];">csu</span> + <span style="color: [+ fw_color +];">fw</span>): [+ bavaria_pot_tigerenten +]% ?]
+[? if bavaria_pot_tigerenten >= 45 : Spezi Coalition (<span style="color: [+ csu_color +];">CSU</span> + <span style="color: [+ fw_color +];">fw</span>): [+ bavaria_pot_tigerenten +]% ?]
 
-[? if bavaria_pot_kiwi >= 45 : Kiwi Coalition (<span style="color: [+ greens_color +];">Greens</span> + <span style="color: [+ csu_color +];">csu</span>): [+ bavaria_pot_kiwi +]% ?]
+[? if bavaria_pot_kiwi >= 45 : Kiwi Coalition (<span style="color: [+ greens_color +];">Greens</span> + <span style="color: [+ csu_color +];">CSU</span>): [+ bavaria_pot_kiwi +]% ?]
 
 [? if bavaria_pot_rot_grun >= 45 : Red-Green Coalition (<span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ bavaria_pot_rot_grun +]% ?]
 
-[? if bavaria_pot_weimar_but_different >= 45 : Germany Coalition (<span style="color: [+ csu_color +];">csu</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ fw_color +];">fw</span>): [+ bavaria_pot_weimar_but_different +]% ?]
+[? if bavaria_pot_weimar_but_different >= 45 : Germany Coalition (<span style="color: [+ csu_color +];">CSU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ fw_color +];">fw</span>): [+ bavaria_pot_weimar_but_different +]% ?]
 
 [? if bavaria_pot_die_linke_maj >= 45 : Left Majority (<span style="color: [+ linke_color +];">The Left</span>): [+ bavaria_pot_die_linke_maj +]% ?]
 
@@ -479,7 +479,7 @@ setTimeout(function() {
 
 [? if bavaria_pot_green_maj >= 45 : Green Majority (<span style="color: [+ greens_color +];">Greens</span>): [+ bavaria_pot_green_maj +]% ?]
 
-[? if bavaria_pot_csu_maj >= 45 : CSU Majority (<span style="color: [+ csu_color +];">csu</span>): [+ bavaria_pot_csu_maj +]% ?]
+[? if bavaria_pot_csu_maj >= 45 : CSU Majority (<span style="color: [+ csu_color +];">CSU</span>): [+ bavaria_pot_csu_maj +]% ?]
 
 - @left_maj: We can form a majority government!
 - @redred: Form a <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">red</span> coalition ([+ bavaria_pot_rot_rot +]%)
