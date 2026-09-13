@@ -556,7 +556,7 @@ on-arrival: greens_relation -= 1; bavaria_groko = 0; bavaria_traffic_light = 0; 
 A Jamaican coalition has been formed.
 
 @kenya
-view-if: bavaria_pot_kenya >= 50 and bavaria_pot_groko < 50 and bavaria_pot_kiwi < 50 and (bavaria_pot_traffic_light < 50 or ampelkoalition_failed = 1) and_bavaria_pot_tigerente < 50
+view-if: bavaria_pot_kenya >= 50 and bavaria_pot_groko < 50 and bavaria_pot_kiwi < 50 and (bavaria_pot_traffic_light < 50 or ampelkoalition_failed = 1) bavaria_pot_tigerente < 50
 on-arrival: greens_relation -= 1; spd_relation -= 1; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 1; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
 
 A Kenyan coalition has been formed.
