@@ -710,10 +710,10 @@ Q.next_election_time_berlin = 4;
 // coalitions 
 Q.brandenburg_groko = 0; 
 Q.brandenburg_traffic_light = 0; 
-Q.brandenburg_rot_rot_grun = 1; 
+Q.brandenburg_rot_rot_grun = 0; 
 Q.brandenburg_jamaica = 0; 
 Q.brandenburg_rot_rot = 0; 
-Q.brandenburg_kenya = 0; 
+Q.brandenburg_kenya = 1; 
 Q.brandenburg_schwarz_blau = 0; 
 Q.brandenburg_tigerenten = 0;
 Q.brandenburg_kiwi = 0; 
