@@ -1,0 +1,622 @@
+title: Bavarian state election
+subtitle: The people of Bavaria head to the polls..
+view-if: (year = next_election_year_bavaria and month >= next_election_month_bavaria) or (year > next_election_year_bavaria)
+new-page: true
+tags: event
+on-arrival: bavaria_election_seen += 1; bavaria_election_seen_time = time; bavaria_most_recent = time;
+on-departure: {! 
+Q.next_election_year_bavaria = Q.next_election_year_bavaria + 4; 
+Q.n_elections_bavaria += 1;
+Q.next_election_time_bavaria = Q.time + 48;
+!}
+priority: 2
+face-image: img/bavaria.png
+
+= Bavarian state election, [+ month : month +] [+ year +]
+
+The regularly scheduled elections for the Bavarian Landtag are to take place. The incumbent government is a [? if bavaria_groko = 1 : <span style="color: [+ csu_color +];">Black</span>-<span style="color: [+ spd_color +];">Red</span> ?][? if bavaria_traffic_light = 1 : <span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ fw_color +];">Yellow</span>-<span style="color: [+ greens_color +];">Green</span> ?][? if bavaria_rot_rot_grun = 1 : <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ greens_color +];">Green</span> ?][? if bavaria_jamaica = 1 : <span style="color: [+ csu_color +];">Black</span>-<span style="color: [+ fw_color +];">Yellow</span>-<span style="color: [+ greens_color +];">Green</span> ?][? if bavaria_rot_rot = 1 : <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">Red</span> ?][? if bavaria_kenya = 1 : <span style="color: [+ csu_color +];">Black</span>-<span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ greens_color +];">Green</span> ?][? if bavaria_schwarz_blau = 1 : <span style="color: [+ csu_color +];">Black</span>-<span style="color: [+ afd_color +];">Blue</span> ?][? if bavaria_tigerenten = 1 : <span style="color: [+ csu_color +];">Black</span>-<span style="color: [+ fw_color +];">Orange</span> ?][? if bavaria_kiwi = 1 : <span style="color: [+ greens_color +];">Green</span>-<span style="color: [+ csu_color +];">Black</span> ?][? if bavaria_die_linke_maj = 1 : <span style="color: [+ linke_color +];">Red</span> ?][? if bavaria_afd_maj = 1 : <span style="color: [+ afd_color +];">Blue</span> ?][? if bavaria_rot_grun = 1 : <span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ greens_color +];">Green</span> ?][? if bavaria_spd_maj = 1 : <span style="color: [+ spd_color +];">Red</span> ?][? if bavaria_green_maj = 1 : <span style="color: [+ greens_color +];">Green</span> ?][? if bavaria_csu_maj = 1 : <span style="color: [+ csu_color +];">Black</span> ?][? if bavaria_weimar_but_different = 1 : <span style="color: [+ csu_color +];">Black</span>-<span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ fw_color +];">Yellow</span> ?] government.
+
+- @bavaria: May we do our best...
+
+@bavaria
+on-arrival: {!
+
+var bavaria_adjustment_factors = {
+    spd: 0.50,
+    linke: 0.35,
+    fw: 1.55,
+    csu: 1.65,
+    afd: 0.80,
+    greens: 1.0,
+    bsw: 0.4,
+};
+
+Q.spd_r_bavaria = 0;
+Q.linke_r_bavaria = 0;
+Q.csu_r_bavaria = 0;
+Q.greens_r_bavaria = 0;
+Q.afd_r_bavaria = 0;
+Q.fw_r_bavaria = 0;
+Q.bsw_r_bavaria = 0;
+
+Q.spd_bavaria_elections_vote = 0;
+Q.linke_bavaria_elections_vote = 0;
+Q.fw_bavaria_elections_vote = 0;
+Q.afd_bavaria_elections_vote = 0;
+Q.greens_bavaria_elections_vote = 0;
+Q.csu_bavaria_elections_vote = 0;
+Q.bsw_bavaria_elections_vote = 0;
+
+///////////////////// class-based proportions votes ////////////////////////////////
+
+if (Q.upper_linke > (Q.votes_linke + 3)) bavaria_adjustment_factors.linke += 0.1;
+if (Q.rural_linke > (Q.votes_linke + 3)) bavaria_adjustment_factors.linke += 0.1;
+if (Q.upper_linke > (Q.votes_linke + 6)) bavaria_adjustment_factors.linke += 0.1;
+if (Q.rural_linke > (Q.votes_linke + 6)) bavaria_adjustment_factors.linke += 0.1;
+if (Q.youth_linke > (Q.votes_linke + 6)) bavaria_adjustment_factors.linke += 0.05;
+if (Q.upper_linke > (Q.votes_linke + 15)) bavaria_adjustment_factors.linke += 0.1;
+if (Q.rural_linke > (Q.votes_linke + 15)) bavaria_adjustment_factors.linke += 0.1;
+if (Q.youth_linke > (Q.votes_linke + 15)) bavaria_adjustment_factors.linke += 0.05;
+
+if (Q.upper_spd > (Q.votes_spd + 3)) bavaria_adjustment_factors.spd += 0.1;
+if (Q.rural_spd > (Q.votes_spd + 3)) bavaria_adjustment_factors.spd += 0.1;
+if (Q.upper_spd > (Q.votes_spd + 6)) bavaria_adjustment_factors.spd += 0.1;
+if (Q.rural_spd > (Q.votes_spd + 6)) bavaria_adjustment_factors.spd += 0.1;
+if (Q.youth_spd > (Q.votes_spd + 6)) bavaria_adjustment_factors.spd += 0.05;
+if (Q.upper_spd > (Q.votes_spd + 15)) bavaria_adjustment_factors.spd += 0.1;
+if (Q.rural_spd > (Q.votes_spd + 15)) bavaria_adjustment_factors.spd += 0.1;
+if (Q.youth_spd > (Q.votes_spd + 15)) bavaria_adjustment_factors.spd += 0.05;
+
+if (Q.upper_greens > (Q.votes_greens + 3)) bavaria_adjustment_factors.greens += 0.1;
+if (Q.rural_greens > (Q.votes_greens + 3)) bavaria_adjustment_factors.greens += 0.1;
+if (Q.upper_greens > (Q.votes_greens + 6)) bavaria_adjustment_factors.greens += 0.1;
+if (Q.rural_greens > (Q.votes_greens + 6)) bavaria_adjustment_factors.greens += 0.1;
+if (Q.youth_greens > (Q.votes_greens + 6)) bavaria_adjustment_factors.greens += 0.05;
+if (Q.upper_greens > (Q.votes_greens + 15)) bavaria_adjustment_factors.greens += 0.1;
+if (Q.rural_greens > (Q.votes_greens + 15)) bavaria_adjustment_factors.greens += 0.1;
+if (Q.youth_greens > (Q.votes_greens + 15)) bavaria_adjustment_factors.greens += 0.05;
+
+if (Q.upper_fw > (Q.votes_fw + 3)) bavaria_adjustment_factors.fw += 0.1;
+if (Q.rural_fw > (Q.votes_fw + 3)) bavaria_adjustment_factors.fw += 0.1;
+if (Q.upper_fw > (Q.votes_fw + 6)) bavaria_adjustment_factors.fw += 0.1;
+if (Q.rural_fw > (Q.votes_fw + 6)) bavaria_adjustment_factors.fw += 0.1;
+if (Q.youth_fw > (Q.votes_fw + 6)) bavaria_adjustment_factors.fw += 0.05;
+if (Q.upper_fw > (Q.votes_fw + 15)) bavaria_adjustment_factors.fw += 0.1;
+if (Q.rural_fw > (Q.votes_fw + 15)) bavaria_adjustment_factors.fw += 0.1;
+if (Q.youth_fw > (Q.votes_fw + 15)) bavaria_adjustment_factors.fw += 0.05;
+
+if (Q.upper_csu > (Q.votes_csu + 3)) bavaria_adjustment_factors.csu += 0.1;
+if (Q.rural_csu > (Q.votes_csu + 3)) bavaria_adjustment_factors.csu += 0.1;
+if (Q.upper_csu > (Q.votes_csu + 6)) bavaria_adjustment_factors.csu += 0.1;
+if (Q.rural_csu > (Q.votes_csu + 6)) bavaria_adjustment_factors.csu += 0.1;
+if (Q.youth_csu > (Q.votes_csu + 6)) bavaria_adjustment_factors.csu += 0.05;
+if (Q.upper_csu > (Q.votes_csu + 15)) bavaria_adjustment_factors.csu += 0.1;
+if (Q.rural_csu > (Q.votes_csu + 15)) bavaria_adjustment_factors.csu += 0.1;
+if (Q.youth_csu > (Q.votes_csu + 15)) bavaria_adjustment_factors.csu += 0.05;
+
+if (Q.upper_afd > (Q.votes_afd + 3)) bavaria_adjustment_factors.afd += 0.1;
+if (Q.rural_afd > (Q.votes_afd + 3)) bavaria_adjustment_factors.afd += 0.1;
+if (Q.upper_afd > (Q.votes_afd + 6)) bavaria_adjustment_factors.afd += 0.1;
+if (Q.rural_afd > (Q.votes_afd + 6)) bavaria_adjustment_factors.afd += 0.1;
+if (Q.youth_afd > (Q.votes_afd + 6)) bavaria_adjustment_factors.afd += 0.05;
+if (Q.upper_afd > (Q.votes_afd + 15)) bavaria_adjustment_factors.afd += 0.1;
+if (Q.rural_afd > (Q.votes_afd + 15)) bavaria_adjustment_factors.afd += 0.1;
+if (Q.youth_afd > (Q.votes_afd + 15)) bavaria_adjustment_factors.afd += 0.05;
+
+////////////////// calculate seats votes ///////////////////////////////
+
+Q.spd_bavaria_elections_vote = Q.spd_votes*bavaria_adjustment_factors.spd;
+Q.linke_bavaria_elections_vote = Q.linke_votes*bavaria_adjustment_factors.linke;
+Q.fw_bavaria_elections_vote = Q.fw_votes*bavaria_adjustment_factors.fw;
+if (Q.issue_migration >= 5) bavaria_adjustment_factors.afd += 0.2;
+Q.afd_bavaria_elections_vote = Q.afd_votes*bavaria_adjustment_factors.afd;
+Q.csu_bavaria_elections_vote = Q.csu_votes*bavaria_adjustment_factors.csu;
+if (Q.issue_environment >= 5) bavaria_adjustment_factors.greens += 0.1;
+Q.greens_bavaria_elections_vote = Q.greens_votes*bavaria_adjustment_factors.greens;
+Q.bsw_bavaria_elections_vote = Q.bsw_votes*bavaria_adjustment_factors.bsw;
+
+Q.total_votes_bavaria = Q.spd_bavaria_elections_vote + Q.linke_bavaria_elections_vote + Q.greens_bavaria_elections_vote + Q.fw_bavaria_elections_vote + Q.csu_bavaria_elections_vote + Q.afd_bavaria_elections_vote + Q.bsw_bavaria_elections_vote;
+
+if (Q.total_votes_bavaria > 0) {
+    Q.spd_bavaria_elections_vote = (Q.spd_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
+    Q.linke_bavaria_elections_vote = (Q.linke_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
+    Q.greens_bavaria_elections_vote = (Q.greens_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
+    Q.fw_bavaria_elections_vote = (Q.fw_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
+    Q.afd_bavaria_elections_vote = (Q.afd_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
+    Q.csu_bavaria_elections_vote = (Q.csu_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
+    Q.bsw_bavaria_elections_vote = (Q.bsw_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
+    let target = 2;
+    Q.linke_bavaria_elections_vote = Math.round((Q.linke_bavaria_elections_vote + (target - Q.linke_bavaria_elections_vote) * 0.35) * 10) / 10;
+    Q.total_votes_bavaria = Q.spd_bavaria_elections_vote + Q.linke_bavaria_elections_vote + Q.greens_bavaria_elections_vote + Q.fw_bavaria_elections_vote + Q.afd_bavaria_elections_vote + Q.csu_bavaria_elections_vote;
+    Q.spd_bavaria_elections_vote = (Q.spd_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
+    Q.linke_bavaria_elections_vote = (Q.linke_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
+    Q.greens_bavaria_elections_vote = (Q.greens_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
+    Q.fw_bavaria_elections_vote = (Q.fw_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
+    Q.afd_bavaria_elections_vote = (Q.afd_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
+    Q.csu_bavaria_elections_vote = (Q.csu_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
+    Q.bsw_bavaria_elections_vote = (Q.bsw_bavaria_elections_vote / Q.total_votes_bavaria) * 100;
+}
+
+Q.spd_bavaria_elections_vote = (Q.spd_bavaria_elections_vote != undefined ? parseFloat(Q.spd_bavaria_elections_vote.toFixed(1)) : 0);
+Q.linke_bavaria_elections_vote = (Q.linke_bavaria_elections_vote != undefined ? parseFloat(Q.linke_bavaria_elections_vote.toFixed(1)) : 0);
+Q.greens_bavaria_elections_vote = (Q.greens_bavaria_elections_vote != undefined ? parseFloat(Q.greens_bavaria_elections_vote.toFixed(1)) : 0);
+Q.fw_bavaria_elections_vote = (Q.fw_bavaria_elections_vote != undefined ? parseFloat(Q.fw_bavaria_elections_vote.toFixed(1)) : 0);
+Q.afd_bavaria_elections_vote = (Q.afd_bavaria_elections_vote != undefined ? parseFloat(Q.afd_bavaria_elections_vote.toFixed(1)) : 0);
+Q.csu_bavaria_elections_vote = (Q.csu_bavaria_elections_vote != undefined ? parseFloat(Q.csu_bavaria_elections_vote.toFixed(1)) : 0);
+Q.bsw_bavaria_elections_vote = (Q.bsw_bavaria_elections_vote != undefined ? parseFloat(Q.bsw_bavaria_elections_vote.toFixed(1)) : 0);
+
+/////////////////////////// adj factors seats ////////////////////////////
+
+var bavaria_adjustment_r_factors = {
+    spd: 0.50,
+    linke: 0.35,
+    fw: 1.55,
+    csu: 1.65,
+    afd: 0.80,
+    greens: 1.0,
+    bsw: 0.4,
+};
+
+//////////////////////////// class based seats ///////////////////////////////
+
+if (Q.upper_linke > (Q.votes_linke + 3)) bavaria_adjustment_r_factors.linke += 0.1;
+if (Q.rural_linke > (Q.votes_linke + 3)) bavaria_adjustment_r_factors.linke += 0.1;
+if (Q.upper_linke > (Q.votes_linke + 6)) bavaria_adjustment_r_factors.linke += 0.1;
+if (Q.rural_linke > (Q.votes_linke + 6)) bavaria_adjustment_r_factors.linke += 0.1;
+if (Q.youth_linke > (Q.votes_linke + 6)) bavaria_adjustment_r_factors.linke += 0.05;
+if (Q.upper_linke > (Q.votes_linke + 15)) bavaria_adjustment_r_factors.linke += 0.1;
+if (Q.rural_linke > (Q.votes_linke + 15)) bavaria_adjustment_r_factors.linke += 0.1;
+if (Q.youth_linke > (Q.votes_linke + 15)) bavaria_adjustment_r_factors.linke += 0.05;
+
+if (Q.upper_spd > (Q.votes_spd + 3)) bavaria_adjustment_r_factors.spd += 0.1;
+if (Q.rural_spd > (Q.votes_spd + 3)) bavaria_adjustment_r_factors.spd += 0.1;
+if (Q.upper_spd > (Q.votes_spd + 6)) bavaria_adjustment_r_factors.spd += 0.1;
+if (Q.rural_spd > (Q.votes_spd + 6)) bavaria_adjustment_r_factors.spd += 0.1;
+if (Q.youth_spd > (Q.votes_spd + 6)) bavaria_adjustment_r_factors.spd += 0.05;
+if (Q.upper_spd > (Q.votes_spd + 15)) bavaria_adjustment_r_factors.spd += 0.1;
+if (Q.rural_spd > (Q.votes_spd + 15)) bavaria_adjustment_r_factors.spd += 0.1;
+if (Q.youth_spd > (Q.votes_spd + 15)) bavaria_adjustment_r_factors.spd += 0.05;
+
+if (Q.upper_greens > (Q.votes_greens + 3)) bavaria_adjustment_r_factors.greens += 0.1;
+if (Q.rural_greens > (Q.votes_greens + 3)) bavaria_adjustment_r_factors.greens += 0.1;
+if (Q.upper_greens > (Q.votes_greens + 6)) bavaria_adjustment_r_factors.greens += 0.1;
+if (Q.rural_greens > (Q.votes_greens + 6)) bavaria_adjustment_r_factors.greens += 0.1;
+if (Q.youth_greens > (Q.votes_greens + 6)) bavaria_adjustment_r_factors.greens += 0.05;
+if (Q.upper_greens > (Q.votes_greens + 15)) bavaria_adjustment_r_factors.greens += 0.1;
+if (Q.rural_greens > (Q.votes_greens + 15)) bavaria_adjustment_r_factors.greens += 0.1;
+if (Q.youth_greens > (Q.votes_greens + 15)) bavaria_adjustment_r_factors.greens += 0.05;
+
+if (Q.upper_fw > (Q.votes_fw + 3)) bavaria_adjustment_r_factors.fw += 0.1;
+if (Q.rural_fw > (Q.votes_fw + 3)) bavaria_adjustment_r_factors.fw += 0.1;
+if (Q.upper_fw > (Q.votes_fw + 6)) bavaria_adjustment_r_factors.fw += 0.1;
+if (Q.rural_fw > (Q.votes_fw + 6)) bavaria_adjustment_r_factors.fw += 0.1;
+if (Q.youth_fw > (Q.votes_fw + 6)) bavaria_adjustment_r_factors.fw += 0.05;
+if (Q.upper_fw > (Q.votes_fw + 15)) bavaria_adjustment_r_factors.fw += 0.1;
+if (Q.rural_fw > (Q.votes_fw + 15)) bavaria_adjustment_r_factors.fw += 0.1;
+if (Q.youth_fw > (Q.votes_fw + 15)) bavaria_adjustment_r_factors.fw += 0.05;
+
+if (Q.upper_csu > (Q.votes_csu + 3)) bavaria_adjustment_r_factors.csu += 0.1;
+if (Q.rural_csu > (Q.votes_csu + 3)) bavaria_adjustment_r_factors.csu += 0.1;
+if (Q.upper_csu > (Q.votes_csu + 6)) bavaria_adjustment_r_factors.csu += 0.1;
+if (Q.rural_csu > (Q.votes_csu + 6)) bavaria_adjustment_r_factors.csu += 0.1;
+if (Q.youth_csu > (Q.votes_csu + 6)) bavaria_adjustment_r_factors.csu += 0.05;
+if (Q.upper_csu > (Q.votes_csu + 15)) bavaria_adjustment_r_factors.csu += 0.1;
+if (Q.rural_csu > (Q.votes_csu + 15)) bavaria_adjustment_r_factors.csu += 0.1;
+if (Q.youth_csu > (Q.votes_csu + 15)) bavaria_adjustment_r_factors.csu += 0.05;
+
+if (Q.upper_afd > (Q.votes_afd + 3)) bavaria_adjustment_r_factors.afd += 0.1;
+if (Q.rural_afd > (Q.votes_afd + 3)) bavaria_adjustment_r_factors.afd += 0.1;
+if (Q.upper_afd > (Q.votes_afd + 6)) bavaria_adjustment_r_factors.afd += 0.1;
+if (Q.rural_afd > (Q.votes_afd + 6)) bavaria_adjustment_r_factors.afd += 0.1;
+if (Q.youth_afd > (Q.votes_afd + 6)) bavaria_adjustment_r_factors.afd += 0.05;
+if (Q.upper_afd > (Q.votes_afd + 15)) bavaria_adjustment_r_factors.afd += 0.1;
+if (Q.rural_afd > (Q.votes_afd + 15)) bavaria_adjustment_r_factors.afd += 0.1;
+if (Q.youth_afd > (Q.votes_afd + 15)) bavaria_adjustment_r_factors.afd += 0.05;
+
+
+Q.spd_r_bavaria = Q.spd_votes*bavaria_adjustment_r_factors.spd;
+Q.linke_r_bavaria = Q.linke_votes*bavaria_adjustment_r_factors.linke;
+Q.fw_r_bavaria = Q.fw_votes*bavaria_adjustment_r_factors.fw;
+if (Q.issue_migration >= 5) bavaria_adjustment_factors.afd += 0.2;
+Q.afd_r_bavaria = Q.afd_votes*bavaria_adjustment_r_factors.afd;
+Q.csu_r_bavaria = Q.csu_votes*bavaria_adjustment_r_factors.csu;
+if (Q.issue_environment >= 5) bavaria_adjustment_r_factors.greens += 0.1;
+Q.greens_r_bavaria = Q.greens_votes*bavaria_adjustment_r_factors.greens;
+Q.bsw_r_bavaria = Q.bsw_votes*bavaria_adjustment_r_factors.bsw;
+
+if (Q.spd_bavaria_elections_vote < 5) Q.spd_r_bavaria = 0;
+if (Q.linke_bavaria_elections_vote < 5) Q.linke_r_bavaria = 0;
+if (Q.greens_bavaria_elections_vote < 5) Q.greens_r_bavaria = 0;
+if (Q.fw_bavaria_elections_vote < 5) Q.fw_r_bavaria = 0;
+if (Q.afd_bavaria_elections_vote < 5) Q.afd_r_bavaria = 0;
+if (Q.csu_bavaria_elections_vote < 5) Q.csu_r_bavaria = 0;
+if (Q.bsw_bavaria_elections_vote < 5) Q.bsw_r_bavaria = 0;
+
+Q.total_r_bavaria = 0;
+
+if (Q.spd_r_bavaria) Q.total_r_bavaria += Q.spd_r_bavaria;
+if (Q.linke_r_bavaria) Q.total_r_bavaria += Q.linke_r_bavaria;
+if (Q.greens_r_bavaria) Q.total_r_bavaria += Q.greens_r_bavaria;
+if (Q.fw_r_bavaria) Q.total_r_bavaria += Q.fw_r_bavaria;
+if (Q.afd_r_bavaria) Q.total_r_bavaria += Q.afd_r_bavaria;
+if (Q.csu_r_bavaria) Q.total_r_bavaria += Q.csu_r_bavaria;
+if (Q.bsw_r_bavaria) Q.total_r_bavaria += Q.bsw_r_bavaria;
+
+if (Q.total_r_bavaria > 0) {
+    Q.spd_r_bavaria = (Q.spd_r_bavaria / Q.total_r_bavaria) * 100;
+    Q.linke_r_bavaria = (Q.linke_r_bavaria / Q.total_r_bavaria) * 100;
+    Q.greens_r_bavaria = (Q.greens_r_bavaria / Q.total_r_bavaria) * 100;
+    Q.fw_r_bavaria = (Q.fw_r_bavaria / Q.total_r_bavaria) * 100;
+    Q.afd_r_bavaria = (Q.afd_r_bavaria / Q.total_r_bavaria) * 100;
+    Q.csu_r_bavaria = (Q.csu_r_bavaria / Q.total_r_bavaria) * 100;
+    Q.bsw_r_bavaria = (Q.bsw_r_bavaria / Q.total_r_bavaria) * 100;
+}
+
+function allocateSeats(percentages, totalSeats = 203) {
+    const exactSeats = {};
+    const flooredSeats = {};
+    const remainders = [];
+
+    let totalFlooredSeats = 0;
+    for (const party in percentages) {
+        const exact = (percentages[party] * totalSeats) / 100;
+        const floored = Math.floor(exact);
+        const remainder = exact - floored;
+
+        exactSeats[party] = exact;
+        flooredSeats[party] = floored;
+        totalFlooredSeats += floored;
+
+        remainders.push({ party, remainder });
+    }
+
+    const seatsToDistribute = totalSeats - totalFlooredSeats;
+    remainders.sort((a, b) => b.remainder - a.remainder);
+
+    for (let i = 0; i < seatsToDistribute; i++) {
+        flooredSeats[remainders[i].party]++;
+    }
+
+    return flooredSeats;
+}
+
+const inputPercentages = {
+    spd_r_bavaria: Q.spd_r_bavaria,
+    linke_r_bavaria: Q.linke_r_bavaria,
+    greens_r_bavaria: Q.greens_r_bavaria,
+    fw_r_bavaria: Q.fw_r_bavaria,
+    afd_r_bavaria: Q.afd_r_bavaria,
+    csu_r_bavaria: Q.csu_r_bavaria,
+    bsw_r_bavaria: Q.bsw_r_bavaria,
+};
+
+const allocatedSeats = allocateSeats(inputPercentages);
+
+for (const party in allocatedSeats) {
+    Q[party] = parseFloat(((allocatedSeats[party] * 100) / 203).toFixed(1));
+}
+
+///////////////////// potential coalition calculation /////////////////////////
+
+Q.bavaria_pot_groko = parseFloat((Q.spd_r_bavaria + Q.csu_r_bavaria).toFixed(1));
+Q.bavaria_pot_traffic_light = parseFloat((Q.fw_r_bavaria + Q.spd_r_bavaria + Q.greens_r_bavaria).toFixed(1));
+Q.bavaria_pot_jamaica = parseFloat((Q.greens_r_bavaria + Q.csu_r_bavaria + Q.fw_r_bavaria).toFixed(1));
+Q.bavaria_pot_rot_rot = parseFloat((Q.linke_r_bavaria + Q.spd_r_bavaria).toFixed(1));
+Q.bavaria_pot_tigerenten = parseFloat((Q.csu_r_bavaria + Q.fw_r_bavaria).toFixed(1));
+Q.bavaria_pot_kiwi = parseFloat((Q.csu_r_bavaria + Q.greens_r_bavaria).toFixed(1));
+Q.bavaria_pot_tigerenten = parseFloat((Q.csu_r_bavaria + Q.fw_r_bavaria).toFixed(1));
+Q.bavaria_pot_die_linke_maj = parseFloat((Q.linke_r_bavaria).toFixed(1));
+Q.bavaria_pot_die_linke_maj = parseFloat((Q.linke_r_bavaria).toFixed(1));
+Q.bavaria_pot_afd_maj = parseFloat((Q.afd_r_bavaria).toFixed(1));
+Q.bavaria_pot_rot_grun = parseFloat((Q.spd_r_bavaria + Q.greens_r_bavaria).toFixed(1));
+Q.bavaria_pot_rot_rot_grun = parseFloat((Q.spd_r_bavaria + Q.greens_r_bavaria + Q.linke_r_bavaria).toFixed(1));
+Q.bavaria_pot_spd_maj = parseFloat((Q.spd_r_bavaria).toFixed(1));
+Q.bavaria_pot_green_maj = parseFloat((Q.greens_r_bavaria).toFixed(1));
+Q.bavaria_pot_csu_maj = parseFloat((Q.csu_r_bavaria).toFixed(1));
+Q.bavaria_pot_weimar_but_different = parseFloat((Q.csu_r_bavaria + Q.fw_r_bavaria + Q.spd_r_bavaria).toFixed(1));
+Q.bavaria_pot_kenya = parseFloat((Q.csu_r_bavaria + Q.greens_r_bavaria + Q.spd_r_bavaria).toFixed(1));
+Q.bavaria_pot_schwarz_blau = parseFloat((Q.csu_r_bavaria + Q.afd_r_bavaria).toFixed(1));
+Q.bavaria_pot_red_purple = parseFloat((Q.bsw_r_bavaria + Q.linke_r_bavaria).toFixed(1));
+Q.bavaria_pot_brombeer = parseFloat((Q.bsw_r_bavaria + Q.csu_r_bavaria + Q.spd_r_bavaria).toFixed(1));
+Q.bavaria_pot_querfront = parseFloat((Q.bsw_r_bavaria + Q.afd_r_bavaria).toFixed(1));
+
+Q.linke_bavaria_elections_vote = (Q.linke_bavaria_elections_vote != undefined ? parseFloat(Q.linke_bavaria_elections_vote.toFixed(1)) : 0);
+Q.spd_bavaria_elections_vote = (Q.spd_bavaria_elections_vote != undefined ? parseFloat(Q.spd_bavaria_elections_vote.toFixed(1)) : 0);
+Q.spd_r_bavaria = (Q.spd_r_bavaria != undefined ? parseFloat(Q.spd_r_bavaria.toFixed(1)) : 0);
+
+!}
+on-display: {!
+var data = [];
+
+/////////////////////////////// push diagram data ////////////////////////////////////
+
+if (Q.bsw_bavaria_elections_vote >= 5) {
+    data.push({
+        "id": "bsw",
+        "legend": "BSW",
+        "name": "BSW",
+        "seats": Math.round(Q.bsw_r_bavaria * 2.03)
+    });
+}
+
+if (Q.linke_bavaria_elections_vote >= 5) {
+    data.push({
+        "id": "linke",
+        "legend": "Left",
+        "name": "Left",
+        "seats": Math.round(Q.linke_r_bavaria * 2.03)
+    });
+}
+
+if (Q.spd_bavaria_elections_vote >= 5) {
+    data.push({
+        "id": "spd",
+        "legend": "SPD",
+        "name": "SPD",
+        "seats": Math.round(Q.spd_r_bavaria * 2.03)
+    });
+}
+
+if (Q.greens_bavaria_elections_vote >= 5) {
+    data.push({
+        "id": "greens",
+        "legend": "B90/Greens",
+        "name": "B90/Greens",
+        "seats": Math.round(Q.greens_r_bavaria * 2.03)
+    });
+}
+
+if (Q.fw_bavaria_elections_vote >= 5) {
+    data.push({
+        "id": "fw",
+        "legend": "Free Voters",
+        "name": "Free Voters",
+        "seats": Math.round(Q.fw_r_bavaria * 2.03)
+    });
+}
+
+if (Q.csu_bavaria_elections_vote >= 5) {
+    data.push({
+        "id": "csu",
+        "legend": "CSU",
+        "name": "CSU",
+        "seats": Math.round(Q.csu_r_bavaria * 2.03)
+    });
+}
+
+if (Q.afd_bavaria_elections_vote >= 5) {
+    data.push({
+        "id": "afd",
+        "legend": "AfD",
+        "name": "AfD",
+        "seats": Math.round(Q.afd_r_bavaria * 2.03)
+    });
+}
+setTimeout(function() {
+    if (window && window.d3) {
+        var width = 500;
+        var height = 500;
+        var contentDiv = document.getElementById('content');
+
+        if (!contentDiv) return; 
+
+        var screenWidth = contentDiv.offsetWidth;
+        if (screenWidth < width - 50) {
+            width = screenWidth - 50;
+            height = width;
+            var svgElement = document.getElementById("bavaria_landtag");
+            if (svgElement) {
+                svgElement.style.height = (screenWidth / 2) + "px";
+            }
+        }
+
+        var parliament = d3.parliament();
+        parliament.width(width).height(height).innerRadiusCoef(0.4);
+        parliament.enter.fromCenter(true).smallToBig(true);
+        parliament.exit.toCenter(false).bigToSmall(true);
+
+        d3.select("#bavaria_landtag").selectAll("*").remove();
+        d3.select("#bavaria_landtag").datum(data).call(parliament);
+    }
+}, 203);
+
+!}
+
+**Bavaria results:**
+
+{!<svg id="bavaria_landtag" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table>!} 
+{!<tr><td>Party</td><td>Vote share</td><td>Landtag Seats</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#BC2D72; outline: 2px; outline-style: solid;'> </div> !} <span style="color: [+ linke_color +];">**Die Linke**</span>: {!</td><td>!} **[+ linke_bavaria_elections_vote +]%** {!</td><td>!} [+ linke_r_bavaria +]% {!</td></tr>!}
+
+[? if bsw_split : {!<tr><td><div class="box" style='background-color:#4C0B5F'> </div> !}<span style="color: [+ bsw_color +];">**BSW**</span>: {!</td><td>!} [+ bsw_bavaria_elections_vote +]% {!</td><td>!} [+ bsw_r_bavaria +]% {!</td></tr>!} ?]
+
+{!<tr><td><div class="box" style='background-color:#E3000F'> </div> !}<span style="color: [+ spd_color +];">**SPD**</span>: {!</td><td>!} [+ spd_bavaria_elections_vote +]% {!</td><td>!} [+ spd_r_bavaria +]% {!</td></tr>!} 
+
+{!<tr><td><div class="box" style='background-color:#1AA037'> </div> !}<span style="color: [+ greens_color +];">**B90/Greens**</span>: {!</td><td>!} [+ greens_bavaria_elections_vote +]% {!</td><td>!} [+ greens_r_bavaria +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#FFD600'> </div> !}<span style="color: [+ fw_color +];">**Free Voters**</span>: {!</td><td>!} [+ fw_bavaria_elections_vote +]% {!</td><td>!} [+ fw_r_bavaria +]%  {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#000000'> </div> !}<span style="color: [+ csu_color +];">**CSU**</span>: {!</td><td>!} [+ csu_bavaria_elections_vote +]% {!</td><td>!} [+ csu_r_bavaria +]%  {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#0489db'> </div> !} <span style="color: [+ afd_color +];">**AfD**</span>: {!</td><td>!} [+ afd_bavaria_elections_vote +]% {!</td><td>!} [+ afd_r_bavaria +]%  {!</td></tr>!} 
+
+{!</table>!}
+<hr id="read-marker">
+
+[? if bavaria_pot_groko >= 45 : Grand Coalition (<span style="color: [+ csu_color +];">csu</span> + <span style="color: [+ spd_color +];">SPD</span>): [+ bavaria_pot_groko +]% ?]
+
+[? if bavaria_pot_traffic_light >= 45 : Traffic Light Coalition (<span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ fw_color +];">fw</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ bavaria_pot_traffic_light +]% ?]
+
+[? if bavaria_pot_rot_rot_grun >= 45 : Red-Red-Green Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ bavaria_pot_rot_rot_grun +]% ?]
+
+[? if bavaria_pot_jamaica >= 45 : Jamaica Coalition (<span style="color: [+ csu_color +];">csu</span> + <span style="color: [+ fw_color +];">fw</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ bavaria_pot_jamaica +]% ?]
+
+[? if bavaria_pot_rot_rot >= 45 : Red-Red Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ spd_color +];">SPD</span>): [+ bavaria_pot_rot_rot +]% ?]
+
+[? if bavaria_pot_red_purple >= 45 and bsw_split = 1 : Red-Purple Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ bsw_color +];">BSW</span>): [+ bavaria_pot_red_purple +]% ?]
+
+[? if bavaria_pot_brombeer >= 45 and bsw_split = 1 : Blackberry Coalition (<span style="color: [+ csu_color +];">csu</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ bsw_color +];">BSW</span>): [+ bavaria_pot_brombeer +]% ?]
+
+[? if bavaria_pot_kenya >= 45 : Kenya Coalition (<span style="color: [+ csu_color +];">csu</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ bavaria_pot_kenya +]% ?]
+
+[? if bavaria_pot_schwarz_blau >= 45 : Midnight Coalition (<span style="color: [+ csu_color +];">csu</span> + <span style="color: [+ afd_color +];">AfD</span>): [+ bavaria_pot_schwarz_blau +]% ?]
+
+[? if bavaria_pot_tigerenten >= 45 : Spezi Coalition (<span style="color: [+ csu_color +];">csu</span> + <span style="color: [+ fw_color +];">fw</span>): [+ bavaria_pot_tigerenten +]% ?]
+
+[? if bavaria_pot_kiwi >= 45 : Kiwi Coalition (<span style="color: [+ greens_color +];">Greens</span> + <span style="color: [+ csu_color +];">csu</span>): [+ bavaria_pot_kiwi +]% ?]
+
+[? if bavaria_pot_rot_grun >= 45 : Red-Green Coalition (<span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ bavaria_pot_rot_grun +]% ?]
+
+[? if bavaria_pot_weimar_but_different >= 45 : Germany Coalition (<span style="color: [+ csu_color +];">csu</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ fw_color +];">fw</span>): [+ bavaria_pot_weimar_but_different +]% ?]
+
+[? if bavaria_pot_die_linke_maj >= 45 : Left Majority (<span style="color: [+ linke_color +];">The Left</span>): [+ bavaria_pot_die_linke_maj +]% ?]
+
+[? if bavaria_pot_afd_maj >= 45 : AfD Majority (<span style="color: [+ afd_color +];">AfD</span>): [+ bavaria_pot_afd_maj +]% ?]
+
+[? if bavaria_pot_spd_maj >= 45 : SPD Majority (<span style="color: [+ spd_color +];">SPD</span>): [+ bavaria_pot_spd_maj +]% ?]
+
+[? if bavaria_pot_green_maj >= 45 : Green Majority (<span style="color: [+ greens_color +];">Greens</span>): [+ bavaria_pot_green_maj +]% ?]
+
+[? if bavaria_pot_csu_maj >= 45 : CSU Majority (<span style="color: [+ csu_color +];">csu</span>): [+ bavaria_pot_csu_maj +]% ?]
+
+- @left_maj: We can form a majority government!
+- @redred: Form a <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">red</span> coalition ([+ bavaria_pot_rot_rot +]%)
+- @rrgreen: Form a <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">red</span>-<span style="color: [+ greens_color +];">green</span> coalition ([+ bavaria_pot_rot_rot_grun +]%)
+- @red_purple: Form a <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ bsw_color +];">purple</span> coalition ([+ bavaria_pot_red_purple +]%)
+- @groko: Let a <span style="color: [+ csu_color +];">Grand</span> <span style="color: [+ spd_color +];">coalition</span> be formed ([+ bavaria_pot_groko +]%).
+- @brombeer: Let a <span style="color: [+ csu_color +];">Black</span> + <span style="color: [+ spd_color +];">berry</span> + <span style="color: [+ bsw_color +];">coalition</span> take power ([+ bavaria_pot_brombeer +]%).
+- @ampel: Let a Bavarian <span style="color: [+ spd_color +];">Traffic</span> <span style="color: [+ greens_color +];">Light</span> <span style="color: [+ fw_color +];">coalition</span> be formed ([+ bavaria_pot_traffic_light +]%).
+- @jamaica: Let a Bavarian <span style="color: [+ csu_color +];">Ja</span><span style="color: [+ greens_color +];">mai</span><span style="color: [+ fw_color +];">can</span> coalition be formed ([+ bavaria_pot_jamaica +]%).
+- @kenya: Let a <span style="color: [+ csu_color +];">Ken</span><span style="color: [+ spd_color +];">yan co</span><span style="color: [+ greens_color +];">alition</span> be formed ([+ bavaria_pot_kenya +]%).
+- @midnight: Let a <span style="color: [+ csu_color +];">Mid</span><span style="color: [+ afd_color +];">night</span> coalition be formed ([+ bavaria_pot_schwarz_blau +]%).
+- @tigerente: Let a <span style="color: [+ csu_color +];">Spe</span><span style="color: [+ fw_color +];">zi</span> coalition be formed ([+ bavaria_pot_tigerente +]%).
+- @kiwi: Let a <span style="color: [+ csu_color +];">Ki</span><span style="color: [+ greens_color +];">wi</span> coalition be formed ([+ bavaria_pot_kiwi +]%).
+- @redgreen: Let a <span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ greens_color +];">green</span> coalition be formed ([+ bavaria_pot_rot_grun +]%).
+- @germany: Let a Bavarian-<span style="color: [+ csu_color +];">Ger</span><span style="color: [+ spd_color +];">ma</span><span style="color: [+ fw_color +];">ny</span> coalition be formed ([+ bavaria_pot_weimar_but_different +]%).
+- @querfront: The <span style="color: [+ bsw_color +];">BSW</span> will tolerate the <span style="color: [+ afd_color +];">AfD</span>.
+- @afd_maj: The <span style="color: [+ afd_color +];">AfD</span> secures a majority.
+- @csu_maj: The <span style="color: [+ csu_color +];">csu</span> secures a majority.
+- @spd_maj: The <span style="color: [+ spd_color +];">SPD</span> secures a majority.
+- @greens_maj: The <span style="color: [+ greens_color +];">Greens</span> secure a majority.
+
+@left_maj
+view-if: bavaria_pot_die_linke_maj >= 50
+on-arrival: spd_relation -= 2; greens_relation -= 2; urban_linke += 0.3; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 1; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+Our campaign has paid off, and we can finally form a majority government! This is a historic moment for our party.
+
+@redred
+view-if: bavaria_pot_rot_rot >= 40
+choose-if: spd_relation >= 45
+unavailable_subtitle: Our relations with the SPD aren't good enough.
+on-arrival: spd_relation += 1; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 1; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+We have decided to form a coalition with the <span style="color: [+ spd_color +];">**SPD**</span>.
+
+@rrgreen
+view-if: bavaria_pot_rot_rot_grun >= 50
+choose-if: spd_relation >= 40 and greens_relation >= 40
+unavailable-subtitle: Our relations with the moderate left aren't good enough.
+on-arrival: spd_relation += 1; greens_relation += 1; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 1; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+We have formed a <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">red</span>-<span style="color: [+ greens_color +];">green</span> coalition with the moderate left.
+
+@red_purple
+view-if: bavaria_pot_red_purple >= 50 and bsw_r_bavaria > 0
+choose-if: bsw_relation >= 40
+unavailable-subtitle: Our relations with Wagenknecht aren't good enough.
+on-arrival: bsw_relation += 1; youth_linke -= 0.5; youth_greens += 0.5; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 1; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+We have formed a Red-purple coalition with the BSW.
+
+@groko
+view-if: bavaria_pot_groko >= 50 and bavaria_pot_spd_maj < 50 and bavaria_pot_csu_maj < 50
+on-arrival: youth_spd -= 0.4; youth_linke += 0.2; youth_greens += 0.2; bavaria_groko = 1; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+A Grand Coalition has been formed.
+
+@brombeer
+view-if: bavaria_pot_brombeer >= 50 and bavaria_pot_groko < 50
+on-arrival: urban_spd -= 0.3; urban_greens += 0.3; urban_csu -= 0.3; urban_fw += 0.3; urban_bsw -= 0.5; urban_linke += 0.5; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 1; bavaria_querfront = 0;
+
+A Blackberry coalition has been formed.
+
+@ampel
+view-if: bavaria_pot_traffic_light >= 50 and ampelkoalition_failed = 0 and bavaria_pot_kiwi < 50
+on-arrival: spd_relation -= 1; greens_relation -= 1; bavaria_groko = 0; bavaria_traffic_light = 1; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+A Traffic Light coalition has been formed.
+
+@jamaica
+view-if: bavaria_pot_jamaica >= 50 and bavaria_pot_kiwi < 50 and bavaria_pot_tigerente < 50 and (bavaria_pot_traffic_light < 50 or ampelkoalition_failed = 1)
+on-arrival: greens_relation -= 1; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 1; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+A Jamaican coalition has been formed.
+
+@kenya
+view-if: bavaria_pot_kenya >= 50 and bavaria_pot_groko < 50 and bavaria_pot_kiwi < 50 and (bavaria_pot_traffic_light < 50 or ampelkoalition_failed = 1) and_bavaria_pot_tigerente < 50
+on-arrival: greens_relation -= 1; spd_relation -= 1; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 1; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+A Kenyan coalition has been formed.
+
+@midnight
+view-if: bavaria_pot_schwarz_blau >= 50 and brandmauer = 0 and bavaria_pot_tigerente < 50
+on-arrival: csu_relation -= 2; rural_csu -= 0.5; rural_fdp += 0.5; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 1; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+A Midnight coalition has been formed. The Fascists are in power.
+
+@tigerente
+view-if: bavaria_pot_tigerente >= 50
+on-arrival: fw_relation -= 1; spd_relation += 1; greens_relation += 1; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 1; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+A liberal-conservative Spezi coalition has been formed. This is the usual Bavarian governing arrangement.
+
+@kiwi
+view-if: bavaria_pot_kiwi >= 50 and bavaria_pot_tigerente < 50 and bavaria_pot_groko < 50
+on-arrival: greens_relation -= 1; youth_greens -= 0.4; youth_spd += 0.4; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 1; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+A Kiwi coalition has been formed.
+
+@redgreen
+view-if: bavaria_pot_rot_grun >= 50 and bavaria_pot_green_maj < 50 and bavaria_pot_spd_maj < 50
+on-arrival: bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 1; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+A center-left Red-green coalition has been formed.
+
+@germany
+view-if: bavaria_pot_weimar_but_different >= 50 and bavaria_pot_groko < 50 and (bavaria_pot_traffic_light < 50 or ampelkoalition_failed = 1)
+on-arrival: greens_relation += 1; spd_relation -= 1; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 1; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+A centrist Germany coalition has been formed.
+
+@afd_maj
+view-if: bavaria_pot_afd_maj >= 50
+on-arrival: bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 1; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+The AfD has won a majority. The Fascists are in power.
+
+@csu_maj
+view-if: bavaria_pot_csu_maj >= 50
+on-arrival: bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 1; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+The csu has won a majority.
+
+@spd_maj
+view-if: bavaria_pot_spd_maj >= 50
+on-arrival: bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 1; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+The SPD has won a majority.
+
+@greens_maj
+view-if: bavaria_pot_green_maj >= 50
+on-arrival: bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 1; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
+
+The Greens have won a majority.
+
+@querfront
+view-if: bavaria_pot_querfront >= 50 and brandmauer = 0 and bavaria_pot_afd_maj < 50 and bavaria_pot_schwarz_blau < 50
+on-arrival: bsw_relation -= 2; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 1;
+
+The BSW is providing toleration to the AfD. The Fascists are in power.
