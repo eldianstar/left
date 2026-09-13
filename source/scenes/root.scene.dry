@@ -770,11 +770,80 @@ Q.greens_brandenburg_elections_vote = 0;
 Q.cdu_brandenburg_elections_vote = 0;
 Q.bsw_brandenburg_elections_vote = 0;
 
-Q.next_election_year_brandenburg = 2021;
+Q.next_election_year_brandenburg = 2023;
 Q.next_election_month_brandenburg = 9;
 Q.n_elections_brandenburg = 0;
 Q.next_election_time_brandenburg = 40;
 
+//////////////////////// BREMEN ////////////////////////////////
+
+// coalitions 
+Q.bremen_groko = 0; 
+Q.bremen_traffic_light = 0; 
+Q.bremen_rot_rot_grun = 1; 
+Q.bremen_jamaica = 0; 
+Q.bremen_rot_rot = 0; 
+Q.bremen_kenya = 0; 
+Q.bremen_schwarz_blau = 0; 
+Q.bremen_tigerenten = 0;
+Q.bremen_kiwi = 0; 
+Q.bremen_die_linke_maj = 0;
+Q.bremen_afd_maj = 0;
+Q.bremen_rot_grun = 0; 
+Q.bremen_spd_maj = 0; 
+Q.bremen_green_maj = 0; 
+Q.bremen_cdu_maj = 0; 
+Q.bremen_weimar_but_different = 0;
+Q.bremen_red_purple = 0;
+Q.bremen_brombeer = 0;
+Q.bremen_querfront = 0;
+
+// coalition potential seats
+
+Q.bremen_pot_groko = 0; 
+Q.bremen_pot_traffic_light = 0; 
+Q.bremen_pot_rot_rot_grun = 0; 
+Q.bremen_pot_jamaica = 0; 
+Q.bremen_pot_rot_rot = 0; 
+Q.bremen_pot_kenya = 0; 
+Q.bremen_pot_schwarz_blau = 0; 
+Q.bremen_pot_tigerenten = 0;
+Q.bremen_pot_kiwi = 0; 
+Q.bremen_pot_die_linke_maj = 0;
+Q.bremen_pot_afd_maj = 0;
+Q.bremen_pot_rot_grun = 0; 
+Q.bremen_pot_spd_maj = 0; 
+Q.bremen_pot_green_maj = 0; 
+Q.bremen_pot_cdu_maj = 0; 
+Q.bremen_pot_weimar_but_different = 0;
+Q.bremen_pot_red_purple = 0;
+Q.bremen_pot_brombeer = 0;
+Q.bremen_pot_querfront = 0;
+
+// seats
+Q.spd_r_bremen = 0;
+Q.linke_r_bremen = 0;
+Q.cdu_r_bremen = 0;
+Q.greens_r_bremen = 0;
+Q.afd_r_bremen = 0;
+Q.fdp_r_bremen = 0;
+Q.bsw_r_bremen = 0;
+
+Q.total_r_bremen = 0;
+
+// votes?
+Q.spd_bremen_elections_vote = 0;
+Q.linke_bremen_elections_vote = 0;
+Q.fdp_bremen_elections_vote = 0;
+Q.afd_bremen_elections_vote = 0;
+Q.greens_bremen_elections_vote = 0;
+Q.cdu_bremen_elections_vote = 0;
+Q.bsw_bremen_elections_vote = 0;
+
+Q.next_election_year_bremen = 2021;
+Q.next_election_month_bremen = 9;
+Q.n_elections_bremen = 0;
+Q.next_election_time_bremen = 28;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////// GOVERNMENT ACTIONS ////////////////////////////////////
