@@ -27,7 +27,7 @@ var bawu_adjustment_factors = {
     fdp: 0.95,
     cdu: 1.10,
     afd: 0.90,
-    greens: 2.0,
+    greens: 1.95,
     bsw: 0.55,
 };
 
@@ -161,7 +161,7 @@ var bawu_adjustment_r_factors = {
     fdp: 0.95,
     cdu: 1.10,
     afd: 0.90,
-    greens: 2.0,
+    greens: 1.95,
     bsw: 0.55,
 };
 
