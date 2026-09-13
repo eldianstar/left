@@ -428,7 +428,7 @@ setTimeout(function() {
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>Landtag Seats</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#BC2D72'; outline: 2px; outline-style: solid;'> </div> !} <span style="color: [+ linke_color +];">**Die Linke**</span>: {!</td><td>!} **[+ linke_bavaria_elections_vote +]%** {!</td><td>!} [+ linke_r_bavaria +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#BC2D72; outline: 2px; outline-style: solid;'> </div> !} <span style="color: [+ linke_color +];">**Die Linke**</span>: {!</td><td>!} **[+ linke_bavaria_elections_vote +]%** {!</td><td>!} [+ linke_r_bavaria +]% {!</td></tr>!}
 
 [? if bsw_split : {!<tr><td><div class="box" style='background-color:#4C0B5F'> </div> !}<span style="color: [+ bsw_color +];">**BSW**</span>: {!</td><td>!} [+ bsw_bavaria_elections_vote +]% {!</td><td>!} [+ bsw_r_bavaria +]% {!</td></tr>!} ?]
 
