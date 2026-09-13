@@ -23,7 +23,7 @@ on-arrival: {!
 
 var bawu_adjustment_factors = {
     spd: 0.55,
-    linke: 0.60,
+    linke: 0.40,
     fdp: 0.95,
     cdu: 1.05,
     afd: 0.85,
