@@ -517,7 +517,7 @@ We have decided to form a coalition with the <span style="color: [+ spd_color +]
 
 @rrgreen
 view-if: bawu_pot_rot_rot_grun >= 50
-choose-if: spd_relation >= 45 and greens_relation >= 45
+choose-if: spd_relation >= 40 and greens_relation >= 40
 unavailable-subtitle: Our relations with the moderate left aren't good enough.
 on-arrival: spd_relation += 1; greens_relation += 1; bawu_groko = 0; bawu_traffic_light = 0; bawu_rot_rot_grun = 1; bawu_jamaica = 0; bawu_rot_rot = 0; bawu_kenya = 0; bawu_schwarz_blau = 0; bawu_tigerenten = 0; bawu_kiwi = 0; bawu_die_linke_maj = 0; bawu_afd_maj = 0; bawu_rot_grun = 0; bawu_spd_maj = 0; bawu_green_maj = 0; bawu_cdu_maj = 0; bawu_weimar_but_different = 0; bawu_red_purple = 0; bawu_brombeer = 0; bawu_querfront = 0;
 
@@ -525,7 +525,7 @@ We have formed a <span style="color: [+ linke_color +];">Red</span>-<span style=
 
 @red_purple
 view-if: bawu_pot_red_purple >= 50 and bsw_r_bawu > 0
-choose-if: bsw_relation >= 50
+choose-if: bsw_relation >= 40
 unavailable-subtitle: Our relations with Wagenknecht aren't good enough.
 on-arrival: bsw_relation += 1; youth_linke -= 0.5; youth_greens += 0.5; bawu_groko = 0; bawu_traffic_light = 0; bawu_rot_rot_grun = 0; bawu_jamaica = 0; bawu_rot_rot = 0; bawu_kenya = 0; bawu_schwarz_blau = 0; bawu_tigerenten = 0; bawu_kiwi = 0; bawu_die_linke_maj = 0; bawu_afd_maj = 0; bawu_rot_grun = 0; bawu_spd_maj = 0; bawu_green_maj = 0; bawu_cdu_maj = 0; bawu_weimar_but_different = 0; bawu_red_purple = 1; bawu_brombeer = 0; bawu_querfront = 0;
 
