@@ -49,7 +49,7 @@ Q.greens_berlin_elections_vote = 0;
 Q.cdu_berlin_elections_vote = 0;
 Q.bsw_berlin_elections_vote = 0;
 
-///////////////////// class-based proportions ////////////////////////////////
+///////////////////// class-based proportions votes ////////////////////////////////
 
 if (Q.youth_linke_normalized + Q.urban_linke_normalized >= 30) berlin_adjustment_factors.linke += 0.1;
 if (Q.urban_linke_normalized >= 70) berlin_adjustment_factors.linke += 0.1;
@@ -107,12 +107,12 @@ if (Q.urban_afd > (Q.votes_afd + 15)) berlin_adjustment_factors.afd += 0.1;
 if (Q.east_afd > (Q.votes_afd + 15)) berlin_adjustment_factors.afd += 0.1;
 if (Q.youth_afd > (Q.votes_afd + 15)) berlin_adjustment_factors.afd += 0.05;
 
-////////////////// calculate seats and votes ///////////////////////////////
+////////////////// calculate seats votes ///////////////////////////////
 
 Q.spd_berlin_elections_vote = Q.spd_votes*berlin_adjustment_factors.spd;
 Q.linke_berlin_elections_vote = Q.linke_votes*berlin_adjustment_factors.linke;
 Q.fdp_berlin_elections_vote = Q.fdp_votes*berlin_adjustment_factors.fdp;
-if (Q.rise_of_afd) berlin_adjustment_factors.afd += 0.2;
+if (Q.issue_migration >= 5) berlin_adjustment_factors.afd += 0.2;
 Q.afd_berlin_elections_vote = Q.afd_votes*berlin_adjustment_factors.afd;
 Q.cdu_berlin_elections_vote = Q.cdu_votes*berlin_adjustment_factors.cdu;
 if (Q.issue_environment >= 5) berlin_adjustment_factors.greens += 0.1;
@@ -157,22 +157,83 @@ if (Q.afd_berlin_elections_vote >= 1.4) Q.afd_r_berlin = Q.afd_berlin_elections_
 if (Q.cdu_berlin_elections_vote >= 1.4) Q.cdu_r_berlin = Q.cdu_berlin_elections_vote;
 if (Q.bsw_berlin_elections_vote >= 1.4) Q.bsw_r_berlin = Q.bsw_berlin_elections_vote;
 
+/////////////////////////// adj factors seats ////////////////////////////
+
 var berlin_adjustment_r_factors = {
     spd: 0.86,
-    linke: 2.0,
-    fdp: 0.75,
-    cdu: 0.95,
-    afd: 0.85,
+    linke: 1.8,
+    fdp: 0.65,
+    cdu: 0.65,
+    afd: 0.70,
     greens: 1.09,
-    bsw: 1,
+    bsw: 1.0,
 };
+
+//////////////////////////// class based seats ///////////////////////////////
 
 if (Q.youth_linke_normalized + Q.urban_linke_normalized >= 30) berlin_adjustment_r_factors.linke += 0.1;
 if (Q.urban_linke_normalized >= 70) berlin_adjustment_r_factors.linke += 0.1;
+if (Q.youth_linke_normalized + Q.urban_linke_normalized >= 30) berlin_adjustment_r_factors.linke += 0.1;
+if (Q.urban_linke_normalized >= 70) berlin_adjustment_r_factors.linke += 0.1;
+if (Q.urban_linke > (Q.votes_linke + 3)) berlin_adjustment_r_factors.linke += 0.1;
+if (Q.east_linke > (Q.votes_linke + 3)) berlin_adjustment_r_factors.linke += 0.1;
+if (Q.urban_linke > (Q.votes_linke + 6)) berlin_adjustment_r_factors.linke += 0.1;
+if (Q.east_linke > (Q.votes_linke + 6)) berlin_adjustment_r_factors.linke += 0.1;
+if (Q.youth_linke > (Q.votes_linke + 6)) berlin_adjustment_r_factors.linke += 0.05;
+if (Q.urban_linke > (Q.votes_linke + 15)) berlin_adjustment_r_factors.linke += 0.1;
+if (Q.east_linke > (Q.votes_linke + 15)) berlin_adjustment_r_factors.linke += 0.1;
+if (Q.youth_linke > (Q.votes_linke + 15)) berlin_adjustment_r_factors.linke += 0.05;
+
+if (Q.urban_spd > (Q.votes_spd + 3)) berlin_adjustment_r_factors.spd += 0.1;
+if (Q.east_spd > (Q.votes_spd + 3)) berlin_adjustment_r_factors.spd += 0.1;
+if (Q.urban_spd > (Q.votes_spd + 6)) berlin_adjustment_r_factors.spd += 0.1;
+if (Q.east_spd > (Q.votes_spd + 6)) berlin_adjustment_r_factors.spd += 0.1;
+if (Q.youth_spd > (Q.votes_spd + 6)) berlin_adjustment_r_factors.spd += 0.05;
+if (Q.urban_spd > (Q.votes_spd + 15)) berlin_adjustment_r_factors.spd += 0.1;
+if (Q.east_spd > (Q.votes_spd + 15)) berlin_adjustment_r_factors.spd += 0.1;
+if (Q.youth_spd > (Q.votes_spd + 15)) berlin_adjustment_r_factors.spd += 0.05;
+
+if (Q.urban_greens > (Q.votes_greens + 3)) berlin_adjustment_r_factors.greens += 0.1;
+if (Q.east_greens > (Q.votes_greens + 3)) berlin_adjustment_r_factors.greens += 0.1;
+if (Q.urban_greens > (Q.votes_greens + 6)) berlin_adjustment_r_factors.greens += 0.1;
+if (Q.east_greens > (Q.votes_greens + 6)) berlin_adjustment_r_factors.greens += 0.1;
+if (Q.youth_greens > (Q.votes_greens + 6)) berlin_adjustment_r_factors.greens += 0.05;
+if (Q.urban_greens > (Q.votes_greens + 15)) berlin_adjustment_r_factors.greens += 0.1;
+if (Q.east_greens > (Q.votes_greens + 15)) berlin_adjustment_r_factors.greens += 0.1;
+if (Q.youth_greens > (Q.votes_greens + 15)) berlin_adjustment_r_factors.greens += 0.05;
+
+if (Q.urban_fdp > (Q.votes_fdp + 3)) berlin_adjustment_r_factors.fdp += 0.1;
+if (Q.east_fdp > (Q.votes_fdp + 3)) berlin_adjustment_r_factors.fdp += 0.1;
+if (Q.urban_fdp > (Q.votes_fdp + 6)) berlin_adjustment_r_factors.fdp += 0.1;
+if (Q.east_fdp > (Q.votes_fdp + 6)) berlin_adjustment_r_factors.fdp += 0.1;
+if (Q.youth_fdp > (Q.votes_fdp + 6)) berlin_adjustment_r_factors.fdp += 0.05;
+if (Q.urban_fdp > (Q.votes_fdp + 15)) berlin_adjustment_r_factors.fdp += 0.1;
+if (Q.east_fdp > (Q.votes_fdp + 15)) berlin_adjustment_r_factors.fdp += 0.1;
+if (Q.youth_fdp > (Q.votes_fdp + 15)) berlin_adjustment_r_factors.fdp += 0.05;
+
+if (Q.urban_cdu > (Q.votes_cdu + 3)) berlin_adjustment_r_factors.cdu += 0.1;
+if (Q.east_cdu > (Q.votes_cdu + 3)) berlin_adjustment_r_factors.cdu += 0.1;
+if (Q.urban_cdu > (Q.votes_cdu + 6)) berlin_adjustment_r_factors.cdu += 0.1;
+if (Q.east_cdu > (Q.votes_cdu + 6)) berlin_adjustment_r_factors.cdu += 0.1;
+if (Q.youth_cdu > (Q.votes_cdu + 6)) berlin_adjustment_r_factors.cdu += 0.05;
+if (Q.urban_cdu > (Q.votes_cdu + 15)) berlin_adjustment_r_factors.cdu += 0.1;
+if (Q.east_cdu > (Q.votes_cdu + 15)) berlin_adjustment_r_factors.cdu += 0.1;
+if (Q.youth_cdu > (Q.votes_cdu + 15)) berlin_adjustment_r_factors.cdu += 0.05;
+
+if (Q.urban_afd > (Q.votes_afd + 3)) berlin_adjustment_r_factors.afd += 0.1;
+if (Q.east_afd > (Q.votes_afd + 3)) berlin_adjustment_r_factors.afd += 0.1;
+if (Q.urban_afd > (Q.votes_afd + 6)) berlin_adjustment_r_factors.afd += 0.1;
+if (Q.east_afd > (Q.votes_afd + 6)) berlin_adjustment_r_factors.afd += 0.1;
+if (Q.youth_afd > (Q.votes_afd + 6)) berlin_adjustment_r_factors.afd += 0.05;
+if (Q.urban_afd > (Q.votes_afd + 15)) berlin_adjustment_r_factors.afd += 0.1;
+if (Q.east_afd > (Q.votes_afd + 15)) berlin_adjustment_r_factors.afd += 0.1;
+if (Q.youth_afd > (Q.votes_afd + 15)) berlin_adjustment_r_factors.afd += 0.05;
+
+
 Q.spd_r_berlin = Q.spd_votes*berlin_adjustment_r_factors.spd;
 Q.linke_r_berlin = Q.linke_votes*berlin_adjustment_r_factors.linke;
 Q.fdp_r_berlin = Q.fdp_votes*berlin_adjustment_r_factors.fdp;
-if (Q.rise_of_afd) berlin_adjustment_r_factors.afd += 0.2;
+if (Q.issue_migration >= 5) berlin_adjustment_factors.afd += 0.2;
 Q.afd_r_berlin = Q.afd_votes*berlin_adjustment_r_factors.afd;
 Q.cdu_r_berlin = Q.cdu_votes*berlin_adjustment_r_factors.cdu;
 if (Q.issue_environment >= 5) berlin_adjustment_r_factors.greens += 0.1;
