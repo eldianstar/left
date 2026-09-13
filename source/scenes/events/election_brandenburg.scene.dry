@@ -22,7 +22,7 @@ The regularly scheduled elections for the Brandenburg Landtag are to take place.
 on-arrival: {!
 
 var brandenburg_adjustment_factors = {
-    spd: 1.95,
+    spd: 1.85,
     linke: 0.90,
     fdp: 0.15,
     cdu: 0.35,
