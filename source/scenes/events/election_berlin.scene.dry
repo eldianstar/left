@@ -532,7 +532,7 @@ on-arrival: spd_relation += 1; greens_relation += 1; east_linke -= 0.3; east_bsw
 We have formed a <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">red</span>-<span style="color: [+ greens_color +];">green</span> coalition with the moderate left.
 
 @red_purple
-view-if: berlin_pot_red_purple >= 50
+view-if: berlin_pot_red_purple >= 50 and bsw_r_berlin > 0
 choose-if: bsw_relation >= 50
 unavailable-subtitle: Our relations with Wagenknecht aren't good enough.
 on-arrival: bsw_relation += 1; youth_linke -= 0.5; youth_greens += 0.5; berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 1; berlin_brombeer = 0; berlin_querfront = 0;
