@@ -107,10 +107,10 @@ if (Q.youth_afd > (Q.votes_afd + 15)) bavaria_adjustment_factors.afd += 0.05;
 
 Q.spd_bavaria_elections_vote = Q.spd_votes*bavaria_adjustment_factors.spd;
 Q.linke_bavaria_elections_vote = Q.linke_votes*bavaria_adjustment_factors.linke;
-Q.fw_bavaria_elections_vote = Q.fw_votes*bavaria_adjustment_factors.fw;
+Q.fw_bavaria_elections_vote = Q.fdp_votes*bavaria_adjustment_factors.fw;
 if (Q.issue_migration >= 5) bavaria_adjustment_factors.afd += 0.2;
 Q.afd_bavaria_elections_vote = Q.afd_votes*bavaria_adjustment_factors.afd;
-Q.csu_bavaria_elections_vote = Q.csu_votes*bavaria_adjustment_factors.csu;
+Q.csu_bavaria_elections_vote = Q.cdu_votes*bavaria_adjustment_factors.csu;
 if (Q.issue_environment >= 5) bavaria_adjustment_factors.greens += 0.1;
 Q.greens_bavaria_elections_vote = Q.greens_votes*bavaria_adjustment_factors.greens;
 Q.bsw_bavaria_elections_vote = Q.bsw_votes*bavaria_adjustment_factors.bsw;
@@ -216,10 +216,10 @@ if (Q.youth_afd > (Q.votes_afd + 15)) bavaria_adjustment_r_factors.afd += 0.05;
 
 Q.spd_r_bavaria = Q.spd_votes*bavaria_adjustment_r_factors.spd;
 Q.linke_r_bavaria = Q.linke_votes*bavaria_adjustment_r_factors.linke;
-Q.fw_r_bavaria = Q.fw_votes*bavaria_adjustment_r_factors.fw;
+Q.fw_r_bavaria = Q.fdp_votes*bavaria_adjustment_r_factors.fw;
 if (Q.issue_migration >= 5) bavaria_adjustment_factors.afd += 0.2;
 Q.afd_r_bavaria = Q.afd_votes*bavaria_adjustment_r_factors.afd;
-Q.csu_r_bavaria = Q.csu_votes*bavaria_adjustment_r_factors.csu;
+Q.csu_r_bavaria = Q.cdu_votes*bavaria_adjustment_r_factors.csu;
 if (Q.issue_environment >= 5) bavaria_adjustment_r_factors.greens += 0.1;
 Q.greens_r_bavaria = Q.greens_votes*bavaria_adjustment_r_factors.greens;
 Q.bsw_r_bavaria = Q.bsw_votes*bavaria_adjustment_r_factors.bsw;
