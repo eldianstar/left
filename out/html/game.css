@@ -732,6 +732,10 @@ th {
   fill: #FFD600;
 }
 
+.seat.fw {
+  fill: #ff6600;
+}
+
 .seat.cdu {
   fill: #000000;
 }
