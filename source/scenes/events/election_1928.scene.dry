@@ -138,7 +138,7 @@ on-arrival: {!
             Q[party + '_b'] = Math.round(Q[party + '_votes'] * factor * 10) / 10;
         }
         
-        if (Q[party + '_b'] > 0) {
+        if (Q[party + '_b'] > 5) {
             if (factor !== 1.0) { // Only apply to parties with adjustment factors
                 // Calculate the Reichstag without the current party's share
                 Q['bundestag_without_' + party] = 100 - Q['original_' + party + '_b'];
@@ -155,6 +155,8 @@ on-arrival: {!
     }
     
 console.log(Q.linke_b)
+
+
 
 // Step 2: Redistribute results among non-adjusted parties to ensure the total is 100%
 if (new_party_sum > 0) {
@@ -185,7 +187,7 @@ if (new_party_sum > 0) {
     // Step 3: Normalize to ensure the total sums to exactly 100%
     let total_b_sum = 0;
 
-    // Calculate the total of all `r` values after redistribution
+    // Calculate the total of all `b` values after redistribution
     for (var party of Q.parties) {
         total_b_sum += Q[party + '_b'];
     }
@@ -287,7 +289,7 @@ var sign2 = Q.str_votes_change_cdu > 0
   : '<img src="img/steady.png"> ';
 Q.str_votes_change_cdu = sign2 + Math.abs(Q.str_votes_change_cdu).toFixed(1);
 
-if (pragmatist_strength <= 40 || oldleft_strength >= 45 || beweli_strength >= 45) {
+if (pragmatist_strength <= 40 || oldleft_strength >= 45 || beweli_strength >= 65) {
     if (Q.linke_votes >= 35) {
         Q.greens_relation -= 12;
         Q.spd_relation -= 12;
@@ -368,7 +370,7 @@ Q.election_records.push(election_result);
 on-display: {!
 const data = [];
 
-if (Q.bsw_b) {
+if (Q.bsw_votes >= 5) {
     data.push({
         "id": "bsw",
         "legend": "BSW",
@@ -377,7 +379,7 @@ if (Q.bsw_b) {
     });
 }
 
-if (Q.linke_b >= 5) {
+if (Q.linke_votes >= 5) {
     data.push({
         "id": "linke",
         "legend": "Left",
@@ -386,7 +388,7 @@ if (Q.linke_b >= 5) {
     });
 }
 
-if (Q.spd_b) {
+if (Q.spd_votes >= 5) {
     data.push({
         "id": "spd",
         "legend": "SPD",
@@ -395,7 +397,7 @@ if (Q.spd_b) {
     });
 }
 
-if (Q.greens_b) {
+if (Q.greens_votes >= 5) {
     data.push({
         "id": "greens",
         "legend": "B90/Greens",
@@ -404,7 +406,7 @@ if (Q.greens_b) {
     });
 }
 
-if (Q.fdp_b) {
+if (Q.fdp_votes >= 5) {
     data.push({
         "id": "fdp",
         "legend": "FDP",
@@ -413,7 +415,7 @@ if (Q.fdp_b) {
     });
 }
 
-if (Q.cdu_minus_csu_b) {
+if (Q.cdu_minus_csu_votes >= 5) {
     data.push({
         "id": "cdu",
         "legend": "CDU",
@@ -422,7 +424,7 @@ if (Q.cdu_minus_csu_b) {
     });
 }
 
-if (Q.csu_b) {
+if (Q.csu_votes >= 5) {
     data.push({
         "id": "csu",
         "legend": "CSU",
@@ -431,7 +433,7 @@ if (Q.csu_b) {
     });
 }
 
-if (Q.afd_b) {
+if (Q.afd_votes >= 5) {
     data.push({
         "id": "afd",
         "legend": "AfD",
