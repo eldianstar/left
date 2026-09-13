@@ -21,7 +21,6 @@ The regularly scheduled elections for the Berlin Abgeordnetenhaus are to take pl
 - @berlin: May we do our best...
 
 @berlin
-face-image: img/berlin_map.jpg
 on-arrival: {!
 
 var berlin_adjustment_factors = {
