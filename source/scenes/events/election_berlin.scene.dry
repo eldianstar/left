@@ -582,7 +582,7 @@ on-arrival: fdp_relation -= 1; spd_relation += 1; greens_relation += 1; berlin_g
 A liberal-conservative Tiger-duck coalition has been formed.
 
 @kiwi
-view-if: berlin_pot_kiwi >= 50 and berlin_pot_tigerente < 50 and berlin_pot_schwarz_blau < 50 and berlin_pot_rot_grun < 50
+view-if: berlin_pot_kiwi >= 50 and berlin_pot_tigerente < 50 and (berlin_pot_schwarz_blau < 50 or brandmauer = 1) and berlin_pot_rot_grun < 50
 on-arrival: greens_relation -= 1; youth_greens -= 0.4; youth_spd += 0.4; berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 0; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 1; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
 
 A Kiwi coalition has been formed.
