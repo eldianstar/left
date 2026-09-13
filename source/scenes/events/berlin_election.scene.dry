@@ -464,7 +464,7 @@ We have decided to form a coalition with the <span style="color: [+ spd_color +]
 
 @rrgreen
 view-if: berlin_pot_rot_rot_grun >= 50
-choose-if: spd_relation >= 50 and greens_relation >= 50
+choose-if: spd_relation >= 40 and greens_relation >= 40
 unavailable-subtitle: Our relations with the moderate left aren't good enough.
 on-arrival: berlin_groko = 0; berlin_traffic_light = 0; berlin_rot_rot_grun = 1; berlin_jamaica = 0; berlin_rot_rot = 0; berlin_kenya = 0; berlin_schwarz_blau = 0; berlin_tigerenten = 0; berlin_kiwi = 0; berlin_die_linke_maj = 0; berlin_afd_maj = 0; berlin_rot_grun = 0; berlin_spd_maj = 0; berlin_green_maj = 0; berlin_cdu_maj = 0; berlin_weimar_but_different = 0; berlin_red_purple = 0; berlin_brombeer = 0; berlin_querfront = 0;
 
