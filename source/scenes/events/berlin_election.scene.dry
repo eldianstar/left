@@ -51,12 +51,8 @@ Q.bsw_berlin_elections_vote = 0;
 
 if (Q.youth_linke_normalized + Q.urban_linke_normalized >= 30) berlin_adjustment_factors.linke += 0.1;
 if (Q.urban_linke_normalized >= 70) berlin_adjustment_factors.linke += 0.1;
-Q.berlin_adjustment_factors.linke += ((Q.youth_linke - Q.linke_votes)/30);
-Q.berlin_adjustment_factors.linke += ((Q.urban_linke - Q.linke_votes)/20);
-Q.berlin_adjustment_factors.linke += ((Q.east_linke - Q.linke_votes)/15);
-Q.berlin_adjustment_factors.afd += ((Q.east_afd - Q.afd_votes)/15);
-Q.berlin_adjustment_factors.spd += ((Q.urban_spd - Q.spd_votes)/15);
-Q.berlin_adjustment_factors.spd += ((Q.east_spd - Q.spd_votes)/15);
+if (Q.urban_linke > (Q.votes_linke + 3)) berlin_adjustment_factors.linke += 0.1;
+if (Q.east_linke > (Q.votes_linke + 3)) berlin_adjustment_factors.linke += 0.1;
 Q.spd_berlin_elections_vote = Q.spd_votes*berlin_adjustment_factors.spd;
 Q.linke_berlin_elections_vote = Q.linke_votes*berlin_adjustment_factors.linke;
 Q.fdp_berlin_elections_vote = Q.fdp_votes*berlin_adjustment_factors.fdp;
