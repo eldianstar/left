@@ -494,6 +494,76 @@ Q.ampelkoalition_failed = 0;
 ////////////////////////// LOCAL ///////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+//////////////////////////// BA-WÜ ///////////////////////////////////////
+/// baden-württemberg
+
+// coalitions 
+Q.bawu_groko = 0; 
+Q.bawu_traffic_light = 0; 
+Q.bawu_rot_rot_grun = 0; 
+Q.bawu_jamaica = 0; 
+Q.bawu_rot_rot = 0; 
+Q.bawu_kenya = 0; 
+Q.bawu_schwarz_blau = 0; 
+Q.bawu_tigerenten = 0;
+Q.bawu_kiwi = 0; 
+Q.bawu_die_linke_maj = 0;
+Q.bawu_afd_maj = 0;
+Q.bawu_rot_grun = 0; 
+Q.bawu_spd_maj = 0; 
+Q.bawu_green_maj = 0; 
+Q.bawu_cdu_maj = 0; 
+Q.bawu_weimar_but_different = 0;
+Q.bawu_red_purple = 0;
+Q.bawu_brombeer = 0;
+Q.bawu_querfront = 0;
+
+// coalition potential seats
+
+Q.bawu_pot_groko = 0; 
+Q.bawu_pot_traffic_light = 0; 
+Q.bawu_pot_rot_rot_grun = 0; 
+Q.bawu_pot_jamaica = 0; 
+Q.bawu_pot_rot_rot = 0; 
+Q.bawu_pot_kenya = 0; 
+Q.bawu_pot_schwarz_blau = 0; 
+Q.bawu_pot_tigerenten = 0;
+Q.bawu_pot_kiwi = 0; 
+Q.bawu_pot_die_linke_maj = 0;
+Q.bawu_pot_afd_maj = 0;
+Q.bawu_pot_rot_grun = 0; 
+Q.bawu_pot_spd_maj = 0; 
+Q.bawu_pot_green_maj = 0; 
+Q.bawu_pot_cdu_maj = 0; 
+Q.bawu_pot_weimar_but_different = 0;
+Q.bawu_pot_red_purple = 0;
+Q.bawu_pot_brombeer = 0;
+Q.bawu_pot_querfront = 0;
+
+// seats
+Q.spd_r_bawu = 0;
+Q.linke_r_bawu = 0;
+Q.cdu_r_bawu = 0;
+Q.greens_r_bawu = 0;
+Q.afd_r_bawu = 0;
+Q.fdp_r_bawu = 0;
+Q.bsw_r_bawu = 0;
+
+Q.total_r_bawu = 0;
+
+// votes?
+Q.spd_bawu_elections_vote = 0;
+Q.linke_bawu_elections_vote = 0;
+Q.fdp_bawu_elections_vote = 0;
+Q.afd_bawu_elections_vote = 0;
+Q.greens_bawu_elections_vote = 0;
+Q.cdu_bawu_elections_vote = 0;
+Q.bsw_bawu_elections_vote = 0;
+
+Q.next_election_year_bawu = 2026;
+Q.next_election_month_bawu = 3;
+Q.n_elections_bawu = 0;
+Q.next_election_time_bawu = 58;
 
 //////////////////////// BERLIN ////////////////////////////////
 
