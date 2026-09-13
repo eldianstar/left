@@ -560,7 +560,7 @@ Q.greens_bawu_elections_vote = 0;
 Q.cdu_bawu_elections_vote = 0;
 Q.bsw_bawu_elections_vote = 0;
 
-Q.next_election_year_bawu = 2021;
+Q.next_election_year_bawu = 2026;
 Q.next_election_month_bawu = 3;
 Q.n_elections_bawu = 0;
 Q.next_election_time_bawu = 58;
@@ -630,7 +630,7 @@ Q.greens_bavaria_elections_vote = 0;
 Q.csu_bavaria_elections_vote = 0;
 Q.bsw_bavaria_elections_vote = 0;
 
-Q.next_election_year_bavaria = 2021;
+Q.next_election_year_bavaria = 2023;
 Q.next_election_month_bavaria = 10;
 Q.n_elections_bavaria = 0;
 Q.next_election_time_bavaria = 26;
@@ -705,6 +705,75 @@ Q.next_election_month_berlin = 9;
 Q.n_elections_berlin = 0;
 Q.next_election_time_berlin = 4;
 
+/////////////////////////// BRANDENBURG ////////////////////////////////////
+
+// coalitions 
+Q.brandenburg_groko = 0; 
+Q.brandenburg_traffic_light = 0; 
+Q.brandenburg_rot_rot_grun = 1; 
+Q.brandenburg_jamaica = 0; 
+Q.brandenburg_rot_rot = 0; 
+Q.brandenburg_kenya = 0; 
+Q.brandenburg_schwarz_blau = 0; 
+Q.brandenburg_tigerenten = 0;
+Q.brandenburg_kiwi = 0; 
+Q.brandenburg_die_linke_maj = 0;
+Q.brandenburg_afd_maj = 0;
+Q.brandenburg_rot_grun = 0; 
+Q.brandenburg_spd_maj = 0; 
+Q.brandenburg_green_maj = 0; 
+Q.brandenburg_cdu_maj = 0; 
+Q.brandenburg_weimar_but_different = 0;
+Q.brandenburg_red_purple = 0;
+Q.brandenburg_brombeer = 0;
+Q.brandenburg_querfront = 0;
+
+// coalition potential seats
+
+Q.brandenburg_pot_groko = 0; 
+Q.brandenburg_pot_traffic_light = 0; 
+Q.brandenburg_pot_rot_rot_grun = 0; 
+Q.brandenburg_pot_jamaica = 0; 
+Q.brandenburg_pot_rot_rot = 0; 
+Q.brandenburg_pot_kenya = 0; 
+Q.brandenburg_pot_schwarz_blau = 0; 
+Q.brandenburg_pot_tigerenten = 0;
+Q.brandenburg_pot_kiwi = 0; 
+Q.brandenburg_pot_die_linke_maj = 0;
+Q.brandenburg_pot_afd_maj = 0;
+Q.brandenburg_pot_rot_grun = 0; 
+Q.brandenburg_pot_spd_maj = 0; 
+Q.brandenburg_pot_green_maj = 0; 
+Q.brandenburg_pot_cdu_maj = 0; 
+Q.brandenburg_pot_weimar_but_different = 0;
+Q.brandenburg_pot_red_purple = 0;
+Q.brandenburg_pot_brombeer = 0;
+Q.brandenburg_pot_querfront = 0;
+
+// seats
+Q.spd_r_brandenburg = 0;
+Q.linke_r_brandenburg = 0;
+Q.cdu_r_brandenburg = 0;
+Q.greens_r_brandenburg = 0;
+Q.afd_r_brandenburg = 0;
+Q.fdp_r_brandenburg = 0;
+Q.bsw_r_brandenburg = 0;
+
+Q.total_r_brandenburg = 0;
+
+// votes?
+Q.spd_brandenburg_elections_vote = 0;
+Q.linke_brandenburg_elections_vote = 0;
+Q.fdp_brandenburg_elections_vote = 0;
+Q.afd_brandenburg_elections_vote = 0;
+Q.greens_brandenburg_elections_vote = 0;
+Q.cdu_brandenburg_elections_vote = 0;
+Q.bsw_brandenburg_elections_vote = 0;
+
+Q.next_election_year_brandenburg = 2024;
+Q.next_election_month_brandenburg = 9;
+Q.n_elections_brandenburg = 0;
+Q.next_election_time_brandenburg = 40;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
