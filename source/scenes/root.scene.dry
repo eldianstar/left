@@ -506,7 +506,7 @@ Q.bawu_rot_rot = 0;
 Q.bawu_kenya = 0; 
 Q.bawu_schwarz_blau = 0; 
 Q.bawu_tigerenten = 0;
-Q.bawu_kiwi = 0; 
+Q.bawu_kiwi = 1; 
 Q.bawu_die_linke_maj = 0;
 Q.bawu_afd_maj = 0;
 Q.bawu_rot_grun = 0; 
@@ -560,10 +560,80 @@ Q.greens_bawu_elections_vote = 0;
 Q.cdu_bawu_elections_vote = 0;
 Q.bsw_bawu_elections_vote = 0;
 
-Q.next_election_year_bawu = 2021;
+Q.next_election_year_bawu = 2026;
 Q.next_election_month_bawu = 3;
 Q.n_elections_bawu = 0;
 Q.next_election_time_bawu = 58;
+
+//////////////////////////// BAVARIA ///////////////////////////////////////
+
+// coalitions 
+Q.bavaria_groko = 0; 
+Q.bavaria_traffic_light = 0; 
+Q.bavaria_rot_rot_grun = 0; 
+Q.bavaria_jamaica = 0; 
+Q.bavaria_rot_rot = 0; 
+Q.bavaria_kenya = 0; 
+Q.bavaria_schwarz_blau = 0; 
+Q.bavaria_tigerenten = 0;
+Q.bavaria_kiwi = 1; 
+Q.bavaria_die_linke_maj = 0;
+Q.bavaria_afd_maj = 0;
+Q.bavaria_rot_grun = 0; 
+Q.bavaria_spd_maj = 0; 
+Q.bavaria_green_maj = 0; 
+Q.bavaria_csu_maj = 0; 
+Q.bavaria_weimar_but_different = 0;
+Q.bavaria_red_purple = 0;
+Q.bavaria_brombeer = 0;
+Q.bavaria_querfront = 0;
+
+// coalition potential seats
+
+Q.bavaria_pot_groko = 0; 
+Q.bavaria_pot_traffic_light = 0; 
+Q.bavaria_pot_rot_rot_grun = 0; 
+Q.bavaria_pot_jamaica = 0; 
+Q.bavaria_pot_rot_rot = 0; 
+Q.bavaria_pot_kenya = 0; 
+Q.bavaria_pot_schwarz_blau = 0; 
+Q.bavaria_pot_tigerenten = 0;
+Q.bavaria_pot_kiwi = 0; 
+Q.bavaria_pot_die_linke_maj = 0;
+Q.bavaria_pot_afd_maj = 0;
+Q.bavaria_pot_rot_grun = 0; 
+Q.bavaria_pot_spd_maj = 0; 
+Q.bavaria_pot_green_maj = 0; 
+Q.bavaria_pot_csu_maj = 0; 
+Q.bavaria_pot_weimar_but_different = 0;
+Q.bavaria_pot_red_purple = 0;
+Q.bavaria_pot_brombeer = 0;
+Q.bavaria_pot_querfront = 0;
+
+// seats
+Q.spd_r_bavaria = 0;
+Q.linke_r_bavaria = 0;
+Q.csu_r_bavaria = 0;
+Q.greens_r_bavaria = 0;
+Q.afd_r_bavaria = 0;
+Q.fw_r_bavaria = 0;
+Q.bsw_r_bavaria = 0;
+
+Q.total_r_bavaria = 0;
+
+// votes?
+Q.spd_bavaria_elections_vote = 0;
+Q.linke_bavaria_elections_vote = 0;
+Q.fw_bavaria_elections_vote = 0;
+Q.afd_bavaria_elections_vote = 0;
+Q.greens_bavaria_elections_vote = 0;
+Q.csu_bavaria_elections_vote = 0;
+Q.bsw_bavaria_elections_vote = 0;
+
+Q.next_election_year_bavaria = 2026;
+Q.next_election_month_bavaria = 3;
+Q.n_elections_bavaria = 0;
+Q.next_election_time_bavaria = 58;
 
 //////////////////////// BERLIN ////////////////////////////////
 
