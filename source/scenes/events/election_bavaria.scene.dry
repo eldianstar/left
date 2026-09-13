@@ -508,7 +508,7 @@ on-arrival: spd_relation -= 2; greens_relation -= 2; urban_linke += 0.3; bavaria
 Our campaign has paid off, and we can finally form a majority government! This is a historic moment for our party.
 
 @redred
-view-if: bavaria_pot_rot_rot >= 40
+view-if: bavaria_pot_rot_rot >= 40 and bavaria_pot_spd_maj < 50
 choose-if: spd_relation >= 45
 unavailable_subtitle: Our relations with the SPD aren't good enough.
 on-arrival: spd_relation += 1; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 0; bavaria_jamaica = 0; bavaria_rot_rot = 1; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
@@ -516,7 +516,7 @@ on-arrival: spd_relation += 1; bavaria_groko = 0; bavaria_traffic_light = 0; bav
 We have decided to form a coalition with the <span style="color: [+ spd_color +];">**SPD**</span>.
 
 @rrgreen
-view-if: bavaria_pot_rot_rot_grun >= 50
+view-if: bavaria_pot_rot_rot_grun >= 50 and bavaria_pot_rot_grun < 50
 choose-if: spd_relation >= 40 and greens_relation >= 40
 unavailable-subtitle: Our relations with the moderate left aren't good enough.
 on-arrival: spd_relation += 1; greens_relation += 1; bavaria_groko = 0; bavaria_traffic_light = 0; bavaria_rot_rot_grun = 1; bavaria_jamaica = 0; bavaria_rot_rot = 0; bavaria_kenya = 0; bavaria_schwarz_blau = 0; bavaria_tigerenten = 0; bavaria_kiwi = 0; bavaria_die_linke_maj = 0; bavaria_afd_maj = 0; bavaria_rot_grun = 0; bavaria_spd_maj = 0; bavaria_green_maj = 0; bavaria_csu_maj = 0; bavaria_weimar_but_different = 0; bavaria_red_purple = 0; bavaria_brombeer = 0; bavaria_querfront = 0;
