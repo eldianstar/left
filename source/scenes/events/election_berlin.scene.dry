@@ -14,7 +14,7 @@ priority: 2
 = Berlin state election, [+ month : month +] [+ year +]
 
 <img src="img/berlin.png" style="width: 45%;border: 5px solid var(--card-border-color);border-radius: 8px;float: left;vertical-align: top;"><img src="img/berlin_map.jpg" style="width: 45%;border: 5px solid var(--card-border-color);border-radius: 8px;float: right;vertical-align: top;">
-<br>
+<br><br>
 
 The regularly scheduled elections for the Berlin Abgeordnetenhaus are to take place. The incumbent government is a [? if berlin_groko = 1 : <span style="color: [+ cdu_color +];">Black</span>-<span style="color: [+ spd_color +];">Red</span> ?][? if berlin_traffic_light = 1 : <span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ fdp_color +];">Yellow</span>-<span style="color: [+ greens_color +];">Green</span> ?][? if berlin_rot_rot_grun = 1 : <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ greens_color +];">Green</span> ?][? if berlin_jamaica = 1 : <span style="color: [+ cdu_color +];">Black</span>-<span style="color: [+ fdp_color +];">Yellow</span>-<span style="color: [+ greens_color +];">Green</span> ?][? if berlin_rot_rot = 1 : <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">Red</span> ?][? if berlin_kenya = 1 : <span style="color: [+ cdu_color +];">Black</span>-<span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ greens_color +];">Green</span> ?][? if berlin_schwarz_blau = 1 : <span style="color: [+ cdu_color +];">Black</span>-<span style="color: [+ afd_color +];">Blue</span> ?][? if berlin_tigerenten = 1 : <span style="color: [+ cdu_color +];">Black</span>-<span style="color: [+ fdp_color +];">Yellow</span> ?][? if berlin_kiwi = 1 : <span style="color: [+ greens_color +];">Green</span>-<span style="color: [+ cdu_color +];">Black</span> ?][? if berlin_die_linke_maj = 1 : <span style="color: [+ linke_color +];">Red</span> ?][? if berlin_afd_maj = 1 : <span style="color: [+ afd_color +];">Blue</span> ?][? if berlin_rot_grun = 1 : <span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ greens_color +];">Green</span> ?][? if berlin_spd_maj = 1 : <span style="color: [+ spd_color +];">Red</span> ?][? if berlin_green_maj = 1 : <span style="color: [+ greens_color +];">Green</span> ?][? if berlin_cdu_maj = 1 : <span style="color: [+ cdu_color +];">Black</span> ?][? if berlin_weimar_but_different = 1 : <span style="color: [+ cdu_color +];">Black</span>-<span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ fdp_color +];">Yellow</span> ?] government.
 
@@ -241,6 +241,14 @@ Q.cdu_r_berlin = Q.cdu_votes*berlin_adjustment_r_factors.cdu;
 if (Q.issue_environment >= 5) berlin_adjustment_r_factors.greens += 0.1;
 Q.greens_r_berlin = Q.greens_votes*berlin_adjustment_r_factors.greens;
 Q.bsw_r_berlin = Q.bsw_votes*berlin_adjustment_r_factors.bsw;
+
+if (Q.spd_berlin_elections_vote < 5) Q.spd_r_berlin = 0;
+if (Q.linke_berlin_elections_vote < 5) Q.linke_r_berlin = 0;
+if (Q.greens_berlin_elections_vote < 5) Q.greens_r_berlin = 0;
+if (Q.fdp_berlin_elections_vote < 5) Q.fdp_r_berlin = 0;
+if (Q.afd_berlin_elections_vote < 5) Q.afd_r_berlin = 0;
+if (Q.cdu_berlin_elections_vote < 5) Q.cdu_r_berlin = 0;
+if (Q.bsw_berlin_elections_vote < 5) Q.bsw_r_berlin = 0;
 
 Q.total_r_berlin = 0;
 
