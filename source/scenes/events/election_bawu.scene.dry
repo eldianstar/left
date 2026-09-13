@@ -22,11 +22,11 @@ The regularly scheduled elections for the Baden-Württemberg Landtag are to take
 on-arrival: {!
 
 var bawu_adjustment_factors = {
-    spd: 0.55,
+    spd: 0.60,
     linke: 0.40,
     fdp: 0.95,
     cdu: 1.05,
-    afd: 0.85,
+    afd: 0.90,
     greens: 2.0,
     bsw: 0.55,
 };
@@ -157,7 +157,7 @@ if (Q.bsw_bawu_elections_vote >= 1.4) Q.bsw_r_bawu = Q.bsw_bawu_elections_vote;
 
 var bawu_adjustment_r_factors = {
     spd: 0.55,
-    linke: 0.60,
+    linke: 0.40,
     fdp: 0.95,
     cdu: 1.05,
     afd: 0.85,
@@ -422,7 +422,7 @@ setTimeout(function() {
 
 !}
 
-**bawu results:**
+**Baden-Württemberg results:**
 
 {!<svg id="bawu_landtag" style="width: 500px; height: 250px;"> </svg>!}
 
