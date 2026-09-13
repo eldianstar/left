@@ -770,7 +770,7 @@ Q.greens_brandenburg_elections_vote = 0;
 Q.cdu_brandenburg_elections_vote = 0;
 Q.bsw_brandenburg_elections_vote = 0;
 
-Q.next_election_year_brandenburg = 2024;
+Q.next_election_year_brandenburg = 2021;
 Q.next_election_month_brandenburg = 9;
 Q.n_elections_brandenburg = 0;
 Q.next_election_time_brandenburg = 40;
