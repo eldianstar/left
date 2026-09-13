@@ -495,12 +495,12 @@ Q.ampelkoalition_failed = 0;
 ////////////////////////////////////////////////////////////////////////////////
 
 
-/// BERLIN
+//////////////////////// BERLIN ////////////////////////////////
 
 // coalitions 
 Q.berlin_groko = 0; 
 Q.berlin_traffic_light = 0; 
-Q.berlin_rot_rot_grun = 0; 
+Q.berlin_rot_rot_grun = 1; 
 Q.berlin_jamaica = 0; 
 Q.berlin_rot_rot = 0; 
 Q.berlin_kenya = 0; 
