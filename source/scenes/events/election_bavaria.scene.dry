@@ -428,7 +428,7 @@ setTimeout(function() {
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>Landtag Seats</td></tr>!}
-{!<tr><td><div class="box" style='background-color:[+ linke_color +]; outline: 2px; outline-style: solid;'> </div> !} <span style="color: [+ linke_color +];">**Die Linke**</span>: {!</td><td>!} **[+ linke_bavaria_elections_vote +]%** {!</td><td>!} [+ linke_r_bavaria +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#BC2D72'; outline: 2px; outline-style: solid;'> </div> !} <span style="color: [+ linke_color +];">**Die Linke**</span>: {!</td><td>!} **[+ linke_bavaria_elections_vote +]%** {!</td><td>!} [+ linke_r_bavaria +]% {!</td></tr>!}
 
 [? if bsw_split : {!<tr><td><div class="box" style='background-color:#4C0B5F'> </div> !}<span style="color: [+ bsw_color +];">**BSW**</span>: {!</td><td>!} [+ bsw_bavaria_elections_vote +]% {!</td><td>!} [+ bsw_r_bavaria +]% {!</td></tr>!} ?]
 
@@ -436,7 +436,7 @@ setTimeout(function() {
 
 {!<tr><td><div class="box" style='background-color:#1AA037'> </div> !}<span style="color: [+ greens_color +];">**B90/Greens**</span>: {!</td><td>!} [+ greens_bavaria_elections_vote +]% {!</td><td>!} [+ greens_r_bavaria +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:[+ fw_color +]'> </div> !}<span style="color: [+ fw_color +];">**Free Voters**</span>: {!</td><td>!} [+ fw_bavaria_elections_vote +]% {!</td><td>!} [+ fw_r_bavaria +]%  {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ff6600'> </div> !}<span style="color: [+ fw_color +];">**Free Voters**</span>: {!</td><td>!} [+ fw_bavaria_elections_vote +]% {!</td><td>!} [+ fw_r_bavaria +]%  {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#000000'> </div> !}<span style="color: [+ csu_color +];">**CSU**</span>: {!</td><td>!} [+ csu_bavaria_elections_vote +]% {!</td><td>!} [+ csu_r_bavaria +]%  {!</td></tr>!}
 
