@@ -127,8 +127,7 @@ on-arrival: {!
         Q['old_' + party + '_b'] = Q[party + '_b']; // Store the original b value for comparison
         
         // Handle constitutional reform logic: set the party's share to 0 based on conditions
-        if (Q.constitutional_reform > 0 &&
-             (Q[party + '_votes'] < Q.electoral_threshold || 
+        if ((Q[party + '_votes'] < Q.electoral_threshold || 
              (Q.electoral_threshold > 1 && party === 'other')) 
             || Q[party + '_banned']) {
             Q[party + '_b'] = 0;
@@ -138,7 +137,7 @@ on-arrival: {!
             Q[party + '_b'] = Math.round(Q[party + '_votes'] * factor * 10) / 10;
         }
         
-        if (Q[party + '_b'] > 5) {
+        if (Q[party + '_b'] > 0) {
             if (factor !== 1.0) { // Only apply to parties with adjustment factors
                 // Calculate the Reichstag without the current party's share
                 Q['bundestag_without_' + party] = 100 - Q['original_' + party + '_b'];
