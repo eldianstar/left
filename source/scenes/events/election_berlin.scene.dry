@@ -133,7 +133,7 @@ if (Q.total_votes_berlin > 0) {
     Q.bsw_berlin_elections_vote = (Q.bsw_berlin_elections_vote / Q.total_votes_berlin) * 100;
     let target = 14;
     Q.linke_berlin_elections_vote = Math.round((Q.linke_berlin_elections_vote + (target - Q.linke_berlin_elections_vote) * 0.35) * 10) / 10;
-    Q.total_votes_berlin = Q.spd_berlin_elections_vote + Q.linke_berlin_elections_vote + Q.greens_berlin_elections_vote + Q.fdp_berlin_elections_vote + Q.afd_berlin_elections_vote + Q.cdu_berlin_elections_vote;
+    Q.total_votes_berlin = Q.spd_berlin_elections_vote + Q.linke_berlin_elections_vote + Q.greens_berlin_elections_vote + Q.fdp_berlin_elections_vote + Q.afd_berlin_elections_vote + Q.cdu_berlin_elections_vote + Q.bsw_berlin_elections_vote;
     Q.spd_berlin_elections_vote = (Q.spd_berlin_elections_vote / Q.total_votes_berlin) * 100;
     Q.linke_berlin_elections_vote = (Q.linke_berlin_elections_vote / Q.total_votes_berlin) * 100;
     Q.greens_berlin_elections_vote = (Q.greens_berlin_elections_vote / Q.total_votes_berlin) * 100;
