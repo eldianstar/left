@@ -631,10 +631,10 @@ Q.greens_bavaria_elections_vote = 0;
 Q.csu_bavaria_elections_vote = 0;
 Q.bsw_bavaria_elections_vote = 0;
 
-Q.next_election_year_bavaria = 2026;
-Q.next_election_month_bavaria = 3;
+Q.next_election_year_bavaria = 2023;
+Q.next_election_month_bavaria = 10;
 Q.n_elections_bavaria = 0;
-Q.next_election_time_bavaria = 58;
+Q.next_election_time_bavaria = 26;
 
 //////////////////////// BERLIN ////////////////////////////////
 
