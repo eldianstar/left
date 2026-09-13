@@ -491,7 +491,7 @@ setTimeout(function() {
 - @jamaica: Let a <span style="color: [+ cdu_color +];">Ja</span><span style="color: [+ greens_color +];">mai</span><span style="color: [+ fdp_color +];">can</span> coalition be formed ([+ bawu_pot_jamaica +]%).
 - @kenya: Let a <span style="color: [+ cdu_color +];">Ken</span><span style="color: [+ spd_color +];">yan co</span><span style="color: [+ greens_color +];">alition</span> be formed ([+ bawu_pot_kenya +]%).
 - @midnight: Let a <span style="color: [+ cdu_color +];">Mid</span><span style="color: [+ afd_color +];">night</span> coalition be formed ([+ bawu_pot_schwarz_blau +]%).
-- @tigerente: Let a <span style="color: [+ cdu_color +];">Tiger</span><span style="color: [+ fdp_color +];">ente</span> coalition be formed ([+ bawu_pot_tigerente +]%).
+- @tigerente: Let a <span style="color: [+ cdu_color +];">Tiger</span><span style="color: [+ fdp_color +];">ente</span> coalition be formed ([+ bawu_pot_tigerenten +]%).
 - @kiwi: Let a <span style="color: [+ cdu_color +];">Ki</span><span style="color: [+ greens_color +];">wi</span> coalition be formed ([+ bawu_pot_kiwi +]%).
 - @redgreen: Let a <span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ greens_color +];">green</span> coalition be formed ([+ bawu_pot_rot_grun +]%).
 - @germany: Let a <span style="color: [+ cdu_color +];">Ger</span><span style="color: [+ spd_color +];">ma</span><span style="color: [+ fdp_color +];">ny</span> coalition be formed ([+ bawu_pot_weimar_but_different +]%).
@@ -550,7 +550,7 @@ on-arrival: spd_relation -= 1; greens_relation -= 1; bawu_groko = 0; bawu_traffi
 A Traffic Light coalition has been formed.
 
 @jamaica
-view-if: bawu_pot_jamaica >= 50 and bawu_pot_kiwi < 50 and bawu_pot_tigerente < 50 and (bawu_pot_traffic_light < 50 or ampelkoalition_failed = 1)
+view-if: bawu_pot_jamaica >= 50 and bawu_pot_kiwi < 50 and bawu_pot_tigerenten < 50 and (bawu_pot_traffic_light < 50 or ampelkoalition_failed = 1)
 on-arrival: greens_relation -= 1; bawu_groko = 0; bawu_traffic_light = 0; bawu_rot_rot_grun = 0; bawu_jamaica = 1; bawu_rot_rot = 0; bawu_kenya = 0; bawu_schwarz_blau = 0; bawu_tigerenten = 0; bawu_kiwi = 0; bawu_die_linke_maj = 0; bawu_afd_maj = 0; bawu_rot_grun = 0; bawu_spd_maj = 0; bawu_green_maj = 0; bawu_cdu_maj = 0; bawu_weimar_but_different = 0; bawu_red_purple = 0; bawu_brombeer = 0; bawu_querfront = 0;
 
 A Jamaican coalition has been formed.
@@ -568,13 +568,13 @@ on-arrival: cdu_relation -= 2; bawu_groko = 0; bawu_traffic_light = 0; bawu_rot_
 A Midnight coalition has been formed. The Fascists are in power.
 
 @tigerente
-view-if: bawu_pot_tigerente >= 50
+view-if: bawu_pot_tigerenten >= 50
 on-arrival: fdp_relation -= 1; spd_relation += 1; greens_relation += 1; bawu_groko = 0; bawu_traffic_light = 0; bawu_rot_rot_grun = 0; bawu_jamaica = 0; bawu_rot_rot = 0; bawu_kenya = 0; bawu_schwarz_blau = 0; bawu_tigerenten = 1; bawu_kiwi = 0; bawu_die_linke_maj = 0; bawu_afd_maj = 0; bawu_rot_grun = 0; bawu_spd_maj = 0; bawu_green_maj = 0; bawu_cdu_maj = 0; bawu_weimar_but_different = 0; bawu_red_purple = 0; bawu_brombeer = 0; bawu_querfront = 0;
 
 A liberal-conservative Tiger-duck coalition has been formed.
 
 @kiwi
-view-if: bawu_pot_kiwi >= 50 and bawu_pot_tigerente < 50 and bawu_pot_rot_grun < 50
+view-if: bawu_pot_kiwi >= 50 and bawu_pot_tigerenten < 50 and bawu_pot_rot_grun < 50
 on-arrival: greens_relation -= 1; youth_greens -= 0.4; youth_spd += 0.4; bawu_groko = 0; bawu_traffic_light = 0; bawu_rot_rot_grun = 0; bawu_jamaica = 0; bawu_rot_rot = 0; bawu_kenya = 0; bawu_schwarz_blau = 0; bawu_tigerenten = 0; bawu_kiwi = 1; bawu_die_linke_maj = 0; bawu_afd_maj = 0; bawu_rot_grun = 0; bawu_spd_maj = 0; bawu_green_maj = 0; bawu_cdu_maj = 0; bawu_weimar_but_different = 0; bawu_red_purple = 0; bawu_brombeer = 0; bawu_querfront = 0;
 
 A Kiwi coalition has been formed.
