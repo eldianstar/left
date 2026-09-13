@@ -317,18 +317,15 @@ if (Q.spd_b >= Q.cdu_b && Q.spd_b >= Q.linke_b && Q.spd_b >= Q.afd_b) {
 
 // coalitions
 
-Q.rrgreen_coalition = parseFloat((Q.linke_b + Q.spd_b + Q.greens_b).toFixed(1));
-Q.ampelkoalition_coalition = parseFloat((Q.spd_b + Q.greens_b + Q.fdp_b).toFixed(1));
-Q.linke_bsw_coalition = parseFloat((Q.linke_b + Q.bsw_b).toFixed(1));
-Q.groko_combo = parseFloat((Q.spd_b + Q.cdu_b).toFixed(1));
-Q.bahamas_coalition_combo = parseFloat((Q.afd_b + Q.cdu_b + Q.fdp_b).toFixed(1));
-Q.midnight_coalition_combo = parseFloat((Q.afd_b + Q.cdu_b).toFixed(1));
-Q.kenya_coalition_combo = parseFloat((Q.spd_b + Q.greens_b + Q.cdu_b).toFixed(1));
-
+Q.rrgreen_pot = parseFloat((Q.linke_b + Q.spd_b + Q.greens_b).toFixed(1));
+Q.ampelkoalition_pot = parseFloat((Q.spd_b + Q.greens_b + Q.fdp_b).toFixed(1));
+Q.purple_red_pot = parseFloat((Q.linke_b + Q.bsw_b).toFixed(1));
+Q.groko_pot = parseFloat((Q.spd_b + Q.cdu_b).toFixed(1));
+Q.bahamas_pot = parseFloat((Q.afd_b + Q.cdu_b + Q.fdp_b).toFixed(1));
+Q.midnight_pot = parseFloat((Q.afd_b + Q.cdu_b).toFixed(1));
+Q.kenya_pot = parseFloat((Q.spd_b + Q.greens_b + Q.cdu_b).toFixed(1));
 
 Q.leverage = Q.linke_b;
-// if (Q.right_coalition >= 50 && (Q.dnvp_ideology == "Moderate" || Q.dnvp_westarp) || Q.center_right_coalition >= 50 && Q.dnvp_ideology == "Moderate") Q.leverage -= 5;
-
 
 Q.coalition_dissent = 0;
 Q.greens_coalition_dissent = 0;
@@ -491,14 +488,23 @@ if (window && d3) {
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 <table>
 {!<tr><th>Party</th><th>Vote share</th><th>% Change</th><td>Reichstag Seats</th><th>% Change</th></tr>!}
-{!<tr><td><div class="box" style='background-color:#700000'> </div> !}Left: {!</td><td>!} [+ linke_votes +]% {!</td><td>!} [+ str_votes_change_linke +] {!</td><td>!} [+ linke_b +]% {!</td><td>!} [+ str_change_linke +] {!</td></tr>!}
-[? if bsw_split: {!<tr><td><div class="box" style='background-color:#700000'> </div> !}BSW: {!</td><td>!} [+ bsw_votes +]% {!</td><td>!} [+ str_votes_change_bsw +] {!</td><td>!} [+ bsw_b +]% {!</td><td>!} [+ str_change_bsw +] {!</td></tr>!} ?]
-{!<tr><td><div class="box" style='background-color:#700000'> </div> !}SPD: {!</td><td>!} [+ spd_votes +]% {!</td><td>!} [+ str_votes_change_spd +] {!</td><td>!} [+ spd_b +]% {!</td><td>!} [+ str_change_spd +] {!</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#700000'> </div> !}B90/Greens: {!</td><td>!} [+ greens_votes +]% {!</td><td>!} [+ str_votes_change_greens +] {!</td><td>!} [+ greens_b +]% {!</td><td>!} [+ str_change_greens +] {!</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#700000'> </div> !}FDP: {!</td><td>!} [+ fdp_votes +]% {!</td><td>!} [+ str_votes_change_fdp +] {!</td><td>!} [+ fdp_b +]% {!</td><td>!} [+ str_change_fdp +] {!</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#000'> </div> !}CDU: {!</td><td>!} [+ cdu_minus_csu_votes +]% {!</td><td>!} [+ str_votes_change_cdu +] {!</td><td>!} [+ cdu_minus_csu_b +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#A2D8E0'> </div> !}CSU: {!</td><td>!} [+ csu_votes +]% {!</td><td>!} [+ str_votes_change_csu +] {!</td><td>!} [+ csu_b +]% {!</td><td>!} [+ str_change_csu +] {!</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#700000'> </div> !}AfD: {!</td><td>!} [+ afd_votes +]% {!</td><td>!} [+ str_votes_change_afd +] {!</td><td>!} [+ afd_b +]% {!</td><td>!} [+ str_change_afd +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#BC2D72; outline: 2px; outline-style: solid;'> </div> !}<span style="color: [+ linke_color +];">**Die Linke**</span>: {!</td><td>!} [+ linke_votes +]% {!</td><td>!} [+ str_votes_change_linke +] {!</td><td>!} [+ linke_b +]% {!</td><td>!} [+ str_change_linke +] {!</td></tr>!}
+
+[? if bsw_split: {!<tr><td><div class="box" style='background-color:#4C0B5F'> </div> !}<span style="color: [+ bsw_color +];">**BSW**</span>: {!</td><td>!} [+ bsw_votes +]% {!</td><td>!} [+ str_votes_change_bsw +] {!</td><td>!} [+ bsw_b +]% {!</td><td>!} [+ str_change_bsw +] {!</td></tr>!} ?]
+
+{!<tr><td><div class="box" style='background-color:#E3000F'> </div> !}<span style="color: [+ spd_color +];">**SPD**</span>: {!</td><td>!} [+ spd_votes +]% {!</td><td>!} [+ str_votes_change_spd +] {!</td><td>!} [+ spd_b +]% {!</td><td>!} [+ str_change_spd +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#1AA037'> </div> !}<span style="color: [+ greens_color +];">**B90/Greens**</span>: {!</td><td>!} [+ greens_votes +]% {!</td><td>!} [+ str_votes_change_greens +] {!</td><td>!} [+ greens_b +]% {!</td><td>!} [+ str_change_greens +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#FFD600'> </div> !}<span style="color: [+ fdp_color +];">**FDP**</span>: {!</td><td>!} [+ fdp_votes +]% {!</td><td>!} [+ str_votes_change_fdp +] {!</td><td>!} [+ fdp_b +]% {!</td><td>!} [+ str_change_fdp +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#00000'> </div> !}<span style="color: [+ cdu_color +];">**CDU**</span>: {!</td><td>!} [+ cdu_minus_csu_votes +]% {!</td><td>!} [+ str_votes_change_cdu +] {!</td><td>!} [+ cdu_minus_csu_b +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#003863'> </div> !}<span style="color: [+ csu_color +];">**CSU**</span>: {!</td><td>!} [+ csu_votes +]% {!</td><td>!} [+ str_votes_change_csu +] {!</td><td>!} [+ csu_b +]% {!</td><td>!} [+ str_change_csu +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#0489db'> </div> !} <span style="color: [+ afd_color +];">**AfD**</span>: {!</td><td>!} [+ afd_votes +]% {!</td><td>!} [+ str_votes_change_afd +] {!</td><td>!} [+ afd_b +]% {!</td><td>!} [+ str_change_afd +] {!</td></tr>!}
+
 </table>
 
 {!<button class="tab_button" id="demographics_tab" onclick="window.toggleDem();">Demographic Results</button>!}
@@ -575,21 +581,21 @@ if (window && d3) {
 
 **Potential coalitions:**
 
-[? if linke_b >= 45 : Left majority government: [+ linke_b +]% ?]
+[? if linke_b >= 45 : Left Majority [+ linke_b +]% ?]
 
-[? if (linke_b + greens_b + spd_b) >= 40 : Red-red-green coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span>): [+ (linke_b + spd_b + greens_b) +]% ?]
+[? if rrgreen_pot >= 45 : Red-Red-Green Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ rrgreen_pot +]% ?]
 
-[? if ampelkoalition_failed = 0 and (spd_b + greens_b + fdp_b) >= 40 : Traffic Light Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span>): [+ (spd_b + greens_b + fdp_b) +]% ?]
+[? if ampelkoalition_failed = 0 and ampelkoalition_pot >= 45 : Traffic Light Coalition (<span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ fdp_color +];">FDP</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ ampelkoalition_pot +]% ?]
 
-[? if (linke_b + bsw_b) >= 40 : Purple coalition (linke+bsw): [+ (linke_b + bsw_b) +]% ?]
+[? if purple_red_pot >= 45 : Red-Purple Coalition (<span style="color: [+ linke_color +];">The Left</span> + <span style="color: [+ bsw_color +];">BSW</span>): [+ purple_red_pot +]% ?]
 
-[? if (spd_b + cdu_b) >= 40 and ampelkoalition_failed : Grand Coalition(cdu/csu+spd): [+ (spd_b + cdu_b) +]% ?]
+[? if groko_pot >= 45 and ampelkoalition_failed : Grand Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span>): [+ groko_pot +]% ?]
 
-[? if (spd_b + greens_b + cdu_b) >= 40 and ampelkoalition_failed and (spd_b + cdu_b) < 45 : Kenyan coalition(cdu/csu+spd+greens): [+ (cdu_b + spd_b + greens_b) +]% ?]
+[? if kenya_pot >= 45 and ampelkoalition_failed and groko_pot < 50 : Kenyan Coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ spd_color +];">SPD</span> + <span style="color: [+ greens_color +];">Greens</span>): [+ kenya_pot +]% ?]
 
-[? if brandmauer = 0 and (cdu_b + afd_b) >= 40 : Midnight coalition(afd+cdu/csu): [+ (afd_b + cdu_b) +]% ?]
+[? if brandmauer = 0 and midnight_pot >= 40 : Midnight coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ afd_color +];">AfD</span>): [+ midnight_pot +]% ?]
 
-[? if brandmauer = 0 and (cdu_b + afd_b) < 45 and (cdu_b + afd_b + fdp_b) >= 45 : Bahaman coalition(afd+cdu/csu+fdp): [+ (afd_b + cdu_b + fdp_b) +]% ?]
+[? if brandmauer = 0 and midnight_pot < 50 and bahamas_pot >= 45 : Bahaman coalition (<span style="color: [+ cdu_color +];">CDU</span> + <span style="color: [+ fdp_color +];">FDP</span> + <span style="color: [+ afd_color +];">AfD</span>): [+ bahamas_pot +]% ?]
 
 There are some potential coalition arrangements.
 
@@ -604,54 +610,72 @@ There are some potential coalition arrangements.
 - @no_majority
 
 @do_linke_majority
-title: text linke maj
+title: We can form a majority government!
 view-if: linke_b >= 50
-on-arrival: linke_in_government = 1; in_linke_majority = 1
+on-arrival: linke_in_government = 1; linke_maj = 1; leverage = 1000;
+go-to: ministries
+
+Our years of campaigns have paid off, and we can finally form a majority government! This is a historic moment for our party.
 
 @do_linke_bsw
-title: text linbsw
-view-if: (linke_b + bsw_b) >= 50
+title: Form a <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ bsw_color +];">purple</span> coalition.
+view-if: purple_red_pot >= 50
 choose-if: bsw_relation >= 60
-on-arrival: bsw_in_government = 1; linke_in_government = 1; in_linke_bsw_coalition = 1
+unavailable-subtitle: Our relations with Wagenknecht aren't good enough.
+on-arrival: bsw_in_government = 1; linke_in_government = 1; purple_red = 1;
 go-to: ministries
+
+We have formed a federal Red-purple coalition with the BSW.
 
 @rrgreen_coalition_do
-title: text r2g
-view-if: (linke_b + spd_b + greens_b) >= 50
+title: Form a <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">red</span>-<span style="color: [+ greens_color +];">green</span> coalition.
+view-if: rrgreen_pot >= 50
 choose-if: (greens_relation >= 60 and spd_relation >= 60)
-on-arrival: linke_in_government = 1; greens_in_government = 1; spd_in_government = 1; in_rrgreen_coalition = 1
+on-arrival: linke_in_government = 1; greens_in_government = 1; spd_in_government = 1; rrgreen = 1;
 go-to: ministries
 
+We have formed a <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ spd_color +];">red</span>-<span style="color: [+ greens_color +];">green</span> coalition with the moderate left.
+
 @do_ampelkoalition
-title: text ampel
-view-if: (spd_b + greens_b + fdp_b) >= 50 and ampelkoalition_failed = 0
+title: Let a <span style="color: [+ spd_color +];">Traffic</span> <span style="color: [+ greens_color +];">Light</span> <span style="color: [+ fdp_color +];">coalition</span> be formed.
+view-if: ampelkoalition_pot >= 50 and ampelkoalition_failed = 0
 on-arrival: fdp_in_government = 1; spd_in_government = 1; greens_in_government = 1; ampelkoalition = 1
 
+A Traffic Light Coalition has been formed. This is generally seen as an unwise move by the moderate left.
+
 @do_kenya
-title: text kenya
-view-if: (spd_b + greens_b + cdu_b) >= 50 and ampelkoalition_failed and (spd_b + cdu_b) < 50
-choose-if: brandmauer
-on-arrival: cdu_in_government = 1; spd_in_government = 1; greens_in_government = 1; kenya_coalition = 1
+title: Let a <span style="color: [+ cdu_color +];">Ken</span><span style="color: [+ spd_color +];">yan co</span><span style="color: [+ greens_color +];">alition</span> be formed.
+view-if: ampelkoalition_pot >= 50 and ampelkoalition_failed and groko_pot < 50
+choose-if: brandmauer = 1
+on-arrival: cdu_in_government = 1; spd_in_government = 1; greens_in_government = 1; kenya = 1
+
+A Kenya coalition has been formed.
 
 @do_groko
-title: text_groko
-view-if: (spd_b + cdu_b) >= 50
-choose-if: brandmauer or (cdu_b + afd_b) < 50
+title: Let a <span style="color: [+ cdu_color +];">Grand</span> <span style="color: [+ spd_color +];">coalition</span> be formed
+view-if: groko_pot >= 50
+choose-if: brandmauer or midnight_pot < 50
 on-arrival: cdu_in_government = 1; spd_in_government = 1; groko = 1
+ 
+Yet another Grand Coalition has been formed.
 
 @do_midnight
-title: text midnight
-view-if: brandmauer = 0 and (cdu_b + afd_b) >= 50
-on-arrival: cdu_in_government = 1; afd_in_government = 1; midnight_coalition = 1
+title: Let a <span style="color: [+ cdu_color +];">Mid</span><span style="color: [+ afd_color +];">night</span> coalition be formed. 
+view-if: brandmauer = 0 and midnight_pot >= 50
+on-arrival: cdu_in_government = 1; afd_in_government = 1; midnight = 1
+
+A Midnight coalition has been formed. The Fascists are in power. 
 
 @do_bahamas
-title: text bahamas
-view-if: brandmauer = 0 and (cdu_b + afd_b) < 50 and (afd_b + fdp_b + cdu_b) >= 50
-on-arrival: cdu_in_government = 1; afd_in_government = 1; fdp_in_government = 1; bahamas_coalition = 1
+title: <span style="color: [+ cdu_color +];">Ba</span><span style="color: [+ fdp_color +];">ha</span><span style="color: [+ afd_color +];">mas</span> coalition be formed. 
+view-if: brandmauer = 0 and midnight_pot < 50 and bahamas_pot >= 50
+on-arrival: cdu_in_government = 1; afd_in_government = 1; fdp_in_government = 1; bahamas = 1
+
+A Bahamas coalition has been formed. The Fascists are in power.
 
 @no_majority
 title: There is no clear governing majority.
-view-if: (afd_b + fdp_b + cdu_b) < 50 and (spd_b + greens_b + cdu_b) < 50 and (bsw_b + linke_b) < 50
+view-if: bahamas_pot < 50 and kenya_pot < 50 and purple_red < 50
 go-to: new_elections
 # either new elections, or Hindenburg appoints either Brüning, Papen, Schleicher, or Hitler.
 
@@ -671,13 +695,14 @@ if (Q.next_election_month > 12) {
 }
 !}
 
-There is no path to a workable Reichstag majority or minority government. The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
+There is no path to a workable Bundestag majority or minority government. The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
 
-The people's faith in democracy is shaken by this ordeal. Of course, the <span style="color: #7A3C00;">Nazis</span> are exploiting the instability to claim that democracy is unworkable, and that Germany needs a strong leader.
+The people's faith in democracy is shaken by this ordeal. Of course, the <span style="color: [+ afd_color +];">AfD</span> is exploiting the instability to claim that democracy is unworkable, and that Germany needs a strong government.
 
 
-
-//////////////// STILL TO DO
+/////////////////////////////////////////////////////////////////////////////////////
+////////////////////////// MINISTRIES ///////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
 
 
 @ministries
