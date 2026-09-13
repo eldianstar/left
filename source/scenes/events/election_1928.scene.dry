@@ -499,7 +499,7 @@ if (window && d3) {
 
 {!<tr><td><div class="box" style='background-color:#FFD600'> </div> !}<span style="color: [+ fdp_color +];">**FDP**</span>: {!</td><td>!} [+ fdp_votes +]% {!</td><td>!} [+ str_votes_change_fdp +] {!</td><td>!} [+ fdp_b +]% {!</td><td>!} [+ str_change_fdp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#00000'> </div> !}<span style="color: [+ cdu_color +];">**CDU**</span>: {!</td><td>!} [+ cdu_minus_csu_votes +]% {!</td><td>!} [+ str_votes_change_cdu +] {!</td><td>!} [+ cdu_minus_csu_b +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000000'> </div> !}<span style="color: [+ cdu_color +];">**CDU**</span>: {!</td><td>!} [+ cdu_minus_csu_votes +]% {!</td><td>!} [+ str_votes_change_cdu +] {!</td><td>!} [+ cdu_minus_csu_b +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#003863'> </div> !}<span style="color: [+ csu_color +];">**CSU**</span>: {!</td><td>!} [+ csu_votes +]% {!</td><td>!} [+ str_votes_change_csu +] {!</td><td>!} [+ csu_b +]% {!</td><td>!} [+ str_change_csu +] {!</td></tr>!}
 
