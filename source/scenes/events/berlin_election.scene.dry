@@ -25,10 +25,10 @@ on-arrival: {!
 
 var berlin_adjustment_factors = {
     spd: 0.86,
-    linke: 1.5,
+    linke: 1.8,
     fdp: 0.65,
     cdu: 0.75,
-    afd: 0.75,
+    afd: 0.70,
     greens: 1.09,
     bsw: 1.0,
 };
