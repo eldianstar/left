@@ -23,7 +23,7 @@ on-arrival: {!
 
 var brandenburg_adjustment_factors = {
     spd: 1.85,
-    linke: 0.90,
+    linke: 0.80,
     fdp: 0.15,
     cdu: 0.35,
     afd: 1.45,
@@ -147,8 +147,8 @@ Q.bsw_brandenburg_elections_vote = (Q.bsw_brandenburg_elections_vote != undefine
 /////////////////////////// adj factors seats ////////////////////////////
 
 var brandenburg_adjustment_r_factors = {
-    spd: 1.95,
-    linke: 0.90,
+    spd: 1.85,
+    linke: 0.80,
     fdp: 0.15,
     cdu: 0.35,
     afd: 1.45,
