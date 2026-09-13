@@ -561,7 +561,7 @@ Q.greens_bawu_elections_vote = 0;
 Q.cdu_bawu_elections_vote = 0;
 Q.bsw_bawu_elections_vote = 0;
 
-Q.next_election_year_bawu = 2026;
+Q.next_election_year_bawu = 2021;
 Q.next_election_month_bawu = 3;
 Q.n_elections_bawu = 0;
 Q.next_election_time_bawu = 58;
@@ -631,7 +631,7 @@ Q.greens_bavaria_elections_vote = 0;
 Q.csu_bavaria_elections_vote = 0;
 Q.bsw_bavaria_elections_vote = 0;
 
-Q.next_election_year_bavaria = 2023;
+Q.next_election_year_bavaria = 2021;
 Q.next_election_month_bavaria = 10;
 Q.n_elections_bavaria = 0;
 Q.next_election_time_bavaria = 26;
