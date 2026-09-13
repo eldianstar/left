@@ -127,7 +127,7 @@ if (Q.total_votes_bawu > 0) {
     Q.bsw_bawu_elections_vote = (Q.bsw_bawu_elections_vote / Q.total_votes_bawu) * 100;
     let target = 3;
     Q.linke_bawu_elections_vote = Math.round((Q.linke_bawu_elections_vote + (target - Q.linke_bawu_elections_vote) * 0.35) * 10) / 10;
-    Q.total_votes_bawu = Q.spd_bawu_elections_vote + Q.linke_bawu_elections_vote + Q.greens_bawu_elections_vote + Q.fdp_bawu_elections_vote + Q.afd_bawu_elections_vote + Q.cdu_bawu_elections_vote;
+    Q.total_votes_bawu = Q.spd_bawu_elections_vote + Q.linke_bawu_elections_vote + Q.greens_bawu_elections_vote + Q.fdp_bawu_elections_vote + Q.afd_bawu_elections_vote + Q.cdu_bawu_elections_vote + Q.bsw_bawu_elections_vote;
     Q.spd_bawu_elections_vote = (Q.spd_bawu_elections_vote / Q.total_votes_bawu) * 100;
     Q.linke_bawu_elections_vote = (Q.linke_bawu_elections_vote / Q.total_votes_bawu) * 100;
     Q.greens_bawu_elections_vote = (Q.greens_bawu_elections_vote / Q.total_votes_bawu) * 100;
