@@ -426,6 +426,7 @@ Q.groko = 1;
 Q.midnight = 0;
 Q.bahamas = 0;
 Q.kenya = 0;
+Q.ampelkoalition = 0;
 
 Q.rrgreen_pot = 0;
 Q.purple_red_pot = 0;
@@ -434,6 +435,7 @@ Q.groko_pot = 1;
 Q.midnight_pot = 0;
 Q.bahamas_pot = 0;
 Q.kenya_pot = 0;
+Q.ampelkoalition_pot = 0;
 
 Q.brandmauer = 1;
 
@@ -483,7 +485,7 @@ Q.housing_minister = 'xyz';
 Q.housing_minister_party = 'xyz';
 
 // Events: what has occurred?
-Q.ampelkoalition = 0;
+
 Q.ampelkoalition_time = 0;
 Q.ampelkoalition_failed = 0;
 
