@@ -22,8 +22,8 @@ The regularly scheduled elections for the Baden-Württemberg Landtag are to take
 on-arrival: {!
 
 var bawu_adjustment_factors = {
-    spd: 0.60,
-    linke: 0.40,
+    spd: 0.55,
+    linke: 0.5,
     fdp: 0.95,
     cdu: 1.05,
     afd: 0.90,
@@ -125,7 +125,7 @@ if (Q.total_votes_bawu > 0) {
     Q.afd_bawu_elections_vote = (Q.afd_bawu_elections_vote / Q.total_votes_bawu) * 100;
     Q.cdu_bawu_elections_vote = (Q.cdu_bawu_elections_vote / Q.total_votes_bawu) * 100;
     Q.bsw_bawu_elections_vote = (Q.bsw_bawu_elections_vote / Q.total_votes_bawu) * 100;
-    let target = 14;
+    let target = 3;
     Q.linke_bawu_elections_vote = Math.round((Q.linke_bawu_elections_vote + (target - Q.linke_bawu_elections_vote) * 0.35) * 10) / 10;
     Q.total_votes_bawu = Q.spd_bawu_elections_vote + Q.linke_bawu_elections_vote + Q.greens_bawu_elections_vote + Q.fdp_bawu_elections_vote + Q.afd_bawu_elections_vote + Q.cdu_bawu_elections_vote;
     Q.spd_bawu_elections_vote = (Q.spd_bawu_elections_vote / Q.total_votes_bawu) * 100;
@@ -157,10 +157,10 @@ if (Q.bsw_bawu_elections_vote >= 1.4) Q.bsw_r_bawu = Q.bsw_bawu_elections_vote;
 
 var bawu_adjustment_r_factors = {
     spd: 0.55,
-    linke: 0.40,
+    linke: 0.5,
     fdp: 0.95,
     cdu: 1.05,
-    afd: 0.85,
+    afd: 0.90,
     greens: 2.0,
     bsw: 0.55,
 };
