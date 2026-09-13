@@ -89,15 +89,6 @@ if (Q.urban_fdp > (Q.votes_fdp + 15)) berlin_adjustment_factors.fdp += 0.1;
 if (Q.east_fdp > (Q.votes_fdp + 15)) berlin_adjustment_factors.fdp += 0.1;
 if (Q.youth_fdp > (Q.votes_fdp + 15)) berlin_adjustment_factors.fdp += 0.05;
 
-if (Q.urban_cdu > (Q.votes_cdu + 3)) berlin_adjustment_factors.cdu += 0.1;
-if (Q.east_cdu > (Q.votes_cdu + 3)) berlin_adjustment_factors.cdu += 0.1;
-if (Q.urban_cdu > (Q.votes_cdu + 6)) berlin_adjustment_factors.cdu += 0.1;
-if (Q.east_cdu > (Q.votes_cdu + 6)) berlin_adjustment_factors.cdu += 0.1;
-if (Q.youth_cdu > (Q.votes_cdu + 6)) berlin_adjustment_factors.cdu += 0.05;
-if (Q.urban_cdu > (Q.votes_cdu + 15)) berlin_adjustment_factors.cdu += 0.1;
-if (Q.east_cdu > (Q.votes_cdu + 15)) berlin_adjustment_factors.cdu += 0.1;
-if (Q.youth_cdu > (Q.votes_cdu + 15)) berlin_adjustment_factors.cdu += 0.05;
-
 if (Q.urban_afd > (Q.votes_afd + 3)) berlin_adjustment_factors.afd += 0.1;
 if (Q.east_afd > (Q.votes_afd + 3)) berlin_adjustment_factors.afd += 0.1;
 if (Q.urban_afd > (Q.votes_afd + 6)) berlin_adjustment_factors.afd += 0.1;
