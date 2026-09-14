@@ -653,7 +653,7 @@ A Kenya coalition has been formed.
 
 @do_groko
 title: Let a <span style="color: [+ cdu_color +];">Grand</span> <span style="color: [+ spd_color +];">coalition</span> be formed
-view-if: (spd_b + cdu_b) >= 50
+view-if: (spd_b + cdu_b) >= 50 and ((spd_b + fdp_b + greens_b < 50) or ampelkoalition_failed = 1)
 choose-if: brandmauer or (afd_b + cdu_b) < 50
 on-arrival: cdu_in_government = 1; spd_in_government = 1; groko = 1
  
