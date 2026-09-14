@@ -60,15 +60,36 @@ Economic growth: [+ economic_growth_2 +]%
 
 @govt
 
-president:
+<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
+<img src="img/SteinmeierFrankWalter.jpg" alt="Steinmeier" style="width: 45%;object-fit:contain;">
+<img src="img/_portraits/MerkelAngela.jpg" alt="Merkel" style="width: 50%;object-fit:cover;object-position:top;border:2px;">
+</div>
+<div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
+<div style="flex: 1;">
+<p style="text-align: center;margin-bottom: 2px;">Frank-Walter Steinmeier (<span style="color: [+ spd_color +];">SPD</span>)</p>
+</div>
+<div style="flex: 1;">
+<p style="text-align: center;margin-bottom: 2px;">Angela Merkel (<span style="color: [+ cdu_color +];">CDU</span>)</p>
+</div>
+</div>
 
-chancellor:
+Budget: [+ budget +]
 
-budget/coalition dissents:
+[? if linke_in_government and spd_in_government : <span style="color: [+ spd_color +];">SPD</span> coalition dissent: [+ spd_coalition_dissent : coalition_dissent +] ?]
+[? if linke_in_government and greens_in_government : <span style="color: [+ greens_color +];">Green</span> coalition dissent: [+ greens_coalition_dissent : coalition_dissent +] ?]
+[? if linke_in_government and bsw_in_government : <span style="color: [+ bsw_color +];">BSW</span> coalition dissent: [+ bsw_coalition_dissent : coalition_dissent +] ?]
 
 ministers:
 
-bundestag seats:
+Bundestag composition:
+
+<span class="tooltip-text" title="The Left" style="color: #BC2D72;">**Linke**</span>: [+ linke_b +]% <br>
+[? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: #4C0B5F;">**BSW**</span>: [+ bsw_b +]% <br> ?]
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #E3000F;">**SPD**</span>: [+ spd_b +]% <br>
+<span class="tooltip-text" title="Alliance 90/The Greens" style="color: #1AA037;">**B90/Greens**</span>: [+ greens_b +]% <br>
+<span class="tooltip-text" title="Free Democratic Party" style="color: #FFD600;">**FDP**</span>: [+ fdp_b +]% <br>
+<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #000000;">**CDU/CSU**</span>: [+ cdu_b +]% <br>
+<span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: [+ afd_b +]% <br>
 
 @politics
 
