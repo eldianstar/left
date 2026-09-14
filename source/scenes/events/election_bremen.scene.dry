@@ -508,7 +508,7 @@ on-arrival: spd_relation -= 2; greens_relation -= 2; urban_linke += 0.3; bremen_
 Our campaign has paid off, and we can finally form a majority government! This is a historic moment for our party.
 
 @redred
-view-if: bremen_pot_rot_rot >= 50 and brandenburg_pot_spd_maj < 50
+view-if: bremen_pot_rot_rot >= 50 and bremen_pot_spd_maj < 50
 choose-if: spd_relation >= 45
 unavailable_subtitle: Our relations with the SPD aren't good enough.
 on-arrival: spd_relation += 1; bremen_groko = 0; bremen_traffic_light = 0; bremen_rot_rot_grun = 0; bremen_jamaica = 0; bremen_rot_rot = 1; bremen_kenya = 0; bremen_schwarz_blau = 0; bremen_tigerenten = 0; bremen_kiwi = 0; bremen_die_linke_maj = 0; bremen_afd_maj = 0; bremen_rot_grun = 0; bremen_spd_maj = 0; bremen_green_maj = 0; bremen_cdu_maj = 0; bremen_weimar_but_different = 0; bremen_red_purple = 0; bremen_brombeer = 0; bremen_querfront = 0;
@@ -516,7 +516,7 @@ on-arrival: spd_relation += 1; bremen_groko = 0; bremen_traffic_light = 0; breme
 We have decided to form a coalition with the <span style="color: [+ spd_color +];">**SPD**</span>.
 
 @rrgreen
-view-if: bremen_pot_rot_rot_grun >= 50 and brandenburg_pot_rot_grun < 50
+view-if: bremen_pot_rot_rot_grun >= 50 and bremen_pot_rot_grun < 50
 choose-if: spd_relation >= 40 and greens_relation >= 40
 unavailable-subtitle: Our relations with the moderate left aren't good enough.
 on-arrival: spd_relation += 1; greens_relation += 1; bremen_groko = 0; bremen_traffic_light = 0; bremen_rot_rot_grun = 1; bremen_jamaica = 0; bremen_rot_rot = 0; bremen_kenya = 0; bremen_schwarz_blau = 0; bremen_tigerenten = 0; bremen_kiwi = 0; bremen_die_linke_maj = 0; bremen_afd_maj = 0; bremen_rot_grun = 0; bremen_spd_maj = 0; bremen_green_maj = 0; bremen_cdu_maj = 0; bremen_weimar_but_different = 0; bremen_red_purple = 0; bremen_brombeer = 0; bremen_querfront = 0;
@@ -544,7 +544,7 @@ on-arrival: urban_spd -= 0.3; urban_greens += 0.3; urban_cdu -= 0.3; urban_fdp +
 A Blackberry coalition has been formed.
 
 @ampel
-view-if: bremen_pot_traffic_light >= 50 and ampelkoalition_failed = 0 and bremen_pot_kiwi < 50
+view-if: bremen_pot_traffic_light >= 50 and ampelkoalition_failed = 0 and bremen_pot_kiwi < 50 and bremen_pot_rot_grun < 50
 on-arrival: spd_relation -= 1; greens_relation -= 1; bremen_groko = 0; bremen_traffic_light = 1; bremen_rot_rot_grun = 0; bremen_jamaica = 0; bremen_rot_rot = 0; bremen_kenya = 0; bremen_schwarz_blau = 0; bremen_tigerenten = 0; bremen_kiwi = 0; bremen_die_linke_maj = 0; bremen_afd_maj = 0; bremen_rot_grun = 0; bremen_spd_maj = 0; bremen_green_maj = 0; bremen_cdu_maj = 0; bremen_weimar_but_different = 0; bremen_red_purple = 0; bremen_brombeer = 0; bremen_querfront = 0;
 
 A Traffic Light coalition has been formed.
