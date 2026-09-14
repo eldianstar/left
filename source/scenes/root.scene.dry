@@ -910,7 +910,7 @@ Q.greens_hamburg_elections_vote = 0;
 Q.cdu_hamburg_elections_vote = 0;
 Q.bsw_hamburg_elections_vote = 0;
 
-Q.next_election_year_hamburg = 2021;
+Q.next_election_year_hamburg = 2025;
 Q.next_election_month_hamburg = 3;
 Q.n_elections_hamburg = 0;
 Q.next_election_time_hamburg = 46;
