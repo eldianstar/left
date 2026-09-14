@@ -418,7 +418,7 @@ if (Q.cdu_minus_csu_votes >= 5) {
     });
 }
 
-if (Q.csu_votes >= 5) {
+if (Q.csu_votes >= 1) {
     data.push({
         "id": "csu",
         "legend": "CSU",
