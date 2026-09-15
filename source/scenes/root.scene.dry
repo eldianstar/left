@@ -1268,7 +1268,10 @@ for (let i = 0; i <= 100; i++) {
 }
 
 
-// all the initial advisors are centrists.
+/////////////////////////////////////////////////////////////////////////////////
+//////////////////////////// ADVISORS ///////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
 Q.hennigwellsow_advisor = 1; // susanne hennig wellsow, pragmatist
 Q.hennigwellsow_advisor_fame = 150;
 Q.wissler_advisor = 1; // janine wissler, oldleft
@@ -1317,6 +1320,41 @@ Q.ramelow_advisor = 0; // bodo ramelow
 Q.ramelow_advisor_fame = 160;
 Q.goerke_advisor = 0; // christian görke
 Q.goerke_advisor_fame = 115;
+
+/////////////////////////////////////////////////////
+////////////////// ADVISORS_B ///////////////////////
+/////////////////////////////////////////////////////
+
+Q.hennigwellsow_advisor_b = 1; // susanne hennig wellsow, pragmatist
+Q.wissler_advisor_b = 1; // janine wissler, oldleft
+
+// oldleft
+Q.wagenknecht_advisor_b = 0; // sahra wagenknecht
+Q.mohamedali_advisor_b = 0; // amira mohamed ali
+Q.riexinger_advisor_b = 0; // bernd riexinger
+Q.pellmann_advisor_b = 0; // sören pellmann
+
+// beweli
+Q.gohlke_advisor_b = 0; // nicole gohlke
+Q.schwerdtner_advisor_b = 0; // ines schwerdtner
+Q.pantisano_advisor_b = 0; // luigi pantisano
+Q.buenger_advisor_b = 0; // clara bünger
+
+// emali
+Q.lay_advisor_b = 0; // caren lay
+Q.kipping_advisor_b = 0; // katja kipping
+Q.reichinnek_advisor_b = 0; // heidi reichinnek
+Q.vanaken_advisor_b = 0; // jan van aken
+Q.schirdewan_advisor_b = 0; // martin schirdewan
+Q.hoss_advisor_b = 0; // luke hoss
+
+// pragmatist
+Q.gysi_advisor_b = 0; // gregor gysi
+Q.bartsch_advisor_b = 0; // dietmar bartsch
+Q.ramelow_advisor_b = 0; // bodo ramelow
+Q.goerke_advisor_b = 0; // christian görke
+
+
 
 if (Q.achievement_holy_moly) {
     const content = document.getElementById('content');
