@@ -15,6 +15,6 @@ Fame: [+ pellmann_advisor_fame +]
 @campaign_east
 title: east
 subtitle: subt
-choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; east_linke += 3*(pellmann_advisor_fame/100); beweli_strength -= 1; emali_strength -= 1; pellmann_advisor_fame += 2;
+choose-if: advisor_action_b_timer <= 0
+unavailable-subtitle: [? if advisor_action_b_timer > 0 : [+ advisor_action_b_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_b_timer = 6; east_linke += 3*(pellmann_advisor_fame/100); beweli_strength -= 1; emali_strength -= 1; pellmann_advisor_fame += 2;
