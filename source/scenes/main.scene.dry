@@ -1267,6 +1267,7 @@ max-cards: 3
 - @time
 - @time_2
 - #advisor
+- #advisorb
 - @shuffle_leadership_pinned
 
 @main_easy
