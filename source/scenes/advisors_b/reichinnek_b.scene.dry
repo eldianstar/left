@@ -18,20 +18,20 @@ Passive effect: Antifaschist für immer
 @social_media
 title: socmed
 subtitle: subt
-choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; social_media += 1*(reichinnek_advisor_fame/100); youth_linke += 0.2*(reichinnek_advisor_fame/100); reichinnek_advisor_fame += 2;
+choose-if: advisor_action_b_timer <= 0
+unavailable-subtitle: [? if advisor_action_b_timer > 0 : [+ advisor_action_b_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_b_timer = 6; social_media += 1*(reichinnek_advisor_fame/100); youth_linke += 0.2*(reichinnek_advisor_fame/100); reichinnek_advisor_fame += 2;
 
 @campaign_youth
 title: campaign youth
 subtitle: subt
-choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; youth_linke += (0.1+social_media)*(reichinnek_advisor_fame/100); reichinnek_advisor_fame += 2;
+choose-if: advisor_action_b_timer <= 0
+unavailable-subtitle: [? if advisor_action_b_timer > 0 : [+ advisor_action_b_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_b_timer = 6; youth_linke += (0.1+social_media)*(reichinnek_advisor_fame/100); reichinnek_advisor_fame += 2;
 
 @contact_greens
 title: rrgreen contact
 subtitle: subt
-choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; greens_relation += 2.5*(reichinnek_advisor_fame/100); spd_relation += 2.5*(reichinnek_advisor_fame/100); reichinnek_advisor_fame += 2;
+choose-if: advisor_action_b_timer <= 0
+unavailable-subtitle: [? if advisor_action_b_timer > 0 : [+ advisor_action_b_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_b_timer = 6; greens_relation += 2.5*(reichinnek_advisor_fame/100); spd_relation += 2.5*(reichinnek_advisor_fame/100); reichinnek_advisor_fame += 2;
