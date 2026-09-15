@@ -27,7 +27,7 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: **[+ president +]**
+President: <span style="color: [+ spd_color +];">**[+ president +]**</span>
 
 Chancellor: [? if chancellor_party = 'LINKE' : <span style="color: #BC2D72;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'BSW' : <span style="color: #4C0B5F;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'Greens' : <span style="color: #1AA037;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'SPD' : <span style="color: #E3000F;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'FDP' : <span style="color: #FFD600;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'CDU' : <span style="color: #000000;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'CSU' : <span style="color: #003863;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'AfD' : <span style="color: #0489db;">**[+ chancellor +]**</span> ?]
 
@@ -66,14 +66,14 @@ Budget: [+ budget +]
 [? if linke_in_government and greens_in_government : <span style="color: [+ greens_color +];">Green</span> coalition dissent: [+ greens_coalition_dissent : coalition_dissent +] ?]
 [? if linke_in_government and bsw_in_government : <span style="color: [+ bsw_color +];">BSW</span> coalition dissent: [+ bsw_coalition_dissent : coalition_dissent +] ?]
 
-
-<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
+<div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
 <p style="text-align: center;margin-bottom: 2px;">**President**</p>
 </div>
 <div style="flex: 1;">
 <p style="text-align: center;margin-bottom: 2px;">**Chancellor**</p>
 </div>
+<div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/SteinmeierFrankWalter.jpg" alt="Steinmeier" style="width: 45%;border:3px ridge #000000;">
 <img src="img/MerkelAngela.jpg" alt="Merkel" style="width: 50%;object-fit:cover;object-position:top;border:3px ridge #000000;">
 </div>
