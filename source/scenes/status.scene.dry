@@ -73,6 +73,7 @@ Budget: [+ budget +]
 <div style="flex: 1;">
 <p style="text-align: center;margin-bottom: 2px;">**Chancellor**</p>
 </div>
+</div>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/SteinmeierFrankWalter.jpg" alt="Steinmeier" style="width: 45%;border:3px ridge #000000;">
 <img src="img/MerkelAngela.jpg" alt="Merkel" style="width: 50%;object-fit:cover;object-position:top;border:3px ridge #000000;">
