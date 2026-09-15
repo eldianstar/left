@@ -20,8 +20,8 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-<span style="color: #BC2D72;">**Die Linke**</span> position: [? if linke_toleration : toleration ?][? if linke_in_government : in government - ?][? if linke_toleration == 0 and linke_in_government == 0 : opposition ?]
-[? if in_rrgreen_coalition and linke_in_government: <span style="color: #BC2D72;">Red</span><span style="color: #E3000F;">red</span><span style="color: #1AA037;">green</span> Coalition ?][? if in_left_front and linke_in_government: <span style="color: #BC2D72;">Socialist</span>-<span style="color: #4C0B5F;">coalitionc</span> ?][? if in_linke_majority and linke_in_government: <span style="color: #BC2D72;">**Linke**</span> majority ?]
+<span style="color: [+ linke_color +];">**Die Linke**</span> position: [? if linke_toleration : toleration ?][? if linke_in_government : in government - ?][? if linke_toleration == 0 and linke_in_government == 0 : opposition ?]
+[? if in_rrgreen_coalition and linke_in_government: <span style="color: [+ linke_color +];">Red</span><span style="color: [+ spd_color +];">red</span><span style="color: [+ greens_color +];">green</span> Coalition ?][? if in_left_front and linke_in_government: <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ bsw_color +];">purple</span> coalition ?][? if in_linke_majority and linke_in_government: <span style="color: [+ linke_color +];">**Linke**</span> majority ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
@@ -29,19 +29,19 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 President: <span style="color: [+ spd_color +];">**[+ president +]**</span>
 
-Chancellor: [? if chancellor_party = 'LINKE' : <span style="color: #BC2D72;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'BSW' : <span style="color: #4C0B5F;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'Greens' : <span style="color: #1AA037;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'SPD' : <span style="color: #E3000F;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'FDP' : <span style="color: #FFD600;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'CDU' : <span style="color: #000000;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'CSU' : <span style="color: #003863;">**[+ chancellor +]**</span> ?][? if chancellor_party = 'AfD' : <span style="color: #0489db;">**[+ chancellor +]**</span> ?]
+Chancellor: [? if chancellor_party = 'LINKE' : <span style="color: [+ linke_color +];">**[+ chancellor +]**</span> ?][? if chancellor_party = 'BSW' : <span style="color: [+ bsw_color +];">**[+ chancellor +]**</span> ?][? if chancellor_party = 'Greens' : <span style="color: [+ bsw_color +];">**[+ chancellor +]**</span> ?][? if chancellor_party = 'SPD' : <span style="color: [+ spd_color +];">**[+ chancellor +]**</span> ?][? if chancellor_party = 'FDP' : <span style="color: [+ fdp_color +];">**[+ chancellor +]**</span> ?][? if chancellor_party = 'CDU' : <span style="color: [+ cdu_color +];">**[+ chancellor +]**</span> ?][? if chancellor_party = 'CSU' : <span style="color: [+ csu_color +];">**[+ chancellor +]**</span> ?][? if chancellor_party = 'AfD' : <span style="color: [+ afd_color +];">**[+ chancellor +]**</span> ?]
 
 Bundestag composition:
 
 # 1928: 30, 1930: 25, 1932: 22
 
-<span class="tooltip-text" title="The Left" style="color: #BC2D72;">**Linke**</span>: [+ linke_b +]% <br>
-[? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: #4C0B5F;">**BSW**</span>: [+ bsw_b +]% <br> ?]
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #E3000F;">**SPD**</span>: [+ spd_b +]% <br>
-<span class="tooltip-text" title="Alliance 90/The Greens" style="color: #1AA037;">**B90/Greens**</span>: [+ greens_b +]% <br>
-<span class="tooltip-text" title="Free Democratic Party" style="color: #FFD600;">**FDP**</span>: [+ fdp_b +]% <br>
-<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #000000;">**CDU/CSU**</span>: [+ cdu_b +]% <br>
-<span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: [+ afd_b +]% <br>
+<span class="tooltip-text" title="The Left" style="color: [+ linke_color +];">**Linke**</span>: [+ linke_b +]% <br>
+[? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: [+ bsw_color +];">**BSW**</span>: [+ bsw_b +]% <br> ?]
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: [+ spd_color +];">**SPD**</span>: [+ spd_b +]% <br>
+<span class="tooltip-text" title="Alliance 90/The Greens" style="color: [+ greens_color +];">**B90/Greens**</span>: [+ greens_b +]% <br>
+<span class="tooltip-text" title="Free Democratic Party" style="color: [+ fdp_color +];">**FDP**</span>: [+ fdp_b +]% <br>
+<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: [+ cdu_color +];">**CDU/CSU**</span>: [+ cdu_b +]% <br>
+<span class="tooltip-text" title="Alternative for Germany" style="color: [+ afd_color +];">**AfD**</span>: [+ afd_b +]% <br>
 
 # 1928: 9, 1930: 10
 **Others**: [+ other_b +]%
@@ -88,132 +88,19 @@ Budget: [+ budget +]
 
 Current cabinet:
 
-Labor: 
-[? if labor_minister_party == "BSW": <span style="color: #BFC8CC;">[+ labor_minister_party +]</span> ?]
-[? if labor_minister_party == "SPD": <span style="color: #c00000;">[+ labor_minister_party +]</span> ?]
-[? if labor_minister_party == "LINKE": <span style="color: #700000;">[+ labor_minister_party +]</span> ?]
-[? if labor_minister_party == "GREENS": <span style="color: #FFCC00;">[+ labor_minister_party +]</span> ?]
-[? if labor_minister_party == "CDU": <span style="color: #000000;">[+ z_party_name +]</span> ?]
-[? if labor_minister_party == "CSU": <span style="color: #A2D8E0;">[+ labor_minister_party +]</span> ?]
-[? if labor_minister_party == "DVP": <span style="color: #C0A054;">[+ labor_minister_party +]</span> ?]
-[? if labor_minister_party == "Others": <span style="color: #c00000;">[+ labor_minister_party +]</span> ?]
-[? if labor_minister_party == "KVP": <span style="color: #0087DC;">[+ labor_minister_party +]</span> ?]
-[? if labor_minister_party == "DNVP": <span style="color: #3E88B3;">[+ labor_minister_party +]</span> ?]
-[? if labor_minister_party == "DNF": <span style="color: #003755;">[+ labor_minister_party +]</span> ?]
-[? if labor_minister_party == "AfD": <span style="color: #7A3C00;">[+ labor_minister_party +]</span> ?]
-[? if labor_minister_party == "I": [+ labor_minister_party +] ?]
+asdrub: 
+[? if asdrub_minister_party == "BSW": <span style="color: [+ bsw_color +];">[+ asdrub_minister_party +]</span> ?]
+[? if asdrub_minister_party == "SPD": <span style="color: [+ spd_color +];">[+ asdrub_minister_party +]</span> ?]
+[? if asdrub_minister_party == "LINKE": <span style="color: [+ linke_color +];">[+ asdrub_minister_party +]</span> ?]
+[? if asdrub_minister_party == "GREENS": <span style="color: [+ greens_color +];">[+ asdrub_minister_party +]</span> ?]
+[? if asdrub_minister_party == "FDP": <span style="color: [+ fdp_color +];">[+ asdrub_minister_party +]</span> ?]
+[? if asdrub_minister_party == "CDU": <span style="color: [+ cdu_color +];">[+ z_party_name +]</span> ?]
+[? if asdrub_minister_party == "CSU": <span style="color: [+ csu_color +];">[+ asdrub_minister_party +]</span> ?]
+[? if asdrub_minister_party == "AfD": <span style="color: [+ afd_color +];">[+ asdrub_minister_party +]</span> ?]
+[? if asdrub_minister_party == "Others": <span style="color: [+ others_color +];">[+ asdrub_minister_party +]</span> ?]
+[? if asdrub_minister_party == "I": [+ asdrub_minister_party +] ?]
 
-Interior: 
-[? if interior_minister_party == "DNEF": <span style="color: #BFC8CC;">[+ interior_minister_party +]</span> ?]
-[? if interior_minister_party == "SPD": <span style="color: #c00000;">[+ interior_minister_party +]</span> ?]
-[? if interior_minister_party == "KPD": <span style="color: #700000;">[+ interior_minister_party +]</span> ?]
-[? if interior_minister_party == ddp_name: <span style="color: #D3C24D;">[+ interior_minister_party +]</span> ?]
-[? if interior_minister_party == "LVP": <span style="color: #FFCC00;">[+ interior_minister_party +]</span> ?]
-[? if interior_minister_party == "Z": <span style="color: #000000;">[+ z_party_name +]</span> ?]
-[? if interior_minister_party == "BVP": <span style="color: #A2D8E0;">[+ interior_minister_party +]</span> ?]
-[? if interior_minister_party == "DVP": <span style="color: #C0A054;">[+ interior_minister_party +]</span> ?]
-[? if interior_minister_party == "Others": <span style="color: #c00000;">[+ interior_minister_party +]</span> ?]
-[? if interior_minister_party == "KVP": <span style="color: #0087DC;">[+ interior_minister_party +]</span> ?]
-[? if interior_minister_party == "DNVP": <span style="color: #3E88B3;">[+ interior_minister_party +]</span> ?]
-[? if interior_minister_party == "DNF": <span style="color: #003755;">[+ interior_minister_party +]</span> ?]
-[? if interior_minister_party == "NSDAP": <span style="color: #7A3C00;">[+ interior_minister_party +]</span> ?]
-[? if interior_minister_party == "I": [+ labor_minister_party +] ?]
 
-Finance:
-[? if finance_minister_party == "DNEF": <span style="color: #BFC8CC;">[+ finance_minister_party +]</span> ?] 
-[? if finance_minister_party == "SPD": <span style="color: #c00000;">[+ finance_minister_party +]</span> ?]
-[? if finance_minister_party == "KPD": <span style="color: #700000;">[+ finance_minister_party +]</span> ?]
-[? if finance_minister_party == ddp_name: <span style="color: #D3C24D;">[+ finance_minister_party +]</span> ?]
-[? if finance_minister_party == "LVP": <span style="color: #FFCC00;">[+ finance_minister_party +]</span> ?]
-[? if finance_minister_party == "Z": <span style="color: #000000;">[+ z_party_name +]</span> ?]
-[? if finance_minister_party == "BVP": <span style="color: #A2D8E0;">[+ finance_minister_party +]</span> ?]
-[? if finance_minister_party == "DVP": <span style="color: #C0A054;">[+ finance_minister_party +]</span> ?]
-[? if finance_minister_party == "Others": <span style="color: #c00000;">[+ finance_minister_party +]</span> ?]
-[? if finance_minister_party == "KVP": <span style="color: #0087DC;">[+ finance_minister_party +]</span> ?]
-[? if finance_minister_party == "DNVP": <span style="color: #3E88B3;">[+ finance_minister_party +]</span> ?]
-[? if finance_minister_party == "DNF": <span style="color: #003755;">[+ finance_minister_party +]</span> ?]
-[? if finance_minister_party == "NSDAP": <span style="color: #7A3C00;">[+ finance_minister_party +]</span> ?]
-[? if finance_minister_party == "I": [+ finance_minister_party +] ?]
-
-Economic: 
-[? if economic_minister_party == "DNEF": <span style="color: #BFC8CC;">[+ economic_minister_party +]</span> ?]
-[? if economic_minister_party == "SPD": <span style="color: #c00000;">[+ economic_minister_party +]</span> ?]
-[? if economic_minister_party == "KPD": <span style="color: #700000;">[+ economic_minister_party +]</span> ?]
-[? if economic_minister_party == ddp_name: <span style="color: #D3C24D;">[+ economic_minister_party +]</span> ?]
-[? if economic_minister_party == "LVP": <span style="color: #FFCC00;">[+ economic_minister_party +]</span> ?]
-[? if economic_minister_party == "Z": <span style="color: #000000;">[+ z_party_name +]</span> ?]
-[? if economic_minister_party == "BVP": <span style="color: #A2D8E0;">[+ economic_minister_party +]</span> ?]
-[? if economic_minister_party == "DVP": <span style="color: #C0A054;">[+ economic_minister_party +]</span> ?]
-[? if economic_minister_party == "Others": <span style="color: #c00000;">[+ economic_minister_party +]</span> ?]
-[? if economic_minister_party == "KVP": <span style="color: #0087DC;">[+ economic_minister_party +]</span> ?]
-[? if economic_minister_party == "DNVP": <span style="color: #3E88B3;">[+ economic_minister_party +]</span> ?]
-[? if economic_minister_party == "DNF": <span style="color: #003755;">[+ economic_minister_party +]</span> ?]
-[? if economic_minister_party == "NSDAP": <span style="color: #7A3C00;">[+ economic_minister_party +]</span> ?]
-[? if economic_minister_party == "I": [+ economic_minister_party +] ?]
-
-Justice: 
-[? if justice_minister_party == "DNEF": <span style="color: #BFC8CC;">[+ justice_minister_party +]</span> ?]
-[? if justice_minister_party == "SPD": <span style="color: #c00000;">[+ justice_minister_party +]</span> ?]
-[? if justice_minister_party == "KPD": <span style="color: #700000;">[+ justice_minister_party +]</span> ?]
-[? if justice_minister_party == ddp_name: <span style="color: #D3C24D;">[+ justice_minister_party +]</span> ?]
-[? if justice_minister_party == "LVP": <span style="color: #FFCC00;">[+ justice_minister_party +]</span> ?]
-[? if justice_minister_party == "Z": <span style="color: #000000;">[+ z_party_name +]</span> ?]
-[? if justice_minister_party == "BVP": <span style="color: #A2D8E0;">[+ justice_minister_party +]</span> ?]
-[? if justice_minister_party == "DVP": <span style="color: #C0A054;">[+ justice_minister_party +]</span> ?]
-[? if justice_minister_party == "Others": <span style="color: #c00000;">[+ justice_minister_party +]</span> ?]
-[? if justice_minister_party == "KVP": <span style="color: #0087DC;">[+ justice_minister_party +]</span> ?]
-[? if justice_minister_party == "DNVP": <span style="color: #3E88B3;">[+ justice_minister_party +]</span> ?]
-[? if justice_minister_party == "DNF": <span style="color: #003755;">[+ justice_minister_party +]</span> ?]
-[? if justice_minister_party == "NSDAP": <span style="color: #7A3C00;">[+ justice_minister_party +]</span> ?]
-[? if justice_minister_party == "I": [+ justice_minister_party +] ?]
-
-Foreign: 
-[? if labor_minister_party == "DNEF": <span style="color: #BFC8CC;">[+ labor_minister_party +]</span> ?]
-[? if foreign_minister_party == "SPD": <span style="color: #c00000;">[+ foreign_minister_party +]</span> ?]
-[? if foreign_minister_party == "KPD": <span style="color: #700000;">[+ foreign_minister_party +]</span> ?]
-[? if foreign_minister_party == ddp_name: <span style="color: #D3C24D;">[+ foreign_minister_party +]</span> ?]
-[? if foreign_minister_party == "LVP": <span style="color: #FFCC00;">[+ foreign_minister_party +]</span> ?]
-[? if foreign_minister_party == "Z": <span style="color: #000000;">[+ z_party_name +]</span> ?]
-[? if foreign_minister_party == "BVP": <span style="color: #A2D8E0;">[+ foreign_minister_party +]</span> ?]
-[? if foreign_minister_party == "DVP": <span style="color: #C0A054;">[+ foreign_minister_party +]</span> ?]
-[? if foreign_minister_party == "Others": <span style="color: #c00000;">[+ foreign_minister_party +]</span> ?]
-[? if foreign_minister_party == "KVP": <span style="color: #0087DC;">[+ foreign_minister_party +]</span> ?]
-[? if foreign_minister_party == "DNVP": <span style="color: #3E88B3;">[+ foreign_minister_party +]</span> ?]
-[? if foreign_minister_party == "DNF": <span style="color: #003755;">[+ foreign_minister_party +]</span> ?]
-[? if foreign_minister_party == "NSDAP": <span style="color: #7A3C00;">[+ foreign_minister_party +]</span> ?]
-[? if foreign_minister_party == "I": [+ foreign_minister_party +] ?]
-
-Reichswehr: 
-[? if reichswehr_minister_party == "DNEF": <span style="color: #BFC8CC;">[+ reichswehr_minister_party +]</span> ?]
-[? if reichswehr_minister_party == "SPD": <span style="color: #c00000;">[+ reichswehr_minister_party +]</span> ?]
-[? if reichswehr_minister_party == "KPD": <span style="color: #700000;">[+ reichswehr_minister_party +]</span> ?]
-[? if reichswehr_minister_party == ddp_name: <span style="color: #D3C24D;">[+ reichswehr_minister_party +]</span> ?]
-[? if reichswehr_minister_party == "LVP": <span style="color: #FFCC00;">[+ reichswehr_minister_party +]</span> ?]
-[? if reichswehr_minister_party == "Z": <span style="color: #000000;">[+ z_party_name +]</span> ?]
-[? if reichswehr_minister_party == "BVP": <span style="color: #A2D8E0;">[+ reichswehr_minister_party +]</span> ?]
-[? if reichswehr_minister_party == "DVP": <span style="color: #C0A054;">[+ reichswehr_minister_party +]</span> ?]
-[? if reichswehr_minister_party == "Others": <span style="color: #c00000;">[+ reichswehr_minister_party +]</span> ?]
-[? if reichswehr_minister_party == "KVP": <span style="color: #0087DC;">[+ reichswehr_minister_party +]</span> ?]
-[? if reichswehr_minister_party == "DNVP": <span style="color: #3E88B3;">[+ reichswehr_minister_party +]</span> ?]
-[? if reichswehr_minister_party == "DNF": <span style="color: #003755;">[+ reichswehr_minister_party +]</span> ?]
-[? if reichswehr_minister_party == "NSDAP": <span style="color: #7A3C00;">[+ reichswehr_minister_party +]</span> ?]
-[? if reichswehr_minister_party == "I": [+ reichswehr_minister_party +] ?]
-
-Agriculture: 
-[? if agriculture_minister_party == "DNEF": <span style="color: #BFC8CC;">[+ agriculture_minister_party +]</span> ?]
-[? if agriculture_minister_party == "SPD": <span style="color: #c00000;">[+ agriculture_minister_party +]</span> ?]
-[? if agriculture_minister_party == "KPD": <span style="color: #700000;">[+ agriculture_minister_party +]</span> ?]
-[? if agriculture_minister_party == ddp_name: <span style="color: #D3C24D;">[+ agriculture_minister_party +]</span> ?]
-[? if agriculture_minister_party == "LVP": <span style="color: #FFCC00;">[+ agriculture_minister_party +]</span> ?]
-[? if agriculture_minister_party == "Z": <span style="color: #000000;">[+ z_party_name +]</span> ?]
-[? if agriculture_minister_party == "BVP": <span style="color: #A2D8E0;">[+ agriculture_minister_party +]</span> ?]
-[? if agriculture_minister_party == "DVP": <span style="color: #C0A054;">[+ agriculture_minister_party +]</span> ?]
-[? if agriculture_minister_party == "Others": <span style="color: #c00000;">[+ agriculture_minister_party +]</span> ?]
-[? if agriculture_minister_party == "KVP": <span style="color: #0087DC;">[+ agriculture_minister_party +]</span> ?]
-[? if agriculture_minister_party == "DNVP": <span style="color: #3E88B3;">[+ agriculture_minister_party +]</span> ?]
-[? if agriculture_minister_party == "DNF": <span style="color: #003755;">[+ agriculture_minister_party +]</span> ?]
-[? if agriculture_minister_party == "NSDAP": <span style="color: #7A3C00;">[+ agriculture_minister_party +]</span> ?]
-[? if agriculture_minister_party == "I": [+ agriculture_minister_party +] ?]
 
 
 Bundestag composition:
