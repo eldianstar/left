@@ -1,0 +1,42 @@
+title: Clara Bünger
+is-pinned-card: true
+tags: advisor, beweli
+card-image: img/_portraits/BuengerClara.jpg
+view-if: buenger_advisor_b = 1
+new-page: true 
+
+= Clara Bünger
+
+Bünger is a jurist and immigration activist belonging the the Movement Left.
+
+Fame: [+ buenger_advisor_fame +]
+Passive effect: Antirassismus
+
+- @promigration
+- @migration
+- @interior
+- @root: Return to main
+  
+@promigration
+title: Campaign for migration
+subtitle: Fight against the right's racist propaganda.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_b_timer = 6; issue_migration -= 0.5*(buenger_advisor_fame/100); buenger_advisor_fame += 2; oldleft_dissent += 2 if oldleft_leader = "Wagenknecht"; rural_linke -= 0.5; east_linke -= 0.5;
+
+We have started a campaign for migrant rights and better asylum processes. Hopefully we'll reduce the people's negative perception of immigrants.
+
+@migration
+title: Migration Affairs
+subtitle: We can set our migration policy.
+choose-if: advisor_action_timer <= 0 and interior_minister_party = "LINKE"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if interior_minister_party != "LINKE" : We do not control the Interior Ministry. ?]
+on-arrival: advisor_action_b_timer = 6; last_advisor_action = 1; buenger_advisor_fame += 2;
+
+@interior
+title: Interior Policy
+subtitle: We can set our interior policy.
+choose-if: advisor_action_timer <= 0 and interior_minister_party = "LINKE"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if interior_minister_party != "LINKE" : We do not control the Interior Ministry. ?]
+on-arrival: advisor_action_b_timer = 6; last_advisor_action = 1; buenger_advisor_fame += 2;
+go-to: police
