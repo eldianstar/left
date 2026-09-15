@@ -19,8 +19,8 @@ Fame: [+ gohlke_advisor_fame +]
 @campaign_youth
 title: Campaign among young people
 subtitle: The future lies with them.
-choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_b_timer <= 0
+unavailable-subtitle: [? if advisor_action_b_timer > 0 : [+ advisor_action_b_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_b_timer = 6; youth_linke += 0.8*(gohlke_advisor_fame/100); gohlke_advisor_fame += 2; social_moderation -= 0.2; oldleft_dissent += 0.6 if oldleft_leader = "Wagenknecht"; oldleft_dissent += 0.6 if oldleft_leader = "Pellmann"; pragmatist_dissent += 0.4;
 
 We have campaigned among young people. They bring new members, but also new views, which some people in our party dislike.
@@ -28,8 +28,8 @@ We have campaigned among young people. They bring new members, but also new view
 @radicalize_foreign
 title: Assert pacifist stance
 subtitle: We must fight against all wars and militarism.
-choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_b_timer <= 0
+unavailable-subtitle: [? if advisor_action_b_timer > 0 : [+ advisor_action_b_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_b_timer = 6; foreign_moderation -= 0.5*(gohlke_advisor_fame/100); gohlke_advisor_fame += 2; pragmatist_dissent += 2; issue_antimilitarism += 0.2*(gohlke_advisor_fame/100); greens_relation -= 3; spd_relation -= 2;
 
 We have asserted a more strongly pacifist stance. Our right wing, however, disapproves, and the moderate parties have also been made wary by this action.
@@ -37,7 +37,7 @@ We have asserted a more strongly pacifist stance. Our right wing, however, disap
 @education
 title: Education
 subtitle: We can set our education policy.
-choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_b_timer <= 0
+unavailable-subtitle: [? if advisor_action_b_timer > 0 : [+ advisor_action_b_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_b_timer = 6; last_advisor_action = 1; gohlke_advisor_fame += 2;
 go-to: education_science
