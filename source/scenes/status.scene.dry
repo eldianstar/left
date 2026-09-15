@@ -90,7 +90,7 @@ Budget: [+ budget +]
 **Cabinet**:
 
 <table>
-<tr><td> finance: </td> <td>
+<tr><td> Finance Ministry: </td> <td>
 [? if finance_minister_party == "BSW": <span style="color: [+ bsw_color +];">[+ finance_minister_party +]</span> ?]
 [? if finance_minister_party == "SPD": <span style="color: [+ spd_color +];">[+ finance_minister_party +]</span> ?]
 [? if finance_minister_party == "LINKE": <span style="color: [+ linke_color +];">[+ finance_minister_party +]</span> ?]
@@ -102,7 +102,7 @@ Budget: [+ budget +]
 [? if finance_minister_party == "Others": <span style="color: [+ others_color +];">[+ finance_minister_party +]</span> ?]
 [? if finance_minister_party == "I": [+ finance_minister_party +] ?]
 </td></tr>
-<tr><td> interior: </td> <td>
+<tr><td> Interior Ministry: </td> <td>
 [? if interior_minister_party == "BSW": <span style="color: [+ bsw_color +];">[+ interior_minister_party +]</span> ?]
 [? if interior_minister_party == "SPD": <span style="color: [+ spd_color +];">[+ interior_minister_party +]</span> ?]
 [? if interior_minister_party == "LINKE": <span style="color: [+ linke_color +];">[+ interior_minister_party +]</span> ?]
@@ -114,7 +114,7 @@ Budget: [+ budget +]
 [? if interior_minister_party == "Others": <span style="color: [+ others_color +];">[+ interior_minister_party +]</span> ?]
 [? if interior_minister_party == "I": [+ interior_minister_party +] ?]
 </td></tr>
-<tr><td> foreign: </td> <td>
+<tr><td> Foreign Ministry: </td> <td>
 [? if foreign_minister_party == "BSW": <span style="color: [+ bsw_color +];">[+ foreign_minister_party +]</span> ?]
 [? if foreign_minister_party == "SPD": <span style="color: [+ spd_color +];">[+ foreign_minister_party +]</span> ?]
 [? if foreign_minister_party == "LINKE": <span style="color: [+ linke_color +];">[+ foreign_minister_party +]</span> ?]
@@ -126,7 +126,7 @@ Budget: [+ budget +]
 [? if foreign_minister_party == "Others": <span style="color: [+ others_color +];">[+ foreign_minister_party +]</span> ?]
 [? if foreign_minister_party == "I": [+ foreign_minister_party +] ?]
 </td></tr>
-<tr><td> economic: </td> <td>
+<tr><td> Economic Ministry: </td> <td>
 [? if economic_minister_party == "BSW": <span style="color: [+ bsw_color +];">[+ economic_minister_party +]</span> ?]
 [? if economic_minister_party == "SPD": <span style="color: [+ spd_color +];">[+ economic_minister_party +]</span> ?]
 [? if economic_minister_party == "LINKE": <span style="color: [+ linke_color +];">[+ economic_minister_party +]</span> ?]
@@ -138,7 +138,7 @@ Budget: [+ budget +]
 [? if economic_minister_party == "Others": <span style="color: [+ others_color +];">[+ economic_minister_party +]</span> ?]
 [? if economic_minister_party == "I": [+ economic_minister_party +] ?]
 </td></tr>
-<tr><td> justice: </td> <td>
+<tr><td> Justice Ministry: </td> <td>
 [? if justice_minister_party == "BSW": <span style="color: [+ bsw_color +];">[+ justice_minister_party +]</span> ?]
 [? if justice_minister_party == "SPD": <span style="color: [+ spd_color +];">[+ justice_minister_party +]</span> ?]
 [? if justice_minister_party == "LINKE": <span style="color: [+ linke_color +];">[+ justice_minister_party +]</span> ?]
@@ -150,7 +150,7 @@ Budget: [+ budget +]
 [? if justice_minister_party == "Others": <span style="color: [+ others_color +];">[+ justice_minister_party +]</span> ?]
 [? if justice_minister_party == "I": [+ justice_minister_party +] ?]
 </td></tr>
-<tr><td> labor: </td> <td>
+<tr><td> Labor Ministry: </td> <td>
 [? if labor_minister_party == "BSW": <span style="color: [+ bsw_color +];">[+ labor_minister_party +]</span> ?]
 [? if labor_minister_party == "SPD": <span style="color: [+ spd_color +];">[+ labor_minister_party +]</span> ?]
 [? if labor_minister_party == "LINKE": <span style="color: [+ linke_color +];">[+ labor_minister_party +]</span> ?]
@@ -162,7 +162,7 @@ Budget: [+ budget +]
 [? if labor_minister_party == "Others": <span style="color: [+ others_color +];">[+ labor_minister_party +]</span> ?]
 [? if labor_minister_party == "I": [+ labor_minister_party +] ?]
 </td></tr>
-<tr><td> defense: </td> <td>
+<tr><td> Defense Ministry: </td> <td>
 [? if defense_minister_party == "BSW": <span style="color: [+ bsw_color +];">[+ defense_minister_party +]</span> ?]
 [? if defense_minister_party == "SPD": <span style="color: [+ spd_color +];">[+ defense_minister_party +]</span> ?]
 [? if defense_minister_party == "LINKE": <span style="color: [+ linke_color +];">[+ defense_minister_party +]</span> ?]
@@ -174,7 +174,7 @@ Budget: [+ budget +]
 [? if defense_minister_party == "Others": <span style="color: [+ others_color +];">[+ defense_minister_party +]</span> ?]
 [? if defense_minister_party == "I": [+ defense_minister_party +] ?]
 </td></tr>
-<tr><td> agriculture: </td> <td>
+<tr><td> Agriculture Ministry: </td> <td>
 [? if agriculture_minister_party == "BSW": <span style="color: [+ bsw_color +];">[+ agriculture_minister_party +]</span> ?]
 [? if agriculture_minister_party == "SPD": <span style="color: [+ spd_color +];">[+ agriculture_minister_party +]</span> ?]
 [? if agriculture_minister_party == "LINKE": <span style="color: [+ linke_color +];">[+ agriculture_minister_party +]</span> ?]
@@ -186,7 +186,7 @@ Budget: [+ budget +]
 [? if agriculture_minister_party == "Others": <span style="color: [+ others_color +];">[+ agriculture_minister_party +]</span> ?]
 [? if agriculture_minister_party == "I": [+ agriculture_minister_party +] ?]
 </td></tr>
-<tr><td> family: </td> <td>
+<tr><td> Family Ministry: </td> <td>
 [? if family_minister_party == "BSW": <span style="color: [+ bsw_color +];">[+ family_minister_party +]</span> ?]
 [? if family_minister_party == "SPD": <span style="color: [+ spd_color +];">[+ family_minister_party +]</span> ?]
 [? if family_minister_party == "LINKE": <span style="color: [+ linke_color +];">[+ family_minister_party +]</span> ?]
@@ -198,7 +198,7 @@ Budget: [+ budget +]
 [? if family_minister_party == "Others": <span style="color: [+ others_color +];">[+ family_minister_party +]</span> ?]
 [? if family_minister_party == "I": [+ family_minister_party +] ?]
 </td></tr>
-<tr><td> health: </td> <td>
+<tr><td> Health Ministry: </td> <td>
 [? if health_minister_party == "BSW": <span style="color: [+ bsw_color +];">[+ health_minister_party +]</span> ?]
 [? if health_minister_party == "SPD": <span style="color: [+ spd_color +];">[+ health_minister_party +]</span> ?]
 [? if health_minister_party == "LINKE": <span style="color: [+ linke_color +];">[+ health_minister_party +]</span> ?]
@@ -210,7 +210,7 @@ Budget: [+ budget +]
 [? if health_minister_party == "Others": <span style="color: [+ others_color +];">[+ health_minister_party +]</span> ?]
 [? if health_minister_party == "I": [+ health_minister_party +] ?]
 </td></tr>
-<tr><td> transport: </td> <td>
+<tr><td> Transport Ministry: </td> <td>
 [? if transport_minister_party == "BSW": <span style="color: [+ bsw_color +];">[+ transport_minister_party +]</span> ?]
 [? if transport_minister_party == "SPD": <span style="color: [+ spd_color +];">[+ transport_minister_party +]</span> ?]
 [? if transport_minister_party == "LINKE": <span style="color: [+ linke_color +];">[+ transport_minister_party +]</span> ?]
@@ -222,7 +222,7 @@ Budget: [+ budget +]
 [? if transport_minister_party == "Others": <span style="color: [+ others_color +];">[+ transport_minister_party +]</span> ?]
 [? if transport_minister_party == "I": [+ transport_minister_party +] ?]
 </td></tr>
-<tr><td> education: </td> <td>
+<tr><td> Education Ministry: </td> <td>
 [? if education_minister_party == "BSW": <span style="color: [+ bsw_color +];">[+ education_minister_party +]</span> ?]
 [? if education_minister_party == "SPD": <span style="color: [+ spd_color +];">[+ education_minister_party +]</span> ?]
 [? if education_minister_party == "LINKE": <span style="color: [+ linke_color +];">[+ education_minister_party +]</span> ?]
@@ -234,7 +234,7 @@ Budget: [+ budget +]
 [? if education_minister_party == "Others": <span style="color: [+ others_color +];">[+ education_minister_party +]</span> ?]
 [? if education_minister_party == "I": [+ education_minister_party +] ?]
 </td></tr>
-<tr><td> cooperation: </td> <td>
+<tr><td> Cooperation Ministry: </td> <td>
 [? if cooperation_minister_party == "BSW": <span style="color: [+ bsw_color +];">[+ cooperation_minister_party +]</span> ?]
 [? if cooperation_minister_party == "SPD": <span style="color: [+ spd_color +];">[+ cooperation_minister_party +]</span> ?]
 [? if cooperation_minister_party == "LINKE": <span style="color: [+ linke_color +];">[+ cooperation_minister_party +]</span> ?]
@@ -246,7 +246,7 @@ Budget: [+ budget +]
 [? if cooperation_minister_party == "Others": <span style="color: [+ others_color +];">[+ cooperation_minister_party +]</span> ?]
 [? if cooperation_minister_party == "I": [+ cooperation_minister_party +] ?]
 </td></tr>
-<tr><td> housing: </td> <td>
+<tr><td> Housing Ministry: </td> <td>
 [? if housing_minister_party == "BSW": <span style="color: [+ bsw_color +];">[+ housing_minister_party +]</span> ?]
 [? if housing_minister_party == "SPD": <span style="color: [+ spd_color +];">[+ housing_minister_party +]</span> ?]
 [? if housing_minister_party == "LINKE": <span style="color: [+ linke_color +];">[+ housing_minister_party +]</span> ?]
