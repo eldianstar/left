@@ -433,8 +433,8 @@ a.card {
   width: 120px;
   height: 150px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  border: 10px solid var(--card-border-color);
-  border-radius: 15px;
+  border: 5px solid var(--card-border-color);
+  border-radius: 8px;
   margin-bottom: 0.5em;
   position: relative;
 }
@@ -450,8 +450,8 @@ div.blank-card {
   width: 120px;
   height: 150px;
   background-color: var(--card-bg-color);
-  border: 10px solid var(--card-border-color);
-  border-radius: 15px;
+  border: 5px solid var(--card-border-color);
+  border-radius: 8px;
   margin-bottom: 0.5em;
 }
 
