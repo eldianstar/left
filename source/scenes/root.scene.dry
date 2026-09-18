@@ -916,6 +916,77 @@ Q.next_election_month_hamburg = 3;
 Q.n_elections_hamburg = 0;
 Q.next_election_time_hamburg = 46;
 
+//////////////////////// LOWER SAXONY ////////////////////////////////
+//////////////////////// niedersachsen ///////////////////////////////
+
+// coalitions 
+Q.lowsax_groko = 0; 
+Q.lowsax_traffic_light = 0; 
+Q.lowsax_rot_rot_grun = 0; 
+Q.lowsax_jamaica = 0; 
+Q.lowsax_rot_rot = 0; 
+Q.lowsax_kenya = 0; 
+Q.lowsax_schwarz_blau = 0; 
+Q.lowsax_tigerenten = 0;
+Q.lowsax_kiwi = 0; 
+Q.lowsax_die_linke_maj = 0;
+Q.lowsax_afd_maj = 0;
+Q.lowsax_rot_grun = 1; 
+Q.lowsax_spd_maj = 0; 
+Q.lowsax_green_maj = 0; 
+Q.lowsax_cdu_maj = 0; 
+Q.lowsax_weimar_but_different = 0;
+Q.lowsax_red_purple = 0;
+Q.lowsax_brombeer = 0;
+Q.lowsax_querfront = 0;
+
+// coalition potential seats
+
+Q.lowsax_pot_groko = 0; 
+Q.lowsax_pot_traffic_light = 0; 
+Q.lowsax_pot_rot_rot_grun = 0; 
+Q.lowsax_pot_jamaica = 0; 
+Q.lowsax_pot_rot_rot = 0; 
+Q.lowsax_pot_kenya = 0; 
+Q.lowsax_pot_schwarz_blau = 0; 
+Q.lowsax_pot_tigerenten = 0;
+Q.lowsax_pot_kiwi = 0; 
+Q.lowsax_pot_die_linke_maj = 0;
+Q.lowsax_pot_afd_maj = 0;
+Q.lowsax_pot_rot_grun = 0; 
+Q.lowsax_pot_spd_maj = 0; 
+Q.lowsax_pot_green_maj = 0; 
+Q.lowsax_pot_cdu_maj = 0; 
+Q.lowsax_pot_weimar_but_different = 0;
+Q.lowsax_pot_red_purple = 0;
+Q.lowsax_pot_brombeer = 0;
+Q.lowsax_pot_querfront = 0;
+
+// seats
+Q.spd_r_lowsax = 0;
+Q.linke_r_lowsax = 0;
+Q.cdu_r_lowsax = 0;
+Q.greens_r_lowsax = 0;
+Q.afd_r_lowsax = 0;
+Q.fdp_r_lowsax = 0;
+Q.bsw_r_lowsax = 0;
+
+Q.total_r_lowsax = 0;
+
+// votes?
+Q.spd_lowsax_elections_vote = 0;
+Q.linke_lowsax_elections_vote = 0;
+Q.fdp_lowsax_elections_vote = 0;
+Q.afd_lowsax_elections_vote = 0;
+Q.greens_lowsax_elections_vote = 0;
+Q.cdu_lowsax_elections_vote = 0;
+Q.bsw_lowsax_elections_vote = 0;
+
+Q.next_election_year_lowsax = 2022;
+Q.next_election_month_lowsax = 10;
+Q.n_elections_lowsax = 0;
+Q.next_election_time_lowsax = 16;
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////// GOVERNMENT ACTIONS ////////////////////////////////////
 ////////////////////////////////////////// what did we achieve? ////////////////////////////////////
