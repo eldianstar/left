@@ -916,6 +916,76 @@ Q.next_election_month_hamburg = 3;
 Q.n_elections_hamburg = 0;
 Q.next_election_time_hamburg = 46;
 
+//////////////////////// HESSE ////////////////////////////////
+
+// coalitions 
+Q.hesse_groko = 0; 
+Q.hesse_traffic_light = 0; 
+Q.hesse_rot_rot_grun = 0; 
+Q.hesse_jamaica = 0; 
+Q.hesse_rot_rot = 0; 
+Q.hesse_kenya = 0; 
+Q.hesse_schwarz_blau = 0; 
+Q.hesse_tigerenten = 0;
+Q.hesse_kiwi = 0; 
+Q.hesse_die_linke_maj = 0;
+Q.hesse_afd_maj = 0;
+Q.hesse_rot_grun = 1; 
+Q.hesse_spd_maj = 0; 
+Q.hesse_green_maj = 0; 
+Q.hesse_cdu_maj = 0; 
+Q.hesse_weimar_but_different = 0;
+Q.hesse_red_purple = 0;
+Q.hesse_brombeer = 0;
+Q.hesse_querfront = 0;
+
+// coalition potential seats
+
+Q.hesse_pot_groko = 0; 
+Q.hesse_pot_traffic_light = 0; 
+Q.hesse_pot_rot_rot_grun = 0; 
+Q.hesse_pot_jamaica = 0; 
+Q.hesse_pot_rot_rot = 0; 
+Q.hesse_pot_kenya = 0; 
+Q.hesse_pot_schwarz_blau = 0; 
+Q.hesse_pot_tigerenten = 0;
+Q.hesse_pot_kiwi = 0; 
+Q.hesse_pot_die_linke_maj = 0;
+Q.hesse_pot_afd_maj = 0;
+Q.hesse_pot_rot_grun = 0; 
+Q.hesse_pot_spd_maj = 0; 
+Q.hesse_pot_green_maj = 0; 
+Q.hesse_pot_cdu_maj = 0; 
+Q.hesse_pot_weimar_but_different = 0;
+Q.hesse_pot_red_purple = 0;
+Q.hesse_pot_brombeer = 0;
+Q.hesse_pot_querfront = 0;
+
+// seats
+Q.spd_r_hesse = 0;
+Q.linke_r_hesse = 0;
+Q.cdu_r_hesse = 0;
+Q.greens_r_hesse = 0;
+Q.afd_r_hesse = 0;
+Q.fdp_r_hesse = 0;
+Q.bsw_r_hesse = 0;
+
+Q.total_r_hesse = 0;
+
+// votes?
+Q.spd_hesse_elections_vote = 0;
+Q.linke_hesse_elections_vote = 0;
+Q.fdp_hesse_elections_vote = 0;
+Q.afd_hesse_elections_vote = 0;
+Q.greens_hesse_elections_vote = 0;
+Q.cdu_hesse_elections_vote = 0;
+Q.bsw_hesse_elections_vote = 0;
+
+Q.next_election_year_hesse = 2023;
+Q.next_election_month_hesse = 10;
+Q.n_elections_hesse = 0;
+Q.next_election_time_hesse = 28;
+
 //////////////////////// LOWER SAXONY ////////////////////////////////
 //////////////////////// niedersachsen ///////////////////////////////
 
