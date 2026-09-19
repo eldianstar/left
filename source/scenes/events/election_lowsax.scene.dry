@@ -508,7 +508,7 @@ on-arrival: spd_relation -= 2; greens_relation -= 2; urban_linke += 0.3; lowsax_
 Our campaign has paid off, and we can finally form a majority government! This is a historic moment for our party.
 
 @redred
-view-if: lowsax_pot_rot_rot >= 50 and brandenburg_pot_spd_maj < 50
+view-if: lowsax_pot_rot_rot >= 50 and lowsax_pot_spd_maj < 50
 choose-if: spd_relation >= 45
 unavailable_subtitle: Our relations with the SPD aren't good enough.
 on-arrival: spd_relation += 1; lowsax_groko = 0; lowsax_traffic_light = 0; lowsax_rot_rot_grun = 0; lowsax_jamaica = 0; lowsax_rot_rot = 1; lowsax_kenya = 0; lowsax_schwarz_blau = 0; lowsax_tigerenten = 0; lowsax_kiwi = 0; lowsax_die_linke_maj = 0; lowsax_afd_maj = 0; lowsax_rot_grun = 0; lowsax_spd_maj = 0; lowsax_green_maj = 0; lowsax_cdu_maj = 0; lowsax_weimar_but_different = 0; lowsax_red_purple = 0; lowsax_brombeer = 0; lowsax_querfront = 0;
@@ -516,7 +516,7 @@ on-arrival: spd_relation += 1; lowsax_groko = 0; lowsax_traffic_light = 0; lowsa
 We have decided to form a coalition with the <span style="color: [+ spd_color +];">**SPD**</span>.
 
 @rrgreen
-view-if: lowsax_pot_rot_rot_grun >= 50 and brandenburg_pot_rot_grun < 50
+view-if: lowsax_pot_rot_rot_grun >= 50 and lowsax_pot_rot_grun < 50
 choose-if: spd_relation >= 40 and greens_relation >= 40
 unavailable-subtitle: Our relations with the moderate left aren't good enough.
 on-arrival: spd_relation += 1; greens_relation += 1; lowsax_groko = 0; lowsax_traffic_light = 0; lowsax_rot_rot_grun = 1; lowsax_jamaica = 0; lowsax_rot_rot = 0; lowsax_kenya = 0; lowsax_schwarz_blau = 0; lowsax_tigerenten = 0; lowsax_kiwi = 0; lowsax_die_linke_maj = 0; lowsax_afd_maj = 0; lowsax_rot_grun = 0; lowsax_spd_maj = 0; lowsax_green_maj = 0; lowsax_cdu_maj = 0; lowsax_weimar_but_different = 0; lowsax_red_purple = 0; lowsax_brombeer = 0; lowsax_querfront = 0;
