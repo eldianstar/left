@@ -24,7 +24,7 @@ on-arrival: {!
 var lowsax_adjustment_factors = {
     spd: 1.45,
     linke: 0.65,
-    fdp: 0.65,
+    fdp: 0.45,
     cdu: 0.95,
     afd: 0.90,
     greens: 0.80,
@@ -150,7 +150,7 @@ Q.bsw_lowsax_elections_vote = (Q.bsw_lowsax_elections_vote != undefined ? parseF
 var lowsax_adjustment_r_factors = {
     spd: 1.45,
     linke: 0.65,
-    fdp: 0.65,
+    fdp: 0.45,
     cdu: 1.05,
     afd: 0.90,
     greens: 0.80,
