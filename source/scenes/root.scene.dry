@@ -1552,6 +1552,76 @@ Q.next_election_month_holstein = 5;
 Q.n_elections_holstein = 0;
 Q.next_election_time_holstein = 12;
 
+//////////////////////// THURINGIA ///////////////////////
+
+// coalitions 
+Q.thuringia_groko = 0; 
+Q.thuringia_traffic_light = 0; 
+Q.thuringia_rot_rot_grun = 0; 
+Q.thuringia_jamaica = 0; 
+Q.thuringia_rot_rot = 0; 
+Q.thuringia_kenya = 0; 
+Q.thuringia_schwarz_blau = 0; 
+Q.thuringia_tigerenten = 0;
+Q.thuringia_kiwi = 0; 
+Q.thuringia_die_linke_maj = 0;
+Q.thuringia_afd_maj = 0;
+Q.thuringia_rot_grun = 0; 
+Q.thuringia_spd_maj = 0; 
+Q.thuringia_green_maj = 0; 
+Q.thuringia_cdu_maj = 0; 
+Q.thuringia_weimar_but_different = 1;
+Q.thuringia_red_purple = 0;
+Q.thuringia_brombeer = 0;
+Q.thuringia_querfront = 0;
+
+// coalition potential seats
+
+Q.thuringia_pot_groko = 0; 
+Q.thuringia_pot_traffic_light = 0; 
+Q.thuringia_pot_rot_rot_grun = 0; 
+Q.thuringia_pot_jamaica = 0; 
+Q.thuringia_pot_rot_rot = 0; 
+Q.thuringia_pot_kenya = 0; 
+Q.thuringia_pot_schwarz_blau = 0; 
+Q.thuringia_pot_tigerenten = 0;
+Q.thuringia_pot_kiwi = 0; 
+Q.thuringia_pot_die_linke_maj = 0;
+Q.thuringia_pot_afd_maj = 0;
+Q.thuringia_pot_rot_grun = 0; 
+Q.thuringia_pot_spd_maj = 0; 
+Q.thuringia_pot_green_maj = 0; 
+Q.thuringia_pot_cdu_maj = 0; 
+Q.thuringia_pot_weimar_but_different = 0;
+Q.thuringia_pot_red_purple = 0;
+Q.thuringia_pot_brombeer = 0;
+Q.thuringia_pot_querfront = 0;
+
+// seats
+Q.spd_r_thuringia = 0;
+Q.linke_r_thuringia = 0;
+Q.cdu_r_thuringia = 0;
+Q.greens_r_thuringia = 0;
+Q.afd_r_thuringia = 0;
+Q.fdp_r_thuringia = 0;
+Q.bsw_r_thuringia = 0;
+
+Q.total_r_thuringia = 0;
+
+// votes?
+Q.spd_thuringia_elections_vote = 0;
+Q.linke_thuringia_elections_vote = 0;
+Q.fdp_thuringia_elections_vote = 0;
+Q.afd_thuringia_elections_vote = 0;
+Q.greens_thuringia_elections_vote = 0;
+Q.cdu_thuringia_elections_vote = 0;
+Q.bsw_thuringia_elections_vote = 0;
+
+Q.next_election_year_thuringia = 2024;
+Q.next_election_month_thuringia = 9;
+Q.n_elections_thuringia = 0;
+Q.next_election_time_thuringia = 40;
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////// GOVERNMENT ACTIONS ////////////////////////////////////
 ////////////////////////////////////////// what did we achieve? ////////////////////////////////////
