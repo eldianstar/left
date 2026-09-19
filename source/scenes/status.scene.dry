@@ -274,6 +274,13 @@ Economic growth: [+ economic_growth_2 +]%
 <span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: #000000;">**CDU/CSU**</span>: [+ cdu_b +]% <br>
 <span class="tooltip-text" title="Alternative for Germany" style="color: #0489db;">**AfD**</span>: [+ afd_b +]% <br>
 
+= State Politics
+
+<div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 5px; margin-left: -3px;"> 
+<div style="flex: 1;"><img src="img/berlin.png" alt="Sahra Wagenknecht" style="width: 96%;object-fit:cover;object-position:top;border:3px ridge #000000;"></div>
+<div style="flex: 1;">Berlin<br>Red-red-green coalition<br>next election</div>
+</div> 
+
 @politics
 
 = Inter-party Relations
