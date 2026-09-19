@@ -508,7 +508,7 @@ on-arrival: spd_relation -= 2; greens_relation -= 2; urban_linke += 0.3; hesse_g
 Our campaign has paid off, and we can finally form a majority government! This is a historic moment for our party.
 
 @redred
-view-if: hesse_pot_rot_rot >= 50 and brandenburg_pot_spd_maj < 50
+view-if: hesse_pot_rot_rot >= 50 and hesse_pot_spd_maj < 50
 choose-if: spd_relation >= 45
 unavailable_subtitle: Our relations with the SPD aren't good enough.
 on-arrival: spd_relation += 1; hesse_groko = 0; hesse_traffic_light = 0; hesse_rot_rot_grun = 0; hesse_jamaica = 0; hesse_rot_rot = 1; hesse_kenya = 0; hesse_schwarz_blau = 0; hesse_tigerenten = 0; hesse_kiwi = 0; hesse_die_linke_maj = 0; hesse_afd_maj = 0; hesse_rot_grun = 0; hesse_spd_maj = 0; hesse_green_maj = 0; hesse_cdu_maj = 0; hesse_weimar_but_different = 0; hesse_red_purple = 0; hesse_brombeer = 0; hesse_querfront = 0;
@@ -516,7 +516,7 @@ on-arrival: spd_relation += 1; hesse_groko = 0; hesse_traffic_light = 0; hesse_r
 We have decided to form a coalition with the <span style="color: [+ spd_color +];">**SPD**</span>.
 
 @rrgreen
-view-if: hesse_pot_rot_rot_grun >= 50 and brandenburg_pot_rot_grun < 50
+view-if: hesse_pot_rot_rot_grun >= 50 and hesse_pot_rot_grun < 50
 choose-if: spd_relation >= 40 and greens_relation >= 40
 unavailable-subtitle: Our relations with the moderate left aren't good enough.
 on-arrival: spd_relation += 1; greens_relation += 1; hesse_groko = 0; hesse_traffic_light = 0; hesse_rot_rot_grun = 1; hesse_jamaica = 0; hesse_rot_rot = 0; hesse_kenya = 0; hesse_schwarz_blau = 0; hesse_tigerenten = 0; hesse_kiwi = 0; hesse_die_linke_maj = 0; hesse_afd_maj = 0; hesse_rot_grun = 0; hesse_spd_maj = 0; hesse_green_maj = 0; hesse_cdu_maj = 0; hesse_weimar_but_different = 0; hesse_red_purple = 0; hesse_brombeer = 0; hesse_querfront = 0;
