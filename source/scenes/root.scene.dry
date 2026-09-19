@@ -927,10 +927,10 @@ Q.hesse_rot_rot = 0;
 Q.hesse_kenya = 0; 
 Q.hesse_schwarz_blau = 0; 
 Q.hesse_tigerenten = 0;
-Q.hesse_kiwi = 0; 
+Q.hesse_kiwi = 1; 
 Q.hesse_die_linke_maj = 0;
 Q.hesse_afd_maj = 0;
-Q.hesse_rot_grun = 1; 
+Q.hesse_rot_grun = 0; 
 Q.hesse_spd_maj = 0; 
 Q.hesse_green_maj = 0; 
 Q.hesse_cdu_maj = 0; 
@@ -990,7 +990,7 @@ Q.next_election_time_hesse = 28;
 //////////////////////// niedersachsen ///////////////////////////////
 
 // coalitions 
-Q.lowsax_groko = 0; 
+Q.lowsax_groko = 1; 
 Q.lowsax_traffic_light = 0; 
 Q.lowsax_rot_rot_grun = 0; 
 Q.lowsax_jamaica = 0; 
@@ -1001,7 +1001,7 @@ Q.lowsax_tigerenten = 0;
 Q.lowsax_kiwi = 0; 
 Q.lowsax_die_linke_maj = 0;
 Q.lowsax_afd_maj = 0;
-Q.lowsax_rot_grun = 1; 
+Q.lowsax_rot_grun = 0; 
 Q.lowsax_spd_maj = 0; 
 Q.lowsax_green_maj = 0; 
 Q.lowsax_cdu_maj = 0; 
@@ -1056,6 +1056,77 @@ Q.next_election_year_lowsax = 2022;
 Q.next_election_month_lowsax = 10;
 Q.n_elections_lowsax = 0;
 Q.next_election_time_lowsax = 16;
+
+//////////////////////// MECKLENBURG-VORPOMMERN ///////////////////////
+/////////////////////////////// meckvor ///////////////////////////////
+
+// coalitions 
+Q.meckvor_groko = 1; 
+Q.meckvor_traffic_light = 0; 
+Q.meckvor_rot_rot_grun = 0; 
+Q.meckvor_jamaica = 0; 
+Q.meckvor_rot_rot = 0; 
+Q.meckvor_kenya = 0; 
+Q.meckvor_schwarz_blau = 0; 
+Q.meckvor_tigerenten = 0;
+Q.meckvor_kiwi = 0; 
+Q.meckvor_die_linke_maj = 0;
+Q.meckvor_afd_maj = 0;
+Q.meckvor_rot_grun = 0; 
+Q.meckvor_spd_maj = 0; 
+Q.meckvor_green_maj = 0; 
+Q.meckvor_cdu_maj = 0; 
+Q.meckvor_weimar_but_different = 0;
+Q.meckvor_red_purple = 0;
+Q.meckvor_brombeer = 0;
+Q.meckvor_querfront = 0;
+
+// coalition potential seats
+
+Q.meckvor_pot_groko = 0; 
+Q.meckvor_pot_traffic_light = 0; 
+Q.meckvor_pot_rot_rot_grun = 0; 
+Q.meckvor_pot_jamaica = 0; 
+Q.meckvor_pot_rot_rot = 0; 
+Q.meckvor_pot_kenya = 0; 
+Q.meckvor_pot_schwarz_blau = 0; 
+Q.meckvor_pot_tigerenten = 0;
+Q.meckvor_pot_kiwi = 0; 
+Q.meckvor_pot_die_linke_maj = 0;
+Q.meckvor_pot_afd_maj = 0;
+Q.meckvor_pot_rot_grun = 0; 
+Q.meckvor_pot_spd_maj = 0; 
+Q.meckvor_pot_green_maj = 0; 
+Q.meckvor_pot_cdu_maj = 0; 
+Q.meckvor_pot_weimar_but_different = 0;
+Q.meckvor_pot_red_purple = 0;
+Q.meckvor_pot_brombeer = 0;
+Q.meckvor_pot_querfront = 0;
+
+// seats
+Q.spd_r_meckvor = 0;
+Q.linke_r_meckvor = 0;
+Q.cdu_r_meckvor = 0;
+Q.greens_r_meckvor = 0;
+Q.afd_r_meckvor = 0;
+Q.fdp_r_meckvor = 0;
+Q.bsw_r_meckvor = 0;
+
+Q.total_r_meckvor = 0;
+
+// votes?
+Q.spd_meckvor_elections_vote = 0;
+Q.linke_meckvor_elections_vote = 0;
+Q.fdp_meckvor_elections_vote = 0;
+Q.afd_meckvor_elections_vote = 0;
+Q.greens_meckvor_elections_vote = 0;
+Q.cdu_meckvor_elections_vote = 0;
+Q.bsw_meckvor_elections_vote = 0;
+
+Q.next_election_year_meckvor = 2021;
+Q.next_election_month_meckvor = 9;
+Q.n_elections_meckvor = 0;
+Q.next_election_time_meckvor = 4;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////// GOVERNMENT ACTIONS ////////////////////////////////////
