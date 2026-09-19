@@ -1268,7 +1268,7 @@ Q.bsw_rpf_elections_vote = 0;
 Q.next_election_year_rpf = 2026;
 Q.next_election_month_rpf = 3;
 Q.n_elections_rpf = 0;
-Q.next_election_time_rpf = 55;
+Q.next_election_time_rpf = 58;
 
 //////////////////////// SAARLAND ///////////////////////
 
@@ -1338,7 +1338,7 @@ Q.bsw_saar_elections_vote = 0;
 Q.next_election_year_saar = 2022;
 Q.next_election_month_saar = 3;
 Q.n_elections_saar = 0;
-Q.next_election_time_saar = 7;
+Q.next_election_time_saar = 11;
 
 //////////////////////// SAXONY ///////////////////////
 
@@ -1409,6 +1409,76 @@ Q.next_election_year_sax = 2024;
 Q.next_election_month_sax = 9;
 Q.n_elections_sax = 0;
 Q.next_election_time_sax = 37;
+
+//////////////////////// SAXONY-ANHALT ///////////////////////
+
+// coalitions 
+Q.anhalt_groko = 0; 
+Q.anhalt_traffic_light = 0; 
+Q.anhalt_rot_rot_grun = 0; 
+Q.anhalt_jamaica = 0; 
+Q.anhalt_rot_rot = 0; 
+Q.anhalt_kenya = 0; 
+Q.anhalt_schwarz_blau = 0; 
+Q.anhalt_tigerenten = 0;
+Q.anhalt_kiwi = 0; 
+Q.anhalt_die_linke_maj = 0;
+Q.anhalt_afd_maj = 0;
+Q.anhalt_rot_grun = 0; 
+Q.anhalt_spd_maj = 0; 
+Q.anhalt_green_maj = 0; 
+Q.anhalt_cdu_maj = 0; 
+Q.anhalt_weimar_but_different = 1;
+Q.anhalt_red_purple = 0;
+Q.anhalt_brombeer = 0;
+Q.anhalt_querfront = 0;
+
+// coalition potential seats
+
+Q.anhalt_pot_groko = 0; 
+Q.anhalt_pot_traffic_light = 0; 
+Q.anhalt_pot_rot_rot_grun = 0; 
+Q.anhalt_pot_jamaica = 0; 
+Q.anhalt_pot_rot_rot = 0; 
+Q.anhalt_pot_kenya = 0; 
+Q.anhalt_pot_schwarz_blau = 0; 
+Q.anhalt_pot_tigerenten = 0;
+Q.anhalt_pot_kiwi = 0; 
+Q.anhalt_pot_die_linke_maj = 0;
+Q.anhalt_pot_afd_maj = 0;
+Q.anhalt_pot_rot_grun = 0; 
+Q.anhalt_pot_spd_maj = 0; 
+Q.anhalt_pot_green_maj = 0; 
+Q.anhalt_pot_cdu_maj = 0; 
+Q.anhalt_pot_weimar_but_different = 0;
+Q.anhalt_pot_red_purple = 0;
+Q.anhalt_pot_brombeer = 0;
+Q.anhalt_pot_querfront = 0;
+
+// seats
+Q.spd_r_anhalt = 0;
+Q.linke_r_anhalt = 0;
+Q.cdu_r_anhalt = 0;
+Q.greens_r_anhalt = 0;
+Q.afd_r_anhalt = 0;
+Q.fdp_r_anhalt = 0;
+Q.bsw_r_anhalt = 0;
+
+Q.total_r_anhalt = 0;
+
+// votes?
+Q.spd_anhalt_elections_vote = 0;
+Q.linke_anhalt_elections_vote = 0;
+Q.fdp_anhalt_elections_vote = 0;
+Q.afd_anhalt_elections_vote = 0;
+Q.greens_anhalt_elections_vote = 0;
+Q.cdu_anhalt_elections_vote = 0;
+Q.bsw_anhalt_elections_vote = 0;
+
+Q.next_election_year_anhalt = 2026;
+Q.next_election_month_anhalt = 9;
+Q.n_elections_anhalt = 0;
+Q.next_election_time_anhalt = 64;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////// GOVERNMENT ACTIONS ////////////////////////////////////
