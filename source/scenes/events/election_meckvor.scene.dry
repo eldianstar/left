@@ -22,7 +22,7 @@ The regularly scheduled elections for the Mecklenburg-Vorpommern Landtag are to 
 on-arrival: {!
 
 var meckvor_adjustment_factors = {
-    spd: 1.15,
+    spd: 1.25,
     linke: 1.65,
     fdp: 0.55,
     cdu: 0.75,
@@ -148,7 +148,7 @@ Q.bsw_meckvor_elections_vote = (Q.bsw_meckvor_elections_vote != undefined ? pars
 /////////////////////////// adj factors seats ////////////////////////////
 
 var meckvor_adjustment_r_factors = {
-    spd: 1.15,
+    spd: 1.25,
     linke: 1.65,
     fdp: 0.55,
     cdu: 0.75,
