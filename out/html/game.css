@@ -724,6 +724,10 @@ th {
   fill: #1AA037;
 }
 
+.seat.ssw {
+  fill: #00277E;
+}
+
 .seat.other {
   fill: #00277E;
 }
