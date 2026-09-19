@@ -1340,6 +1340,75 @@ Q.next_election_month_saar = 3;
 Q.n_elections_saar = 0;
 Q.next_election_time_saar = 7;
 
+//////////////////////// SAXONY ///////////////////////
+
+// coalitions 
+Q.sax_groko = 0; 
+Q.sax_traffic_light = 0; 
+Q.sax_rot_rot_grun = 0; 
+Q.sax_jamaica = 0; 
+Q.sax_rot_rot = 0; 
+Q.sax_kenya = 1; 
+Q.sax_schwarz_blau = 0; 
+Q.sax_tigerenten = 0;
+Q.sax_kiwi = 0; 
+Q.sax_die_linke_maj = 0;
+Q.sax_afd_maj = 0;
+Q.sax_rot_grun = 0; 
+Q.sax_spd_maj = 0; 
+Q.sax_green_maj = 0; 
+Q.sax_cdu_maj = 0; 
+Q.sax_weimar_but_different = 0;
+Q.sax_red_purple = 0;
+Q.sax_brombeer = 0;
+Q.sax_querfront = 0;
+
+// coalition potential seats
+
+Q.sax_pot_groko = 0; 
+Q.sax_pot_traffic_light = 0; 
+Q.sax_pot_rot_rot_grun = 0; 
+Q.sax_pot_jamaica = 0; 
+Q.sax_pot_rot_rot = 0; 
+Q.sax_pot_kenya = 0; 
+Q.sax_pot_schwarz_blau = 0; 
+Q.sax_pot_tigerenten = 0;
+Q.sax_pot_kiwi = 0; 
+Q.sax_pot_die_linke_maj = 0;
+Q.sax_pot_afd_maj = 0;
+Q.sax_pot_rot_grun = 0; 
+Q.sax_pot_spd_maj = 0; 
+Q.sax_pot_green_maj = 0; 
+Q.sax_pot_cdu_maj = 0; 
+Q.sax_pot_weimar_but_different = 0;
+Q.sax_pot_red_purple = 0;
+Q.sax_pot_brombeer = 0;
+Q.sax_pot_querfront = 0;
+
+// seats
+Q.spd_r_sax = 0;
+Q.linke_r_sax = 0;
+Q.cdu_r_sax = 0;
+Q.greens_r_sax = 0;
+Q.afd_r_sax = 0;
+Q.fdp_r_sax = 0;
+Q.bsw_r_sax = 0;
+
+Q.total_r_sax = 0;
+
+// votes?
+Q.spd_sax_elections_vote = 0;
+Q.linke_sax_elections_vote = 0;
+Q.fdp_sax_elections_vote = 0;
+Q.afd_sax_elections_vote = 0;
+Q.greens_sax_elections_vote = 0;
+Q.cdu_sax_elections_vote = 0;
+Q.bsw_sax_elections_vote = 0;
+
+Q.next_election_year_sax = 2024;
+Q.next_election_month_sax = 9;
+Q.n_elections_sax = 0;
+Q.next_election_time_sax = 37;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////// GOVERNMENT ACTIONS ////////////////////////////////////
