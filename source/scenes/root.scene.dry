@@ -1480,6 +1480,78 @@ Q.next_election_month_anhalt = 9;
 Q.n_elections_anhalt = 0;
 Q.next_election_time_anhalt = 64;
 
+//////////////////////// SCHLESWIG-HOLSTEIN ///////////////////////
+
+// coalitions 
+Q.holstein_groko = 0; 
+Q.holstein_traffic_light = 0; 
+Q.holstein_rot_rot_grun = 0; 
+Q.holstein_jamaica = 1; 
+Q.holstein_rot_rot = 0; 
+Q.holstein_kenya = 0; 
+Q.holstein_schwarz_blau = 0; 
+Q.holstein_tigerenten = 0;
+Q.holstein_kiwi = 0; 
+Q.holstein_die_linke_maj = 0;
+Q.holstein_afd_maj = 0;
+Q.holstein_rot_grun = 0; 
+Q.holstein_spd_maj = 0; 
+Q.holstein_green_maj = 0; 
+Q.holstein_cdu_maj = 0; 
+Q.holstein_weimar_but_different = 0;
+Q.holstein_red_purple = 0;
+Q.holstein_brombeer = 0;
+Q.holstein_querfront = 0;
+
+// coalition potential seats
+
+Q.holstein_pot_groko = 0; 
+Q.holstein_pot_traffic_light = 0; 
+Q.holstein_pot_rot_rot_grun = 0; 
+Q.holstein_pot_jamaica = 0; 
+Q.holstein_pot_rot_rot = 0; 
+Q.holstein_pot_kenya = 0; 
+Q.holstein_pot_schwarz_blau = 0; 
+Q.holstein_pot_tigerenten = 0;
+Q.holstein_pot_kiwi = 0; 
+Q.holstein_pot_die_linke_maj = 0;
+Q.holstein_pot_afd_maj = 0;
+Q.holstein_pot_rot_grun = 0; 
+Q.holstein_pot_spd_maj = 0; 
+Q.holstein_pot_green_maj = 0; 
+Q.holstein_pot_cdu_maj = 0; 
+Q.holstein_pot_weimar_but_different = 0;
+Q.holstein_pot_red_purple = 0;
+Q.holstein_pot_brombeer = 0;
+Q.holstein_pot_querfront = 0;
+
+// seats
+Q.spd_r_holstein = 0;
+Q.linke_r_holstein = 0;
+Q.cdu_r_holstein = 0;
+Q.greens_r_holstein = 0;
+Q.afd_r_holstein = 0;
+Q.fdp_r_holstein = 0;
+Q.bsw_r_holstein = 0;
+Q.ssw_r_holstein = 0;
+
+Q.total_r_holstein = 0;
+
+// votes?
+Q.spd_holstein_elections_vote = 0;
+Q.linke_holstein_elections_vote = 0;
+Q.fdp_holstein_elections_vote = 0;
+Q.afd_holstein_elections_vote = 0;
+Q.greens_holstein_elections_vote = 0;
+Q.cdu_holstein_elections_vote = 0;
+Q.bsw_holstein_elections_vote = 0;
+Q.ssw_holstein_elections_vote = 0;
+
+Q.next_election_year_holstein = 2022;
+Q.next_election_month_holstein = 5;
+Q.n_elections_holstein = 0;
+Q.next_election_time_holstein = 12;
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////// GOVERNMENT ACTIONS ////////////////////////////////////
 ////////////////////////////////////////// what did we achieve? ////////////////////////////////////
