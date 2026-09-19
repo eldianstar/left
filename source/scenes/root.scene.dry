@@ -1273,8 +1273,8 @@ Q.next_election_time_rpf = 55;
 //////////////////////// SAARLAND ///////////////////////
 
 // coalitions 
-Q.saar_groko = 0; 
-Q.saar_traffic_light = 1; 
+Q.saar_groko = 1; 
+Q.saar_traffic_light = 0; 
 Q.saar_rot_rot_grun = 0; 
 Q.saar_jamaica = 0; 
 Q.saar_rot_rot = 0; 
