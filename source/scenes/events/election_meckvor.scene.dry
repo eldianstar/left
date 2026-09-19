@@ -508,7 +508,7 @@ on-arrival: spd_relation -= 2; greens_relation -= 2; east_linke += 0.3; meckvor_
 Our campaign has paid off, and we can finally form a majority government! This is a historic moment for our party.
 
 @redred
-view-if: meckvor_pot_rot_rot >= 50 and brandenburg_pot_spd_maj < 50
+view-if: meckvor_pot_rot_rot >= 50 and meckvor_pot_spd_maj < 50
 choose-if: spd_relation >= 45
 unavailable_subtitle: Our relations with the SPD aren't good enough.
 on-arrival: spd_relation += 1; meckvor_groko = 0; meckvor_traffic_light = 0; meckvor_rot_rot_grun = 0; meckvor_jamaica = 0; meckvor_rot_rot = 1; meckvor_kenya = 0; meckvor_schwarz_blau = 0; meckvor_tigerenten = 0; meckvor_kiwi = 0; meckvor_die_linke_maj = 0; meckvor_afd_maj = 0; meckvor_rot_grun = 0; meckvor_spd_maj = 0; meckvor_green_maj = 0; meckvor_cdu_maj = 0; meckvor_weimar_but_different = 0; meckvor_red_purple = 0; meckvor_brombeer = 0; meckvor_querfront = 0;
@@ -516,7 +516,7 @@ on-arrival: spd_relation += 1; meckvor_groko = 0; meckvor_traffic_light = 0; mec
 We have decided to form a coalition with the <span style="color: [+ spd_color +];">**SPD**</span>.
 
 @rrgreen
-view-if: meckvor_pot_rot_rot_grun >= 50 and brandenburg_pot_rot_grun < 50
+view-if: meckvor_pot_rot_rot_grun >= 50 and meckvor_pot_rot_grun < 50
 choose-if: spd_relation >= 40 and greens_relation >= 40
 unavailable-subtitle: Our relations with the moderate left aren't good enough.
 on-arrival: spd_relation += 1; greens_relation += 1; meckvor_groko = 0; meckvor_traffic_light = 0; meckvor_rot_rot_grun = 1; meckvor_jamaica = 0; meckvor_rot_rot = 0; meckvor_kenya = 0; meckvor_schwarz_blau = 0; meckvor_tigerenten = 0; meckvor_kiwi = 0; meckvor_die_linke_maj = 0; meckvor_afd_maj = 0; meckvor_rot_grun = 0; meckvor_spd_maj = 0; meckvor_green_maj = 0; meckvor_cdu_maj = 0; meckvor_weimar_but_different = 0; meckvor_red_purple = 0; meckvor_brombeer = 0; meckvor_querfront = 0;
