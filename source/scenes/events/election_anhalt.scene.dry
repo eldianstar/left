@@ -508,7 +508,7 @@ on-arrival: spd_relation -= 2; greens_relation -= 2; urban_linke += 0.3; anhalt_
 Our campaign has paid off, and we can finally form a majority government! This is a historic moment for our party.
 
 @redred
-view-if: anhalt_pot_rot_rot >= 50 and brandenburg_pot_spd_maj < 50
+view-if: anhalt_pot_rot_rot >= 50 and anhalt_pot_spd_maj < 50
 choose-if: spd_relation >= 45
 unavailable_subtitle: Our relations with the SPD aren't good enough.
 on-arrival: spd_relation += 1; anhalt_groko = 0; anhalt_traffic_light = 0; anhalt_rot_rot_grun = 0; anhalt_jamaica = 0; anhalt_rot_rot = 1; anhalt_kenya = 0; anhalt_schwarz_blau = 0; anhalt_tigerenten = 0; anhalt_kiwi = 0; anhalt_die_linke_maj = 0; anhalt_afd_maj = 0; anhalt_rot_grun = 0; anhalt_spd_maj = 0; anhalt_green_maj = 0; anhalt_cdu_maj = 0; anhalt_weimar_but_different = 0; anhalt_red_purple = 0; anhalt_brombeer = 0; anhalt_querfront = 0;
@@ -516,7 +516,7 @@ on-arrival: spd_relation += 1; anhalt_groko = 0; anhalt_traffic_light = 0; anhal
 We have decided to form a coalition with the <span style="color: [+ spd_color +];">**SPD**</span>.
 
 @rrgreen
-view-if: anhalt_pot_rot_rot_grun >= 50 and brandenburg_pot_rot_grun < 50
+view-if: anhalt_pot_rot_rot_grun >= 50 and anhalt_pot_rot_grun < 50
 choose-if: spd_relation >= 40 and greens_relation >= 40
 unavailable-subtitle: Our relations with the moderate left aren't good enough.
 on-arrival: spd_relation += 1; greens_relation += 1; anhalt_groko = 0; anhalt_traffic_light = 0; anhalt_rot_rot_grun = 1; anhalt_jamaica = 0; anhalt_rot_rot = 0; anhalt_kenya = 0; anhalt_schwarz_blau = 0; anhalt_tigerenten = 0; anhalt_kiwi = 0; anhalt_die_linke_maj = 0; anhalt_afd_maj = 0; anhalt_rot_grun = 0; anhalt_spd_maj = 0; anhalt_green_maj = 0; anhalt_cdu_maj = 0; anhalt_weimar_but_different = 0; anhalt_red_purple = 0; anhalt_brombeer = 0; anhalt_querfront = 0;
