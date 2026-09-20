@@ -2,7 +2,7 @@ title: Russian troops invade Ukraine!
 subtitle: It is war...
 new-page: true
 on-arrival: ukraine_seen = 1; ukraine_war = 1; foreign_moderation += 0.5; issue_antimilitarism -= 0.4*(dissent); urban_qol -= 3; east_qol -= 4; youth_qol -= 2; rural_qol -= 3; unemployment += 0.1; inflation += 1.5; economic_growth -= 0.5;
-view-if: year = 2022 and month >= 2
+view-if: year = 2021 and month >= 2
 set-bg: img/ukraine1.jpg
 max-visits: 1
 on-display: {!  
