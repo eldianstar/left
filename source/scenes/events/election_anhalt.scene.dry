@@ -5,9 +5,9 @@ new-page: true
 tags: event
 on-arrival: anhalt_election_seen += 1; anhalt_election_seen_time = time; anhalt_most_recent = time;
 on-departure: {! 
-Q.next_election_year_anhalt = Q.next_election_year_anhalt + 4; 
+Q.next_election_year_anhalt = Q.next_election_year_anhalt + 5; 
 Q.n_elections_anhalt += 1;
-Q.next_election_time_anhalt = Q.time + 48;
+Q.next_election_time_anhalt = Q.time + 60;
 !}
 priority: 2
 face-image: img/anhalt.png
