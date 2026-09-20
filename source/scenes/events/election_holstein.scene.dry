@@ -5,9 +5,9 @@ new-page: true
 tags: event
 on-arrival: holstein_election_seen += 1; holstein_election_seen_time = time; holstein_most_recent = time;
 on-departure: {! 
-Q.next_election_year_holstein = Q.next_election_year_holstein + 4; 
+Q.next_election_year_holstein = Q.next_election_year_holstein + 5; 
 Q.n_elections_holstein += 1;
-Q.next_election_time_holstein = Q.time + 48;
+Q.next_election_time_holstein = Q.time + 60;
 !}
 priority: 2
 face-image: img/holstein.png
