@@ -5,9 +5,9 @@ new-page: true
 tags: event
 on-arrival: brandenburg_election_seen += 1; brandenburg_election_seen_time = time; brandenburg_most_recent = time;
 on-departure: {! 
-Q.next_election_year_brandenburg = Q.next_election_year_brandenburg + 4; 
+Q.next_election_year_brandenburg = Q.next_election_year_brandenburg + 5; 
 Q.n_elections_brandenburg += 1;
-Q.next_election_time_brandenburg = Q.time + 48;
+Q.next_election_time_brandenburg = Q.time + 60;
 !}
 priority: 2
 face-image: img/brandenburg.png
