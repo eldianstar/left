@@ -5,9 +5,9 @@ new-page: true
 tags: event
 on-arrival: lowsax_election_seen += 1; lowsax_election_seen_time = time; lowsax_most_recent = time;
 on-departure: {! 
-Q.next_election_year_lowsax = Q.next_election_year_lowsax + 4; 
+Q.next_election_year_lowsax = Q.next_election_year_lowsax + 5; 
 Q.n_elections_lowsax += 1;
-Q.next_election_time_lowsax = Q.time + 48;
+Q.next_election_time_lowsax = Q.time + 60;
 !}
 priority: 2
 face-image: img/lowsax.png
