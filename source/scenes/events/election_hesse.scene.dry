@@ -5,9 +5,9 @@ new-page: true
 tags: event
 on-arrival: hesse_election_seen += 1; hesse_election_seen_time = time; hesse_most_recent = time;
 on-departure: {! 
-Q.next_election_year_hesse = Q.next_election_year_hesse + 4; 
+Q.next_election_year_hesse = Q.next_election_year_hesse + 5; 
 Q.n_elections_hesse += 1;
-Q.next_election_time_hesse = Q.time + 48;
+Q.next_election_time_hesse = Q.time + 60;
 !}
 priority: 2
 face-image: img/hesse.png
