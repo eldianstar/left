@@ -326,7 +326,7 @@ blockquote+blockquote.attribution {
   /*float: left;*/
   border: none;
   outline: none;
-  padding: 10px;
+  padding: 3px;
 }
 
 .tab_button.active {
