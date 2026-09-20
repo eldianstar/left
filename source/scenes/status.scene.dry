@@ -276,11 +276,16 @@ Economic growth: [+ economic_growth_2 +]%
 
 = State Politics
 
-<div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 5px; margin-left: -3px;"> 
-<div style="flex: 1;"><img src="img/berlin.png" alt="Sahra Wagenknecht" style="width: 96%;object-fit:cover;object-position:top;border:3px ridge #000000;"></div>
-<div style="flex: 1;">**Berlin**<br>Red-red-green coalition</div>
-<div style="flex: 1;">Next election: September 2021</div>
-</div> 
+**Berlin**<br>
+<div style="display: flex; gap: 5px; margin-bottom: 5px; margin-left: -3px;">
+    <div style="flex: 0 0 33.333%;">
+        <img src="img/berlin.png" alt="Berlin" style="width: 96%; object-fit: cover; object-position: top; border: 3px ridge #000000;">
+    </div>
+    <div style="flex: 1;">
+        Red-red-green coalition<br>Next election: September 2021
+    </div>
+</div>
+
 
 @politics
 
