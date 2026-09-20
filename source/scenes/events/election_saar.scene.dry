@@ -5,9 +5,9 @@ new-page: true
 tags: event
 on-arrival: saar_election_seen += 1; saar_election_seen_time = time; saar_most_recent = time;
 on-departure: {! 
-Q.next_election_year_saar = Q.next_election_year_saar + 4; 
+Q.next_election_year_saar = Q.next_election_year_saar + 5; 
 Q.n_elections_saar += 1;
-Q.next_election_time_saar = Q.time + 48;
+Q.next_election_time_saar = Q.time + 60;
 !}
 priority: 2
 face-image: img/saar.png
