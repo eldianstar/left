@@ -5,9 +5,9 @@ new-page: true
 tags: event
 on-arrival: sax_election_seen += 1; sax_election_seen_time = time; sax_most_recent = time;
 on-departure: {! 
-Q.next_election_year_sax = Q.next_election_year_sax + 4; 
+Q.next_election_year_sax = Q.next_election_year_sax + 5; 
 Q.n_elections_sax += 1;
-Q.next_election_time_sax = Q.time + 48;
+Q.next_election_time_sax = Q.time + 60;
 !}
 priority: 2
 face-image: img/sax.png
