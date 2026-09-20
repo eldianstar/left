@@ -6,6 +6,23 @@ tags: event
 view-if: year = 2021 and month >= 2
 set-bg: img/ukraine1.jpg
 max-visits: 1
+face-image: 
+priority: 1
+
+= War in Ukraine
+
+After a failed ultimatum, <span style="color: [+ russia_color_1 +];">**Ru**</span><span style="color: [+ russia_color_2 +];">**ss**</span><span style="color: [+ russia_color_3 +];">**ian**</span> President Vladimir Putin has declared the start of a **special military operation** with the stated goal of protecting the Donbass Republics and ethnic Russians and <span style="color: #753f16;">denazifying</span> <span style="color: [+ ukraine_color_1 +];">**Ukra**</span><span style="color: [+ ukraine_color_2 +];">**ine**</span> as a continuation of the Great Patriotic War.
+
+<blockquote>
+*In this regard, in accordance with Article 51 of Part 7 of the UN Charter, with the sanction of the Federation Council of Russia and in pursuance of the treaties of friendship and mutual assistance ratified by the Federal Assembly on 22 February this year with the Donetsk People’s Republic and the Luhansk People’s Republic, I decided to conduct a special military operation.
+
+Its goal is to protect people who have been subjected to bullying and genocide by the Kiev regime for eight years. And for this we will strive for the demilitarisation and denazification of Ukraine, as well as bringing to justice those who committed numerous, bloody crimes against civilians, including citizens of the Russian Federation.*
+</blockquote>
+
+
+- @ukraine1: The military machine is put into motion...
+
+@ukraine1
 on-display: {!  
     var cardEl = document.createElement('div');  
     cardEl.className = "face-figure2";  
@@ -18,21 +35,5 @@ on-display: {!
     var contentDiv = document.querySelector("#page #mid_panel #content");
     contentDiv.appendChild(cardEl);
 !}
-priority: 1
 
-= War in Ukraine
-
-After a failed ultimatum to <span style="color: [+ ukraine_color_1 +];">Ukra</span><span style="color: [+ ukraine_color_2 +];">ine</span>, <span style="color: [+ russia_color_1 +];">Ru</span><span style="color: [+ russia_color_2 +];">ss</span><span style="color: [+ russia_color_3 +];">ian</span> President Vladimir Putin has declared the start of a **special military operation** with the stated goal of protecting the Donbass Republics and ethnic Russians and <span style="color: #753f16;">denazifying</span> the Ukrainian state.  
-
-  
-- @cap: It is the nature of capitalism...
-- @do_something: We must do something to stop the suffering...
-
-@cap
-
-Perhaps this is simply one of the periodic crises of capitalism. Perhaps this moment will simply pass.
-
-@do_something
-on-arrival: crisis_urgency += 1
-
-What can we do to staunch the workers' suffering? It is becoming a hotly debated question.
+150'000 Russian troops attack Ukraine minutes after the President's announcement. Thousands of Russian vehicles, marked with a white **Z**, cross the Ukrainian border in four columns, a Northern one in Kyiv, a Southern one in Crimea, and two in the middle in the Donbass region and in Kharkiv. The attack is rapid and coordinated, with the clear main objective of taking the capital, Kyiv.
