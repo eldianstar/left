@@ -5,9 +5,9 @@ new-page: true
 tags: event
 on-arrival: berlin_election_seen += 1; berlin_election_seen_time = time; berlin_most_recent = time;
 on-departure: {! 
-Q.next_election_year_berlin = Q.next_election_year_berlin + 4; 
+Q.next_election_year_berlin = Q.next_election_year_berlin + 5; 
 Q.n_elections_berlin += 1;
-Q.next_election_time_berlin = Q.time + 48;
+Q.next_election_time_berlin = Q.time + 60;
 !}
 priority: 2
 face-image: img/berlin.png
