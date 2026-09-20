@@ -5,9 +5,9 @@ new-page: true
 tags: event
 on-arrival: bavaria_election_seen += 1; bavaria_election_seen_time = time; bavaria_most_recent = time;
 on-departure: {! 
-Q.next_election_year_bavaria = Q.next_election_year_bavaria + 4; 
+Q.next_election_year_bavaria = Q.next_election_year_bavaria + 5; 
 Q.n_elections_bavaria += 1;
-Q.next_election_time_bavaria = Q.time + 48;
+Q.next_election_time_bavaria = Q.time + 60;
 !}
 priority: 2
 face-image: img/bavaria.png
