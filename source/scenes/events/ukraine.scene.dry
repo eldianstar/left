@@ -6,7 +6,7 @@ tags: event
 view-if: year = 2021 and month >= 2
 set-bg: img/ukraine1.jpg
 max-visits: 1
-face-image: 
+face-image: img/PutinShoigu.jpg
 priority: 1
 
 = War in Ukraine
