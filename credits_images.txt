@@ -58,6 +58,8 @@ protest.jpg: https://cloudfront-eu-central-1.images.arcpublishing.com/madsack/TJ
 
 linkebanner.jpg: https://cf.katholisch.de/dpa_40249714_Die_Linke_Logo~1.jpg
 
+ukraine1.jpg: https://static.time.com/v3/assets/bltea6093859af6183b/bltb3303816e5423bd2/698a30c9db298740a9267b24/ukraine-war-military-1.jpg?branch=production
+
 = Local affairs
 
 berlin_map.jpg: https://www.in-berlin-brandenburg.com/Berliner_Bezirke/Bilder/berliner-stadtplan.jpeg
