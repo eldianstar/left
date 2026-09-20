@@ -5,9 +5,9 @@ new-page: true
 tags: event
 on-arrival: bawu_election_seen += 1; bawu_election_seen_time = time; bawu_most_recent = time;
 on-departure: {! 
-Q.next_election_year_bawu = Q.next_election_year_bawu + 4; 
+Q.next_election_year_bawu = Q.next_election_year_bawu + 5; 
 Q.n_elections_bawu += 1;
-Q.next_election_time_bawu = Q.time + 48;
+Q.next_election_time_bawu = Q.time + 60;
 !}
 priority: 2
 face-image: img/bawu.png
