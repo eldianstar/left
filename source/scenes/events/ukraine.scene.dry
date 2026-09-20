@@ -14,9 +14,11 @@ priority: 1
 After a failed ultimatum, <span style="color: [+ russia_color_1 +];">**Ru**</span><span style="color: [+ russia_color_2 +];">**ss**</span><span style="color: [+ russia_color_3 +];">**ian**</span> President Vladimir Putin has declared the start of a **special military operation** with the stated goal of protecting the Donbass Republics and ethnic Russians and <span style="color: #753f16;">denazifying</span> <span style="color: [+ ukraine_color_1 +];">**Ukra**</span><span style="color: [+ ukraine_color_2 +];">**ine**</span> as a continuation of the Great Patriotic War.
 
 <blockquote>
-*In this regard, in accordance with Article 51 of Part 7 of the UN Charter, with the sanction of the Federation Council of Russia and in pursuance of the treaties of friendship and mutual assistance ratified by the Federal Assembly on 22 February this year with the Donetsk People’s Republic and the Luhansk People’s Republic, I decided to conduct a special military operation.
+*"In this regard, in accordance with Article 51 of Part 7 of the UN Charter, with the sanction of the Federation Council of Russia and in pursuance of the treaties of friendship and mutual assistance ratified by the Federal Assembly on 22 February this year with the Donetsk People’s Republic and the Luhansk People’s Republic, I decided to conduct a special military operation.
 
-Its goal is to protect people who have been subjected to bullying and genocide by the Kiev regime for eight years. And for this we will strive for the demilitarisation and denazification of Ukraine, as well as bringing to justice those who committed numerous, bloody crimes against civilians, including citizens of the Russian Federation.*
+Its goal is to protect people who have been subjected to bullying and genocide by the Kiev regime for eight years. And for this we will strive for the demilitarisation and denazification of Ukraine, as well as bringing to justice those who committed numerous, bloody crimes against civilians, including citizens of the Russian Federation."*
+
+<span style="text-align: left;">Vladimir Putin, 24.02.2022, 5:30 Moscow time</span>
 </blockquote>
 
 
@@ -36,4 +38,9 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-150'000 Russian troops attack Ukraine minutes after the President's announcement. Thousands of Russian vehicles, marked with a white **Z**, cross the Ukrainian border in four columns, a Northern one in Kyiv, a Southern one in Crimea, and two in the middle in the Donbass region and in Kharkiv. The attack is rapid and coordinated, with the clear main objective of taking the capital, Kyiv.
+150'000 Russian troops attack Ukraine minutes after the President's announcement. Thousands of Russian vehicles, marked with a white **Z**, cross the Ukrainian border in four columns, a Northern one in Kyiv, a Southern one in Crimea, and two in the middle in the Donbass region and in Kharkiv. The attack is rapid and coordinated, with the clear main objective of taking the capital, <span style="color: [+ ukraine_color_1 +];">Kyiv</span>.
+
+- @ukraine2: What about the Ukrainians?
+
+@ukraine2
+face-image
