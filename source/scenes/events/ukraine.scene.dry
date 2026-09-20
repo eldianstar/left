@@ -1,0 +1,38 @@
+title: Russian troops invade Ukraine!
+subtitle: It is war...
+new-page: true
+on-arrival: ukraine_seen = 1; ukraine_war = 1; foreign_moderation += 0.5; issue_antimilitarism -= 0.4*(dissent); urban_qol -= 3; east_qol -= 4; youth_qol -= 2; rural_qol -= 3; unemployment += 0.1; inflation += 1.5; economic_growth -= 0.5;
+view-if: year = 2022 and month >= 2
+set-bg: img/ukraine1.jpg
+face-image
+max-visits: 1
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/ukrainenyt.webp";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+priority: 1
+
+= War in Ukraine
+
+After a failed ultimatum to <span style="color: [+ ukraine_color_1 +];">Ukra</span><span style="color: [+ ukraine_color_2 +];">ine</span>, <span style="color: [+ russia_color_1 +];">Ru</span><span style="color: [+ russia_color_2 +];">ss</span><span style="color: [+ russia_color_3 +];">ian</span> President Vladimir Putin has declared the start of a **special military operation** with the stated goal of protecting the Donbass Republics and ethnic Russians and <span style="color: #753f16;">denazifying</span> the Ukrainian state.  
+
+  
+- @cap: It is the nature of capitalism...
+- @do_something: We must do something to stop the suffering...
+
+@cap
+
+Perhaps this is simply one of the periodic crises of capitalism. Perhaps this moment will simply pass.
+
+@do_something
+on-arrival: crisis_urgency += 1
+
+What can we do to staunch the workers' suffering? It is becoming a hotly debated question.
