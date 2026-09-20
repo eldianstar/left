@@ -2219,7 +2219,7 @@ if (Q.percentComplete >= 100) {
     Q.achievement_holy_moly = 1;
 }
 !}
-set-bg: img/map_2.jpg
+set-bg: img/linkebanner.jpg
 new-page: true
 
 > *"The Communists turn their attention chiefly to Germany, because that country is on the eve of a bourgeois revolution that is bound to be carried out under more advanced conditions of European civilisation and with a much more developed proletariat than that of England was in the seventeenth, and France in the eighteenth century, and because the bourgeois revolution in Germany will be but the prelude to an immediately following proletarian revolution."*
