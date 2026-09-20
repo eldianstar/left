@@ -5,9 +5,9 @@ new-page: true
 tags: event
 on-arrival: hamburg_election_seen += 1; hamburg_election_seen_time = time; hamburg_most_recent = time;
 on-departure: {! 
-Q.next_election_year_hamburg = Q.next_election_year_hamburg + 4; 
+Q.next_election_year_hamburg = Q.next_election_year_hamburg + 5; 
 Q.n_elections_hamburg += 1;
-Q.next_election_time_hamburg = Q.time + 48;
+Q.next_election_time_hamburg = Q.time + 60;
 !}
 priority: 2
 face-image: img/hamburg.png
