@@ -5,9 +5,9 @@ new-page: true
 tags: event
 on-arrival: nrw_election_seen += 1; nrw_election_seen_time = time; nrw_most_recent = time;
 on-departure: {! 
-Q.next_election_year_nrw = Q.next_election_year_nrw + 4; 
+Q.next_election_year_nrw = Q.next_election_year_nrw + 5; 
 Q.n_elections_nrw += 1;
-Q.next_election_time_nrw = Q.time + 48;
+Q.next_election_time_nrw = Q.time + 60;
 !}
 priority: 2
 face-image: img/nrw.png
