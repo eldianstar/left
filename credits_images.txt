@@ -56,6 +56,8 @@ parteivorstand.jpg: https://www.die-linke.de/fileadmin/user_upload/52174481845_2
 
 protest.jpg: https://cloudfront-eu-central-1.images.arcpublishing.com/madsack/TJLTA6NMNFDBFGLHQM7BIXN7DI.jpeg
 
+linkebanner.jpg: https://cf.katholisch.de/dpa_40249714_Die_Linke_Logo~1.jpg
+
 = Local affairs
 
 berlin_map.jpg: https://www.in-berlin-brandenburg.com/Berliner_Bezirke/Bilder/berliner-stadtplan.jpeg
