@@ -413,48 +413,48 @@ Bundestag composition:
 = Party Leadership
 
 [? if bsw_split : 
-<div style="display: flex; gap: 15px; margin-bottom: 1px; margin-left: -3px;">
-    <div style="flex: 0 0 45%;">
+<div style="display: flex; gap: 10px; margin-bottom: 1px; margin-left: -3px;">
+    <div style="flex: 0 0 25%;">
         <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: [+ bsw_color +];">**BSW**</span>:
     </div>
     <div style="flex: 1;">
         Left-wing Conservatism ([+ bsw_leader +])
     </div>
 </div> ?]
-<div style="display: flex; gap: 15px; margin-bottom: 1px; margin-left: -3px;">
-    <div style="flex: 0 0 45%;">
+<div style="display: flex; gap: 10px; margin-bottom: 1px; margin-left: -3px;">
+    <div style="flex: 0 0 25%;">
         <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: [+ spd_color +];">**SPD**</span>:
     </div>
     <div style="flex: 1;">
         Third Way Social Democracy ([+ spd_leader +])
     </div>
 </div>
-<div style="display: flex; gap: 15px; margin-bottom: 1px; margin-left: -3px;">
-    <div style="flex: 0 0 45%;">
-        <span class="tooltip-text" title="Greens" style="color: [+ greens_color +];">**B90/Greens**</span>:
+<div style="display: flex; gap: 10px; margin-bottom: 1px; margin-left: -3px;">
+    <div style="flex: 0 0 25%;">
+        <span class="tooltip-text" title="Greens" style="color: [+ greens_color +];">**Greens**</span>:
     </div>
     <div style="flex: 1;">
         Green Progressivism ([+ greens_leader +])
     </div>
 </div>
-<div style="display: flex; gap: 15px; margin-bottom: 1px; margin-left: -3px;">
-    <div style="flex: 0 0 45%;">
+<div style="display: flex; gap: 10px; margin-bottom: 1px; margin-left: -3px;">
+    <div style="flex: 0 0 25%;">
         <span class="tooltip-text" title="Free Democratic Party" style="color: [+ fdp_color +];">**FDP**</span>:
     </div>
     <div style="flex: 1;">
         Classical Liberalism ([+ fdp_leader +])
     </div>
 </div>
-<div style="display: flex; gap: 15px; margin-bottom: 1px; margin-left: -3px;">
-    <div style="flex: 0 0 45%;">
-        <span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: [+ cdu_color +];">**CDU/CSU**</span>:
+<div style="display: flex; gap: 10px; margin-bottom: 1px; margin-left: -3px;">
+    <div style="flex: 0 0 25%;">
+        <span class="tooltip-text" title="Christian Democratic Union" style="color: [+ cdu_color +];">**CDU**</span>:
     </div>
     <div style="flex: 1;">
         Moderate Conservatism ([+ cdu_leader +])
     </div>
 </div>
-<div style="display: flex; gap: 15px; margin-bottom: 1px; margin-left: -3px;">
-    <div style="flex: 0 0 45%;">
+<div style="display: flex; gap: 10px; margin-bottom: 1px; margin-left: -3px;">
+    <div style="flex: 0 0 25%;">
         <span class="tooltip-text" title="Alternative for Germany" style="color: [+ afd_color +];">**AfD**</span>:
     </div>
     <div style="flex: 1;">
