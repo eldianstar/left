@@ -273,8 +273,9 @@ Bundestag composition:
 <tr><td><span class="tooltip-text" title="Social Democratic Party of Germany" style="color: [+ spd_color +];">**SPD**</span>: </td><td>[+ spd_b +]% </td></tr>
 <tr><td><span class="tooltip-text" title="Alliance 90/The Greens" style="color: [+ greens_color +];">**B90/Greens**</span>: </td><td>[+ greens_b +]% </td></tr>
 <tr><td><span class="tooltip-text" title="Free Democratic Party" style="color: [+ fdp_color +];">**FDP**</span>: </td><td>[+ fdp_b +]% </td></tr>
-<tr><td><span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: </td><td>[+ cdu_color +];">**CDU/CSU**</span>: [+ cdu_b +]% </td></tr>
+<tr><td><span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: [+ cdu_color +];">**CDU/CSU**</span>: </td><td>[+ cdu_b +]% </td></tr>
 <tr><td><span class="tooltip-text" title="Alternative for Germany" style="color: [+ afd_color +];">**AfD**</span>: </td><td>[+ afd_b +]% </td></tr>
+<tr><td>**Others**: </td><td>[+ other_b +]% </td></tr>
 </table>
 
 @local
