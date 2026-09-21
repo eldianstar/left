@@ -14,9 +14,9 @@ priority: 1
 After a failed ultimatum, <span style="color: [+ russia_color_1 +];">**Ru**</span><span style="color: [+ russia_color_2 +];">**ss**</span><span style="color: [+ russia_color_3 +];">**ian**</span> President Vladimir Putin has declared the start of a **special military operation** with the stated goal of protecting the Donbass Republics and ethnic Russians and <span style="color: #753f16;">denazifying</span> <span style="color: [+ ukraine_color_1 +];">**Ukra**</span><span style="color: [+ ukraine_color_2 +];">**ine**</span> as a continuation of the Great Patriotic War.
 
 <blockquote>
-*"In this regard, in accordance with Article 51 of Part 7 of the UN Charter, with the sanction of the Federation Council of Russia and in pursuance of the treaties of friendship and mutual assistance ratified by the Federal Assembly on 22 February this year with the Donetsk People’s Republic and the Luhansk People’s Republic, I decided to conduct a special military operation.
+*"In this regard, in accordance with Article 51 of Part 7 of the <span style="color: [+ un_color +];">UN Charter</span>, with the sanction of the Federation Council of Russia and in pursuance of the treaties of friendship and mutual assistance ratified by the Federal Assembly on 22 February this year with the <span style="color: #000000;">Donetsk</span><span style="color: [+ russia_color_2 +];">People's</span><span style="color: [+ russia_color_1 +];">Republic</span> and the <span style="color: [+ un_color +];">Donetsk</span><span style="color: [+ russia_color_2 +];">People's</span><span style="color: [+ russia_color_1 +];">Republic</span>, I decided to conduct a special military operation.
 
-Its goal is to protect people who have been subjected to bullying and genocide by the Kiev regime for eight years. And for this we will strive for the demilitarisation and denazification of Ukraine, as well as bringing to justice those who committed numerous, bloody crimes against civilians, including citizens of the Russian Federation."*
+Its goal is to protect people who have been subjected to bullying and genocide by the Kiev regime for eight years. And for this we will strive for the demilitarisation and denazification of <span style="color: [+ ukraine_color_1 +];">Ukra</span><span style="color: [+ ukraine_color_2 +];">ine</span>, as well as bringing to justice those who committed numerous, bloody crimes against civilians, including citizens of the Russian Federation."*
 
 </blockquote>
 <span style="text-align: right;">Vladimir Putin, 24.02.2022, 5:30 Moscow time</span>
@@ -42,13 +42,12 @@ on-display: {!
 - @ukraine2: What about the Ukrainians?
 
 @ukraine2
-face-image: img/_portraits/ZelenskyVolodymyr.jpg
 
-Immediately, Ukrainian President Volodymyr Zelenskyy has declared martial law. All men between 18 and 60 years must remain in the country in preparation for a general mobilisation. Despite Russian forces marching towards Kyiv, Zelenskyy has decided to stay in the capital.
+Immediately, <span style="color: [+ ukraine_color_1 +];">Ukra</span><span style="color: [+ ukraine_color_2 +];">inian</span> President Volodymyr Zelenskyy has declared martial law. All men between 18 and 60 years must remain in the country in preparation for a general mobilisation. Despite Russian forces marching towards Kyiv, Zelenskyy has decided to stay in the capital, hoping to restore morale among citizens.
 
 - @ukraine3: He won't last a week...
 
 @ukraine3
 set-bg: img/linkebanner.jpg
 
-Surprisingly, the Russians have failed at capturing the capital. The offensive is halted, and the armies settle on fixed fronts and thousands of kilometers of trenches. Our continent faces yet another conflict, and it seems that this war has come to stay.
+Surprisingly, the Russians have failed at capturing the capital. The offensive is halted, and the armies settle on fixed fronts and thousands of kilometers of trenches. Our <span style="color: [+ eu_color_1 +];">conti</span><span style="color: [+ eu_color_2 +];">nent</span> faces yet another conflict, and it seems that this war has come to stay.
