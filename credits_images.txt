@@ -2,6 +2,8 @@
 
 = Images (eldianstar/linke mod):
 
+ukraine_refugees.jpg: https://cloudfront-us-east-2.images.arcpublishing.com/reuters/XXCDP4SOCJN3NBCCIQQWCIUOTE.jpg
+
 ScholzZeitenwende.jpg: https://ga.de/imgs/scaled/93/1/5/8/8/5/6/6/4/9/w2100_h1313_x1160_y638_DPA_bfunkdpa_5FAA4E00EA2D1F35-ca6737992db8a6db.jpg
 
 ukrainenyt1.webp: https://static01.nyt.com/images/2023/02/24/us/24ukraine-blog-update-A1/24ukraine-blog-update-A1-articleLarge.jpg?quality=75&auto=webp&disable=upscale
