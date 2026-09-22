@@ -1,0 +1,30 @@
+title: The Bürgergeld passes!
+new-page: true
+on-arrival: urban_qol += 3; rural_qol += 1; youth_qol += 2; east_qol += 2; upper_fdp -= 5*(100-status_quo)/20; urban_fdp -= 3*(100-status_quo)/20; rural_fdp -= 3*(100-status_quo)/20; east_fdp -= 3*(100-status_quo)/20; youth_fdp -= 4*(100-status_quo)/20; upper_cdu += 5*(100-status_quo)/20; urban_cdu += 3*(100-status_quo)/20; rural_cdu += 3*(100-status_quo)/20; east_cdu += 3*(100-status_quo)/20; youth_cdu += 4*(100-status_quo)/20; industrial_fdp_backing -= 2; industrial_afd_backing += 1; industrial_cdu_backing += 1;
+tags: event
+view-if: ampelkoalition_time >= 14
+max-visits: 1
+face-image: img/ukraine_refugees.jpg
+priority: 2
+
+= The Bürgergeld passes!
+
+Since the times of Gerhard Schröder, Germany's unemployment benefits system has been the neoliberal Hartz IV. Now, as one of the most important reforms of their mandate, the <span style="color: [+ spd_color +];">new go</span> <span style="color: [+ greens_color +];">vern</span> <span style="color: [+ fdp_color +];">ment</span> has managed to pass the Bürgergeld, which increases both the amount of the monthly payment and the personal savings allowed, as well as introducing a 6-months long mild sanctions period. At the same time, the minimum wage has been increased.
+
+As we are on the left-wing of the German political spectrum, we are expected to formulate our stance on this reform as well as the government in general.
+  
+What should we do?
+
+- @criticize
+- @praise
+
+
+@criticize
+title: Criticize the bill as being far too moderate.
+on-arrival: pragmatist_dissent += 1; beweli_dissent -= 2; beweli_strength += 2; pro_status_quo -= 1; issue_welfare -= 0.5; urban_linke -= 1; east_linke -= 0.7; youth_linke -= 0.4; urban_cdu += 1; east_spd += 0.7; youth_spd += 0.4;
+go-to: root
+
+@praise
+title: Praise the bill while still remarking its shortcomings.
+on-arrival: pragmatist_strength += 2; beweli_dissent += 2; pro_status_quo += 1; urban_linke -= 2; east_linke -= 1; youth_linke -= 0.7; urban_spd += 1; east_spd += 1; youth_spd += 0.7; issue_welfare -= 2.5;
+go-to: root
