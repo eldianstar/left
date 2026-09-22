@@ -39,5 +39,5 @@ on-arrival: issue_migration += 0.95-(social_media/10+newspapers/20); east_afd +=
 @against
 title: Criticize the government's open borders policy.
 subtitle: After all, refugees only hurt the German worker.
-// view-if: oldleft_strength >= 45
+view-if: oldleft_strength >= 5
 on-arrival: issue_migration += 1.6; oldleft_dissent -= 5; social_moderation += 3; spd_relation -= 2; greens_relation -= 4; beweli_dissent += 15; emali_dissent += 10; pragmatist_dissent += 6; oldleft_strength += 6; pro_status_quo -= 1*(10+newspapers+social_media)/10; east_afd += 1.4; urban_afd += 0.4; rural_afd += 0.9; upper_afd += 0.3; youth_afd += 0.4; east_linke += 0.7*(1-dissent); rural_linke += 0.2*(1-dissent); wagenknecht_advisor_fame += 5; 
