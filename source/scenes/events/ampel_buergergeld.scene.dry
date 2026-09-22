@@ -1,6 +1,6 @@
 title: The Bürgergeld passes!
 new-page: true
-on-arrival: urban_qol += 3; rural_qol += 1; youth_qol += 2; east_qol += 2; upper_fdp -= 5*(100-status_quo)/20; urban_fdp -= 3*(100-status_quo)/20; rural_fdp -= 3*(100-status_quo)/20; east_fdp -= 3*(100-status_quo)/20; youth_fdp -= 4*(100-status_quo)/20; upper_cdu += 5*(100-status_quo)/20; urban_cdu += 3*(100-status_quo)/20; rural_cdu += 3*(100-status_quo)/20; east_cdu += 3*(100-status_quo)/20; youth_cdu += 4*(100-status_quo)/20; industrial_fdp_backing -= 2; industrial_afd_backing += 1; industrial_cdu_backing += 1;
+on-arrival: urban_qol += 3; rural_qol += 1; youth_qol += 2; east_qol += 2; upper_fdp -= 5*(100-pro_status_quo)/20; urban_fdp -= 3*(100-pro_status_quo)/20; rural_fdp -= 3*(100-pro_status_quo)/20; east_fdp -= 3*(100-pro_status_quo)/20; youth_fdp -= 4*(100-pro_status_quo)/20; upper_cdu += 5*(100-pro_status_quo)/20; urban_cdu += 3*(100-pro_status_quo)/20; rural_cdu += 3*(100-pro_status_quo)/20; east_cdu += 3*(100-pro_status_quo)/20; youth_cdu += 4*(100-pro_status_quo)/20; industrial_fdp_backing -= 2; industrial_afd_backing += 1; industrial_cdu_backing += 1;
 tags: event
 view-if: ampelkoalition_time >= 14
 max-visits: 1
