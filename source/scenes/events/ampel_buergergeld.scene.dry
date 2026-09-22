@@ -4,7 +4,7 @@ on-arrival: urban_qol += 3; rural_qol += 1; youth_qol += 2; east_qol += 2; upper
 tags: event
 view-if: ampelkoalition_time >= 14
 max-visits: 1
-face-image: img/ukraine_refugees.jpg
+face-image: img/ScholzHeil.webp
 priority: 2
 
 = The Bürgergeld passes!
