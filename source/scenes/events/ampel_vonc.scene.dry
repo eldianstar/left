@@ -1,0 +1,24 @@
+title: Vote of Confidence for Chancellor Scholz
+new-page: true
+tags: event
+view-if: (ampelkoalition_time + spd_relation/5) >= 45 or ampelkoalition_time >= 38
+max-visits: 1
+face-image: img/ScholzTeryoshi.jpg
+priority: 2
+
+= Vote of Confidence for Chancellor Scholz
+
+Scholz has called a Vote of Confidence after the collapse of the <span style="color: [+ spd_color +];">Traffic</span> <span style="color: [+ greens_color +];">Light</span> <span style="color: [+ fdp_color +];">coalition</span>. There seems to be no possible coalition to form, so Scholz's hope is to trigger a snap election as soon as possible.
+
+As for us, we haven't been approached by any of the member parties. We probably shouldn't concern ourselves with what doesn't regard us. Still, shall we vote for or against Scholz?
+
+- @for: Vote in favor of the Chancellor, thereby potentially saving the government.
+- @against: Vote against the Chancellor, as expected.
+
+@for
+go-to: against if ((spd_b + greens_b + linke_b) < 50); election_1928.ministries if (spd_b + greens_b + linke_b)>= 50
+
+@against
+on-arrival: ampelkoalition = 0; next_election_year = year if month <= 9; next_election_year = (year+1) if month > 9; next_election_month = (month+3) if (month+3) <= 12; next_election_month = (month-9) if (month+3) > 12; pro_status_quo -= 3;
+
+Scholz has lost the vote, as expected. Next elections will be set for [+ next_election_month +] [+ next_election_year +].
