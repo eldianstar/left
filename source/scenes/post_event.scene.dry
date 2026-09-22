@@ -1394,6 +1394,11 @@ if (Q.linke_in_government) {
 // before this had govt burden
 
 
+// ampel
+
+if (Q.ampelkoalition) {
+   Q.ampelkoalition_time += 1;
+}
 
 // brüning toleration TODO
 
