@@ -1,0 +1,21 @@
+title: Nord Stream pipeline explodes!
+new-page: true
+on-arrival: 
+tags: event
+view-if: year = 2022 and month >= 9
+max-visits: 1
+face-image: img/nordstream.jpeg
+priority: 2
+
+= Nord Stream pipeline explodes
+
+The Nord Stream gas pipeline, one of the most important pipelines conducting gas from <span style="color: [+ russia_color_1 +];">**Ru**</span><span style="color: [+ russia_color_2 +];">**ss**</span><span style="color: [+ russia_color_3 +];">**ian**</span> to the <span style="color: [+ eu_color_1 +];">**European**</span><span style="color: [+ eu_color_2 +];">**Union**</span> through the Baltic Sea, has experienced an enormous leak after a series of underwater explosions. In a day, gas prices throughout Europe have risen by 12%.
+
+With so much vested interest behind it, and only half a year after the start of the war, this event is quite the interesting coincidence.
+
+- @huh
+
+@huh
+title: Huh...
+on-arrival: urban_qol -= 3; rural_qol -= 6; youth_qol -= 1; east_qol -= 5; inflation += 1; economic_growth -= 0.3; issue_cost_of_living += 0.5*(1-dissent); pro_status_quo -= 1.5; east_afd += 0.8; rural_afd += 0.4; urban_afd += 0.2; youth_afd += 0.1;
+go-to: root
