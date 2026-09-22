@@ -1,0 +1,19 @@
+title: Lindner is dismissed!
+new-page: true
+tags: event
+view-if: (ampelkoalition_time + spd_relation/5) >= 45 or ampelkoalition_time >= 38
+max-visits: 1
+face-image: img/_portraits/LindnerChristian.jpg
+priority: 2
+
+= Lindner is dismissed!
+
+Following conflicts between the coalition partners, Chancellor Olaf Scholz (<span style="color: [+ spd_color +];">**SPD**</span>) has agreed with President [+ president +] to dismiss Minister of Finance Christian Lindner as well as all other <span style="color: [+ fdp_color +];">**FDP**</span> ministers! This functionally means the breakup of the <span style="color: [+ spd_color +];">Traffic</span> <span style="color: [+ greens_color +];">Light</span> <span style="color: [+ fdp_color +];">coalition</span>. A document has also been discovered in which the FDP seems to have carefully planned the breakup of the coalition using violent, militaristic wording. The media hasn't hesitated to attack both parties involved for their mistakes. 
+  
+For now, Scholz has continued to absolve his mandate in a minority <span style="color: [+ spd_color +];">Red</span>-<span style="color: [+ greens_color +];">green</span> coalition, but it's clear to everyone that this arrangement cannot continue for long. In order to settle the matter, the Chancellor has the intention of calling a vote of confidence soon.
+
+- @option: We can only wait now.
+
+@option
+on-arrival: urban_spd -= 1.5; rural_spd -= 1.5; upper_spd -= 1; urban_cdu += 1.5; rural_cdu += 1.5; upper_cdu += 1; urban_fdp -= 3; youth_fdp -= 3; upper_fdp -= 3; east_fdp -= 2; rural_fdp -= 1; urban_cdu += 3; youth_cdu += 3; upper_cdu += 3; east_cdu += 2; rural_cdu += 1; east_afd += 2; rural_afd += 1; ampelkoalition_failed = 1;
+go-to: root
