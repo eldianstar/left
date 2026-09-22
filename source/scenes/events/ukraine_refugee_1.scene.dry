@@ -1,0 +1,43 @@
+title: Ukrainian refugees enter Germany en masse
+new-page: true
+on-arrival: 
+tags: event
+view-if: year = 2022 and month >= 5
+max-visits: 1
+face-image: img/ukraine_refugees.jpg
+priority: 2
+
+= Ukrainian refugee crisis
+
+In the last two months, a total of more than half a million <span style="color: [+ ukraine_color_1 +];">**Ukra**</span><span style="color: [+ ukraine_color_2 +];">**inian**</span> refugees have entered Germany. The government has agreed to assign an additional billion to asylum costs, but many centers are still overwhelmed. Meanwhile, the <span style="color: [+ afd_color +];">far-right</span> will surely use the opportunity for fearmongering.
+
+What should we do?
+
+- @criticize
+- @praise
+- @campaign
+- @against
+
+@criticize
+title: Criticize the government's actions.
+subtitle: Their response to the crisis has only made the problem worse!
+on-arrival: pragmatist_dissent += 1; beweli_strength += 2; emali_strength += 1; issue_migration += 1.25; urban_linke += 0.2*(1-dissent)*((10+newspapers)/10); youth_linke += 0.2*(1-dissent)*((10+social_media)/10); pro_status_quo -= 1*(10+newspapers+social_media)/10; east_afd += 1.5; urban_afd += 0.5; rural_afd += 1; upper_afd += 0.4; youth_afd += 0.5;
+
+@praise
+title: Praise the government's handling of the matter.
+subtitle: They probably should have invested more though...
+on-arrival: beweli_dissent += 3; oldleft_dissent += 3; pragmatist_strength += 2; issue_migration += 1; east_afd += 1.4; urban_afd += 0.4; rural_afd += 0.9; upper_afd += 0.3; youth_afd += 0.4; pro_status_quo += 1; spd_relation += 2; greens_relation += 2; fdp_relation += 0.5; urban_linke -= 0.1; youth_linke -= 0.1;
+
+@campaign
+title: Start a media campaign against <span style="color: [+ afd_color +];">AfD</span> propaganda.
+subtitle: -1 resources.
+view-if: oldleft_strength < 50
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: issue_migration += 0.95-(social_media/10+newspapers/20); east_afd += 1; urban_afd += 0.2; rural_afd += 0.7; upper_afd += 0.1; youth_afd += 0.2; pro_status_quo += 0.5; buenger_advisor_fame += 4;
+
+@against
+title: Criticize the government's open borders policy.
+subtitle: After all, refugees only hurt the German worker.
+// view-if: oldleft_strength >= 45
+on-arrival: issue_migration += 1.6; oldleft_dissent -= 5; social_moderation += 3; spd_relation -= 2; greens_relation -= 4; beweli_dissent += 15; emali_dissent += 10; pragmatist_dissent += 6; oldleft_strength += 6; pro_status_quo -= 1*(10+newspapers+social_media)/10; east_afd += 1.4; urban_afd += 0.4; rural_afd += 0.9; upper_afd += 0.3; youth_afd += 0.4; east_linke += 0.7*(1-dissent); rural_linke += 0.2*(1-dissent); wagenknecht_advisor_fame += 5; 
