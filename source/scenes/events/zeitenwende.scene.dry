@@ -20,16 +20,19 @@ What should our reaction be?
 - @speech
 
 @condemn
-title: Sharply condemn the <span style="color: [+ spd_color +];">false</span><span style="color: [+ greens_color +];">left</span>'s militarism.
+title: Sharply condemn the <span style="color: [+ spd_color +];">false</span> <span style="color: [+ greens_color +];">left</span>'s militarism.
 subtitle: The <span style="color: [+ spd_color +];">SPD</span> betrays us once again...
+on-arrival: pragmatist_dissent += 2; oldleft_strength += 3; beweli_strength += 2; greens_relation -= 4; spd_relation -= 4; youth_linke -= (6-issue_antimilitarism)/8; urban_linke -= (6-issue_antimilitarism)/8; youth_spd += (6-issue_antimilitarism)/16; urban_spd += (6-issue_antimilitarism)/16; youth_greens += (6-issue_antimilitarism)/16; urban_greens += (6-issue_antimilitarism)/16;
 
 @donotreact
 title: Condemn the resolution, but don't make a big deal out of it.
 subtitle: Pro-<span style="color: [+ ukraine_color_1 +];">Ukra</span><span style="color: [+ ukraine_color_2 +];">ine</span> sentiment is so widespread that a strong attack on the speech would only hurt us.
+on-arrival: oldleft_dissent += 8; beweli_dissent += 3; emali_strength += 3; pragmatist_strength += 3; foreign_moderation += 2; issue_antimilitarism -= 0.75;
 
 @agree
 title: He has a point after all...
 subtitle: While 100 billion is way too much, we do need to help Ukrainians against the aggressor...
+on-arrival: oldleft_dissent += 25; beweli_dissent += 10; emali_dissent += 3; pragmatist_strength += 10; foreign_moderation += 4; greens_relation += 4; spd_relation += 4; cdu_relation += 3; fdp_relation += 3; east_afd += (issue_antimilitarism)/10; east_linke -= (issue_antimilitarism)/10; youth_linke -= (issue_antimilitarism-2)/8; urban_linke -= (issue_antimilitarism-2)/8; issue_antimilitarism -= 2;
 
 @speech
 title: Wait, what did he say exactly?
@@ -43,7 +46,7 @@ Distinguished colleagues,
 
 Fellow citizens,
 
-The twenty-fourth of February 2022 marks a watershed in the history of our continent. With the attack on <span style="color: [+ ukraine_color_1 +];">Ukra</span><span style="color: [+ ukraine_color_2 +];">ine</span>, the <span style="color: [+ russia_color_1 +];">**Ru**</span><span style="color: [+ russia_color_2 +];">**ss**</span><span style="color: [+ russia_color_3 +];">**ian**</span> President Putin has started a war of aggression in cold blood. For one reason alone: the freedom of the Ukrainian people calls his own oppressive regime into question.
+The twenty-fourth of February 2022 marks a watershed in the history of our continent. With the attack on <span style="color: [+ ukraine_color_1 +];">Ukra</span><span style="color: [+ ukraine_color_2 +];">ine</span>, the <span style="color: [+ russia_color_1 +];">Ru</span><span style="color: [+ russia_color_2 +];">ss</span><span style="color: [+ russia_color_3 +];">ian</span> President Putin has started a war of aggression in cold blood. For one reason alone: the freedom of the Ukrainian people calls his own oppressive regime into question.
 
 That is inhumane. It is a violation of international law. There is nothing and nobody that can justify it. The terrible images from Kyiv, Kharkiv, Odesa and Mariupol show Putin’s utter lack of scruples. The appalling injustice, the pain of the Ukrainian people – they affect us all very deeply.
 
@@ -57,9 +60,9 @@ It was only by resorting to the use of its veto that Moscow – which is, after 
 
 What a disgrace! President Putin always talks about indivisible security. But what he really seeks now is to divide the continent into the familiar old spheres of influence through armed force. This has consequences for security in <span style="color: [+ eu_color_1 +];">Eur</span><span style="color: [+ eu_color_2 +];">ope</span>. Yes, in the long term security in Europe cannot be achieved in opposition to Russia. But for the foreseeable future, Putin is jeopardising this security. That is why I say very clearly that we accept the challenge that now faces us – with clear-headed resolve. There are five courses of action that we must take:
 
-Firstly, we must support <span style="color: [+ ukraine_color_1 +];">Ukra</span><span style="color: [+ ukraine_color_2 +];">ine</span> in this desperate situation. We have already provided significant support in recent weeks, months and years. But with the attack on Ukraine, we have entered a new era. In Kyiv, Kharkiv, Odesa and Mariupol, people are not just defending their homeland. They are fighting for freedom and their democracy. For values that we share with them. As democrats, as Europeans, we stand by their side – on the right side of history! With his attack on Ukraine on Thursday, President Putin has created a new reality. This new reality requires an unequivocal response. We have given one. As you know, we decided yesterday that <span style="color: [+ cdu_color +];">**Ger**</span><span style="color: [+ spd_color +];">**ma**</span><span style="color: [+ fdp_color +];">**ny**</span> will supply Ukraine with weapons for the country’s defence. No other response to Putin’s aggression was possible.
+Firstly, we must support <span style="color: [+ ukraine_color_1 +];">Ukra</span><span style="color: [+ ukraine_color_2 +];">ine</span> in this desperate situation. We have already provided significant support in recent weeks, months and years. But with the attack on Ukraine, we have entered a new era. In Kyiv, Kharkiv, Odesa and Mariupol, people are not just defending their homeland. They are fighting for freedom and their democracy. For values that we share with them. As democrats, as Europeans, we stand by their side – on the right side of history! With his attack on Ukraine on Thursday, President Putin has created a new reality. This new reality requires an unequivocal response. We have given one. As you know, we decided yesterday that <span style="color: [+ cdu_color +];">Ger</span><span style="color: [+ spd_color +];">ma</span><span style="color: [+ fdp_color +];">ny</span> will supply Ukraine with weapons for the country’s defence. No other response to Putin’s aggression was possible.
 
-Ladies and gentlemen, The second course of action that we must take is to divert Putin from the path of war. This war is a catastrophe for Ukraine. However, it will prove to be a catastrophe for <span style="color: [+ russia_color_1 +];">**Ru**</span><span style="color: [+ russia_color_2 +];">**ss**</span><span style="color: [+ russia_color_3 +];">**ia**</span>, too. Together with the Heads of State and Government of the <span style="color: [+ eu_color_1 +];">E</span><span style="color: [+ eu_color_2 +];">U</span>, we have passed a package of sanctions on an unprecedented scale.
+Ladies and gentlemen, The second course of action that we must take is to divert Putin from the path of war. This war is a catastrophe for Ukraine. However, it will prove to be a catastrophe for <span style="color: [+ russia_color_1 +];">Ru</span><span style="color: [+ russia_color_2 +];">ss</span><span style="color: [+ russia_color_3 +];">ia</span>, too. Together with the Heads of State and Government of the <span style="color: [+ eu_color_1 +];">E</span><span style="color: [+ eu_color_2 +];">U</span>, we have passed a package of sanctions on an unprecedented scale.
 
 1. We are cutting Russian banks and state businesses off from financing. <br>
 2. We are preventing the export of cutting-edge technology to Russia. <br>
