@@ -1,0 +1,95 @@
+title: The future of the <span style="color: [+ bsw_color +];">**Old Left**</span>
+view-if: (year = 2022 and month >= 6 and wagenknecht_left = 0) or (wagenknecht_left_progress >= 9 and wagenknecht_left = 0)
+max-visits: 1
+tags: event
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/WagenknechtWissler.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+new-page: true
+
+= The future of the <span style="color: [+ bsw_color +];">**Old Left**</span>
+
+After the Erfurt Congress, the Old Left has [? if oldleft_c >= 50 : experienced an unprecedented victory in inner-party politics ?][? if oldleft_c < 50 and oldleft_c >= 38 : increased its power ?][? if oldleft_c < 38 and oldleft_c >= 27 : slightly decreased its power ?][? if oldleft_c < 27 : suffered an unprecedented defeat ?], [? if (in_left_leadership = 1 or in_hufeisen_leadership = 1) and oldleft_c >= 38 : and thus electing a Party leader from its own ranks. ?][? if (in_left_leadership = 1 or in_hufeisen_leadership = 1) and oldleft_c < 38 : while still electing a Party leader from its own ranks. ?][? if (in_left_leadership = 0 and in_hufeisen_leadership = 0) and oldleft_c >= 38 : but somehow still failing to elect Party leader from its own ranks. ?][? if (in_left_leadership = 0 and in_hufeisen_leadership = 0) and oldleft_c < 38 : and has failed in electing a Party leader from its own ranks. ?].
+
+While she has enoyed unprecedented power in her faction, the recent war in <span style="color: [+ ukraine_color_1 +];">Ukra</span><span style="color: [+ ukraine_color_2 +];">ine</span>, as well as clashes with the <span style="color: [+ linke_color +];">progressives</span>, has lead many in the faction to rethink her role as uncontested leader.
+
+Among the most relevant of these critics is the <span style="color: [+ spd_color +];">**Sozialistische Linke**</span>, a worker-focused West German caucus descending from our parent party, the **W**<span style="color: [+ russia_color_3 +];">**A**</span><span style="color: [+ spd_color +];">**S**</span>**G**, that opposes Wagenknecht's conservatism with a new brand of radical progressivism, distant from both the Kremlin and the bureaucratism of the DDR.
+
+- @results: Who shall lead the <span style="color: [+ bsw_color +];">Old Left</span>?
+
+@results
+on-arrival: {!
+  Q.wagenknecht_score += Q.wagenknecht_advisor_fame/40;
+  Q.wagenknecht_score += Q.oldleft_c/10;
+  Q.wagenknecht_score += Q.east_linke/4;
+  Q.wagenknecht_score += Q.united_russia;
+  Q.wagenknecht_score += (100-Q.pro_status_quo)/20;
+  Q.wagenknecht_score += Q.social_moderation/5;
+  Q.wagenknecht_score += (10-Q.foreign_moderation)/5;
+  Q.wagenknecht_score += Q.wagenknecht_advisor*2;
+  if ((Q.oldleft_dissent > Q.dissent*100) && Q.wagenknecht_advisor) {
+    Q.wagenknecht_score -= Q.oldleft_dissent/30;
+  }
+             
+  Q.wissler_score += Q.wissler_advisor_fame/40;
+  Q.wissler_score += Q.urban_linke/8;
+  Q.wissler_score += Q.youth_linke/8;
+  Q.wissler_score += (100-Q.pro_status_quo)/20;
+  Q.wissler_score += (100-Q.social_moderation)/10;
+  Q.wissler_score += Q.tradeunion_contact;
+  Q.wissler_score += (Q.foreign_moderation)/7;
+  Q.wissler_score += Q.wissler_advisor*2;
+  if ((Q.oldleft_dissent > Q.dissent*100) && Q.in_progressive_leadership) {
+    Q.wissler_score -= Q.oldleft_dissent/30;
+  }
+
+  Q.riexinger_score += Q.riexinger_advisor_fame/40;
+  Q.riexinger_score += Q.urban_linke/4;
+  Q.riexinger_score += (Q.pro_status_quo)/70;
+  Q.riexinger_score += (Q.foreign_moderation)/7;
+  Q.riexinger_score += Q.tradeunion_contact;
+  Q.riexinger_score += Q.riexinger_advisor*2;
+  if ((Q.oldleft_dissent > Q.dissent*100) && Q.in_hufeisen_leadership) {
+    Q.riexinger_score -= Q.oldleft_dissent/30;
+  }
+
+  if (Q.wagenknecht_score >= Q.wissler_score && Q.wagenknecht_score >= Q.riexinger_score) {Q.oldleft_leader = "Wagenknecht"; Q.wagenknecht_power_reduced = 1;}
+  if (Q.wagenknecht_score >= Q.wissler_score+Q.riexinger_score) {Q.wagenknecht_power_reduced = 0; Q.wagenknecht_power_consolidated = 1;}
+  if (Q.wissler_score > Q.wagenknecht_score && Q.wissler_score >= Q.riexinger_score) {Q.oldleft_leader = "Wissler"; Q.wagenknecht_power_lost = 1;}      
+  if (Q.riexinger_score > Q.wissler_score && Q.riexinger_score > Q.wagenknecht_score) {Q.oldleft_leader = "Riexinger"; Q.wagenknecht_power_lost = 1;}
+!}
+go-to: wagenknech_cons if wagenknecht_power_consolidated; wagenknecht_red if wagenknecht_power_reduced; wissler if oldleft_leader = "Wissler"; riexinger if oldleft_leader = "Riexinger"
+
+@wagenknecht_cons
+on-arrival: wagenknecht_advisor_fame += 15; wissler_advisor_fame -= 10; riexinger_advisor_fame -= 15; social_moderation += oldleft_strength/100;
+face-image: img/_portraits/WagenknechtSahra.jpg
+
+Sahra Wagenknecht has not only won the power struggle, but she has also managed to consolidate her control over the faction. It seems the Eastern wing is going to remain as united as ever. Meanwhile, the <span style="color: [+ spd_color +];">**Sozialistische Linke**</span> has come out substantially weakened.
+
+
+@wagenknecht_red
+on-arrival: wagenknecht_advisor_fame += 2; wissler_advisor_fame -= 6; riexinger_advisor_fame -= 12;
+face-image: img/_portraits/WagenknechtSahra.jpg
+
+The <span style="color: [+ bsw_color +];">**Eastern**</span> wing and its leader Sahra Wagenknecht have won the power struggle. The <span style="color: [+ spd_color +];">**SL**</span> leaders, Riexinger and Wissler, have come out defeated and are starting to look to the right for more allies. However, Wagenknecht's hold is starting to weaken, with many growing doubtful of her policies.
+  
+@wissler
+on-arrival: wagenknecht_advisor_fame -= 15; wissler_advisor_fame += 15; riexinger_advisor_fame -= 5;
+face-image: img/_portraits/WisslerJanine.jpg
+
+Surprisingly, Wagenknecht has lost the power struggle. The main figure in the <span style="color: [+ bsw_color +];">**Old Left**</span> has become Janine Wissler, known for her radicalism as well as her connection to both the Western worker-oriented <span style="color: [+ spd_color +];">**SL**</span> and the progressive <span style="color: [+ linke_color +];">**BWL**</span>.
+  
+@riexinger
+on-arrival: wagenknecht_advisor_fame -= 15; riexinger_advisor_fame += 10; oldleft_dissent -= 2;
+face-image: img/_portraits/RiexingerBernd.jpg
+
+Surprisingly, Wagenknecht has lost the power struggle. The main figure in the <span style="color: [+ bsw_color +];">**Old Left**</span> has become Bern Riexinger, a long-time associate of the worker-oriented <span style="color: [+ spd_color +];">**SL**</span>. Riexinger is among the most moderates in his faction, and he may steer it in a direction much more favorable to our party's right wing.
