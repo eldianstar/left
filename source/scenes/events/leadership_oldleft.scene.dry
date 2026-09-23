@@ -18,18 +18,18 @@ new-page: true
 
 = The future of the <span style="color: [+ bsw_color +];">**Old Left**</span>
 
-After the Erfurt Congress, the Old Left has [? if oldleft_c >= 50 : experienced an unprecedented victory in inner-party politics ?][? if oldleft_c < 50 and oldleft_c >= 38 : increased its power ?][? if oldleft_c < 38 and oldleft_c >= 27 : slightly decreased its power ?][? if oldleft_c < 27 : suffered an unprecedented defeat ?], [? if (in_left_leadership = 1 or in_hufeisen_leadership = 1) and oldleft_c >= 38 : and thus electing a Party leader from its own ranks. ?][? if (in_left_leadership = 1 or in_hufeisen_leadership = 1) and oldleft_c < 38 : while still electing a Party leader from its own ranks. ?][? if (in_left_leadership = 0 and in_hufeisen_leadership = 0) and oldleft_c >= 38 : but somehow still failing to elect Party leader from its own ranks. ?][? if (in_left_leadership = 0 and in_hufeisen_leadership = 0) and oldleft_c < 38 : and has failed in electing a Party leader from its own ranks. ?].
+After the Erfurt Congress, the Old Left has [? if oldleft_c >= 50 : experienced an unprecedented victory in inner-party politics ?][? if oldleft_c < 50 and oldleft_c >= 38 : increased its power ?][? if oldleft_c < 38 and oldleft_c >= 27 : slightly decreased its power ?][? if oldleft_c < 27 : suffered an unprecedented defeat ?], [? if (in_left_leadership = 1 or in_hufeisen_leadership = 1) and oldleft_c >= 38 : and thus electing a Party leader from its own ranks. ?][? if (in_left_leadership = 1 or in_hufeisen_leadership = 1) and oldleft_c < 38 : while still electing a Party leader from its own ranks. ?][? if (in_left_leadership = 0 and in_hufeisen_leadership = 0) and oldleft_c >= 38 : but somehow still failing to elect Party leader from its own ranks. ?][? if (in_left_leadership = 0 and in_hufeisen_leadership = 0) and oldleft_c < 38 : and has failed in electing a Party leader from its own ranks. ?]
 
-While she has enoyed unprecedented power in her faction, the recent war in <span style="color: [+ ukraine_color_1 +];">Ukra</span><span style="color: [+ ukraine_color_2 +];">ine</span>, as well as clashes with the <span style="color: [+ linke_color +];">progressives</span>, has lead many in the faction to rethink her role as uncontested leader.
+While she has enoyed unprecedented power in her faction, the recent war in <span style="color: [+ ukraine_color_1 +];">**Ukra**</span><span style="color: [+ ukraine_color_2 +];">**ine**</span>, as well as clashes with the <span style="color: [+ linke_color +];">**progressives**</span>, has lead many in the faction to rethink her role as uncontested leader.
 
-Among the most relevant of these critics is the <span style="color: [+ spd_color +];">**Sozialistische Linke**</span>, a worker-focused West German caucus descending from our parent party, the **W**<span style="color: [+ russia_color_3 +];">**A**</span><span style="color: [+ spd_color +];">**S**</span>**G**, that opposes Wagenknecht's conservatism with a new brand of radical progressivism, distant from both the Kremlin and the bureaucratism of the DDR.
+Among the most relevant of these critics is the <span style="color: [+ spd_color +];">**Sozialistische Linke**</span>, a worker-focused West German caucus descending from our parent party, the <span style="color: [+ russia_color_3 +];">**W**</span><span style="color: #666666;">**A**</span><span style="color: [+ spd_color +];">**S**</span><span style="color: #000000;">**G**</span>, that opposes Wagenknecht's conservatism with a new brand of radical progressivism, distant from both the Kremlin and the bureaucratism of the DDR.
 
 - @results: Who shall lead the <span style="color: [+ bsw_color +];">Old Left</span>?
 
 @results
 on-arrival: {!
   Q.wagenknecht_score += Q.wagenknecht_advisor_fame/40;
-  Q.wagenknecht_score += Q.oldleft_c/10;
+  Q.wagenknecht_score += Q.oldleft_c/7;
   Q.wagenknecht_score += Q.east_linke/4;
   Q.wagenknecht_score += Q.united_russia;
   Q.wagenknecht_score += (100-Q.pro_status_quo)/20;
@@ -41,11 +41,11 @@ on-arrival: {!
   }
              
   Q.wissler_score += Q.wissler_advisor_fame/40;
-  Q.wissler_score += Q.urban_linke/8;
-  Q.wissler_score += Q.youth_linke/8;
-  Q.wissler_score += (100-Q.pro_status_quo)/20;
+  Q.wissler_score += Q.urban_linke/12;
+  Q.wissler_score += Q.youth_linke/12;
+  Q.wissler_score += (100-Q.pro_status_quo)/30;
   Q.wissler_score += (100-Q.social_moderation)/10;
-  Q.wissler_score += Q.tradeunion_contact;
+  Q.wissler_score += Q.tradeunion_contact/2;
   Q.wissler_score += (Q.foreign_moderation)/7;
   Q.wissler_score += Q.wissler_advisor*2;
   if ((Q.oldleft_dissent > Q.dissent*100) && Q.in_progressive_leadership) {
@@ -53,7 +53,7 @@ on-arrival: {!
   }
 
   Q.riexinger_score += Q.riexinger_advisor_fame/40;
-  Q.riexinger_score += Q.urban_linke/4;
+  Q.riexinger_score += Q.urban_linke/8;
   Q.riexinger_score += (Q.pro_status_quo)/70;
   Q.riexinger_score += (Q.foreign_moderation)/7;
   Q.riexinger_score += Q.tradeunion_contact;
