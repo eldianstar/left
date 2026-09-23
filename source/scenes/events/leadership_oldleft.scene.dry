@@ -1,5 +1,5 @@
 title: The future of the <span style="color: [+ bsw_color +];">**Old Left**</span>
-view-if: (year = 2022 and month >= 6 and wagenknecht_left = 0) or (wagenknecht_left_progress >= 9 and wagenknecht_left = 0)
+view-if: (year = 2022 and month >= 7 and wagenknecht_left = 0) or (wagenknecht_left_progress >= 9 and wagenknecht_left = 0)
 max-visits: 1
 tags: event
 on-display: {!  
@@ -18,7 +18,7 @@ new-page: true
 
 = The future of the <span style="color: [+ bsw_color +];">**Old Left**</span>
 
-After the Erfurt Congress, the Old Left has [? if oldleft_c >= 50 : experienced an unprecedented victory in inner-party politics ?][? if oldleft_c < 50 and oldleft_c >= 38 : increased its power ?][? if oldleft_c < 38 and oldleft_c >= 27 : slightly decreased its power ?][? if oldleft_c < 27 : suffered an unprecedented defeat ?], [? if (in_left_leadership = 1 or in_hufeisen_leadership = 1) and oldleft_c >= 38 : and thus electing a Party leader from its own ranks. ?][? if (in_left_leadership = 1 or in_hufeisen_leadership = 1) and oldleft_c < 38 : while still electing a Party leader from its own ranks. ?][? if (in_left_leadership = 0 and in_hufeisen_leadership = 0) and oldleft_c >= 38 : but somehow still failing to elect Party leader from its own ranks. ?][? if (in_left_leadership = 0 and in_hufeisen_leadership = 0) and oldleft_c < 38 : and has failed in electing a Party leader from its own ranks. ?]
+After the Erfurt Congress, the Old Left has [? if oldleft_c >= 50 : experienced an unprecedented victory in inner-party politics?][? if oldleft_c < 50 and oldleft_c >= 38 : increased its power?][? if oldleft_c < 38 and oldleft_c >= 27 : slightly decreased its power?][? if oldleft_c < 27 : suffered an unprecedented defeat?], [? if (in_left_leadership = 1 or in_hufeisen_leadership = 1) and oldleft_c >= 38 : and thus electing a Party leader from its own ranks. ?][? if (in_left_leadership = 1 or in_hufeisen_leadership = 1) and oldleft_c < 38 : while still electing a Party leader from its own ranks. ?][? if (in_left_leadership = 0 and in_hufeisen_leadership = 0) and oldleft_c >= 38 : but somehow still failing to elect Party leader from its own ranks. ?][? if (in_left_leadership = 0 and in_hufeisen_leadership = 0) and oldleft_c < 38 : and has failed in electing a Party leader from its own ranks. ?]
 
 While she has enoyed unprecedented power in her faction, the recent war in <span style="color: [+ ukraine_color_1 +];">**Ukra**</span><span style="color: [+ ukraine_color_2 +];">**ine**</span>, as well as clashes with the <span style="color: [+ linke_color +];">**progressives**</span>, has lead many in the faction to rethink her role as uncontested leader.
 
