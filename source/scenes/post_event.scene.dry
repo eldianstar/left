@@ -710,7 +710,7 @@ if (Q.ramelow_advisor_b == 1) { Q.east_linke += 0.3*(1-Q.dissent); }
 
     Q.beweli_dissent += Q.beweli_dissent_decay;
     Q.emali_dissent += Q.emali_dissent_decay;
-    Q.oldleft_dissent += Q.oldeft_dissent_decay;
+    Q.oldleft_dissent += Q.oldleft_dissent_decay;
     Q.pragmatist_dissent += Q.pragmatist_dissent_decay;
 
     if (Q.emali_strength < 0) { Q.emali_strength = 0; }
