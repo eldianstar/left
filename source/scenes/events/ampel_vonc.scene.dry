@@ -1,7 +1,7 @@
 title: Vote of Confidence for Chancellor Scholz
 new-page: true
 tags: event
-view-if: (ampelkoalition_time + spd_relation/5) >= 45 or ampelkoalition_time >= 38
+view-if: ampelkoalition_failed
 max-visits: 1
 face-image: img/ScholzTeryoshi.jpg
 priority: 2
