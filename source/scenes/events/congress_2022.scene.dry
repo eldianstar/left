@@ -191,7 +191,7 @@ The prominent issue in the conference is clearly the war in Ukraine and our stan
 @oppositionist
 choose-if: right_leadership >= 50 or foreign_moderation >= 5 or oldleft_c < 25
 subtitle: Russian imperialism is clearly at fault for the war. We must stand with Ukraine in these dark times.
-on-arrival: foreign_moderation += 2; pragmatist_strength += 2; oldleft_strength -= 2; oldleft_dissent += 30; greens_relation += 3; spd_relation += 1; cdu_relation += 1;
+on-arrival: foreign_moderation += 2; pragmatist_strength += 2; oldleft_strength -= 2; oldleft_dissent += 30; greens_relation += 3; spd_relation += 1; cdu_relation += 1; wagenknecht_left_progress += 5;
 go-to: leadership_election
 
 We have remarked our support for Ukraine. While our right wing cheers this outcome and the moderate parties are pleased by our decision, the Old Left sees this as a betrayal and feels increasingly sidelined. Some people talk about a party split. 
@@ -199,7 +199,7 @@ We have remarked our support for Ukraine. While our right wing cheers this outco
 @avoid_decision
 subtitle: We must avoid taking a definitive side.
 choose-if: right_leadership < 50 and oldleft_c >= 20 and oldleft_c < 45 or (foreign_moderation < 7 and foreign_moderation >= 3)
-on-arrival: oldleft_dissent += 5; pragmatist_dissent += 5; emali_dissent += 5;
+on-arrival: oldleft_dissent += 5; pragmatist_dissent += 5; emali_dissent += 5; wagenknecht_left_progress += 2;
 go-to: leadership_election
 
 We have decided to stall our decision. We are not yet ready to formulate a party line.
@@ -207,7 +207,7 @@ We have decided to stall our decision. We are not yet ready to formulate a party
 @participationist
 choose-if: oldleft_c >= 45 or (oldleft_c >= 35 and foreign_moderation < 2)
 subtitle: After all, we mustn't forget that Russia was initially provoked by NATO imperialism.
-on-arrival: oldleft_strength += 5; oldleft_dissent -= 5; pragmatist_dissent += 30; emali_dissent += 15; greens_relation -= 5; spd_relation -= 2; cdu_relation -= 2; foreign_moderation -= 2;
+on-arrival: oldleft_strength += 5; oldleft_dissent -= 5; pragmatist_dissent += 30; emali_dissent += 15; greens_relation -= 5; spd_relation -= 2; cdu_relation -= 2; foreign_moderation -= 2; wagenknecht_left_progress -= 1;
 go-to: leadership_election
 
 Unexpectedly, the delegates have decided to maintain a neutral stance between Ukraine and Russia. While our left wing cheers, the moderate parties and our right wing are greatly disappointed by the party's decision.
