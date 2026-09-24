@@ -22,7 +22,7 @@ flavor_text
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; foreign_moderation += 1; greens_relation += 6*(1 - dissent); emali_strength += 1; pragmatist_strength += 1; oldleft_dissent += 2; pragmatist_dissent -= 1;
+on-arrival: resources -= 1; foreign_moderation += 1; greens_relation += 6*(1 - dissent); emali_strength += 1; pragmatist_strength += 1; oldleft_dissent += 2; pragmatist_dissent -= 1; wagenknecht_left_progress += 1;
 
 @rel_spd
 subtitle: -1 resources
@@ -32,6 +32,7 @@ on-arrival: resources -= 1; econ_moderation += 1; spd_relation += 6*(1 - dissent
 
 @rel_bsw
 subtitle: -1 resources
+view-if: bsw_split
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; social_moderation += 1; bsw_relation += 6*(1 - dissent); oldleft_strength += 2; oldleft_dissent -= 2; pragmatist_dissent += 2; beweli_dissent += 1;
@@ -40,7 +41,7 @@ on-arrival: resources -= 1; social_moderation += 1; bsw_relation += 6*(1 - disse
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; foreign_moderation += 1; social_moderation += 1; econ_moderation += 1; cdu_relation += 6*(1 - dissent); beweli_dissent += 4; pragmatist_strength += 3; oldleft_dissent += 1; pragmatist_dissent -= 1; emali_dissent += 1;
+on-arrival: resources -= 1; foreign_moderation += 1; social_moderation += 1; econ_moderation += 1; cdu_relation += 6*(1 - dissent); beweli_dissent += 4; pragmatist_strength += 3; oldleft_dissent += 1; pragmatist_dissent -= 1; emali_dissent += 1; wagenknecht_left_progress += 1;
 
 @linke_alone
 on-arrival: greens_relation -= 1; spd_relation -= 1; beweli_strength += 1;
