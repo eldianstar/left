@@ -462,7 +462,7 @@ if (Q.bsw_split && Q.foreign_moderation == 10) {
         Q.east_linke -= 0.4;
         Q.east_bsw += 0.4;
     } 
-if (Q.bsw_split && Q.bsw_rising == 0) {
+if (Q.bsw_split == 1 && Q.bsw_rising == 0) {
         Q.east_linke += 0.2;
         Q.east_bsw -= 0.2;
     }
@@ -470,7 +470,7 @@ if (Q.bsw_split && Q.bsw_rising) {
         Q.rural_linke -= 0.1;
         Q.rural_bsw += 0.1;
     } 
-if (Q.bsw_split && Q.bsw_rising == 0) {
+if (Q.bsw_split == 1 && Q.bsw_rising == 0) {
         Q.rural_linke += 0.1;
         Q.rural_bsw -= 0.1;
     }
@@ -1539,6 +1539,10 @@ if (Q.bsw_rising) {
     Q.bsw_peak += (100 - Q.pro_status_quo) / 20;
     Q.bsw_peak += (10 - Q.linke_votes)/2;
 }   
+
+if (Q.bsw_votes >= Q.bsw_peak) {
+    Q.bsw_rising = 0;
+}
 
 // linke losing support with unemployment
 
