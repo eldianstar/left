@@ -15,6 +15,7 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 new-page: true
+on-arrival: oldleft_leadership_seen = 1
 
 = The future of the <span style="color: [+ bsw_color +];">**Old Left**</span>
 
