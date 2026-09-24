@@ -28,7 +28,7 @@ We have criticized the government in their handling of the issue. While this has
 @praise
 title: Praise the government's handling of the matter.
 subtitle: They probably should have invested more though...
-on-arrival: beweli_dissent += 3; oldleft_dissent += 3; pragmatist_strength += 2; issue_migration += 1; east_afd += 1.4; urban_afd += 0.4; rural_afd += 0.9; upper_afd += 0.3; youth_afd += 0.4; pro_status_quo += 1; spd_relation += 2; greens_relation += 2; fdp_relation += 0.5; urban_linke -= 0.1; youth_linke -= 0.1;
+on-arrival: beweli_dissent += 3; oldleft_dissent += 3; pragmatist_strength += 2; issue_migration += 1; east_afd += 1.4; urban_afd += 0.4; rural_afd += 0.9; upper_afd += 0.3; youth_afd += 0.4; pro_status_quo += 1; spd_relation += 2; greens_relation += 2; fdp_relation += 0.5; urban_linke -= 0.1; youth_linke -= 0.1; wagenknecht_left_progress += 0.75;
 
 We have supported the government in their dealing with the crisis. This has slightly warmed up our relations.
 
@@ -46,6 +46,6 @@ We have conducted a media campaign against conservative propaganda, and have lef
 title: Criticize the government's open borders policy.
 subtitle: After all, refugees only hurt the German worker.
 view-if: oldleft_strength >= 45
-on-arrival: issue_migration += 1.6; oldleft_dissent -= 5; social_moderation += 3; spd_relation -= 2; greens_relation -= 4; beweli_dissent += 15; emali_dissent += 10; pragmatist_dissent += 6; oldleft_strength += 6; pro_status_quo -= 1*(10+newspapers+social_media)/10; east_afd += 1.4; urban_afd += 0.4; rural_afd += 0.9; upper_afd += 0.3; youth_afd += 0.4; east_linke += 0.7*(1-dissent); rural_linke += 0.2*(1-dissent); wagenknecht_advisor_fame += 5; 
+on-arrival: issue_migration += 1.6; oldleft_dissent -= 5; social_moderation += 3; spd_relation -= 2; greens_relation -= 4; beweli_dissent += 15; emali_dissent += 10; pragmatist_dissent += 6; oldleft_strength += 6; pro_status_quo -= 1*(10+newspapers+social_media)/10; east_afd += 1.4; urban_afd += 0.4; rural_afd += 0.9; upper_afd += 0.3; youth_afd += 0.4; east_linke += 0.7*(1-dissent); rural_linke += 0.2*(1-dissent); wagenknecht_advisor_fame += 5; wagenknecht_left_progress -= 1; 
 
 We have criticized the government's open borders policy. This is increasingly giving us the chance to position ourselves as a populist left-conservative option, especially in the East.
