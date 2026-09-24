@@ -1,0 +1,133 @@
+title: Wagenknecht leaves the party!
+view-if: wagenknecht_left_progress >= 10
+max-visits: 1
+tags: event
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/WagenknechtSahra.webp";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+new-page: true
+
+= Wagenknecht leaves the party!
+
+Following the Party's decisions on key themes like <span style="color: [+ ukraine_color_1 +];">**Ukra**</span><span style="color: [+ ukraine_color_2 +];">**ine**</span> and migration, Wagenknecht has found herself sidelined. The Old Left's dissent with the party's line has only exacerbated the situation, and Wagenknecht has decided that the best course of action is to leave the party and start anew. Needless to say, our current instability and her personal fame make her potentially very dangerous.
+
+- @choice: What will she do now?
+
+@choice
+on-arrival: wagenknecht_left = 1;
+go-to: bsw_strong if wagenknecht_power_consolidated; bsw_normal if wagenknecht_power_reduced; bsw_failed if wagenknecht_power_lost
+
+
+@bsw_strong
+on-arrival: {!
+// set up the infrastructure
+Q.bsw_split = 1;
+Q.bsw_rising = 1;
+Q.parties.push('bsw');
+Q.parties_graph.push('bsw');
+
+Q.urban_bsw = (Q.urban_linke/1)*(Q.oldleft_strength/100);
+Q.rural_bsw = (Q.rural_linke/0.5)*(Q.oldleft_strength/100);
+Q.upper_bsw = (Q.upper_linke/1.5)*(Q.oldleft_strength/100);
+Q.east_bsw = (Q.east_linke/0.5)*(Q.oldleft_strength/100);
+Q.youth_bsw = (Q.youth_linke/1.5)*(Q.oldleft_strength/100);
+
+Q.urban_linke -= (Q.urban_linke/1)*(Q.oldleft_strength/100);
+Q.rural_linke -= (Q.rural_linke/0.5)*(Q.oldleft_strength/100);
+Q.upper_linke -= (Q.upper_linke/1.5)*(Q.oldleft_strength/100);
+Q.east_linke -= (Q.east_linke/0.5)*(Q.oldleft_strength/100);
+Q.youth_linke -= (Q.youth_linke/1.5)*(Q.oldleft_strength/100);
+
+Q.old_urban_bsw_display = 0
+Q.old_rural_bsw_display = 0
+Q.old_upper_bsw_display = 0
+Q.old_east_bsw_display = 0
+Q.old_youth_bsw_display = 0
+
+Q.oldleft_strength /= 3;
+Q.oldleft_leader = "nobody";
+Q.foreign_moderation += 1;
+Q.social_moderation -= 0.5;
+
+
+// update all records
+Q.bsw_b = 0;
+Q.old_bsw_b = 0;
+for (var record of Q.election_records) {
+    record['bsw'] = 0;
+}
+for (var record of Q.party_support_records) {
+    record['bsw'] = 0;
+}
+!}
+face-image: img/BSWLogo.png
+
+Shortly after Wagenknecht announced her exit from the party, the majority of politicians from our left wing, like Amira Mohamed Ali and Sören Pellmann, have followed her.
+
+Wagenknecht has then proceeded to unravel her plans for a new party, the <span style="color: [+ bsw_color +];">**BSW**</span>, which is planned to take a more populist and left-conservative role to counter both the progressives among our ranks and the <span style="color: [+ afd_color +];">**AfD**</span>'s campaigning.
+
+Needless to say, our party has been substantially weakened, with many starting to question the need for its existence even. <span style="color: [+ linke_color +];">**Die Linke**</span> is at a historic low; who knows if we'll even last enough to see the next elections.
+
+@bsw_strong
+on-arrival: {!
+// set up the infrastructure
+Q.bsw_split = 1;
+Q.bsw_rising = 1;
+Q.parties.push('bsw');
+Q.parties_graph.push('bsw');
+
+Q.urban_bsw = (Q.urban_linke/1.2)*(Q.oldleft_strength/100);
+Q.rural_bsw = (Q.rural_linke/0.7)*(Q.oldleft_strength/100);
+Q.upper_bsw = (Q.upper_linke/2)*(Q.oldleft_strength/100);
+Q.east_bsw = (Q.east_linke/0.7)*(Q.oldleft_strength/100);
+Q.youth_bsw = (Q.youth_linke/2)*(Q.oldleft_strength/100);
+
+Q.urban_linke -= (Q.urban_linke/1.2)*(Q.oldleft_strength/100);
+Q.rural_linke -= (Q.rural_linke/0.7)*(Q.oldleft_strength/100);
+Q.upper_linke -= (Q.upper_linke/2)*(Q.oldleft_strength/100);
+Q.east_linke -= (Q.east_linke/0.7)*(Q.oldleft_strength/100);
+Q.youth_linke -= (Q.youth_linke/2)*(Q.oldleft_strength/100);
+
+Q.old_urban_bsw_display = 0
+Q.old_rural_bsw_display = 0
+Q.old_upper_bsw_display = 0
+Q.old_east_bsw_display = 0
+Q.old_youth_bsw_display = 0
+
+Q.oldleft_strength /= 2;
+Q.oldleft_leader = "Pellmann";
+Q.foreign_moderation += 1;
+Q.social_moderation -= 0.5;
+
+
+// update all records
+Q.bsw_b = 0;
+Q.old_bsw_b = 0;
+for (var record of Q.election_records) {
+    record['bsw'] = 0;
+}
+for (var record of Q.party_support_records) {
+    record['bsw'] = 0;
+}
+!}
+face-image: img/BSWLogo.png
+
+Shortly after Wagenknecht announced her exit from the party, many politicians from our left wing, like Amira Mohamed Ali and Sören Pellmann, have followed her.
+
+Wagenknecht has then proceeded to unravel her plans for a new party, the <span style="color: [+ bsw_color +];">**BSW**</span>, which is planned to take a more populist and left-conservative role to counter both the progressives among our ranks and the <span style="color: [+ afd_color +];">**AfD**</span>'s campaigning.
+
+Needless to say, our party has been substantially weakened, with many starting to question the need for its existence even. <span style="color: [+ linke_color +];">**Die Linke**</span> is at a historic low; who knows if we'll even last enough to see the next elections.
+
+@bsw_failed
+on-arrival: oldleft_leader = "Pellmann"; oldleft_strength /= 1.5; foreign_moderation += 1; social_moderation -= 0.5;
+
+While it seemed like Wagenknecht, together with other prominent politicians like Mohamed Ali, had tried to launch a new party following her personal brand of left-populism, her efforts have failed, possibly because of internal conflicts or because of her recent loss of popularity. What seemed like a great threat to us has revealed itself to be no more dangerous than a baby. The party shall survive.
