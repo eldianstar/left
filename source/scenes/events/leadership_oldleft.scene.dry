@@ -31,10 +31,10 @@ Among the most relevant of these critics is the <span style="color: [+ spd_color
 on-arrival: {!
   Q.wagenknecht_score += Q.wagenknecht_advisor_fame/40;
   Q.wagenknecht_score += Q.oldleft_c/4;
-  Q.wagenknecht_score += Q.east_linke/4;
+  Q.wagenknecht_score += Q.east_linke/2;
   Q.wagenknecht_score += Q.united_russia*2;
-  Q.wagenknecht_score += (100-Q.pro_status_quo)/20;
-  Q.wagenknecht_score += Q.social_moderation/5;
+  Q.wagenknecht_score += (100-Q.pro_status_quo)/16;
+  Q.wagenknecht_score += Q.social_moderation/4;
   Q.wagenknecht_score += (10-Q.foreign_moderation)/5;
   Q.wagenknecht_score += Q.wagenknecht_advisor*2;
   if ((Q.oldleft_dissent > Q.dissent*100) && Q.wagenknecht_advisor) {
