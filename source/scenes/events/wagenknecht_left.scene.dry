@@ -77,7 +77,7 @@ Wagenknecht has then proceeded to unravel her plans for a new party, the <span s
 
 Needless to say, our party has been substantially weakened, with many starting to question the need for its existence even. <span style="color: [+ linke_color +];">**Die Linke**</span> is at a historic low; who knows if we'll even last enough to see the next elections.
 
-@bsw_strong
+@bsw_normal
 on-arrival: {!
 // set up the infrastructure
 Q.bsw_split = 1;
