@@ -28,13 +28,13 @@ go-to: root
 @donotreact
 title: Condemn the resolution, but don't make a big deal out of it.
 subtitle: Pro-<span style="color: [+ ukraine_color_1 +];">Ukra</span><span style="color: [+ ukraine_color_2 +];">ine</span> sentiment is so widespread that a strong attack on the speech would only hurt us.
-on-arrival: oldleft_dissent += 8; beweli_dissent += 3; emali_strength += 3; pragmatist_strength += 3; foreign_moderation += 2; issue_antimilitarism -= 0.75;
+on-arrival: oldleft_dissent += 8; beweli_dissent += 3; emali_strength += 3; pragmatist_strength += 3; foreign_moderation += 2; issue_antimilitarism -= 0.75; wagenknecht_left_progress += 0.75;
 go-to: root
 
 @agree
 title: He has a point after all...
 subtitle: While 100 billion is way too much, we do need to help Ukrainians against the aggressor...
-on-arrival: oldleft_dissent += 25; beweli_dissent += 10; emali_dissent += 3; pragmatist_strength += 10; foreign_moderation += 4; greens_relation += 4; spd_relation += 4; cdu_relation += 3; fdp_relation += 3; east_afd += (issue_antimilitarism)/10; east_linke -= (issue_antimilitarism)/10; youth_linke -= (issue_antimilitarism-2)/8; urban_linke -= (issue_antimilitarism-2)/8; issue_antimilitarism -= 2;
+on-arrival: oldleft_dissent += 25; beweli_dissent += 10; emali_dissent += 3; pragmatist_strength += 10; foreign_moderation += 4; greens_relation += 4; spd_relation += 4; cdu_relation += 3; fdp_relation += 3; east_afd += (issue_antimilitarism)/10; east_linke -= (issue_antimilitarism)/10; youth_linke -= (issue_antimilitarism-2)/8; urban_linke -= (issue_antimilitarism-2)/8; issue_antimilitarism -= 2; wagenknecht_left_progress += 2;
 go-to: root
 
 @speech
