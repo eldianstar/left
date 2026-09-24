@@ -23,7 +23,7 @@ Whether or not we are in an electoral campaign, the party is always trying to br
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; youth_linke += ((social_media+3+solid+(10-social_moderation))/2)*(1-dissent); beweli_strength += ((social_media+4+(10-social_moderation))/3); pragmatist_strength -= 1;
+on-arrival: resources -= 1; youth_linke += ((social_media+3+solid+(10-social_moderation))/2)*(1-dissent); beweli_strength += ((social_media+4+(10-social_moderation))/3); pragmatist_strength -= 1; wagenknecht_left_progress += 0.5;
 
 @urban
 subtitle: -1 resources
