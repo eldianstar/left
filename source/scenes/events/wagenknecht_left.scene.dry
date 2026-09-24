@@ -1,5 +1,5 @@
 title: Wagenknecht leaves the party!
-view-if: wagenknecht_left_progress >= 10
+view-if: wagenknecht_left_progress >= 10 and oldleft_leadership_seen
 max-visits: 1
 tags: event
 on-display: {!  
