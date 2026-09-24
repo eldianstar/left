@@ -70,14 +70,14 @@ on-arrival: {!
 go-to: wagenknecht_cons if wagenknecht_power_consolidated; wagenknecht_red if wagenknecht_power_reduced; wissler if oldleft_leader = "Wissler"; riexinger if oldleft_leader = "Riexinger"
 
 @wagenknecht_cons
-on-arrival: wagenknecht_advisor_fame += 15; wissler_advisor_fame -= 10; riexinger_advisor_fame -= 15; social_moderation += oldleft_strength/100;
+on-arrival: wagenknecht_advisor_fame += 15; wissler_advisor_fame -= 10; riexinger_advisor_fame -= 15; social_moderation += oldleft_strength/100; wagenknecht_left_progress += 1;
 face-image: img/_portraits/WagenknechtSahra.jpg
 
 Sahra Wagenknecht has not only won the power struggle, but she has also managed to consolidate her control over the faction. It seems the Eastern wing is going to remain as united as ever. Meanwhile, the <span style="color: [+ spd_color +];">**Sozialistische Linke**</span> has come out substantially weakened.
 
 
 @wagenknecht_red
-on-arrival: wagenknecht_advisor_fame += 2; wissler_advisor_fame -= 6; riexinger_advisor_fame -= 12;
+on-arrival: wagenknecht_advisor_fame += 2; wissler_advisor_fame -= 6; riexinger_advisor_fame -= 12; wagenknecht_left_progress += 1;
 face-image: img/_portraits/WagenknechtSahra.jpg
 
 The <span style="color: [+ bsw_color +];">**Eastern**</span> wing and its leader Sahra Wagenknecht have won the power struggle. The <span style="color: [+ spd_color +];">**SL**</span> leaders, Riexinger and Wissler, have come out defeated and are starting to look to the right for more allies. However, Wagenknecht's hold is starting to weaken, with many growing doubtful of her policies.
