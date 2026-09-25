@@ -459,24 +459,24 @@ if (Q.bsw_split && Q.foreign_moderation == 10) {
         Q.beweli_dissent += 0.3;
     }
     if (Q.bsw_split && Q.bsw_rising) {
-        Q.east_linke -= 0.5;
-        Q.east_bsw += 0.5;
+        Q.east_linke -= 0.9;
+        Q.east_bsw += 0.9;
     } 
 if (Q.bsw_split == 1 && Q.bsw_rising == 0) {
         Q.east_linke += 0.2;
         Q.east_bsw -= 0.2;
     }
 if (Q.bsw_split && Q.bsw_rising) {
-        Q.rural_linke -= 0.3;
-        Q.rural_bsw += 0.3;
+        Q.rural_linke -= 0.5;
+        Q.rural_bsw += 0.5;
     } 
 if (Q.bsw_split == 1 && Q.bsw_rising == 0) {
         Q.rural_linke += 0.1;
         Q.rural_bsw -= 0.1;
     }
 if (Q.bsw_split && Q.bsw_rising) {
-        Q.urban_linke -= 0.3;
-        Q.urban_bsw += 0.3;
+        Q.urban_linke -= 0.5;
+        Q.urban_bsw += 0.5;
     } 
 if (Q.bsw_split == 1 && Q.bsw_rising == 0) {
         Q.urban_linke += 0.1;
