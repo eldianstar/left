@@ -47,17 +47,10 @@ Q.upper_linke -= (Q.upper_linke/1.5)*(Q.oldleft_strength/100);
 Q.east_linke -= (Q.east_linke/0.5)*(Q.oldleft_strength/100);
 Q.youth_linke -= (Q.youth_linke/1.5)*(Q.oldleft_strength/100);
 
-Q.old_urban_bsw_display = 0
-Q.old_rural_bsw_display = 0
-Q.old_upper_bsw_display = 0
-Q.old_east_bsw_display = 0
-Q.old_youth_bsw_display = 0
-
-Q.oldleft_strength /= 3;
+Q.oldleft_strength /= 6;
 Q.oldleft_leader = "nobody";
 Q.foreign_moderation += 1;
 Q.social_moderation -= 0.5;
-
 
 // update all records
 Q.bsw_b = 0;
@@ -68,6 +61,13 @@ for (var record of Q.election_records) {
 for (var record of Q.party_support_records) {
     record['bsw'] = 0;
 }
+
+Q.old_urban_bsw_display = 0
+Q.old_rural_bsw_display = 0
+Q.old_upper_bsw_display = 0
+Q.old_east_bsw_display = 0
+Q.old_youth_bsw_display = 0
+
 !}
 face-image: img/BSWLogo.png
 
@@ -97,17 +97,10 @@ Q.upper_linke -= (Q.upper_linke/2)*(Q.oldleft_strength/100);
 Q.east_linke -= (Q.east_linke/0.7)*(Q.oldleft_strength/100);
 Q.youth_linke -= (Q.youth_linke/2)*(Q.oldleft_strength/100);
 
-Q.old_urban_bsw_display = 0
-Q.old_rural_bsw_display = 0
-Q.old_upper_bsw_display = 0
-Q.old_east_bsw_display = 0
-Q.old_youth_bsw_display = 0
-
-Q.oldleft_strength /= 2;
+Q.oldleft_strength /= 4;
 Q.oldleft_leader = "Pellmann";
 Q.foreign_moderation += 1;
 Q.social_moderation -= 0.5;
-
 
 // update all records
 Q.bsw_b = 0;
@@ -118,10 +111,17 @@ for (var record of Q.election_records) {
 for (var record of Q.party_support_records) {
     record['bsw'] = 0;
 }
+
+Q.old_urban_bsw_display = 0
+Q.old_rural_bsw_display = 0
+Q.old_upper_bsw_display = 0
+Q.old_east_bsw_display = 0
+Q.old_youth_bsw_display = 0
+
 !}
 face-image: img/BSWLogo.png
 
-Shortly after Wagenknecht announced her exit from the party, many politicians from our left wing, like Amira Mohamed Ali and Sören Pellmann, have followed her.
+Shortly after Wagenknecht announced her exit from the party, many politicians from our left wing, like Amira Mohamed Ali, have followed her.
 
 Wagenknecht has then proceeded to unravel her plans for a new party, the <span style="color: [+ bsw_color +];">**BSW**</span>, which is planned to take a more populist and left-conservative role to counter both the progressives among our ranks and the <span style="color: [+ afd_color +];">**AfD**</span>'s campaigning.
 
