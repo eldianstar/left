@@ -554,10 +554,10 @@ Q.rural_linke -= ((10 - Q.party_moderation)/50);
 Q.upper_linke -= ((10 - Q.party_moderation)/50);
 Q.youth_linke -= ((10 - Q.party_moderation)/50);
 
-    Q.oldleft_dissent_decay = 2;
-    Q.beweli_dissent_decay = 2;
-    Q.emali_dissent_decay = 2;
-    Q.pragmatist_dissent_decay = 2;
+    Q.oldleft_dissent_decay = 1.25;
+    Q.beweli_dissent_decay = 1.25;
+    Q.emali_dissent_decay = 1.25;
+    Q.pragmatist_dissent_decay = 1.25;
 
     Q.oldleft_strength_gain = 0;
     Q.beweli_strength_gain = 0;
