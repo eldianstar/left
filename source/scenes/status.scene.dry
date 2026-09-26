@@ -656,22 +656,41 @@ Decentralization: [+ decentralization +]
 
 = Internal Factions
 
+[? if wagenknecht_power_consolidated = 0 or wagenknecht_left = 0 :
 <span class="tooltip-text" title="oldleft text" style="text-align: center;font-weight: bold;color: [+ bsw_color +];">Old Left</span> <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
+[? if wagenknecht_power_lost = 0 : 
 <img src="img/LogoAufstehen.jpg" alt="Aufstehen" style="width: 48%;object-fit:contain;">
-<img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 48%;object-fit:cover;object-position:top;border:3px ridge [+ cdu_color +];">
+[? if oldleft_leader = "Wagenknecht" : <img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 48%;object-fit:cover;object-position:top;border:3px ridge [+ cdu_color +];"> ?]
+[? if oldleft_leader = "Pellmann" : <img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 48%;object-fit:cover;object-position:top;border:3px ridge [+ cdu_color +];"> ?]
+?]
+[? if wagenknecht_power_lost = 1 : 
+<img src="img/LogoSL.svg" alt="SL" style="width: 48%;object-fit:contain;">
+[? if oldleft_leader = "Wissler" : <img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 48%;object-fit:cover;object-position:top;border:3px ridge [+ cdu_color +];"> ?]
+[? if oldleft_leader = "Riexinger" : <img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 48%;object-fit:cover;object-position:top;border:3px ridge [+ cdu_color +];"> ?]
+?]
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
+[? if wagenknecht_power_lost = 0 :
 <p style="text-align: center;margin-bottom: 2px;">Aufstehen</p>
+?]
+[? if wagenknecht_power_lost = 1 :
+<p style="text-align: center;margin-bottom: 2px;">Sozialistische Linke</p>
+?]
 </div>
 <div style="flex: 1;">
-<p style="text-align: center;margin-bottom: 2px;">Wagenknecht</p>
+[? if oldleft_leader = "Wagenknecht" : <p style="text-align: center;margin-bottom: 2px;">Wagenknecht</p> ?]
+[? if oldleft_leader = "Pellmann" : <p style="text-align: center;margin-bottom: 2px;">Pellmann</p> ?]
+[? if oldleft_leader = "Wissler" : <p style="text-align: center;margin-bottom: 2px;">Wissler</p> ?]
+[? if oldleft_leader = "Riexinger" : <p style="text-align: center;margin-bottom: 2px;">Riexinger</p> ?]
 </div>
 </div>
 Strength: [+ oldleft_strength : strength +] <br>
 Dissent: [+ oldleft_dissent : dissent +] <br>
+?]
 
+[? if beweli_left = 0 :
 <span class="tooltip-text" title="beweli text" style="text-align: center;font-weight: bold;color: #BC2D72;">Movement Left</span> <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/LogoBewegungslinke.jpg" alt="Bewegungslinke" style="width: 48%;object-fit:contain;">
@@ -687,7 +706,10 @@ Dissent: [+ oldleft_dissent : dissent +] <br>
 </div>
 Strength: [+ beweli_strength : strength +] <br>
 Dissent: [+ beweli_dissent : dissent +] <br>
+?]
 
+
+[? if emali_left = 0 :
 <span class="tooltip-text" title="emali text" style="text-align: center;font-weight: bold;color: [+ spd_color +];">Centre</span> <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/LogoEmali.jpg" alt="Ema.Li" style="width: 48%;object-fit:contain;">
@@ -703,7 +725,10 @@ Dissent: [+ beweli_dissent : dissent +] <br>
 </div>
 Strength: [+ emali_strength : strength +] <br>
 Dissent: [+ emali_dissent : dissent +] <br>
+?]
 
+
+[? if pragmatist_left = 0 :
 <span class="tooltip-text" title="pragmatist text" style="text-align: center;font-weight: bold;color: #ff5500;">Pragmatists</span> <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/LogoFDS.jpg" alt="FDS" style="width: 48%;object-fit:contain;">
@@ -719,3 +744,4 @@ Dissent: [+ emali_dissent : dissent +] <br>
 </div>
 Strength: [+ pragmatist_strength : strength +] <br>
 Dissent: [+ pragmatist_dissent : dissent +] <br>
+?]
