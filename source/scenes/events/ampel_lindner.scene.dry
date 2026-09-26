@@ -15,5 +15,5 @@ For now, Scholz has continued to absolve his mandate in a minority <span style="
 - @option: We can only wait now.
 
 @option
-on-arrival: urban_spd -= 1.5; rural_spd -= 1.5; upper_spd -= 1; urban_cdu += 1.5; rural_cdu += 1.5; upper_cdu += 1; urban_fdp -= 3; youth_fdp -= 3; upper_fdp -= 3; east_fdp -= 2; rural_fdp -= 1; urban_cdu += 3; youth_cdu += 3; upper_cdu += 3; east_cdu += 2; rural_cdu += 1; east_afd += 2; rural_afd += 1; ampelkoalition_failed = 1;
+on-arrival: urban_spd -= 1.5; rural_spd -= 1.5; upper_spd -= 1; urban_cdu += 1.5; rural_cdu += 1.5; upper_cdu += 1; urban_fdp -= 3; youth_fdp -= 3; upper_fdp -= 3; east_fdp -= 2; rural_fdp -= 1; urban_cdu += 3; youth_cdu += 3; upper_cdu += 3; east_cdu += 2; rural_cdu += 1; east_afd += 2; rural_afd += 1; ampelkoalition_failed = 1; ampelkoalition = 0;
 go-to: root
