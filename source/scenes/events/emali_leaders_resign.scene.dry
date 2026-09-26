@@ -1,6 +1,6 @@
 title: Centrist leaders resign
 new-page: true 
-subtitle: BWL disagreements with our policies have grown too severe.
+subtitle: Centrist disagreements with our policies have grown too severe.
 tags: event
 view-if: emali_dissent >= 80
 on-arrival: {!
