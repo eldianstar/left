@@ -47,7 +47,7 @@ Q.upper_linke -= (Q.upper_linke/1.5)*(Q.oldleft_strength/100);
 Q.east_linke -= (Q.east_linke/0.5)*(Q.oldleft_strength/100);
 Q.youth_linke -= (Q.youth_linke/1.5)*(Q.oldleft_strength/100);
 
-Q.oldleft_strength /= 6;
+Q.oldleft_strength *= 0.2;
 Q.oldleft_leader = "nobody";
 Q.foreign_moderation += 1;
 Q.social_moderation -= 0.5;
@@ -97,7 +97,7 @@ Q.upper_linke -= (Q.upper_linke/2)*(Q.oldleft_strength/100);
 Q.east_linke -= (Q.east_linke/0.7)*(Q.oldleft_strength/100);
 Q.youth_linke -= (Q.youth_linke/2)*(Q.oldleft_strength/100);
 
-Q.oldleft_strength /= 4;
+Q.oldleft_strength *= 0.4;
 Q.oldleft_leader = "Pellmann";
 Q.foreign_moderation += 1;
 Q.social_moderation -= 0.5;
@@ -128,6 +128,6 @@ Wagenknecht has then proceeded to unravel her plans for a new party, the <span s
 Needless to say, our party has been substantially weakened, with many starting to question the need for its existence even. <span style="color: [+ linke_color +];">**Die Linke**</span> is at a historic low; who knows if we'll even last enough to see the next elections.
 
 @bsw_failed
-on-arrival: oldleft_leader = "Pellmann"; oldleft_strength /= 1.5; foreign_moderation += 1; social_moderation -= 0.5;
+on-arrival: oldleft_leader = "Pellmann"; oldleft_strength *= 0.6; foreign_moderation += 1; social_moderation -= 0.5;
 
 While it seemed like Wagenknecht, together with other prominent politicians like Mohamed Ali, had tried to launch a new party following her personal brand of left-populism, her efforts have failed, possibly because of internal conflicts or because of her recent loss of popularity. What seemed like a great threat to us has revealed itself to be no more dangerous than a baby. The party shall survive.
