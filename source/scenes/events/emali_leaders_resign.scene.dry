@@ -1,0 +1,62 @@
+title: Centrist leaders resign
+new-page: true 
+subtitle: BWL disagreements with our policies have grown too severe.
+tags: event
+view-if: emali_dissent >= 80
+on-arrival: {!
+
+Q.urban_greens += 0.3*(Q.urban_linke/0.9)*(Q.emali_strength/100);
+Q.rural_greens += 0.3*(Q.rural_linke/0.5)*(Q.emali_strength/100);
+Q.upper_greens += 0.4*(Q.upper_linke/0.8)*(Q.emali_strength/100);
+Q.east_greens += 0.3*(Q.east_linke/0.7)*(Q.emali_strength/100);
+Q.youth_greens += 0.5*(Q.youth_linke/1)*(Q.emali_strength/100);
+
+Q.urban_spd += 0.4*(Q.urban_linke/0.9)*(Q.emali_strength/100);
+Q.rural_spd += 0.4*(Q.rural_linke/0.5)*(Q.emali_strength/100);
+Q.upper_spd += 0.5*(Q.upper_linke/0.8)*(Q.emali_strength/100);
+Q.east_spd += 0.3*(Q.east_linke/0.7)*(Q.emali_strength/100);
+Q.youth_spd += 0.3*(Q.youth_linke/1)*(Q.emali_strength/100);
+
+Q.urban_linke -= (Q.urban_linke/0.9)*(Q.emali_strength/100);
+Q.rural_linke -= (Q.rural_linke/0.5)*(Q.emali_strength/100);
+Q.upper_linke -= (Q.upper_linke/0.8)*(Q.emali_strength/100);
+Q.east_linke -= (Q.east_linke/0.7)*(Q.emali_strength/100);
+Q.youth_linke -= (Q.youth_linke/1)*(Q.emali_strength/100);
+
+Q.emali_strength *= 0.1; 
+
+if (Q.lay_advisor == 1) Q.n_advisors -= 1; 
+if (Q.schirdewan_advisor == 1) Q.n_advisors -= 1;
+if (Q.hoss_advisor == 1) Q.n_advisors -= 1;             
+if (Q.kipping_advisor == 1) Q.n_advisors -= 1; 
+if (Q.reichinnek_advisor == 1) Q.n_advisors -= 1;
+if (Q.lay_advisor == 1) Q.n_advisors_woman -= 1;
+if (Q.kipping_advisor == 1) Q.n_advisors_woman -= 1;
+if (Q.reichinnek_advisor == 1) Q.n_advisors_woman -= 1;
+Q.lay_advisor = 0;
+Q.schirdewan_advisor = 0;
+Q.hoss_advisor = 0;
+Q.kipping_advisor = 0;
+Q.reichinnek_advisor = 0;
+
+if (Q.lay_advisor_b == 1) Q.n_advisors_b -= 1; 
+if (Q.schirdewan_advisor_b == 1) Q.n_advisors_b -= 1;
+if (Q.hoss_advisor_b == 1) Q.n_advisors_b -= 1;
+if (Q.kipping_advisor_b == 1) Q.n_advisors_b -= 1; 
+if (Q.reichinnek_advisor_b == 1) Q.n_advisors_b -= 1;
+if (Q.lay_advisor_b == 1) Q.n_advisors_b_woman -= 1;
+if (Q.kipping_advisor_b == 1) Q.n_advisors_b_woman -= 1;
+if (Q.reichinnek_advisor_b == 1) Q.n_advisors_b_woman -= 1;
+Q.lay_advisor_b = 0;
+Q.schirdewan_advisor_b = 0;
+Q.hoss_advisor_b = 0;
+Q.kipping_advisor_b = 0;
+Q.reichinnek_advisor_b = 0;
+
+Q.emali_left = 1;
+!}
+max-visits: 1
+
+= Centrist leaders resign
+
+Our policy choices have greatly offended the Centrist and emancipatory faction. Many of our most experienced leaders have resigned. 
