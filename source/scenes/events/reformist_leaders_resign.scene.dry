@@ -1,53 +1,57 @@
-title: Reformist leaders resign
+title: Movement Left leaders resign
 new-page: true 
-subtitle: Reformist disagreements with our policies have grown too severe.
+subtitle: BWL disagreements with our policies have grown too severe.
 tags: event
-view-if: reformist_dissent >= 60
+view-if: beweli_dissent >= 80
 on-arrival: {!
-if (Q.reformist_strength < 10) {
-    Q.workers_spd -= 4; 
-    Q.new_middle_spd -= 2; 
-    Q.old_middle_spd -= 2; 
-    Q.rural_spd -= 2; 
-    Q.rb_strength -= 200; 
-} else if (Q.reformist_strength < 25) {
-    Q.workers_spd -= 5; 
-    Q.new_middle_spd -= 3; 
-    Q.old_middle_spd -= 3; 
-    Q.rural_spd -= 3; 
-    Q.rb_strength -= 250; 
-} else if (Q.reformist_strength < 40) {
-    Q.workers_spd -= 6; 
-    Q.new_middle_spd -= 4; 
-    Q.old_middle_spd -= 4; 
-    Q.rural_spd -= 4; 
-    Q.rb_strength -= 300; 
-} else if (Q.reformist_strength < 60) {
-    Q.workers_spd -= 8; 
-    Q.new_middle_spd -= 6; 
-    Q.old_middle_spd -= 6; 
-    Q.rural_spd -= 6; 
-    Q.rb_strength -= 350; 
-} else {
-    Q.workers_spd -= 10; 
-    Q.new_middle_spd -= 8; 
-    Q.old_middle_spd -= 8; 
-    Q.rural_spd -= 8; 
-    Q.rb_strength -= 400; 
-}
 
-Q.reformist_strength *= 0.3; 
+Q.urban_linke -= (Q.urban_linke/0.8)*(Q.beweli_strength/100);
+Q.rural_linke -= (Q.rural_linke/0.4)*(Q.beweli_strength/100);
+Q.upper_linke -= (Q.upper_linke/0.6)*(Q.beweli_strength/100);
+Q.east_linke -= (Q.east_linke/0.6)*(Q.beweli_strength/100);
+Q.youth_linke -= (Q.youth_linke/1.2)*(Q.beweli_strength/100);
 
-Q.n_advisors_start = Q.n_advisors; 
-if (Q.braun_advisor == 1) Q.n_advisors -= 1; 
-if (Q.severing_advisor == 1) Q.n_advisors -= 1; 
-Q.braun_advisor = 0; 
-Q.severing_advisor = 0; 
-Q.reformists_resign = 1; 
-if (Q.n_advisors < Q.n_advisors_start) Q.shuffle_leadership_timer = 0;
+Q.beweli_strength *= 0.1; 
+
+if (Q.schwerdtner_advisor == 1) Q.n_advisors -= 1; 
+if (Q.pantisano_advisor == 1) Q.n_advisors -= 1;
+if (Q.gohlke_advisor == 1) Q.n_advisors -= 1; 
+if (Q.buenger_advisor == 1) Q.n_advisors -= 1;
+if (Q.wissler_advisor == 1 && Q.beweli_leader == "Wissler") Q.n_advisors -= 1;
+if (Q.riexinger_advisor == 1 && Q.beweli_leader == "Wissler") Q.n_advisors -= 1;
+if (Q.schwerdtner_advisor == 1) Q.n_advisors_woman -= 1;
+if (Q.gohlke_advisor == 1) Q.n_advisors_woman -= 1;
+if (Q.buenger_advisor == 1) Q.n_advisors_woman -= 1;
+if (Q.wissler_advisor == 1 && Q.beweli_leader == "Wissler") Q.n_advisors_woman -= 1;
+Q.schwerdtner_advisor = 0;
+Q.pantisano_advisor = 0;
+Q.gohlke_advisor = 0;
+Q.buenger_advisor = 0;
+if (Q.wissler_advisor == 1 && Q.beweli_leader == "Wissler") Q.wissler_advisor = 0;
+if (Q.riexinger_advisor == 1 && Q.beweli_leader == "Wissler") Q.riexinger_advisor = 0;
+
+
+if (Q.schwerdtner_advisor_b == 1) Q.n_advisors_b -= 1; 
+if (Q.pantisano_advisor_b == 1) Q.n_advisors_b -= 1;
+if (Q.gohlke_advisor_b == 1) Q.n_advisors_b -= 1; 
+if (Q.buenger_advisor_b == 1) Q.n_advisors_b -= 1;
+if (Q.wissler_advisor_b == 1 && Q.beweli_leader == "Wissler") Q.n_advisors_b -= 1;
+if (Q.riexinger_advisor_b == 1 && Q.beweli_leader == "Wissler") Q.n_advisors_b -= 1;
+if (Q.schwerdtner_advisor_b == 1) Q.n_advisors_b_woman -= 1;
+if (Q.gohlke_advisor_b == 1) Q.n_advisors_b_woman -= 1;
+if (Q.buenger_advisor_b == 1) Q.n_advisors_b_woman -= 1;
+if (Q.wissler_advisor_b == 1 && Q.beweli_leader == "Wissler") Q.n_advisors_b_woman -= 1;
+Q.schwerdtner_advisor_b = 0;
+Q.pantisano_advisor_b = 0;
+Q.gohlke_advisor_b = 0;
+Q.buenger_advisor_b = 0;
+if (Q.wissler_advisor_b == 1 && Q.beweli_leader == "Wissler") Q.wissler_advisor_b = 0;
+if (Q.riexinger_advisor_b == 1 && Q.beweli_leader == "Wissler") Q.riexinger_advisor_b = 0;
+
+Q.beweli_left = 1;
 !}
 max-visits: 1
 
-= Reformist leaders resign
+= Movement Left leaders resign
 
-Our policy choices have greatly offended the reformist faction. Many of our most experienced leaders have resigned. 
+Our policy choices have greatly offended the BWL faction. Many of our most experienced leaders have resigned. 
