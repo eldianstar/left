@@ -52,6 +52,25 @@ Q.oldleft_leader = "nobody";
 Q.foreign_moderation += 1;
 Q.social_moderation -= 0.5;
 
+if (Q.wagenknecht_advisor == 1) Q.n_advisors -= 1; 
+if (Q.mohamedali_advisor == 1) Q.n_advisors -= 1;
+if (Q.pellmann_advisor == 1) Q.n_advisors -= 1; 
+if (Q.wagenknecht_advisor == 1) Q.n_advisors_woman -= 1;
+if (Q.mohamedali_advisor == 1) Q.n_advisors_woman -= 1;
+Q.wagenknecht_advisor = 0;
+Q.pantisano_advisor = 0;
+Q.mohamedali_advisor = 0;
+
+
+if (Q.wagenknecht_advisor_b == 1) Q.n_advisors_b -= 1; 
+if (Q.pantisano_advisor_b == 1) Q.n_advisors_b -= 1;
+if (Q.mohamedali_advisor_b == 1) Q.n_advisors_b -= 1; 
+if (Q.wagenknecht_advisor_b == 1) Q.n_advisors_b_woman -= 1;
+if (Q.mohamedali_advisor_b == 1) Q.n_advisors_b_woman -= 1;
+Q.wagenknecht_advisor_b = 0;
+Q.pantisano_advisor_b = 0;
+Q.mohamedali_advisor_b = 0;
+
 // update all records
 Q.bsw_b = 0;
 Q.old_bsw_b = 0;
