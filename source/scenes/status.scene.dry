@@ -86,31 +86,6 @@ if (Q.afd_votes >= 5) {
         "seats": Math.round(Q.afd_b * Q.bundestag_size),
     });
 }
-    if (window && window.d3) {
-        var width = 500;
-        var height = 500;
-        var contentDiv = document.getElementById('content');
-
-        if (!contentDiv) return; 
-
-        var screenWidth = contentDiv.offsetWidth;
-        if (screenWidth < width - 50) {
-            width = screenWidth - 50;
-            height = width;
-            var svgElement = document.getElementById("nrw_landtag");
-            if (svgElement) {
-                svgElement.style.height = (screenWidth / 2) + "px";
-            }
-        }
-
-        var parliament = d3.parliament();
-        parliament.width(width).height(height).innerRadiusCoef(0.4);
-        parliament.enter.fromCenter(true).smallToBig(true);
-        parliament.exit.toCenter(false).bigToSmall(true);
-
-        d3.select("#nrw_landtag").selectAll("*").remove();
-        d3.select("#nrw_landtag").datum(data).call(parliament);
-    }
 
 !}
 
@@ -614,6 +589,32 @@ Q.pro_status_quo_disp = Math.floor(Q.pro_status_quo);
 <span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: [+ cdu_color +];">**CDU/CSU**</span>: [+ cdu_votes +]% <br>
 <span class="tooltip-text" title="Alternative for Germany" style="color: [+ afd_color +];">**AfD**</span>: [+ afd_votes +]% <br>
 **Others**: [+ other_votes +]%
+
+if (window && window.d3) {
+        var width = 500;
+        var height = 500;
+        var contentDiv = document.getElementById('content');
+
+        if (!contentDiv) return; 
+
+        var screenWidth = contentDiv.offsetWidth;
+        if (screenWidth < width - 50) {
+            width = screenWidth - 50;
+            height = width;
+            var svgElement = document.getElementById("nrw_landtag");
+            if (svgElement) {
+                svgElement.style.height = (screenWidth / 2) + "px";
+            }
+        }
+
+        var parliament = d3.parliament();
+        parliament.width(width).height(height).innerRadiusCoef(0.4);
+        parliament.enter.fromCenter(true).smallToBig(true);
+        parliament.exit.toCenter(false).bigToSmall(true);
+
+        d3.select("#nrw_landtag").selectAll("*").remove();
+        d3.select("#nrw_landtag").datum(data).call(parliament);
+    }
 
 Support for the Status Quo: [+ pro_status_quo_disp +]%
 
