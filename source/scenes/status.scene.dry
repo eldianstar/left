@@ -573,8 +573,8 @@ if (Q.afd_votes >= 5) {
     });
 }
 if (window && window.d3) {
-        var width = 500;
-        var height = 500;
+        var width = 100;
+        var height = 100;
         var contentDiv = document.getElementById('content');
 
         if (!contentDiv) return; 
