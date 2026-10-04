@@ -14,6 +14,10 @@ if (Q.economic_growth) {
 }
 !}
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// STATUS ///////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 = Status
 
 [+ month : month +] [+ year +]
@@ -58,6 +62,10 @@ Inflation: [+ inflation_2 +]%
 Unemployment: [+ unemployed_2 +]%
 
 Economic growth: [+ economic_growth_2 +]%
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////// GOVERNMENT /////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @govt
 
@@ -299,6 +307,10 @@ Bundestag composition:
 <tr><td>**Others**: </td><td>[+ other_b +]% </td></tr>
 </table>
 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////// LOCAL ////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
 @local
 
 = State Politics
@@ -419,6 +431,10 @@ Bundestag composition:
    <div style="flex: 1;">Next election: [+ next_election_month_thuringia : month +] [+ next_election_year_thuringia +]</div> 
 </div>
 
+//////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// PARTIES ////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+
 @politics
 
 = Inter-party Relations
@@ -495,25 +511,14 @@ Bundestag composition:
 <tr> <td> <span class="tooltip-text" title="Alternative for Germany" style="color: [+ afd_color +];">**AfD**</span>: </td> <td> [? if industrial_afd_backing == 0: none?][? if industrial_afd_backing == 1: low?][? if industrial_afd_backing == 2: medium?][? if industrial_afd_backing == 3: high?][? if industrial_afd_backing == 4: highest?] </td> </tr>
 </table>
 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////// POLLS //////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
 @polls
 on-arrival: {!
 Q.pro_status_quo_disp = Math.floor(Q.pro_status_quo);
 !}
-
-= Projected election results
-
-(if the election were to be held now):
-
-<span class="tooltip-text" title="The Left" style="color: #BC2D72;">**Linke**</span>: [+ linke_votes +]% <br>
-[? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: [+ bsw_color +];">**BSW**</span>: [+ bsw_votes +]% <br> ?]
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: [+ spd_color +];">**SPD**</span>: [+ spd_votes +]% <br>
-<span class="tooltip-text" title="Alliance 90/The Greens" style="color: [+ greens_color +];">**B90/Greens**</span>: [+ greens_votes +]% <br>
-<span class="tooltip-text" title="Free Democratic Party" style="color: [+ fdp_color +];">**FDP**</span>: [+ fdp_votes +]% <br>
-<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: [+ cdu_color +];">**CDU/CSU**</span>: [+ cdu_votes +]% <br>
-<span class="tooltip-text" title="Alternative for Germany" style="color: [+ afd_color +];">**AfD**</span>: [+ afd_votes +]% <br>
-**Others**: [+ other_votes +]%
-
-
 on-display: {!
 const data = [];
 if (Q.bsw_votes >= 5) {
@@ -598,7 +603,7 @@ if (window && window.d3) {
         if (screenWidth < width - 50) {
             width = screenWidth - 50;
             height = width;
-            var svgElement = document.getElementById("nrw_landtag");
+            var svgElement = document.getElementById("reichstag_polls");
             if (svgElement) {
                 svgElement.style.height = (screenWidth / 2) + "px";
             }
@@ -609,10 +614,23 @@ if (window && window.d3) {
         parliament.enter.fromCenter(true).smallToBig(true);
         parliament.exit.toCenter(false).bigToSmall(true);
 
-        d3.select("#nrw_landtag").selectAll("*").remove();
-        d3.select("#nrw_landtag").datum(data).call(parliament);
+        d3.select("#reichstag_polls").selectAll("*").remove();
+        d3.select("#reichstag_polls").datum(data).call(parliament);
     }
 !}
+
+= Projected election results
+
+{!<svg id="reichstag_polls" style="width: 500px; height: 250px;"> </svg>!}
+
+<span class="tooltip-text" title="The Left" style="color: #BC2D72;">**Linke**</span>: [+ linke_votes +]% <br>
+[? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: [+ bsw_color +];">**BSW**</span>: [+ bsw_votes +]% <br> ?]
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: [+ spd_color +];">**SPD**</span>: [+ spd_votes +]% <br>
+<span class="tooltip-text" title="Alliance 90/The Greens" style="color: [+ greens_color +];">**B90/Greens**</span>: [+ greens_votes +]% <br>
+<span class="tooltip-text" title="Free Democratic Party" style="color: [+ fdp_color +];">**FDP**</span>: [+ fdp_votes +]% <br>
+<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: [+ cdu_color +];">**CDU/CSU**</span>: [+ cdu_votes +]% <br>
+<span class="tooltip-text" title="Alternative for Germany" style="color: [+ afd_color +];">**AfD**</span>: [+ afd_votes +]% <br>
+**Others**: [+ other_votes +]%
 
 Support for the Status Quo: [+ pro_status_quo_disp +]%
 
@@ -671,6 +689,10 @@ Support for the Status Quo: [+ pro_status_quo_disp +]%
             {!<td style="background-color: rgba(4, 137, 219, 0.1); font-size: 0.85em;">!}[+ east_afd_display +]%{!</td>!}
         {!</tr>!}
     </table>
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////// LEADERSHIP/PARTY /////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
 @leadership
 
