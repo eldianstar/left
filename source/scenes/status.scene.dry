@@ -575,9 +575,10 @@ Support for the Status Quo: [+ pro_status_quo_disp +]%
 
 = State of the Party
 
-Internal dissent: [+ dissent_percent : dissent +]
-Ideological moderation: [+ party_moderation +]
-Decentralization: [+ decentralization +]
+<table>
+<tr><td>Internal dissent:</td><td>[+ dissent_percent : dissent +]</td><tr>
+<tr><td>Radicalism:</td><td>[+ party_moderation : party_moderation +]</td><tr>
+<tr><td>Centralization:</td><td>[+ decentralization : decentralization +]</td><tr>
 
 = Party Leadership
 
