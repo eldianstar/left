@@ -55,6 +55,7 @@ v0.02:
 
 Major changes: 
 - Status tab was made dynamic
+- Displays for status variables done
 
 Minor changes:
 - Länder flag image border was removed
@@ -80,7 +81,6 @@ Future changes:
    - add a status subtab?
    - EU, French, American elections
 - Status/Main tab:
-   - Do all displays for variables
    - Better looking polls tab (issues + parliament graph)
    - Better looking local tab (parliaments?)
    - Foreign tab?
