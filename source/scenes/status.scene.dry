@@ -12,6 +12,108 @@ Q.economic_growth_2 = '0';
 if (Q.economic_growth) {
     Q.economic_growth_2 = Q.economic_growth.toFixed(1);
 }
+
+on-display: {!
+const data = [];
+if (Q.bsw_votes >= 5) {
+    data.push({
+        "id": "bsw",
+        "legend": "BSW",
+        "name": "BSW",
+        "seats": Math.round(Q.bsw_b * Q.bundestag_size),
+    });
+}
+
+if (Q.linke_votes >= 5) {
+    data.push({
+        "id": "linke",
+        "legend": "Left",
+        "name": "Left",
+        "seats": Math.round(Q.linke_b * Q.bundestag_size),
+    });
+}
+
+if (Q.spd_votes >= 5) {
+    data.push({
+        "id": "spd",
+        "legend": "SPD",
+        "name": "SPD",
+        "seats": Math.round(Q.spd_b * Q.bundestag_size),
+    });
+}
+
+if (Q.greens_votes >= 5) {
+    data.push({
+        "id": "greens",
+        "legend": "B90/Greens",
+        "name": "B90/Greens",
+        "seats": Math.round(Q.greens_b * Q.bundestag_size),
+    });
+}
+
+if (Q.fdp_votes >= 5) {
+    data.push({
+        "id": "fdp",
+        "legend": "FDP",
+        "name": "FDP",
+        "seats": Math.round(Q.fdp_b * Q.bundestag_size),
+    });
+}
+
+if (Q.cdu_minus_csu_votes >= 5) {
+    data.push({
+        "id": "cdu",
+        "legend": "CDU",
+        "name": "CDU",
+        "seats": Math.round(Q.cdu_minus_csu_b * Q.bundestag_size),
+    });
+}
+
+if (Q.csu_votes >= 1) {
+    data.push({
+        "id": "csu",
+        "legend": "CSU",
+        "name": "CSU",
+        "seats": Math.round(Q.csu_b * Q.bundestag_size),
+    });
+}
+
+if (Q.afd_votes >= 5) {
+    data.push({
+        "id": "afd",
+        "legend": "AfD",
+        "name": "AfD",
+        "seats": Math.round(Q.afd_b * Q.bundestag_size),
+    });
+}
+    if (window && window.d3) {
+        var width = 500;
+        var height = 500;
+        var contentDiv = document.getElementById('content');
+
+        if (!contentDiv) return; 
+
+        var screenWidth = contentDiv.offsetWidth;
+        if (screenWidth < width - 50) {
+            width = screenWidth - 50;
+            height = width;
+            var svgElement = document.getElementById("nrw_landtag");
+            if (svgElement) {
+                svgElement.style.height = (screenWidth / 2) + "px";
+            }
+        }
+
+        var parliament = d3.parliament();
+        parliament.width(width).height(height).innerRadiusCoef(0.4);
+        parliament.enter.fromCenter(true).smallToBig(true);
+        parliament.exit.toCenter(false).bigToSmall(true);
+
+        d3.select("#nrw_landtag").selectAll("*").remove();
+        d3.select("#nrw_landtag").datum(data).call(parliament);
+    }
+
+!}
+
 !}
 
 = Status
