@@ -1,4 +1,5 @@
-v0.01:
+/////////////////////////////////////////////////////////////////////////////////////////
+v0.01(this is the version of when i made this first to-do list):
 
 Future changes:
 - Internal dynamics:
@@ -21,6 +22,64 @@ Future changes:
 - Status/Main tab:
    - Make everything dynamic and changing with the variables
    - Fix the ugly picture frame
+   - Do all displays for variables
+   - Better looking polls tab (issues + parliament graph)
+   - Better looking local tab (parliaments?)
+   - Foreign tab?
+   - Add news
+- Govt: 
+   - all govt cards done
+   - Better economic system
+   - Trump blockading you
+   - Opposition system?
+   - Parliamentary approval system (eg Redux)?
+   - 3% hürde
+   - Presidential elections
+- Other events:
+   - More Ampel events
+   - Merz Groko events
+   - Covid end event
+   - Better bundestag election event (ministries)
+   - Leadership events
+   - Brandmauer crumbling events
+   - AfD in power
+   - Trump in power
+   - Specific events (eg Mamdani), antisemitism scandals etc.
+   - Add every single minor party (with dynamic routes)
+- Other/Misc:
+   - Nerf all party cards
+   - Add images to all cards
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+v0.02:
+
+Major changes: 
+- Status tab was made dynamic
+
+Minor changes:
+- Länder flag image border was removed
+- Double leadership system added for B90/G and AfD
+- Linke now moderates over time
+
+Future changes:
+- Internal dynamics:
+   - Leadership events for factions
+   - Faction dissent increase changed for different leaders
+   - Better way of displaying advisors
+   - Bundestag leaders choice
+   - More dynamic fame system
+   - Add event about BeweLi
+- Local dynamics:
+   - Fix errors related to coalition formation
+   - Better way of negotiating coalitions
+   - Local governments
+   - Local govt missions
+   - Local coalition dissent
+   - Regional factions/interests
+- Foreign affairs:
+   - add a status subtab?
+   - EU, French, American elections
+- Status/Main tab:
    - Do all displays for variables
    - Better looking polls tab (issues + parliament graph)
    - Better looking local tab (parliaments?)
