@@ -85,6 +85,7 @@ Future changes:
    - Better looking local tab (parliaments?)
    - Foreign tab?
    - Add news
+   - Add more icons for stuff like economy and issues
 - Govt: 
    - all govt cards done
    - Better economic system
@@ -107,3 +108,4 @@ Future changes:
 - Other/Misc:
    - Nerf all party cards
    - Add images to all cards
+   - Better tooltips
