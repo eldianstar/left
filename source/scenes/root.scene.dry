@@ -191,11 +191,14 @@ Q.fdp_relation = 15;
 // DNVP and NSDAP are invariably hostile
 Q.afd_relation = 0;
 
-Q.greens_leader = "Habeck/Baerbock";
+Q.greens_leader_1 = "Habeck";
+Q.greens_leader_2 = "Baerbock";
 Q.spd_leader = "Scholz";
 Q.fdp_leader = "Lindner";
 Q.cdu_leader = "Laschet";
-Q.afd_leader = "Weidel/Chrupalla";
+Q.afd_leader_1 = "Meuthen";
+Q.afd_leader_2 = "Chrupalla";
+Q.bsw_leader = "Wagenknecht";
 
 Q.industrial_bsw_backing = 0;
 Q.industrial_spd_backing = 1;
