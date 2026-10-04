@@ -12,83 +12,6 @@ Q.economic_growth_2 = '0';
 if (Q.economic_growth) {
     Q.economic_growth_2 = Q.economic_growth.toFixed(1);
 }
-
-on-display: {!
-const data = [];
-if (Q.bsw_votes >= 5) {
-    data.push({
-        "id": "bsw",
-        "legend": "BSW",
-        "name": "BSW",
-        "seats": Math.round(Q.bsw_b * Q.bundestag_size),
-    });
-}
-
-if (Q.linke_votes >= 5) {
-    data.push({
-        "id": "linke",
-        "legend": "Left",
-        "name": "Left",
-        "seats": Math.round(Q.linke_b * Q.bundestag_size),
-    });
-}
-
-if (Q.spd_votes >= 5) {
-    data.push({
-        "id": "spd",
-        "legend": "SPD",
-        "name": "SPD",
-        "seats": Math.round(Q.spd_b * Q.bundestag_size),
-    });
-}
-
-if (Q.greens_votes >= 5) {
-    data.push({
-        "id": "greens",
-        "legend": "B90/Greens",
-        "name": "B90/Greens",
-        "seats": Math.round(Q.greens_b * Q.bundestag_size),
-    });
-}
-
-if (Q.fdp_votes >= 5) {
-    data.push({
-        "id": "fdp",
-        "legend": "FDP",
-        "name": "FDP",
-        "seats": Math.round(Q.fdp_b * Q.bundestag_size),
-    });
-}
-
-if (Q.cdu_minus_csu_votes >= 5) {
-    data.push({
-        "id": "cdu",
-        "legend": "CDU",
-        "name": "CDU",
-        "seats": Math.round(Q.cdu_minus_csu_b * Q.bundestag_size),
-    });
-}
-
-if (Q.csu_votes >= 1) {
-    data.push({
-        "id": "csu",
-        "legend": "CSU",
-        "name": "CSU",
-        "seats": Math.round(Q.csu_b * Q.bundestag_size),
-    });
-}
-
-if (Q.afd_votes >= 5) {
-    data.push({
-        "id": "afd",
-        "legend": "AfD",
-        "name": "AfD",
-        "seats": Math.round(Q.afd_b * Q.bundestag_size),
-    });
-}
-
-!}
-
 !}
 
 = Status
@@ -590,6 +513,80 @@ Q.pro_status_quo_disp = Math.floor(Q.pro_status_quo);
 <span class="tooltip-text" title="Alternative for Germany" style="color: [+ afd_color +];">**AfD**</span>: [+ afd_votes +]% <br>
 **Others**: [+ other_votes +]%
 
+
+on-display: {!
+const data = [];
+if (Q.bsw_votes >= 5) {
+    data.push({
+        "id": "bsw",
+        "legend": "BSW",
+        "name": "BSW",
+        "seats": Math.round(Q.bsw_b * Q.bundestag_size),
+    });
+}
+
+if (Q.linke_votes >= 5) {
+    data.push({
+        "id": "linke",
+        "legend": "Left",
+        "name": "Left",
+        "seats": Math.round(Q.linke_b * Q.bundestag_size),
+    });
+}
+
+if (Q.spd_votes >= 5) {
+    data.push({
+        "id": "spd",
+        "legend": "SPD",
+        "name": "SPD",
+        "seats": Math.round(Q.spd_b * Q.bundestag_size),
+    });
+}
+
+if (Q.greens_votes >= 5) {
+    data.push({
+        "id": "greens",
+        "legend": "B90/Greens",
+        "name": "B90/Greens",
+        "seats": Math.round(Q.greens_b * Q.bundestag_size),
+    });
+}
+
+if (Q.fdp_votes >= 5) {
+    data.push({
+        "id": "fdp",
+        "legend": "FDP",
+        "name": "FDP",
+        "seats": Math.round(Q.fdp_b * Q.bundestag_size),
+    });
+}
+
+if (Q.cdu_minus_csu_votes >= 5) {
+    data.push({
+        "id": "cdu",
+        "legend": "CDU",
+        "name": "CDU",
+        "seats": Math.round(Q.cdu_minus_csu_b * Q.bundestag_size),
+    });
+}
+
+if (Q.csu_votes >= 1) {
+    data.push({
+        "id": "csu",
+        "legend": "CSU",
+        "name": "CSU",
+        "seats": Math.round(Q.csu_b * Q.bundestag_size),
+    });
+}
+
+if (Q.afd_votes >= 5) {
+    data.push({
+        "id": "afd",
+        "legend": "AfD",
+        "name": "AfD",
+        "seats": Math.round(Q.afd_b * Q.bundestag_size),
+    });
+}
 if (window && window.d3) {
         var width = 500;
         var height = 500;
@@ -615,6 +612,7 @@ if (window && window.d3) {
         d3.select("#nrw_landtag").selectAll("*").remove();
         d3.select("#nrw_landtag").datum(data).call(parliament);
     }
+!}
 
 Support for the Status Quo: [+ pro_status_quo_disp +]%
 
@@ -682,6 +680,7 @@ Support for the Status Quo: [+ pro_status_quo_disp +]%
 <tr><td>Internal dissent:</td><td>[+ dissent_percent : dissent +]</td><tr>
 <tr><td>Radicalism:</td><td>[+ party_moderation : party_moderation +]</td><tr>
 <tr><td>Centralization:</td><td>[+ decentralization : decentralization +]</td><tr>
+</table>
 
 = Party Leadership
 
