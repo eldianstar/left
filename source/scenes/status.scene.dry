@@ -676,7 +676,7 @@ Support for the Status Quo: [+ pro_status_quo_disp +]%
 = State of the Party
 
 <table>
-<tr><td>Internal dissent:</td><td>[+ dissent_percent : dissent +]</td><tr>
+<tr><td>Internal dissent:</td><td><div class="bar"><div class="bar-fill" style="width: [+ dissent_percent +]%;"></div></div></td><tr>
 <tr><td>Radicalism:</td><td>[+ party_moderation : party_moderation +]</td><tr>
 <tr><td>Centralization:</td><td>[+ decentralization : decentralization +]</td><tr>
 </table>
