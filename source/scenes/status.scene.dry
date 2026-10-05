@@ -500,7 +500,7 @@ on-arrival: {!
 Q.pro_status_quo_disp = Math.floor(Q.pro_status_quo);
 !}
 on-display: {!
-const data = [];
+var data = [];
 if (Q.bsw_votes >= 5) {
     data.push({
         "id": "bsw",
