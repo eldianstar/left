@@ -350,8 +350,8 @@ blockquote+blockquote.attribution {
 } */
 
 .bar {
-  width: 50%;
-  height: 20px;
+  width: 100px;
+  height: 10px;
   background-color: var(--card-bg-color);
   border: 4px solid var(--card-border-color);
   border-radius: 7px;
