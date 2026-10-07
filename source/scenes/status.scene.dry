@@ -603,16 +603,6 @@ if (window && window.d3) {
 
 <svg id="reichstag_polls" style="width: 100px; height: 50px;"> </svg>
 
-<table>
-<tr><td><span class="tooltip-text" title="The Left" style="color: #BC2D72;">**Linke**</span>:</td><td><div class="bar"><div class="bar-fill" style="width: [+ linke_votes +]%;background-color: [+ linke_color +];"></div></div></td></tr>
-[? if bsw_split : <tr><td><span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: [+ bsw_color +];">**BSW**</span>:</td><td><div class="bar"><div class="bar-fill" style="width: [+ bsw_votes +]%;background-color: [+ bsw_color +];"></div></div></td></tr> ?]
-<tr><td><span class="tooltip-text" title="Social Democratic Party of Germany" style="color: [+ spd_color +];">**SPD**</span>:</td><td><div class="bar"><div class="bar-fill" style="width: [+ spd_votes +]%;background-color: [+ spd_color +];"></div></div></td></tr>
-<tr><td><span class="tooltip-text" title="Alliance 90/The Greens" style="color: [+ greens_color +];">**B90/Greens**</span>:</td><td><div class="bar"><div class="bar-fill" style="width: [+ greens_votes +]%;background-color: [+ greens_color +];"></div></div></td></tr>
-<tr><td><span class="tooltip-text" title="Free Democratic Party" style="color: [+ fdp_color +];">**FDP**</span>:</td><td><div class="bar"><div class="bar-fill" style="width: [+ fdp_votes +]%;background-color: [+ fdp_color +];"></div></div></td></tr>
-<tr><td><span class="tooltip-text" title="Christian Democratic Union/Christian Social Union" style="color: [+ cdu_color +];">**CDU/CSU**</span>:<br></td><td><div class="bar"><div class="bar-fill" style="width: [+ cdu_votes +]%;background-color: [+ cdu_color +];"></div></div></td></tr>
-<tr><td><span class="tooltip-text" title="Alternative for Germany" style="color: [+ afd_color +];">**AfD**</span>: [+ afd_votes +]% <br><br></td><td><div class="bar"><div class="bar-fill" style="width: [+ afd_votes +]%;background-color: [+ afd_color +];"></div></div></td></tr>
-</table>
-
 <span class="tooltip-text" title="The Left" style="color: #BC2D72;">**Linke**</span>: [+ linke_votes +]% <br>
 [? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: [+ bsw_color +];">**BSW**</span>: [+ bsw_votes +]% <br> ?]
 <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: [+ spd_color +];">**SPD**</span>: [+ spd_votes +]% <br>
@@ -686,9 +676,9 @@ Support for the Status Quo: [+ pro_status_quo_disp +]%
 = State of the Party
 
 <table>
-<tr><td>Internal dissent:</td><td><div class="bar"><div class="bar-fill" style="width: [+ dissent_percent +]%;"></div></div></td></tr>
-<tr><td>Radicalism:</td><td><div class="bar"><div class="bar-fill" style="width: [+ ((10-party_moderation)*10) +]%;"></div></div></td></tr>
-<tr><td>Centralization:</td><td><div class="bar"><div class="bar-fill" style="width: [+ ((10-decentralization)*10) +]%;"></div></div></td></tr>
+<tr><td>Internal dissent:</td><td><div class="bar" style="width: 150px;"><div class="bar-fill" style="width: [+ dissent_percent +]%;"></div></div></td></tr>
+<tr><td>Radicalism:</td><td><div class="bar" style="width: 150px;"><div class="bar-fill" style="width: [+ (10-party_moderation)*10 +]%;"></div></div></td></tr>
+<tr><td>Centralization:</td><td><div class="bar" style="width: 150px;"><div class="bar-fill" style="width: [+ (10-decentralization)*10 +]%;"></div></div></td></tr>
 </table>
 
 = Party Leadership
