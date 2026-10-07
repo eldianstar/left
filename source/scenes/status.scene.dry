@@ -677,8 +677,8 @@ Support for the Status Quo: [+ pro_status_quo_disp +]%
 
 <table>
 <tr><td>Internal dissent:</td><td><div class="bar" style="width: 150px;"><div class="bar-fill" style="width: [+ dissent_percent +]%;"></div></div></td><tr>
-<tr><td>Radicalism:</td><td><div class="bar" style="width: 150px;"><div class="bar-fill" style="width: [+ (10-party_moderation)*10 +]%;"></div></div></td><tr>
-<tr><td>Centralization:</td><td><div class="bar" style="width: 150px;"><div class="bar-fill" style="width: [+ (10-decentralization)*10 +]%;"></div></div></td><tr>
+<tr><td>Radicalism:</td><td><div class="bar" style="width: 150px;"><div class="bar-fill" style="width: [+ (100-party_moderation_percent) +]%;"></div></div></td><tr>
+<tr><td>Centralization:</td><td><div class="bar" style="width: 150px;"><div class="bar-fill" style="width: [+ (100-decentralization_percent) +]%;"></div></div></td><tr>
 </table>
 
 = Party Leadership
