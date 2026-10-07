@@ -499,109 +499,10 @@ Bundestag composition:
 on-arrival: {!
 Q.pro_status_quo_disp = Math.floor(Q.pro_status_quo);
 !}
-on-display: {!
-var data = [];
-if (Q.bsw_votes >= 5) {
-    data.push({
-        "id": "bsw",
-        "legend": "BSW",
-        "name": "BSW",
-        "seats": Math.round(Q.bsw_b * Q.bundestag_size),
-    });
-}
 
-if (Q.linke_votes >= 5) {
-    data.push({
-        "id": "linke",
-        "legend": "Left",
-        "name": "Left",
-        "seats": Math.round(Q.linke_b * Q.bundestag_size),
-    });
-}
-
-if (Q.spd_votes >= 5) {
-    data.push({
-        "id": "spd",
-        "legend": "SPD",
-        "name": "SPD",
-        "seats": Math.round(Q.spd_b * Q.bundestag_size),
-    });
-}
-
-if (Q.greens_votes >= 5) {
-    data.push({
-        "id": "greens",
-        "legend": "B90/Greens",
-        "name": "B90/Greens",
-        "seats": Math.round(Q.greens_b * Q.bundestag_size),
-    });
-}
-
-if (Q.fdp_votes >= 5) {
-    data.push({
-        "id": "fdp",
-        "legend": "FDP",
-        "name": "FDP",
-        "seats": Math.round(Q.fdp_b * Q.bundestag_size),
-    });
-}
-
-if (Q.cdu_minus_csu_votes >= 5) {
-    data.push({
-        "id": "cdu",
-        "legend": "CDU",
-        "name": "CDU",
-        "seats": Math.round(Q.cdu_minus_csu_b * Q.bundestag_size),
-    });
-}
-
-if (Q.csu_votes >= 1) {
-    data.push({
-        "id": "csu",
-        "legend": "CSU",
-        "name": "CSU",
-        "seats": Math.round(Q.csu_b * Q.bundestag_size),
-    });
-}
-
-if (Q.afd_votes >= 5) {
-    data.push({
-        "id": "afd",
-        "legend": "AfD",
-        "name": "AfD",
-        "seats": Math.round(Q.afd_b * Q.bundestag_size),
-    });
-}
-if (window && window.d3) {
-        var width = 100;
-        var height = 100;
-        var contentDiv = document.getElementById('content');
-
-        if (!contentDiv) return; 
-
-        var screenWidth = contentDiv.offsetWidth;
-        if (screenWidth < width - 50) {
-            width = screenWidth - 50;
-            height = width;
-            var svgElement = document.getElementById("reichstag_polls");
-            if (svgElement) {
-                svgElement.style.height = (screenWidth / 2) + "px";
-            }
-        }
-
-        var parliament = d3.parliament();
-        parliament.width(width).height(height).innerRadiusCoef(0.4);
-        parliament.enter.fromCenter(true).smallToBig(true);
-        parliament.exit.toCenter(false).bigToSmall(true);
-
-        d3.select("#reichstag_polls").selectAll("*").remove();
-        d3.select("#reichstag_polls").datum(data).call(parliament);
-    }
-!}
 
 = Projected election results
 
-<svg id="reichstag_polls" style="width: 100px; height: 50px;"> </svg>
 
 <span class="tooltip-text" title="The Left" style="color: #BC2D72;">**Linke**</span>: [+ linke_votes +]% <br>
 [? if bsw_split : <span class="tooltip-text" title="Sahra Wagenknecht Alliance" style="color: [+ bsw_color +];">**BSW**</span>: [+ bsw_votes +]% <br> ?]
