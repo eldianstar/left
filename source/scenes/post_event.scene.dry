@@ -452,10 +452,6 @@ if (Q.foreign_moderation > 10) {
 Q.foreign_moderation = 10
 }
 
-Q.foreign_moderation += 0.02*(10-Q.issue_antimilitarism);
-Q.social_moderation += 0.02*(10-(Q.issue_feminism+Q.issue-environment)/2);
-Q.econ_moderation += 0.02*(10-(Q.issue_cost_of_living+Q.issue_welfare+Q.issue_services)/3);
-
     if (Q.bsw_split && Q.social_moderation <= 1) {
         Q.pragmatist_dissent += 0.3;
     }
