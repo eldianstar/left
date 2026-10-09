@@ -554,6 +554,15 @@ Q.party_moderation_percent = Q.party_moderation*10;
 
 Q.decentralization_percent = Q.decentralization*10;
 
+Q.issue_cost_of_living_percent = Q.issue_cost_of_living*10;
+Q.issue_welfare_percent = Q.issue_welfare*10;
+Q.issue_services_percent = Q.issue_services*10;
+Q.issue_antimilitarism_percent = Q.issue_antimilitarism*10;
+Q.issue_feminism_percent = Q.issue_feminism*10;
+Q.issue_environment_percent = Q.issue_environment*10;
+Q.issue_antifascism_percent = Q.issue_antifascism*10;
+Q.issue_migration_percent = Q.issue_migration*10;
+
 // popularity change based on moderation
 
 Q.urban_linke -= ((10 - Q.party_moderation)/50);
