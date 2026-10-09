@@ -631,6 +631,19 @@ Detailed results for each demographic:
 
 = Important Issues
 
+<table style="width: 100%; table-layout: fixed;">
+<colgroup>
+  <col style="width: 66%;">
+  <col style="width: 34%;">
+</colgroup>
+<tr><td style="word-wrap: break-word;"><span style="color: [+ cost_of_living_color +];">**Cost of Living**</span>:</td><td><div class="bar" style="width: 100px;"><div class="bar-fill" style="width: [+ issue_cost_of_living_percent +]%;background-color: [+ cost_of_living_color +];"></div></div></td></tr>
+<tr><td><span style="color: [+ welfare_color +];">**Welfare**</span>:</td><td><div class="bar" style="width: 100px;"><div class="bar-fill" style="width: [+ (issue_welfare_percent) +]%;background-color: [+ welfare_color +];"></div></div></td></tr>
+<tr><td><span style="color: [+ services_color +];">**Services and Infrastructure**</span>:</td><td><div class="bar" style="width: 100px;"><div class="bar-fill" style="width: [+ (issue_services_percent) +]%;background-color: [+ services_color +];"></div></div></td></tr>
+<tr><td><span style="color: [+ antimilitarism_color +];">**Anti-imperialism and Antimilitarism**</span>:</td><td><div class="bar" style="width: 100px;"><div class="bar-fill" style="width: [+ (issue_antimilitarism_percent) +]%;background-color: [+ antimilitarism_color +];"></div></div></td></tr>
+<tr><td><span style="color: [+ feminism_color +];">**Feminism/LGBTQ**</span>:</td><td><div class="bar" style="width: 100px;"><div class="bar-fill" style="width: [+ (issue_feminism_percent) +]%;background-color: [+ feminism_color +];"></div></div></td></tr>
+<tr><td><span style="color: [+ environment_color +];">**Environment**</span>:</td><td><div class="bar" style="width: 100px;"><div class="bar-fill" style="width: [+ (issue_environment_percent) +]%;background-color: [+ environment_color +];"></div></div></td></tr>
+</table>
+
 <table>
 <tr><td><span style="color: [+ cost_of_living_color +];">**Cost of Living**</span>:</td><td><div class="bar" style="width: 100px;"><div class="bar-fill" style="width: [+ issue_cost_of_living_percent +]%;background-color: [+ cost_of_living_color +];"></div></div></td></tr>
 <tr><td><span style="color: [+ welfare_color +];">**Welfare**</span>:</td><td><div class="bar" style="width: 100px;"><div class="bar-fill" style="width: [+ (issue_welfare_percent) +]%;background-color: [+ welfare_color +];"></div></div></td></tr>
