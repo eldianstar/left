@@ -434,26 +434,26 @@ if (Q.afd_votes >= 33 && Q.greens_votes < 9) Q.greens_relation += 1;
 if (Q.afd_votes >= 33 && Q.spd_votes < 9) Q.spd_relation += 1;
 
 if (Q.social_moderation < 0) {
-Q.social_moderation = 0
+Q.social_moderation = 0;
 }
 if (Q.econ_moderation < 0) {
-Q.econ_moderation = 0
+Q.econ_moderation = 0;
 }
 if (Q.foreign_moderation < 0) {
-Q.foreign_moderation = 0
+Q.foreign_moderation = 0;
 }
 if (Q.social_moderation > 10) {
-Q.social_moderation = 10
+Q.social_moderation = 10;
 }
 if (Q.econ_moderation > 10) {
-Q.econ_moderation = 10
+Q.econ_moderation = 10;
 }
 if (Q.foreign_moderation > 10) {
-Q.foreign_moderation = 10
+Q.foreign_moderation = 10;
 }
 
 Q.foreign_moderation += 0.02*(10-Q.issue_antimilitarism);
-Q.social_moderation += 0.02*(10-(Q.issue_feminism+Q.issue-environment)/2);
+Q.social_moderation += 0.02*(10-(Q.issue_feminism+Q.issue_environment)/2);
 Q.econ_moderation += 0.02*(10-(Q.issue_cost_of_living+Q.issue_welfare+Q.issue_services)/3);
 
     if (Q.bsw_split && Q.social_moderation <= 1) {
@@ -501,31 +501,31 @@ Q.econ_moderation += 0.2;
 Q.youth_greens -= 0.3;
 Q.youth_fdp -= 0.3;
 Q.youth_cdu -= 0.3;
-Q.youth_linke += 0.6*(1-dissent);
+Q.youth_linke += 0.6*(1-Q.dissent);
 Q.youth_afd += 0.6;
 Q.rural_spd -= 0.3;
 Q.rural_greens -= 0.3;
 Q.rural_fdp -= 0.3;
 Q.rural_cdu -= 0.3;
-Q.rural_linke += 0.2*(1-dissent);
+Q.rural_linke += 0.2*(1-Q.dissent);
 Q.rural_afd += 1;
 Q.east_spd -= 0.4;
 Q.east_greens -= 0.4;
 Q.east_fdp -= 0.4;
 Q.east_cdu -= 0.4;
-Q.east_linke += 0.8*(1-dissent);
+Q.east_linke += 0.8*(1-Q.dissent);
 Q.east_afd += 0.8;
 Q.urban_spd -= 0.3;
 Q.urban_greens -= 0.3;
 Q.urban_fdp -= 0.3;
 Q.urban_cdu -= 0.3;
-Q.urban_linke += 0.6*(1-dissent);
+Q.urban_linke += 0.6*(1-Q.dissent);
 Q.urban_afd += 0.6;
 Q.upper_spd -= 0.3;
 Q.upper_greens -= 0.3;
 Q.upper_fdp -= 0.3;
 Q.upper_cdu -= 0.3;
-Q.upper_linke += 0.2*(1-dissent);
+Q.upper_linke += 0.2*(1-Q.dissent);
 Q.upper_afd += 1;
 if (Q.bsw_split) {
 Q.urban_bsw += 0.1;
@@ -648,7 +648,7 @@ if (Q.kipping_advisor == 1) { Q.oldleft_dissent -= 0.2; }
 if (Q.kipping_advisor == 1) { Q.beweli_dissent -= 0.2; }
 if (Q.kipping_advisor == 1) { Q.emali_dissent -= 0.2; }
 if (Q.kipping_advisor == 1) { Q.pragmatist_dissent -= 0.2; }
-if (Q.vanaken_advisor == 1) { Q.issue_environmentalism += 0.1; }
+if (Q.vanaken_advisor == 1) { Q.issue_environment += 0.1; }
 if (Q.schirdewan_advisor == 1) { Q.guengl += 0.1; }
 if (Q.lay_advisor == 1) { Q.youth_linke += (Q.afd_votes/80)*(1-Q.dissent); }
 if (Q.ramelow_advisor == 1) { Q.east_linke += 0.3*(1-Q.dissent); }
@@ -716,7 +716,7 @@ if (Q.kipping_advisor_b == 1) { Q.oldleft_dissent -= 0.2; }
 if (Q.kipping_advisor_b == 1) { Q.beweli_dissent -= 0.2; }
 if (Q.kipping_advisor_b == 1) { Q.emali_dissent -= 0.2; }
 if (Q.kipping_advisor_b == 1) { Q.pragmatist_dissent -= 0.2; }
-if (Q.vanaken_advisor_b == 1) { Q.issue_environmentalism += 0.1; }
+if (Q.vanaken_advisor_b == 1) { Q.issue_environment += 0.1; }
 if (Q.schirdewan_advisor_b == 1) { Q.guengl += 0.1; }
 if (Q.lay_advisor_b == 1) { Q.youth_linke += (Q.afd_votes/80)*(1-Q.dissent); }
 if (Q.ramelow_advisor_b == 1) { Q.east_linke += 0.3*(1-Q.dissent); }
@@ -782,47 +782,47 @@ Q.urban_afd += 0.3;
 
 // status quo votes + being in government
 
-if (Q.pro_status_quo < 70 && Q.linke_in_goverment) {
-Q.rural_linke -= 0.02*(100-pro_status_quo);
-Q.urban_linke -= 0.03*(100-pro_status_quo);
-Q.youth_linke -= 0.04*(100-pro_status_quo);
-Q.east_linke -= 0.04*(100-pro_status_quo);
-Q.upper_linke -= 0.01*(100-pro_status_quo);
+if (Q.pro_status_quo < 70 && Q.linke_in_government) {
+Q.rural_linke -= 0.02*(100-Q.pro_status_quo);
+Q.urban_linke -= 0.03*(100-Q.pro_status_quo);
+Q.youth_linke -= 0.04*(100-Q.pro_status_quo);
+Q.east_linke -= 0.04*(100-Q.pro_status_quo);
+Q.upper_linke -= 0.01*(100-Q.pro_status_quo);
 }
-if (Q.pro_status_quo < 70 && Q.spd_in_goverment) {
-Q.rural_spd -= 0.02*(100-pro_status_quo);
-Q.urban_spd -= 0.03*(100-pro_status_quo);
-Q.youth_spd -= 0.04*(100-pro_status_quo);
-Q.east_spd -= 0.03*(100-pro_status_quo);
-Q.upper_spd -= 0.01*(100-pro_status_quo);
+if (Q.pro_status_quo < 70 && Q.spd_in_government) {
+Q.rural_spd -= 0.02*(100-Q.pro_status_quo);
+Q.urban_spd -= 0.03*(100-Q.pro_status_quo);
+Q.youth_spd -= 0.04*(100-Q.pro_status_quo);
+Q.east_spd -= 0.03*(100-Q.pro_status_quo);
+Q.upper_spd -= 0.01*(100-Q.pro_status_quo);
 }
-if (Q.pro_status_quo < 70 && Q.greens_in_goverment) {
-Q.rural_greens -= 0.01*(100-pro_status_quo);
-Q.urban_greens -= 0.02*(100-pro_status_quo);
-Q.youth_greens -= 0.04*(100-pro_status_quo);
-Q.east_greens -= 0.01*(100-pro_status_quo);
-Q.upper_greens -= 0.03*(100-pro_status_quo);
+if (Q.pro_status_quo < 70 && Q.greens_in_government) {
+Q.rural_greens -= 0.01*(100-Q.pro_status_quo);
+Q.urban_greens -= 0.02*(100-Q.pro_status_quo);
+Q.youth_greens -= 0.04*(100-Q.pro_status_quo);
+Q.east_greens -= 0.01*(100-Q.pro_status_quo);
+Q.upper_greens -= 0.03*(100-Q.pro_status_quo);
 }
-if (Q.pro_status_quo < 70 && Q.fdp_in_goverment) {
-Q.rural_fdp -= 0.01*(100-pro_status_quo);
-Q.urban_fdp -= 0.03*(100-pro_status_quo);
-Q.youth_fdp -= 0.04*(100-pro_status_quo);
-Q.east_fdp -= 0.01*(100-pro_status_quo);
-Q.upper_fdp -= 0.04*(100-pro_status_quo);
+if (Q.pro_status_quo < 70 && Q.fdp_in_government) {
+Q.rural_fdp -= 0.01*(100-Q.pro_status_quo);
+Q.urban_fdp -= 0.03*(100-Q.pro_status_quo);
+Q.youth_fdp -= 0.04*(100-Q.pro_status_quo);
+Q.east_fdp -= 0.01*(100-Q.pro_status_quo);
+Q.upper_fdp -= 0.04*(100-Q.pro_status_quo);
 }
-if (Q.pro_status_quo < 70 && Q.cdu_in_goverment) {
-Q.rural_cdu -= 0.04*(100-pro_status_quo);
-Q.urban_cdu -= 0.02*(100-pro_status_quo);
-Q.youth_cdu -= 0.04*(100-pro_status_quo);
-Q.east_cdu -= 0.03*(100-pro_status_quo);
-Q.upper_cdu -= 0.02*(100-pro_status_quo);
+if (Q.pro_status_quo < 70 && Q.cdu_in_government) {
+Q.rural_cdu -= 0.04*(100-Q.pro_status_quo);
+Q.urban_cdu -= 0.02*(100-Q.pro_status_quo);
+Q.youth_cdu -= 0.04*(100-Q.pro_status_quo);
+Q.east_cdu -= 0.03*(100-Q.pro_status_quo);
+Q.upper_cdu -= 0.02*(100-Q.pro_status_quo);
 }
-if (Q.pro_status_quo < 70 && Q.bsw_in_goverment) {
-Q.rural_bsw -= 0.03*(100-pro_status_quo);
-Q.urban_bsw -= 0.01*(100-pro_status_quo);
-Q.youth_bsw -= 0.03*(100-pro_status_quo);
-Q.east_bsw -= 0.05*(100-pro_status_quo);
-Q.upper_bsw -= 0.01*(100-pro_status_quo);
+if (Q.pro_status_quo < 70 && Q.bsw_in_government) {
+Q.rural_bsw -= 0.03*(100-Q.pro_status_quo);
+Q.urban_bsw -= 0.01*(100-Q.pro_status_quo);
+Q.youth_bsw -= 0.03*(100-Q.pro_status_quo);
+Q.east_bsw -= 0.05*(100-Q.pro_status_quo);
+Q.upper_bsw -= 0.01*(100-Q.pro_status_quo);
 }
 
 
@@ -1378,8 +1378,8 @@ if (Q.greens_in_government && !Q.linke_in_government) {
 Q.greens_relation -= 0.1;
 }
 if (!Q.greens_in_government && !Q.spd_in_government && !Q.linke_in_government) {
-Q.spd_relation += (afd_votes)/30;
-Q.greens_relation += (afd_votes)/30;
+Q.spd_relation += (Q.afd_votes)/30;
+Q.greens_relation += (Q.afd_votes)/30;
 }
 
 
@@ -2093,6 +2093,7 @@ if (Q.budget < 0) {
 if (Q.spd_toleration || (Q.spd_in_government && !Q.in_spd_majority))
     Q.catastrophepolitik_cancel = 1;
 }
+
 
 if (Q.chancellor == "Brüning") {
     if (!Q.soziale_marktwirtschaft_start && Q.unemployed >= 15) Q.soziale_marktwirtschaft_start = Q.unemployed;
