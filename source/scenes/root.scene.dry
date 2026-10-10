@@ -417,7 +417,6 @@ Q.ssw_color = "#00277E";
 Q.fw_color = "#ff6600";
 Q.others_color = "#c00000";
 
-
 Q.russia_color_1 = "#D52B1E";
 Q.russia_color_2 = "#0039A6";
 Q.russia_color_3 = "#cccccc";
@@ -431,6 +430,14 @@ Q.israel_color_2 = "#cccccc";
 Q.palestine_color_1 = "#000000";
 Q.palestine_color_2 = "#CE1126";
 Q.palestine_color_3 = "#007A3D";
+Q.china_color_1 = "#DE2910";
+Q.china_color_2 = "#FFFF00";
+
+Q.dsa_color = "#ec1f27";
+Q.lfi_color = "#56277e";
+Q.pel_color = "#b71c1c";
+Q.ela_color = "#665199";
+Q.guengl_color = "#d51865";
 
 Q.cost_of_living_color = "#E3000F";
 Q.welfare_color = "#FFCC00";
