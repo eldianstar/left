@@ -633,8 +633,8 @@ Detailed results for each demographic:
 
 <table style="width: 100%; table-layout: fixed;">
 <colgroup>
-  <col style="width: 66%;">
-  <col style="width: 34%;">
+  <col style="width: 60%;">
+  <col style="width: 40%;">
 </colgroup>
 <tr><td style="word-wrap: break-word;"><span style="color: [+ cost_of_living_color +];">**Cost of Living**</span>:</td><td><div class="bar" style="width: 100px;"><div class="bar-fill" style="width: [+ issue_cost_of_living_percent +]%;background-color: [+ cost_of_living_color +];"></div></div></td></tr>
 <tr><td><span style="color: [+ welfare_color +];">**Welfare**</span>:</td><td><div class="bar" style="width: 100px;"><div class="bar-fill" style="width: [+ (issue_welfare_percent) +]%;background-color: [+ welfare_color +];"></div></div></td></tr>
