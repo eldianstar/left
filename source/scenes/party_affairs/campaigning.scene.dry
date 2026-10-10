@@ -11,11 +11,11 @@ tags: party_affairs
 
 Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
 
-- @youth: youth text
-- @urban: urban text
-- @rural: rural text
-- @upper: upper text
-- @east: east text
+- @youth: Young people, especially in larger cities.
+- @urban: The urban workers, white and blue collar workers.
+- @rural: The rural workers, who haven't supported us in the past.
+- @upper: The upper class, managers and enterpreneurs, who dislike us.
+- @east: The workers in the Eastern states, our greatest stronghold.
 - @root: We either don't want to or cannot campaign right now.
 - @easy_discard
 
@@ -25,11 +25,15 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; youth_linke += ((social_media+3+solid+(10-social_moderation))/2)*(1-dissent); beweli_strength += ((social_media+4+(10-social_moderation))/3); pragmatist_strength -= 1; wagenknecht_left_progress += 0.5;
 
+We have increased our campaigning among the youth. 
+
 @urban
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: urban_linke += ((newspapers+(social_media/4))+3)*(1-dissent); resources -= 1;  
+
+We have increased our campaigning among the urban workers.
 
 @rural
 subtitle: -1 resources
@@ -37,14 +41,20 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: rural_linke += ((newspapers+social_moderation)/2.5)*(1-dissent); resources -= 1; social_moderation += 0.5; pragmatist_strength += 2; beweli_strength -= 1; emali_strength -= 1;
 
+We have increased our campaigning among the rural workers.
+
 @upper
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: upper_linke += (4+econ_moderation)/4*(1-dissent); resources -= 1; pragmatist_strength += 1; econ_moderation += 0.5; beweli_dissent += 3; emali_dissent += 3; oldleft_dissent += 3; spd_relation += 1;
 
+We have increased our campaigning among the upper class.
+
 @east
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: east_linke += ((newspapers+social_moderation+(10-foreign_moderation))/3)*(1-dissent); resources -= 1; oldleft_strength += 3; pragmatist_strength += 2;
+
+We have increased our campaigning in the Eastern states.
