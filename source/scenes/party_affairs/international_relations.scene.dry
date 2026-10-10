@@ -8,13 +8,13 @@ card-image: img/international.jpg
 max-visits: 6
 #subtitle: interrel text
 
-flavor text
+<span style="color: [+ linke_color +];">**Die Linke**</span> has a multitude of international connections to other parties. Through these contacts, we may exchange resources, establish better relations and improve our political means.
 
-- @united_russia: russia text
-- @lfi: lfi text
-- @guengl: guengl text
-- @dsa: dsa text
-- @ccp: ccp text
+- @united_russia: Build relationships with <span style="color: [+ russia_color_1 +];">**Unit**</span><span style="color: [+ russia_color_2 +];">**ed Ru**</span><span style="color: [+ russia_color_3 +];">**ssia**</span> to sway Vladimir Putin in our favor.
+- @lfi: Learn new kinds of left-wing populism from our French comrades of <span style="color: [+ lfi_color +];">La France Insoumise</span>.
+- @guengl: Consolidate the <span style="color: [+ eu_color_1 +];">Euro</span><span style="color: [+ eu_color_2 +];">pean</span> socialist movement through <span style="color: [+ guengl_color +];">**The Left**</span> parliamentary group.
+- @dsa: Learn grassroots organizing from the American <span style="color: [+ dsa_color +];">**DSA**</span>.
+- @ccp: Contact the <span style="color: [+ china_color_1 +];">**CCP**</span>.
 - @return: We do not need international contacts at the moment.
 - @easy_discard
 - @cancel_advisor_action
@@ -25,6 +25,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; united_russia += 1; oldleft_strength += 4; oldleft_dissent -= 2; pragmatist_dissent += 5; emali_dissent += 2;
 
+After all, they are among the most important players in resisting NATO imperialism.
 
 @lfi
 subtitle: -1 resources
@@ -32,7 +33,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: beweli_strength += 3; resources -= 1; lfi += 1;
 
-
+Our French comrades can teach us a lot in their fight for European socialism.
 
 @guengl
 subtitle: -1 resources
@@ -40,17 +41,23 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; guengl += 1; decentralization -= 0.5;
 
+We need unity with our European sister parties, in order to build a movement that transcends the single country.
+
 @dsa
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; dsa += 1; decentralization += 1; youth += 2*(1 - dissent) if mamdani = 1; beweli_strength += 1; emali_strength += 1; oldleft_dissent += 1;
 
+While politically very distant, the DSA has been one of the most interesting developments of the last decade, and we may have much to learn from their mass party organization and grassroots organizing.
+
 @ccp
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; oldleft_dissent -= 2;
+
+We have contacted the CCP. It is unclear how this will help any of the two parties.
 
 @reduce
 
