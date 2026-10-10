@@ -6,17 +6,17 @@ view-if: issues_timer <= 0
 on-arrival: month_actions += 1
 card-image: img/antifa.jpg
 
-text
+What specific issues should we focus on in our media?
   
-- @cost_of_living: cost of living
-- @welfare: better welfare
-- @services: expand services
-- @feminism: feminism and lgbtq
-- @pacifism: Opposing war, nationalism, and militarism at all costs.
-- @environmentalism: environment
-- @antifascism: antifascism
-- @promigration: promigration
-- @antimigration: Antimigration
+- @cost_of_living: Cost of living and inflation, as they are broadly relatable themes for the German electorate.
+- @welfare: We should focus more on welfare and benefits reform.
+- @services: We should focus on talking about the improvement of services and infrastructure.
+- @feminism: Feminism and LGBTQ are very important social issues, guaranteed to get us more young voters.
+- @pacifism: We should remark our commitment to international peace and antimilitarism.
+- @environmentalism: We must focus more on the environment and the climate crisis.
+- @antifascism: When the Nazis are at the gates, there is nothing to talk about but how to stop them.
+- @promigration: We should try to highlight the positive impacts of migration and to undo the demonization of foreigners.
+- @antimigration: We should focus on the negative impacts of migration on the German worker.
 - @easy_discard
 
 @cost_of_living
@@ -34,7 +34,7 @@ on-arrival: issue_cost_of_living -= 0.2; issue_welfare -= 0.2; issue_feminism +=
 
 @pacifism
 view-if: pragmatist_strength < 65
-on-arrival: issue_cost_of_living -= 0.2; issue_welfare -= 0.2; issue_feminism -= 0.2; issue_services -= 0.2; issue_pacifism += 1; foreign_moderation -= 0.5; youth_linke += 0.5*(1-dissent); pragmatist_dissent += 2;
+on-arrival: issue_cost_of_living -= 0.2; issue_welfare -= 0.2; issue_feminism -= 0.2; issue_services -= 0.2; issue_antimilitarism += 1; foreign_moderation -= 0.5; youth_linke += 0.5*(1-dissent); pragmatist_dissent += 2;
 
 @environmentalism
 view-if: oldleft_strength < 40
