@@ -13,6 +13,7 @@ Minor changes:
 - Double leadership system added for B90/G and AfD
 - Linke now moderates over time
 - Länder tab was made slightly shorter
+- Added voter bleed if some issues are too low
 
 Future changes:
 - Internal dynamics:
@@ -33,7 +34,6 @@ Future changes:
    - add a status subtab?
    - EU, French, American elections
 - Status/Main tab:
-   - Better looking polls tab (issues + parliament graph)
    - Better looking local tab (parliaments?)
    - Foreign tab?
    - Add news
@@ -58,7 +58,9 @@ Future changes:
    - Specific events (eg Mamdani), antisemitism scandals etc.
    - Add every single minor party (with dynamic routes)
 - Other/Misc:
-   - Nerf all party cards
+   - Nerf all party cards 
+   - Add flavor text to all cards
    - Add images to all cards
    - Better tooltips
-   - Balance issue system and cost of living spam
+   - investigate what happens with the antimilitarism tab (one time it jumped to max)
+   - Balance the vote loss of establishment parties
