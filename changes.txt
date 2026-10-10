@@ -14,6 +14,8 @@ Minor changes:
 - Linke now moderates over time
 - Länder tab was made slightly shorter
 - Added voter bleed if some issues are too low
+- Changed the angle of the main and status bars from 15px to 10px
+
 
 Future changes:
 - Internal dynamics:
