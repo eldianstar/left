@@ -13,24 +13,35 @@ In our media and campaign materials, who should we consider as our main opponent
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @right: fdp/cdu/afd
-- @far_right: afd
-- @left: spd/greens
-- @establishment: establishment (spd/greens/fdp/cdu)
-- @noenemy: thorfinnmaxxing
+- @right: The right-wing parties - The <span style="color: [+ fdp_color +];">**FDP**</span>, <span style="color: [+ cdu_color +];">**CDU**</span> and <span style="color: [+ afd_color +];">**AfD**</span>.
+- @far_right: The <span style="color: [+ afd_color +];">**AfD**</span> alone.
+- @left: The neoliberal <span style="color: [+ greens_color +];">false</span> <span style="color: [+ spd_color +];">left</span> parties.
+- @establishment: The entire <span style="color: [+ greens_color +];">es</span><span style="color: [+ spd_color +];">tab</span><span style="color: [+ fdp_color +];">lish</span><span style="color: [+ cdu_color +];">ment</span> is to blame.
+- @noenemy: Don't attack any specific party.
 - @easy_discard
 
 @right
-on-arrival: enemies = "right-wing parties"; beweli_strength += 4; emali_strength += 4; pragmatist_dissent += 1; urban_cdu -= 1; urban_afd -= 1; youth_cdu -= 1; youth_afd -= 1; youth_linke += 1*(1-dissent); urban_linke += 1*(1-dissent); pro_status_quo -= 1; cdu_relation -= 2;
+on-arrival: enemies = "right-wing parties"; beweli_strength += 4; emali_strength += 4; pragmatist_dissent += 1; urban_cdu -= 1; urban_afd -= 1; youth_cdu -= 1; youth_afd -= 1; youth_linke += 1*(1-dissent); urban_linke += 1*(1-dissent); pro_status_quo -= 1; cdu_relation -= 2; fdp_relation -= 1;
+
+Attacking the right-wing parties is a popular and non controversial move.
 
 @far_right
-on-arrival: enemies = "far right AfD"; pro_status_quo += 1; pragmatist_strength += 2; urban_linke += (afd_votes/10)*(1-dissent); youth_linke += (afd_votes/10)*(1-dissent); beweli_dissent += 1; rural_afd += (100-afd_votes)/100; cdu_relation += 4;
+on-arrival: enemies = "far-right AfD"; pro_status_quo += 1; pragmatist_strength += 2; urban_linke += (afd_votes/10)*(1-dissent); youth_linke += (afd_votes/10)*(1-dissent); beweli_dissent += 1; rural_afd += (100-afd_votes)/100; cdu_relation += 4;
+
+Attacking the <span style="color: [+ afd_color +];">**AfD**</span> is a popular move, although it may give them too much attention.
 
 @left
+subtitle: Wer hat uns verraten?
 on-arrival: enemies = "moderate left parties"; oldleft_strength += 5; oldleft_dissent -= 2; beweli_strength += 1; emali_dissent += 2; pragmatist_dissent += 5; pro_status_quo -= 6*(1-dissent); youth_linke += 3*(1-dissent); youth_spd -= 1*(1-dissent); youth_greens += 1*(1-dissent); econ_moderation -= 1; foreign_moderation -= 1; bsw_relation += 4; greens_relation -= 6; spd_relation -= 6;
+
+Attacking the <span style="color: [+ greens_color +];">moderate</span> <span style="color: [+ spd_color +];">left</span> pleases the left wing of our party, while our reformist wing is left unmoored. This move may also sever our ties to valuable allies.
 
 @establishment
 on-arrival: enemies = "entire establishment"; oldleft_strength += 3; oldleft_dissent -= 1; beweli_strentgh += 3; pragmatist_dissent += 4; emali_dissent += 1; pro_status_quo -= 10*(1-dissent); youth_linke += 2*(1-dissent); east_linke += 1*(1-dissent); greens_relation -= 4; spd_relation -= 4; cdu_relation -= 2;
 
+Attacking the entire establishment is a populist move that pleases our left wing, but it may indirectly strengthen other populist parties, such as the <span style="color: [+ afd_color +];">**AfD**</span>.
+
 @noenemy
-on-arrival: beweli_dissent += 2; emali_dissent += 2; oldleft_dissent += 3; greens_relation += 2; spd_relation += 2; cdu_relation += 2; pro_status_quo += 5;
+on-arrival: beweli_dissent += 4; emali_dissent += 4; oldleft_dissent += 4; pragmatist_dissent += 3; greens_relation += 2; spd_relation += 2; fdp_relation += 2; cdu_relation += 2; pro_status_quo += 5;
+
+We have no enemies.
