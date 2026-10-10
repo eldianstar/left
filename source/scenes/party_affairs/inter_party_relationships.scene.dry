@@ -9,13 +9,13 @@ card-image: img/rrgreen.jpg
 
 = Inter-Party Relationships
 
-flavor_text
+What parties should we improve our relations with?
 
-- @rel_greens: greens text
-- @rel_spd: spd text
-- @rel_bsw: bsw text
-- @rel_cdu: approach cdu text
-- @linke_alone: text stand alone
+- @rel_greens: Strengthen our ties with the <span style="color: [+ greens_color +];">**Greens**</span> by moderating our foreign policy stance.
+- @rel_spd: Strengthen our ties with the <span style="color: [+ spd_color +];">**SPD**</span> by moderating our economic policy stance.
+- @rel_bsw: Improve our ties with our splinter party, the <span style="color: [+ bsw_color +];">**BSW**</span>, by moderating our socially progressive stances.
+- @rel_cdu: Approach the <span style="color: [+ cdu_color +];">**CDU**</span>.
+- @linke_alone: The <span style="color: [+ linke_color +];">**Left**</span> can stand alone for now.
 - @easy_discard
 
 @rel_greens
@@ -24,11 +24,15 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; foreign_moderation += 1; greens_relation += 6*(1 - dissent); emali_strength += 1; pragmatist_strength += 1; oldleft_dissent += 2; pragmatist_dissent -= 1; wagenknecht_left_progress += 1;
 
+We have improved our relations with the <span style="color: [+ greens_color +];">**Greens**</span>.
+
 @rel_spd
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; econ_moderation += 1; spd_relation += 6*(1 - dissent); emali_strength += 1; pragmatist_strength += 2; beweli_dissent += 2; oldleft_dissent += 1; pragmatist_dissent -= 2;
+
+We have improved our relations with the <span style="color: [+ spd_color +];">**SPD**</span>.
 
 @rel_bsw
 subtitle: -1 resources
@@ -37,11 +41,15 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; social_moderation += 1; bsw_relation += 6*(1 - dissent); oldleft_strength += 2; oldleft_dissent -= 2; pragmatist_dissent += 2; beweli_dissent += 1;
 
+We have improved our relations with the <span style="color: [+ bsw_color +];">**BSW**</span>.
+
 @rel_cdu
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; foreign_moderation += 1; social_moderation += 1; econ_moderation += 1; cdu_relation += 6*(1 - dissent); beweli_dissent += 4; pragmatist_strength += 3; oldleft_dissent += 1; pragmatist_dissent -= 1; emali_dissent += 1; wagenknecht_left_progress += 1;
+
+We have improved our relations with the <span style="color: [+ cdu_color +];">**CDU**</span>.
 
 @linke_alone
 on-arrival: greens_relation -= 1; spd_relation -= 1; beweli_strength += 1;
