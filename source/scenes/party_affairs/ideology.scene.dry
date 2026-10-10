@@ -10,24 +10,32 @@ max-visits: 3
 
 = Questions of Ideology
 
-ideology text
+<span style="color: [+ linke_color +];">**Die Linke**</span> has an unusually diverse and multifaceted web of ideological currents and caucuses. What should be our primary ideological guidance for now?
 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
-- @oldleft: oldleft text
-- @beweli: beweli text
-- @emali: emali text
-- @pragmatist: pragmatist text
+- @oldleft: [? if oldleft_leader == "Wagenknecht" or oldleft_leader == "Pellmann" : A conservative populist stance would help us regain dissatisfied and right-wing voters. ?][? if oldleft_leader == "Riexinger" or oldleft_leader == "Wissler" : We should adopt a left-wing populist stance and work together with trade unions and radical progressive groups to achieve our goals. ?]
+- @beweli: We should adopt a radical, intersectional stance and combine economic and social issues.
+- @emali: A centrist position remains the best to solve our internal disputes.
+- @pragmatist: We should work towards concrete reforms through collaboration with the moderate left.
 - @easy_discard
 
 @oldleft
 on-arrival: ideology = "radical populist"; oldleft_strength += 6; bsw_relation += 3; oldleft_dissent -= 5; pragmatist_dissent += 4; beweli_dissent += 3; foreign_moderation -= 0.5; spd_relation -= 3; greens_relation -= 3;
 
+Our old left wing, led by [+ oldleft_leader +], is pleased by our decision.
+
 @beweli
 on-arrival: ideology = "radical progressive"; beweli_strength += 6; beweli_dissent -= 5; oldleft_dissent += 3; pragmatist_dissent += 3; social_moderation -= 0.5;
+
+The Movement Left approves of our decision.
 
 @emali
 on-arrival: ideology = "centrist"; emali_strength += 6; emali_dissent -= 5; oldleft_dissent -= 1; beweli_dissent -= 2; pragmatist_dissent -= 3;
 
+Our decision to endorse the centrists is met with no great complaint by other factions.
+
 @pragmatist
 on-departure: ideology = "pragmatic"; pragmatist_strength += 8; pragmatist_dissent -= 5; oldleft_dissent += 4; beweli_dissent += 4; spd_relation += 4; greens_relation += 4; cdu_relation += 3;
+
+The pragmatist faction is pleased by our decision.
