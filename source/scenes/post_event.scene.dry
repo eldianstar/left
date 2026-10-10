@@ -456,6 +456,21 @@ Q.foreign_moderation += 0.02*(10-Q.issue_antimilitarism);
 Q.social_moderation += 0.02*(10-(Q.issue_feminism+Q.issue_environment)/2);
 Q.econ_moderation += 0.02*(10-(Q.issue_cost_of_living+Q.issue_welfare+Q.issue_services)/3);
 
+if (Q.issue_cost_of_living <= 1 && Q.issue_welfare <= 1 && Q.issue_services <= 1) {
+   Q.urban_linke -= 0.7*(Q.dissent);
+   Q.east_linke -= 0.3*(Q.dissent);
+}
+
+if (Q.issue_environment <= 1 && Q.issue_feminism <= 1) {
+   Q.youth_linke -= 0.7*(Q.dissent);
+   Q.urban_linke -= 0.3*(Q.dissent);
+}
+
+if (Q.issue_antimilitarism <= 1) {
+   Q.east_linke -= 0.7*(Q.dissent);
+   Q.youth_linke -= 0.3*(Q.dissent);
+}
+
     if (Q.bsw_split && Q.social_moderation <= 1) {
         Q.pragmatist_dissent += 0.3;
     }
