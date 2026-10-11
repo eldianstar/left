@@ -24,7 +24,7 @@ Minor changes:
 - Solid score makes rallies more effective
 - Slightly reduced the amount of votes the afd gets
 - Slightly nerfed some advisor actions reducing status quo
-
+- Some advisor flavor texts written
 
 
 Future changes:
