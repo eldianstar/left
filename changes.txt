@@ -1,7 +1,7 @@
 v0.01(this is the version of when i made this first to-do list):
 
 
-v0.02:
+v0.02, 04.10.26:
 
 Major changes: 
 - Status tab was made dynamic
@@ -22,6 +22,7 @@ Minor changes:
 - Added issue decay
 - Added 1 resource cost for rallies
 - Solid score makes rallies more effective
+- Slightly reduced the amount of votes the afd gets
 
 
 
@@ -74,3 +75,5 @@ Future changes:
    - investigate what happens with the antimilitarism tab (one time it jumped to max)
    - Balance the vote loss of establishment parties
    - Reduce the amount of rural votes the afd gets
+   - Nerf/revise all advisor actions
+   - Give all advisor actions flavor texts
