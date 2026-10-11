@@ -7,6 +7,9 @@ Major changes:
 - Status tab was made dynamic
 - Added progress bars to status tab
 - Added issues to polls tab
+- Added flavor text to all party cards
+- Added images to all party cards
+- All party cards nerfed
 
 Minor changes:
 - Länder flag image border was removed
@@ -15,6 +18,11 @@ Minor changes:
 - Länder tab was made slightly shorter
 - Added voter bleed if some issues are too low
 - Changed the angle of the main and status bars from 15px to 10px
+- Changed the image of the rally card
+- Added issue decay
+- Added 1 resource cost for rallies
+- Solid score makes rallies more effective
+
 
 
 Future changes:
@@ -25,6 +33,8 @@ Future changes:
    - Bundestag leaders choice
    - More dynamic fame system
    - Add event about BeweLi
+   - Make it so that party cards change faction strength more
+   - Make it so that appeasing factions is more dependant on party actions (maybe a govt dues system like in dynamic?)
 - Local dynamics:
    - Fix errors related to coalition formation
    - Better way of negotiating coalitions
@@ -60,9 +70,7 @@ Future changes:
    - Specific events (eg Mamdani), antisemitism scandals etc.
    - Add every single minor party (with dynamic routes)
 - Other/Misc:
-   - Nerf all party cards 
-   - Add flavor text to all cards
-   - Add images to all cards
    - Better tooltips
    - investigate what happens with the antimilitarism tab (one time it jumped to max)
    - Balance the vote loss of establishment parties
+   - Reduce the amount of rural votes the afd gets
