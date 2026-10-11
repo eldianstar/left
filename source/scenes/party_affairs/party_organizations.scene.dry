@@ -26,6 +26,7 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; newspapers += 1; urban_linke += 1*(1 - dissent); east_linke += 1*(1 - dissent);
 
+We have allocated more funding towards physical ad campaigns, as well as newspapers close to our party.
 
 @social_media
 choose-if: resources > 0
@@ -33,6 +34,7 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; social_media += 1; youth_linke += 1.5*(1 - dissent); beweli_strength += 3; emali_strength += 2;
 
+We have decided to allocate more funding towards building up our social media presence.
 
 @tradeunions
 choose-if: resources > 0
@@ -40,17 +42,23 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; tradeunion_contact += 1; urban_linke += 2*(1 - dissent); oldleft_strength += 2; beweli_dissent += 3 if bsw_split = 0; econ_moderation -= 0.5; upper_linke -= 0.2*(1 + dissent);
 
+We have decided to increase our presence in the Trade Unions.
+
 @fund_solid
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; solid += 1; beweli_strength += 2; pragmatist_strength -= 3; youth_linke += 1*(1 - dissent); social_moderation -= 0.5;
 
+We have allocated more funding towards building up our youth wing and grassroots presence.
+
 @rosalux
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; beweli_dissent -= 6; oldleft_dissent -= 6; emali_dissent -= 6; pragmatist_dissent -= 6;
+
+We have decided to focus on solving internal divisions.
 
 @nothing
 on-arrival: urban_linke -= 0.2*(1 + dissent); east_linke -= 0.2*(1 + dissent); rural_linke -= 0.1*(1 + dissent); upper_linke -= 0.1*(1 + dissent); youth_linke -= 0.3*(1 + dissent);
