@@ -27,7 +27,7 @@ title: attack govt
 subtitle: subt
 choose-if: advisor_action_b_timer <= 0
 unavailable-subtitle: [? if advisor_action_b_timer > 0 : [+ advisor_action_b_timer +] months before next advisor action. ?] 
-on-arrival: advisor_action_b_timer = 6; pro_status_quo -= 3*(wissler_advisor_fame/100); greens_relation -= 2; spd_relation -= 2; greens_relation -= 3 if (greens_in_government); spd_relation -= 3 if (spd_in_government); youth_linke += ((100-status_quo)/100)*(wissler_advisor_fame/100); urban_linke += ((100-status_quo)/100)*(wissler_advisor_fame/100); east_linke += ((100-status_quo)/100)*(wissler_advisor_fame/100); wissler_advisor_fame += 2;
+on-arrival: advisor_action_b_timer = 6; pro_status_quo -= 2*(wissler_advisor_fame/100); greens_relation -= 2; spd_relation -= 2; greens_relation -= 3 if (greens_in_government); spd_relation -= 3 if (spd_in_government); youth_linke += ((100-status_quo)/100)*(wissler_advisor_fame/100); urban_linke += ((100-status_quo)/100)*(wissler_advisor_fame/100); east_linke += ((100-status_quo)/100)*(wissler_advisor_fame/100); wissler_advisor_fame += 2;
 
 @strengthen_sl
 title: soz.li
