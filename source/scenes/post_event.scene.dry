@@ -541,11 +541,11 @@ Q.youth_cdu -= 0.15;
 Q.youth_linke += 0.3*(1-Q.dissent);
 Q.youth_afd += 0.3;
 Q.rural_spd -= 0.15;
-Q.rural_greens -= 0.1;
+Q.rural_greens -= 0.05;
 Q.rural_fdp -= 0.1;
 Q.rural_cdu -= 0.15;
 Q.rural_linke += 0.1*(1-Q.dissent);
-Q.rural_afd += 0.3;
+Q.rural_afd += 0.25;
 Q.east_spd -= 0.2;
 Q.east_greens -= 0.2;
 Q.east_fdp -= 0.2;
@@ -818,8 +818,8 @@ if (Q.spd_relation < 30) {
 
 // changes afd votes based on migration + wählerpotential
 
-if (Q.afd_votes < (Q.issue_migration*5)) {
-Q.rural_afd += 0.6;
+if (Q.afd_votes < (Q.issue_migration*4)) {
+Q.rural_afd += 0.5;
 Q.east_afd += 0.8;
 Q.upper_afd += 0.2;
 Q.youth_afd += 0.3;
