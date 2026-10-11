@@ -25,7 +25,7 @@ Minor changes:
 - Slightly reduced the amount of votes the afd gets
 - Slightly nerfed some advisor actions reducing status quo
 - Some advisor flavor texts written
-
+- solved the bug with issues becoming infinite
 
 Future changes:
 - Internal dynamics:
@@ -73,9 +73,10 @@ Future changes:
    - Add every single minor party (with dynamic routes)
 - Other/Misc:
    - Better tooltips
-   - investigate what happens with the antimilitarism tab (one time it jumped to max)
    - Balance the vote loss of establishment parties
    - Reduce the amount of rural votes the afd gets
    - Nerf/revise all advisor actions
    - Give all advisor actions flavor texts both before, during and after the options
    - Fix the fact that rally options become more limited over time
+- Bugs:
+   - schwerdtner issue bug
