@@ -22,7 +22,7 @@ The Linksjugend SoLiD' is our youth organization and one of the main groups resp
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; solid += 1; beweli_strength += 3; pragmatist_dissent += 5; foreign_moderation -= 0.5; econ_moderation -= 0.5; social_moderation -= 0.5; youth += 3*(1-dissent); spd_relation -= 4; greens_relation -= 2;
+on-arrival: resources -= 1; solid += 1; beweli_strength += 3; pragmatist_strength -= 1; foreign_moderation -= 0.5; econ_moderation -= 0.5; social_moderation -= 0.5; youth += 1*(1-dissent); spd_relation -= 4; greens_relation -= 2;
 
 We have decided to invest more funds into our youth wing. This gives more energy to our party, but may have the unwanted effect of radicalizing us.
 
@@ -30,6 +30,6 @@ We have decided to invest more funds into our youth wing. This gives more energy
 
 @cut_rb
 subtitle: +1 resources
-on-arrival: resources += 1; solid -= 1; beweli_strength -= 2; beweli_dissent += 1; youth_linke -= 2; youth_greens += 2;
+on-arrival: resources += 1; solid -= 1; beweli_strength -= 2; beweli_dissent += 1; youth_linke -= 1; youth_greens += 1;
 
 We have reduced our funding for the Linksjugend.
