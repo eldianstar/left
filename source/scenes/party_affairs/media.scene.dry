@@ -9,10 +9,10 @@ card-image: img/nd.jpg
 
 = Media
 
-The <span style="color: #c00000;">**SPD**</span> runs a veritable media empire, with many newspapers throughout every German city and region. We could use the media for various purposes...
+There are many kinds of media the <span style="color: [+ linke_color +];">**Left**</span> uses to communicate to its voter base. We could use the them for various purposes...
 
-- @trad_media: trad media text
-- @social_media: social media text
+- @trad_media: Focus on traditional media like newspapers and electoral posters.
+- @social_media: Build up our social media apparatus.
 - @ideological
 - @return: We should not do anything with media at the moment.
 - @easy_discard
@@ -21,11 +21,15 @@ The <span style="color: #c00000;">**SPD**</span> runs a veritable media empire, 
 @trad_media
 on-arrival: newspapers += 1; urban_linke += ((10+newspapers)/5)*(1-dissent); east_linke += ((10+newspapers)/5)*(1-dissent);
 
+We have decided to focus on traditional forms of media.
+
 @social_media
 on-arrival: social_media += 1; youth_linke += ((13+social_media)/5)*(1-dissent); urban_linke += ((2+social_media)/5)*(1-dissent);
 
+We have invested more in social media campaigns and advertisements, in an attempt to connect with younger voters.
+
 @ideological
-title: We will have vibrant ideological debate within our newspapers.
+title: We will have vibrant ideological debate within our media.
 subtitle: There will be space for all factions to air their views.
 on-arrival: oldleft_dissent -= 6; beweli_dissent -= 6; emali_dissent -= 6; pragmatist_dissent -= 6;
 
