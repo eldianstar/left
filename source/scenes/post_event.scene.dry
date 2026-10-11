@@ -534,36 +534,36 @@ Q.econ_moderation += 0.2;
     ///////////////////////////// change party support based on pro_republic
     // if pro_republic is less than the support of the Weimar coalition, reduce SPD support...
     if (Q.pro_status_quo < (Q.spd_votes + Q.greens_votes + Q.fdp_votes + Q.cdu_votes)) {
-        Q.youth_spd -= 0.3;
-Q.youth_greens -= 0.3;
-Q.youth_fdp -= 0.3;
-Q.youth_cdu -= 0.3;
-Q.youth_linke += 0.6*(1-Q.dissent);
-Q.youth_afd += 0.6;
-Q.rural_spd -= 0.3;
-Q.rural_greens -= 0.2;
-Q.rural_fdp -= 0.2;
-Q.rural_cdu -= 0.3;
-Q.rural_linke += 0.2*(1-Q.dissent);
-Q.rural_afd += 0.6;
-Q.east_spd -= 0.4;
-Q.east_greens -= 0.4;
-Q.east_fdp -= 0.4;
-Q.east_cdu -= 0.4;
-Q.east_linke += 0.8*(1-Q.dissent);
-Q.east_afd += 0.8;
-Q.urban_spd -= 0.3;
-Q.urban_greens -= 0.3;
-Q.urban_fdp -= 0.3;
-Q.urban_cdu -= 0.3;
-Q.urban_linke += 0.6*(1-Q.dissent);
-Q.urban_afd += 0.6;
-Q.upper_spd -= 0.3;
-Q.upper_greens -= 0.3;
-Q.upper_fdp -= 0.3;
-Q.upper_cdu -= 0.3;
-Q.upper_linke += 0.2*(1-Q.dissent);
-Q.upper_afd += 1;
+        Q.youth_spd -= 0.15;
+Q.youth_greens -= 0.15;
+Q.youth_fdp -= 0.15;
+Q.youth_cdu -= 0.15;
+Q.youth_linke += 0.3*(1-Q.dissent);
+Q.youth_afd += 0.3;
+Q.rural_spd -= 0.15;
+Q.rural_greens -= 0.1;
+Q.rural_fdp -= 0.1;
+Q.rural_cdu -= 0.15;
+Q.rural_linke += 0.1*(1-Q.dissent);
+Q.rural_afd += 0.3;
+Q.east_spd -= 0.2;
+Q.east_greens -= 0.2;
+Q.east_fdp -= 0.2;
+Q.east_cdu -= 0.2;
+Q.east_linke += 0.4*(1-Q.dissent);
+Q.east_afd += 0.4;
+Q.urban_spd -= 0.15;
+Q.urban_greens -= 0.15;
+Q.urban_fdp -= 0.15;
+Q.urban_cdu -= 0.15;
+Q.urban_linke += 0.3*(1-Q.dissent);
+Q.urban_afd += 0.3;
+Q.upper_spd -= 0.15;
+Q.upper_greens -= 0.15;
+Q.upper_fdp -= 0.15;
+Q.upper_cdu -= 0.15;
+Q.upper_linke += 0.1*(1-Q.dissent);
+Q.upper_afd += 0.5;
 if (Q.bsw_split) {
 Q.urban_bsw += 0.1;
 Q.rural_bsw += 0.2;
@@ -1458,7 +1458,7 @@ if (Q.linke_in_government) {
 
 // ampel
 
-if (Q.ampelkoalition) {
+if (Q.ampelkoalition == 1) {
    Q.ampelkoalition_time += 1;
 }
 
