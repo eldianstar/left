@@ -19,12 +19,12 @@ There are many kinds of media the <span style="color: [+ linke_color +];">**Left
 - @cancel_advisor_action
 
 @trad_media
-on-arrival: newspapers += 1; urban_linke += ((10+newspapers)/5)*(1-dissent); east_linke += ((10+newspapers)/5)*(1-dissent);
+on-arrival: newspapers += 1; social_media -= 0.2; urban_linke += ((10+newspapers)/15)*(1-dissent); east_linke += ((10+newspapers)/15)*(1-dissent);
 
 We have decided to focus on traditional forms of media.
 
 @social_media
-on-arrival: social_media += 1; youth_linke += ((13+social_media)/5)*(1-dissent); urban_linke += ((2+social_media)/5)*(1-dissent);
+on-arrival: social_media += 1; newspapers -= 0.2; youth_linke += ((13+social_media)/15)*(1-dissent); urban_linke += ((2+social_media)/10)*(1-dissent);
 
 We have invested more in social media campaigns and advertisements, in an attempt to connect with younger voters.
 
