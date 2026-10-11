@@ -77,5 +77,5 @@ Future changes:
    - Balance the vote loss of establishment parties
    - Reduce the amount of rural votes the afd gets
    - Nerf/revise all advisor actions
-   - Give all advisor actions flavor texts
+   - Give all advisor actions flavor texts both before, during and after the options
    - Fix the fact that rally options become more limited over time
