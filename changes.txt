@@ -78,3 +78,4 @@ Future changes:
    - Reduce the amount of rural votes the afd gets
    - Nerf/revise all advisor actions
    - Give all advisor actions flavor texts
+   - Fix the fact that rally options become more limited over time
