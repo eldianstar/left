@@ -16,7 +16,7 @@ Fame: [+ hennigwellsow_advisor_fame +]
 
 @rrgreen
 title: Contact the <span style="color: #E3000F;">moderate</span> <span style="color: #1AA037;">left</span>.
-subtitle: subt
+subtitle: It will promote left unity and maybe allow us entry into the government.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; greens_relation += 2.5*(bartsch_advisor_fame/100); spd_relation += 2.5*(bartsch_advisor_fame/100); bartsch_advisor_fame += 2;
