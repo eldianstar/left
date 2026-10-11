@@ -78,5 +78,6 @@ Future changes:
    - Nerf/revise all advisor actions
    - Give all advisor actions flavor texts both before, during and after the options
    - Fix the fact that rally options become more limited over time
+   - Change brandenburg elections from 2023 to 2024
 - Bugs:
    - schwerdtner issue bug
