@@ -10,13 +10,13 @@ max-visits: 8
 
 = Party Organizations
 
-text
+Our party has many different programs and organizations, all with their own areas and competencies. Which do we wish to fund?
 
-- @newspapers: fund trad media text
-- @social_media: fund social media text
-- @tradeunions: trade unions and grassroots text
-- @fund_solid: linksjugend solid
-- @rosalux: rosalux foundation
+- @newspapers: Fund traditional media, like newspapers and physical ad campaigns.
+- @social_media: Fund our social media apparatus.
+- @tradeunions: Build up our connections to the trade unions.
+- @fund_solid: Invest in our youth wing and grassroots organizations.
+- @rosalux: Reduce party dissent with our thinktank, the Rosa Luxemburg Foundation.
 - @nothing: Do not increase funding for any program.
 - @easy_discard
 
