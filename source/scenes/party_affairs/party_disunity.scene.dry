@@ -39,25 +39,25 @@ Enforcing party discipline reduces dissent, but it could lead to an exit of diss
 @concessions_pragmatist
 title: Give concessions to the moderates.
 view-if: pragmatist_dissent > 30
-on-arrival: pragmatist_dissent -= (28-decentralization)/2.5; beweli_dissent += 7; oldleft_dissent += 4;
+on-arrival: pragmatist_dissent -= (28-decentralization)/2.5; beweli_dissent += 4; oldleft_dissent += 4;
 
 
 @concessions_emali
 title: Give concessions to the centrists.
 view-if: emali_dissent > 30
-on-arrival: emali_dissent -= (28-decentralization)/2.5; oldleft_dissent += 7;
+on-arrival: emali_dissent -= (28-decentralization)/2.5; oldleft_dissent += 6;
 
 
 @concessions_oldleft
 title: Give concessions to the populist left.
 view-if: oldleft_dissent > 30
-on-arrival: oldleft_dissent -= (28-decentralization)/2.5; beweli_dissent += 5; pragmatist_dissent += 7;
+on-arrival: oldleft_dissent -= (28-decentralization)/2.5; beweli_dissent += 2; pragmatist_dissent += 6;
 
 
 @concessions_beweli
 title: Give concessions to the Bewegungslinke.
 view-if: beweli_dissent > 30
-on-arrival: beweli_dissent -= (28-decentralization)/2.5; pragmatist_dissent += 7; oldleft_dissent += 4;
+on-arrival: beweli_dissent -= (28-decentralization)/2.5; pragmatist_dissent += 4; oldleft_dissent += 4;
 
 
 @do_nothing
