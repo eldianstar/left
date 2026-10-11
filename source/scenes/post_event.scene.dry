@@ -452,26 +452,47 @@ if (Q.foreign_moderation > 10) {
 Q.foreign_moderation = 10;
 }
 
-if (Q.issue_cost_of_living >= 0) {
+if (Q.issue_cost_of_living >= 0.2) {
 Q.issue_cost_of_living -= 0.1;
 }
-if (Q.issue_services >= 0) {
+if (Q.issue_services >= 0.2) {
 Q.issue_services -= 0.1;
 }
-if (Q.issue_welfare >= 0) {
+if (Q.issue_welfare >= 0.2) {
 Q.issue_welfare -= 0.1;
 }
-if (Q.issue_feminism >= 0) {
+if (Q.issue_feminism >= 0.2) {
 Q.issue_feminism -= 0.1;
 }
-if (Q.issue_environment >= 0) {
+if (Q.issue_environment >= 0.2) {
 Q.issue_environment -= 0.1;
 }
-if (Q.issue_antifascism >= 0) {
+if (Q.issue_antifascism >= 0.2) {
 Q.issue_antifascism -= 0.1;
 }
-if (Q.issue_antimilitarism >= 0) {
+if (Q.issue_antimilitarism >= 0.2) {
 Q.issue_antimilitarism -= 0.1;
+}
+if (Q.issue_cost_of_living < 0.2) {
+Q.issue_cost_of_living += 0.1;
+}
+if (Q.issue_services < 0.2) {
+Q.issue_services += 0.1;
+}
+if (Q.issue_welfare < 0.2) {
+Q.issue_welfare += 0.1;
+}
+if (Q.issue_feminism < 0.2) {
+Q.issue_feminism += 0.1;
+}
+if (Q.issue_environment < 0.2) {
+Q.issue_environment += 0.1;
+}
+if (Q.issue_antifascism < 0.2) {
+Q.issue_antifascism += 0.1;
+}
+if (Q.issue_antimilitarism < 0.2) {
+Q.issue_antimilitarism += 0.1;
 }
 
 Q.foreign_moderation += 0.02*(10-Q.issue_antimilitarism);
