@@ -9,35 +9,47 @@ go-to: main_rally
 
 @main_rally
 
-Mass rallies are a common feature of <span style="color: #c00000;">social democratic</span> life, especially in the lead-up to an election. What is the primary theme of this rally?
+Mass rallies and protests are a common feature of left-wing politics, especially in the lead-up to an election. What is the primary theme of this rally?
 
-- @welfare: cost of living and welfare
-- @feminism_rally: feminism/lgbtq
-- @pacifism: Opposing war, nationalism, and militarism at all costs.
-- @environment: environment
-- @antifascism: antifascism
-- @antimigration: antimigration
+- @welfare: Economic issues, like the cost of living crisis and the welfare state.
+- @feminism_rally: Social issues like feminism and LGBTQ+ rights.
+- @pacifism: Opposition to war and militarism.
+- @environment: The climate crisis and the protection of our environment.
+- @antifascism: Anti-fascism and our role as a bulwark against the <span style="color: [+ afd_color +];">far-right</span>.
+- @antimigration: Protection of the German worker from globalist immigration.
 - @easy_discard
 
 @welfare
 on-arrival: econ_moderation -= 0.5; cdu_relation -= 1; urban_linke += ((issue_cost_of_living + issue_welfare + issue_services + unemployed/10)/3)*(1 - dissent); east_linke += ((issue_cost_of_living + issue_welfare + issue_services + unemployed/10)/4)*(1 - dissent); rural_linke += ((issue_cost_of_living + issue_welfare + issue_services + unemployed/10)/5)*(1 - dissent); issue_welfare += 0.2; issue_services += 0.2; issue_cost_of_living += 0.2;
 
+Economic issues are a centerpiece of our programme, and attractive to many potential voters.
+
 @feminism_rally
 view-if: oldleft_strength < 40 and social_moderation < 6
 on-arrival: social_moderation -= 0.5; bsw_relation -= 2; youth_linke += (issue_feminism + (10-social_moderation)/5)*(1 - dissent); urban_linke += ((issue_feminism + (10-social_moderation)/5)/2)*(1 - dissent); rural_linke -= ((issue_feminism + (10-social_moderation)/5)/3); east_linke -= ((issue_feminism + (10-social_moderation)/5)/4); issue_feminism += 0.5; beweli_dissent -= 2; emali_dissent -= 2; oldleft_dissent += 3; wagenknecht_left_progress += 0.5
+
+Our focus on social issues attracts many young and progressive voters.
 
 @antifascism
 view-if: afd_vote >= 20
 on-arrival: pro_status_quo += 2*(1 - dissent); youth_linke += (issue_antifascism - 1 + afd_votes/20 + solid)*(1 - dissent); urban_linke += (issue_antifascism - 1 + afd_votes/20)*(1 - dissent); east_linke += (issue_antifascism - 1 + afd_votes/25)*(1 - dissent); issue_antifascism += 0.5; spd_relation += 3; greens_relation += 3;
 
+The rise of the <span style="color: [+ afd_color +];">AfD</span> has made us into one of their most bitter rivals, which may help us get votes from anti-fascists from all demographics.
+
 @pacifism
 view-if: foreign_moderation < 10
 on-arrival: foreign_moderation -= 0.5; pro_status_quo -= 1; youth_linke += (issue_antimilitarism + (cdu_votes + fdp_votes + afd_votes)/50)*(1-dissent); east_linke += (issue_antimilitarism + (cdu_votes + fdp_votes + afd_votes)/50)*(1-dissent); urban_linke += ((issue_antimilitarism + (cdu_votes + fdp_votes + afd_votes)/50)/2)*(1-dissent); bsw_relation += 1; issue_antimilitarism += 0.5;
+
+We have always prided ourselves in our commitment to peace and antimilitarism. This rally proves it once again.
 
 @environment
 view-if: social_moderation < 6
 on-arrival: social_moderation -= 0.5; econ_moderation -= 0.5; bsw_relation -= 2; greens_relation += 3; youth_linke += (issue_environment+(10-social_moderation)/3)*(1-dissent); urban_linke += ((issue_environment+(10-social_moderation)/4)/3)*(1-dissent); issue_environment += 0.5; beweli_dissent -= 1; emali_dissent -= 1; oldleft_dissent += 3; wagenknecht_left_progress += 0.5;
 
+Our home is in flames, we can only hope to have awakened people's consciousness of the danger.
+
 @antimigration
 view-if: social_moderation >= 6 and oldleft_strength > 45
 on-arrival: bsw_relation += 4; greens_relation -= 3; rural_linke += (social_moderation/5 + issue_migration)*(1-dissent); east_linke += ((social_moderation/5 + issue_migration)/1.5)*(1-dissent); youth_linke -= (social_moderation/5 + issue_migration)/2; urban_linke -= (social_moderation/5 + issue_migration)/3; social_moderation += 0.5; issue_migration += 0.5;
+
+This is an interesting shift from the last decade, one that consolidates us as a socially conservative left-wing party.
