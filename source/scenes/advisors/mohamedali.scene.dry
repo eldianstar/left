@@ -34,4 +34,4 @@ title: against st.quo
 subtitle: subt
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; pro_status_quo -= 2*(mohamedali_advisor_fame/100); beweli_strength += 1; oldleft_strength += 1; mohamedali_advisor_fame += 2;
+on-arrival: advisor_action_timer = 6; pro_status_quo -= 1*(mohamedali_advisor_fame/100); beweli_strength += 1; oldleft_strength += 1; mohamedali_advisor_fame += 2;
