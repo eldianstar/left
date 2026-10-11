@@ -10,11 +10,11 @@ view-if: solid_timer <= 0
 
 = SoLiD
 
-text
+The Linksjugend SoLiD' is our youth organization and one of the main groups responsible for grassroots campaigns and recruitment. 
 
-- @militant: invest in solid
-- @same: Keep the linksjugend as it is.
-- @cut_rb: Cut funding
+- @militant: Invest in Solid.
+- @same: Keep the Linksjugend as it is.
+- @cut_rb: Cut funding for the Linksjugend.
 - @easy_discard
 - @cancel_advisor_action
 
@@ -24,9 +24,12 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; solid += 1; beweli_strength += 3; pragmatist_dissent += 5; foreign_moderation -= 0.5; econ_moderation -= 0.5; social_moderation -= 0.5; youth += 3*(1-dissent); spd_relation -= 4; greens_relation -= 2;
 
+We have decided to invest more funds into our youth wing. This gives more energy to our party, but may have the unwanted effect of radicalizing us.
+
 @same
 
 @cut_rb
 subtitle: +1 resources
 on-arrival: resources += 1; solid -= 1; beweli_strength -= 2; beweli_dissent += 1; youth_linke -= 2; youth_greens += 2;
 
+We have reduced our funding for the Linksjugend.
