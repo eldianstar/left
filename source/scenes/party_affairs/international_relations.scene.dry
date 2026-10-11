@@ -31,7 +31,7 @@ After all, they are among the most important players in resisting NATO imperiali
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: beweli_strength += 3; resources -= 1; lfi += 1;
+on-arrival: beweli_strength += 3; resources -= 1; lfi += 1; decentralization -= 0.5;
 
 Our French comrades can teach us a lot in their fight for European socialism.
 
@@ -47,7 +47,7 @@ We need unity with our European sister parties, in order to build a movement tha
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; dsa += 1; decentralization += 1; youth += 2*(1 - dissent) if mamdani = 1; beweli_strength += 1; emali_strength += 1; oldleft_dissent += 1;
+on-arrival: resources -= 1; dsa += 1; decentralization += 1; youth += 1*(1 - dissent) if mamdani = 1; beweli_strength += 1; emali_strength += 1; oldleft_dissent += 1;
 
 While politically very distant, the DSA has been one of the most interesting developments of the last decade, and we may have much to learn from their mass party organization and grassroots organizing.
 
