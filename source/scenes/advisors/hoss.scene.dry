@@ -13,8 +13,8 @@ Fame: [+ hoss_advisor_fame +]
 - @root: Return to main
 
 @justice
-title: justice
-subtitle: subt
+title: Judicial Affairs.
+subtitle: As Justice Minister, Hoss can set our policy on judicial affairs.
 choose-if: advisor_action_timer <= 0 and justice_minister_party == "LINKE"
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if justice_minister_party != "LINKE" : We do not control the Foreign Ministry. ?]
 on-arrival: advisor_action_timer = 6; hoss_advisor_fame += 2; last_advisor_action = 1;
