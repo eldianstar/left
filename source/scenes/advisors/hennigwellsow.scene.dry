@@ -15,22 +15,28 @@ Fame: [+ hennigwellsow_advisor_fame +]
 - @root: Return to main
 
 @rrgreen
-title: rrgreen contact
+title: Contact the <span style="color: #E3000F;">moderate</span> <span style="color: #1AA037;">left</span>.
 subtitle: subt
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; greens_relation += 2.5*(bartsch_advisor_fame/100); spd_relation += 2.5*(bartsch_advisor_fame/100); bartsch_advisor_fame += 2;
 
+We have improved our relations with the <span style="color: #E3000F;">moderate</span> <span style="color: #1AA037;">left</span>. We may gain powerful allies, but our left wing disapproves.
+
 @moderate_foreign
-title: moderate
-subtitle: subt
+title: Moderate our foreign policy.
+subtitle: Push <span style="color: #BC2D72;">Die Linke</span> towards a more friendly view of the West.
 choose-if: advisor_action_timer <= 0 and hennigwellsow_advisor == 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
 on-arrival: advisor_action_timer = 6; foreign_moderation += 0.5*(hennigwellsow_advisor_fame/100); pragmatist_dissent -= 1*(hennigwellsow_advisor_fame/100); greens_relation += 2*(hennigwellsow_advisor_fame/100); spd_relation += 1*(hennigwellsow_advisor_fame/100); cdu_relation += 1*(hennigwellsow_advisor_fame/100); issue_antimilitarism -= 0.2; hennigwellsow_advisor_fame += 2;
 
+We have slightly moderated our foreign policy, bringing ourselves closer to NATO and the EU. The moderate parties notice and appreciate our move, but our left wing disapproves.
+
 @defend_democracy
-title: radical realpolitik
-subtitle: subt
+title: Preach Radical Realpolitik.
+subtitle: Politics is all about compromise.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; pragmatist_strength += 1*(hennigwellsow_advisor_fame/100); pro_status_quo += 5*(hennigwellsow_advisor_fame/100); hennigwellsow_advisor_fame += 2;
+
+We have advocated for a more reformist stance.
