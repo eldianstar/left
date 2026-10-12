@@ -238,7 +238,7 @@ blockquote+blockquote.attribution {
 #tools_wrapper {
   position: absolute;
   width: 100%;
-  max-width: 77em; /* prev. 69 */
+  max-width: 78em; /* prev. 69 */
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -246,7 +246,7 @@ blockquote+blockquote.attribution {
 
 .tools {
   padding: 0.6em;
-  width: 18rem;
+  width: 22rem;
   color: var(--text-color);
   background-color: var(--content-bg-color);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
