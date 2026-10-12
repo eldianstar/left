@@ -75,6 +75,10 @@ Future changes:
    - Trump in power
    - Specific events (eg Mamdani), antisemitism scandals etc.
    - Add every single minor party (with dynamic routes)
+       - Extrap. left (DKP rev vs. reformism, KP/KO, RKP big vs small, 3 outcomes: fragmented, fragmented with entryism/support, united
+       - Extrap. right (NPD/Heimat (+ Die Rechte), 3. Weg big vs small, 3 outcomes: fragmented, united against AfD, united with AfD splinter (DNZ?)
+       - Bourgeois right (BD, FW, FDP?, 3 outcomes: unimportant, strong independent, strong with Meuthen AfD)
+       - Liberal left (Volt, Tierschutz, Piraten)
 - Other/Misc:
    - Better tooltips
    - Balance the vote loss of establishment parties
