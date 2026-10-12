@@ -28,6 +28,8 @@ Minor changes:
 - solved the bug with issues becoming infinite
 - slightly reduced issue decay
 - Changed brandenburg elections from 2023 to 2024
+- Changed font from Tahoma to Montserrat -> Cent.Gothic -> Avenir, too lazy to download montserrat
+
 
 Future changes:
 - Internal dynamics:
