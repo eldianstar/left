@@ -16,9 +16,7 @@ if (Q.economic_growth) {
 
 = Time
 
-<table>
-<tr><td>Time (month/year):</td><td>**[+ month : month +] [+ year +]**</td></tr>
-</table>
+Time (month/year): **[+ month : month +] [+ year +]**
 
 = Party
 
@@ -26,7 +24,7 @@ if (Q.economic_growth) {
 <tr><td>Resources available:</td><td>[+ resources +]</td></tr>
 <tr><td><span style="color: [+ linke_color +];">**Die Linke**</span> position:</td><td>[? if linke_toleration : toleration ?][? if linke_in_government : in government - ?][? if linke_toleration == 0 and linke_in_government == 0 : opposition ?]
 [? if in_rrgreen_coalition and linke_in_government: <span style="color: [+ linke_color +];">Red</span><span style="color: [+ spd_color +];">red</span><span style="color: [+ greens_color +];">green</span> Coalition ?][? if in_left_front and linke_in_government: <span style="color: [+ linke_color +];">Red</span>-<span style="color: [+ bsw_color +];">purple</span> coalition ?][? if in_linke_majority and linke_in_government: <span style="color: [+ linke_color +];">**Linke**</span> majority ?]</td></tr>
-<tr><td>Internal dissent:</td><td><div class="bar" style="width: 120px;"><div class="bar-fill" style="width: [+ dissent_percent +]%;"></div></div></td></tr>
+<tr><td>Internal dissent:</td><td><div class="bar" style="width: 110px;"><div class="bar-fill" style="width: [+ dissent_percent +]%;"></div></div></td></tr>
 </table>
 
 <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 5px; margin-left: -3px;"> 
@@ -649,9 +647,9 @@ Detailed results for each demographic:
 = State of the Party
 
 <table>
-<tr><td>Internal dissent:</td><td><div class="bar" style="width: 150px;"><div class="bar-fill" style="width: [+ dissent_percent +]%;"></div></div></td></tr>
-<tr><td>Radicalism:</td><td><div class="bar" style="width: 150px;"><div class="bar-fill" style="width: [+ (100-party_moderation_percent) +]%;"></div></div></td></tr>
-<tr><td>Centralization:</td><td><div class="bar" style="width: 150px;"><div class="bar-fill" style="width: [+ (100-decentralization_percent) +]%;"></div></div></td></tr>
+<tr><td>Internal dissent:</td><td><div class="bar" style="width: 140px;"><div class="bar-fill" style="width: [+ dissent_percent +]%;"></div></div></td></tr>
+<tr><td>Radicalism:</td><td><div class="bar" style="width: 140px;"><div class="bar-fill" style="width: [+ (100-party_moderation_percent) +]%;"></div></div></td></tr>
+<tr><td>Centralization:</td><td><div class="bar" style="width: 140px;"><div class="bar-fill" style="width: [+ (100-decentralization_percent) +]%;"></div></div></td></tr>
 </table>
 
 = Party Leadership
