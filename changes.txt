@@ -82,6 +82,7 @@ Future changes:
    - Nerf/revise all advisor actions
    - Give all advisor actions flavor texts both before, during and after the options
    - Fix the fact that rally options become more limited over time
+   - replace picture frames with something more modern
 - Bugs:
    - schwerdtner issue bug
    - ampel vonc event doesnt fire
