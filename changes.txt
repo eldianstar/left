@@ -81,3 +81,4 @@ Future changes:
    - Change brandenburg elections from 2023 to 2024
 - Bugs:
    - schwerdtner issue bug
+   - ampel vonc event doesnt fire
