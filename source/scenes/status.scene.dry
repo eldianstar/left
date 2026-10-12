@@ -135,18 +135,18 @@ Next election: **[+ next_election_month : month +] [+ next_election_year +]**
 </div>
 </div>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
-<img src="img/SteinmeierFrankWalter.jpg" alt="Steinmeier" style="width: 48%;object-fit:cover;border:5px solid #ccc;border-radius: 7px;">
-[? if chancellor = "Merkel" : <img src="img/MerkelAngela.jpg" alt="Merkel" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
-[? if chancellor = "Scholz" : <img src="img/ScholzOlaf.jpg" alt="Scholz" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
-[? if chancellor = "Merz" : <img src="img/ScholzOlaf.jpg" alt="Merz" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
-[? if chancellor = "Laschet" : <img src="img/LaschetArmin.jpg" alt="Laschet" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
-[? if chancellor = "Weidel" : <img src="img/WeidelAlice.jpg" alt="Weidel" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
-[? if chancellor = "Höcke" : <img src="img/HoeckeBjoern.jpg" alt="Höcke" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
-[? if chancellor = "Schwerdtner" : <img src="img/_portraits/SchwerdtnerInes.jpg" alt="Schwerdtner" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
-[? if chancellor = "Reichinnek" : <img src="img/_portraits/ReichinnekHeidi.jpg" alt="Reichinnek" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
-[? if chancellor = "VanAken" : <img src="img/_portraits/VanAkenJan.jpg" alt="van Aken" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
-[? if chancellor = "Gysi" : <img src="img/_portraits/GysiGregor.jpg" alt="Gysi" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
-[? if chancellor = "Wagenknecht" : <img src="img/_portraits/WagenknechtSahra.jpg" alt="Wagenknecht" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+<img src="img/SteinmeierFrankWalter.jpg" alt="Steinmeier" style="width: 46%;object-fit:cover;border:5px solid #ccc;border-radius: 7px;">
+[? if chancellor = "Merkel" : <img src="img/MerkelAngela.jpg" alt="Merkel" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Scholz" : <img src="img/ScholzOlaf.jpg" alt="Scholz" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Merz" : <img src="img/ScholzOlaf.jpg" alt="Merz" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Laschet" : <img src="img/LaschetArmin.jpg" alt="Laschet" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Weidel" : <img src="img/WeidelAlice.jpg" alt="Weidel" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Höcke" : <img src="img/HoeckeBjoern.jpg" alt="Höcke" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Schwerdtner" : <img src="img/_portraits/SchwerdtnerInes.jpg" alt="Schwerdtner" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Reichinnek" : <img src="img/_portraits/ReichinnekHeidi.jpg" alt="Reichinnek" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "VanAken" : <img src="img/_portraits/VanAkenJan.jpg" alt="van Aken" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Gysi" : <img src="img/_portraits/GysiGregor.jpg" alt="Gysi" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Wagenknecht" : <img src="img/_portraits/WagenknechtSahra.jpg" alt="Wagenknecht" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
@@ -756,14 +756,14 @@ Detailed results for each demographic:
 <span class="tooltip-text" title="oldleft text" style="text-align: center;font-weight: bold;color: [+ bsw_color +];">Old Left</span> <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 [? if wagenknecht_power_lost = 0 : 
-<img src="img/LogoAufstehen.jpg" alt="Aufstehen" style="width: 48%;object-fit:contain;">
-[? if oldleft_leader = "Wagenknecht" : <img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
-[? if oldleft_leader = "Pellmann" : <img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+<img src="img/LogoAufstehen.jpg" alt="Aufstehen" style="width: 46%;object-fit:contain;">
+[? if oldleft_leader = "Wagenknecht" : <img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if oldleft_leader = "Pellmann" : <img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
 ?]
 [? if wagenknecht_power_lost = 1 : 
-<img src="img/LogoSL.svg" alt="SL" style="width: 48%;object-fit:contain;">
-[? if oldleft_leader = "Wissler" : <img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
-[? if oldleft_leader = "Riexinger" : <img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+<img src="img/LogoSL.svg" alt="SL" style="width: 46%;object-fit:contain;">
+[? if oldleft_leader = "Wissler" : <img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if oldleft_leader = "Riexinger" : <img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
 ?]
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
@@ -789,8 +789,8 @@ Dissent: [+ oldleft_dissent : dissent +] <br>
 [? if beweli_left = 0 :
 <span class="tooltip-text" title="beweli text" style="text-align: center;font-weight: bold;color: #BC2D72;">Movement Left</span> <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
-<img src="img/LogoBewegungslinke.jpg" alt="Bewegungslinke" style="width: 48%;object-fit:contain;">
-<img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;">
+<img src="img/LogoBewegungslinke.jpg" alt="Bewegungslinke" style="width: 46%;object-fit:contain;">
+<img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;">
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
@@ -808,8 +808,8 @@ Dissent: [+ beweli_dissent : dissent +] <br>
 [? if emali_left = 0 :
 <span class="tooltip-text" title="emali text" style="text-align: center;font-weight: bold;color: [+ spd_color +];">Centre</span> <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
-<img src="img/LogoEmali.jpg" alt="Ema.Li" style="width: 48%;object-fit:contain;">
-<img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;">
+<img src="img/LogoEmali.jpg" alt="Ema.Li" style="width: 46%;object-fit:contain;">
+<img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;">
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
@@ -827,8 +827,8 @@ Dissent: [+ emali_dissent : dissent +] <br>
 [? if pragmatist_left = 0 :
 <span class="tooltip-text" title="pragmatist text" style="text-align: center;font-weight: bold;color: #ff5500;">Pragmatists</span> <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
-<img src="img/LogoFDS.jpg" alt="FDS" style="width: 48%;object-fit:contain;">
-<img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;">
+<img src="img/LogoFDS.jpg" alt="FDS" style="width: 46%;object-fit:contain;">
+<img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;">
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
