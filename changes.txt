@@ -26,6 +26,7 @@ Minor changes:
 - Slightly nerfed some advisor actions reducing status quo
 - Some advisor flavor texts written
 - solved the bug with issues becoming infinite
+- slightly reduced issue decay
 
 Future changes:
 - Internal dynamics:
