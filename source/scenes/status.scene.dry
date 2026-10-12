@@ -30,46 +30,46 @@ if (Q.economic_growth) {
 </table>
 
 <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 5px; margin-left: -3px;"> 
-[? if wagenknecht_advisor : <div style="flex: 1;"><img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if mohamedali_advisor : <div style="flex: 1;"><img src="img/_portraits/MohamedAliAmira.jpg" alt="Amira Mohamed Ali" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if wissler_advisor : <div style="flex: 1;"><img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if pellmann_advisor : <div style="flex: 1;"><img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if riexinger_advisor : <div style="flex: 1;"><img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if gohlke_advisor : <div style="flex: 1;"><img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if schwerdtner_advisor : <div style="flex: 1;"><img src="img/_portraits/SchwerdtnerInes.jpg" alt="Ines Schwerdtner" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if pantisano_advisor : <div style="flex: 1;"><img src="img/_portraits/PantisanoLuigi.jpg" alt="Luigi Pantisano" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if buenger_advisor : <div style="flex: 1;"><img src="img/_portraits/BüngerClara.jpg" alt="Clara Bünger" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if kipping_advisor : <div style="flex: 1;"><img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if vanaken_advisor : <div style="flex: 1;"><img src="img/_portraits/VanAkenJan.jpg" alt="Jan Van Aken" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if reichinnek_advisor : <div style="flex: 1;"><img src="img/_portraits/ReichinnekHeidi.jpg" alt="Heidi Reichinnek" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if lay_advisor : <div style="flex: 1;"><img src="img/_portraits/LayCaren.jpg" alt="Caren Lay" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if schirdewan_advisor : <div style="flex: 1;"><img src="img/_portraits/SchirdewanMartin.jpg" alt="Martin Schirdewan" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if hoss_advisor : <div style="flex: 1;"><img src="img/_portraits/HossLuke.jpg" alt="Luke Hoß" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if gysi_advisor : <div style="flex: 1;"><img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if ramelow_advisor : <div style="flex: 1;"><img src="img/_portraits/RamelowBodo.jpg" alt="Bodo Ramelow" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if bartsch_advisor : <div style="flex: 1;"><img src="img/_portraits/BartschDietmar.jpg" alt="Dietmar Bartsch" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if hennigwellsow_advisor : <div style="flex: 1;"><img src="img/_portraits/HennigWellsowSusanne.jpg" alt="Susanne Hennig-Wellsow" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if goerke_advisor : <div style="flex: 1;"><img src="img/_portraits/GörkeChristian.jpg" alt="Christian Görke" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if wagenknecht_advisor_b : <div style="flex: 1;"><img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if mohamedali_advisor_b : <div style="flex: 1;"><img src="img/_portraits/MohamedAliAmira.jpg" alt="Amira Mohamed Ali" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if wissler_advisor_b : <div style="flex: 1;"><img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if pellmann_advisor_b : <div style="flex: 1;"><img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if riexinger_advisor_b : <div style="flex: 1;"><img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if gohlke_advisor_b : <div style="flex: 1;"><img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if schwerdtner_advisor_b : <div style="flex: 1;"><img src="img/_portraits/SchwerdtnerInes.jpg" alt="Ines Schwerdtner" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if pantisano_advisor_b : <div style="flex: 1;"><img src="img/_portraits/PantisanoLuigi.jpg" alt="Luigi Pantisano" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if buenger_advisor_b : <div style="flex: 1;"><img src="img/_portraits/BüngerClara.jpg" alt="Clara Bünger" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if kipping_advisor_b : <div style="flex: 1;"><img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if vanaken_advisor_b : <div style="flex: 1;"><img src="img/_portraits/VanAkenJan.jpg" alt="Jan Van Aken" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if reichinnek_advisor_b : <div style="flex: 1;"><img src="img/_portraits/ReichinnekHeidi.jpg" alt="Heidi Reichinnek" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if lay_advisor_b : <div style="flex: 1;"><img src="img/_portraits/LayCaren.jpg" alt="Caren Lay" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if schirdewan_advisor_b : <div style="flex: 1;"><img src="img/_portraits/SchirdewanMartin.jpg" alt="Martin Schirdewan" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if hoss_advisor_b : <div style="flex: 1;"><img src="img/_portraits/HossLuke.jpg" alt="Luke Hoß" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if gysi_advisor_b : <div style="flex: 1;"><img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if ramelow_advisor_b : <div style="flex: 1;"><img src="img/_portraits/RamelowBodo.jpg" alt="Bodo Ramelow" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if bartsch_advisor_b : <div style="flex: 1;"><img src="img/_portraits/BartschDietmar.jpg" alt="Dietmar Bartsch" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if hennigwellsow_advisor_b : <div style="flex: 1;"><img src="img/_portraits/HennigWellsowSusanne.jpg" alt="Susanne Hennig-Wellsow" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if goerke_advisor_b : <div style="flex: 1;"><img src="img/_portraits/GörkeChristian.jpg" alt="Christian Görke" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
+[? if wagenknecht_advisor : <div style="flex: 1;"><img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if mohamedali_advisor : <div style="flex: 1;"><img src="img/_portraits/MohamedAliAmira.jpg" alt="Amira Mohamed Ali" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if wissler_advisor : <div style="flex: 1;"><img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if pellmann_advisor : <div style="flex: 1;"><img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if riexinger_advisor : <div style="flex: 1;"><img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if gohlke_advisor : <div style="flex: 1;"><img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if schwerdtner_advisor : <div style="flex: 1;"><img src="img/_portraits/SchwerdtnerInes.jpg" alt="Ines Schwerdtner" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if pantisano_advisor : <div style="flex: 1;"><img src="img/_portraits/PantisanoLuigi.jpg" alt="Luigi Pantisano" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if buenger_advisor : <div style="flex: 1;"><img src="img/_portraits/BüngerClara.jpg" alt="Clara Bünger" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if kipping_advisor : <div style="flex: 1;"><img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if vanaken_advisor : <div style="flex: 1;"><img src="img/_portraits/VanAkenJan.jpg" alt="Jan Van Aken" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if reichinnek_advisor : <div style="flex: 1;"><img src="img/_portraits/ReichinnekHeidi.jpg" alt="Heidi Reichinnek" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if lay_advisor : <div style="flex: 1;"><img src="img/_portraits/LayCaren.jpg" alt="Caren Lay" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if schirdewan_advisor : <div style="flex: 1;"><img src="img/_portraits/SchirdewanMartin.jpg" alt="Martin Schirdewan" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if hoss_advisor : <div style="flex: 1;"><img src="img/_portraits/HossLuke.jpg" alt="Luke Hoß" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if gysi_advisor : <div style="flex: 1;"><img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if ramelow_advisor : <div style="flex: 1;"><img src="img/_portraits/RamelowBodo.jpg" alt="Bodo Ramelow" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if bartsch_advisor : <div style="flex: 1;"><img src="img/_portraits/BartschDietmar.jpg" alt="Dietmar Bartsch" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if hennigwellsow_advisor : <div style="flex: 1;"><img src="img/_portraits/HennigWellsowSusanne.jpg" alt="Susanne Hennig-Wellsow" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if goerke_advisor : <div style="flex: 1;"><img src="img/_portraits/GörkeChristian.jpg" alt="Christian Görke" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if wagenknecht_advisor_b : <div style="flex: 1;"><img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if mohamedali_advisor_b : <div style="flex: 1;"><img src="img/_portraits/MohamedAliAmira.jpg" alt="Amira Mohamed Ali" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if wissler_advisor_b : <div style="flex: 1;"><img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if pellmann_advisor_b : <div style="flex: 1;"><img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if riexinger_advisor_b : <div style="flex: 1;"><img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if gohlke_advisor_b : <div style="flex: 1;"><img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if schwerdtner_advisor_b : <div style="flex: 1;"><img src="img/_portraits/SchwerdtnerInes.jpg" alt="Ines Schwerdtner" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if pantisano_advisor_b : <div style="flex: 1;"><img src="img/_portraits/PantisanoLuigi.jpg" alt="Luigi Pantisano" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if buenger_advisor_b : <div style="flex: 1;"><img src="img/_portraits/BüngerClara.jpg" alt="Clara Bünger" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if kipping_advisor_b : <div style="flex: 1;"><img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if vanaken_advisor_b : <div style="flex: 1;"><img src="img/_portraits/VanAkenJan.jpg" alt="Jan Van Aken" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if reichinnek_advisor_b : <div style="flex: 1;"><img src="img/_portraits/ReichinnekHeidi.jpg" alt="Heidi Reichinnek" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if lay_advisor_b : <div style="flex: 1;"><img src="img/_portraits/LayCaren.jpg" alt="Caren Lay" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if schirdewan_advisor_b : <div style="flex: 1;"><img src="img/_portraits/SchirdewanMartin.jpg" alt="Martin Schirdewan" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if hoss_advisor_b : <div style="flex: 1;"><img src="img/_portraits/HossLuke.jpg" alt="Luke Hoß" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if gysi_advisor_b : <div style="flex: 1;"><img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if ramelow_advisor_b : <div style="flex: 1;"><img src="img/_portraits/RamelowBodo.jpg" alt="Bodo Ramelow" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if bartsch_advisor_b : <div style="flex: 1;"><img src="img/_portraits/BartschDietmar.jpg" alt="Dietmar Bartsch" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if hennigwellsow_advisor_b : <div style="flex: 1;"><img src="img/_portraits/HennigWellsowSusanne.jpg" alt="Susanne Hennig-Wellsow" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if goerke_advisor_b : <div style="flex: 1;"><img src="img/_portraits/GörkeChristian.jpg" alt="Christian Görke" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
 </div>
 
 = Government
@@ -135,18 +135,18 @@ Next election: **[+ next_election_month : month +] [+ next_election_year +]**
 </div>
 </div>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
-<img src="img/SteinmeierFrankWalter.jpg" alt="Steinmeier" style="width: 48%;object-fit:cover;border:5px solid #ccc;">
-[? if chancellor = "Merkel" : <img src="img/MerkelAngela.jpg" alt="Merkel" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;"> ?]
-[? if chancellor = "Scholz" : <img src="img/ScholzOlaf.jpg" alt="Scholz" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;"> ?]
-[? if chancellor = "Merz" : <img src="img/ScholzOlaf.jpg" alt="Merz" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;"> ?]
-[? if chancellor = "Laschet" : <img src="img/LaschetArmin.jpg" alt="Laschet" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;"> ?]
-[? if chancellor = "Weidel" : <img src="img/WeidelAlice.jpg" alt="Weidel" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;"> ?]
-[? if chancellor = "Höcke" : <img src="img/HoeckeBjoern.jpg" alt="Höcke" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;"> ?]
-[? if chancellor = "Schwerdtner" : <img src="img/_portraits/SchwerdtnerInes.jpg" alt="Schwerdtner" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;"> ?]
-[? if chancellor = "Reichinnek" : <img src="img/_portraits/ReichinnekHeidi.jpg" alt="Reichinnek" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;"> ?]
-[? if chancellor = "VanAken" : <img src="img/_portraits/VanAkenJan.jpg" alt="van Aken" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;"> ?]
-[? if chancellor = "Gysi" : <img src="img/_portraits/GysiGregor.jpg" alt="Gysi" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;"> ?]
-[? if chancellor = "Wagenknecht" : <img src="img/_portraits/WagenknechtSahra.jpg" alt="Wagenknecht" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;"> ?]
+<img src="img/SteinmeierFrankWalter.jpg" alt="Steinmeier" style="width: 48%;object-fit:cover;border:5px solid #ccc;border-radius: 7px;">
+[? if chancellor = "Merkel" : <img src="img/MerkelAngela.jpg" alt="Merkel" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Scholz" : <img src="img/ScholzOlaf.jpg" alt="Scholz" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Merz" : <img src="img/ScholzOlaf.jpg" alt="Merz" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Laschet" : <img src="img/LaschetArmin.jpg" alt="Laschet" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Weidel" : <img src="img/WeidelAlice.jpg" alt="Weidel" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Höcke" : <img src="img/HoeckeBjoern.jpg" alt="Höcke" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Schwerdtner" : <img src="img/_portraits/SchwerdtnerInes.jpg" alt="Schwerdtner" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Reichinnek" : <img src="img/_portraits/ReichinnekHeidi.jpg" alt="Reichinnek" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "VanAken" : <img src="img/_portraits/VanAkenJan.jpg" alt="van Aken" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Gysi" : <img src="img/_portraits/GysiGregor.jpg" alt="Gysi" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if chancellor = "Wagenknecht" : <img src="img/_portraits/WagenknechtSahra.jpg" alt="Wagenknecht" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
@@ -657,26 +657,26 @@ Detailed results for each demographic:
 = Party Leadership
 
 <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 5px; margin-left: -3px;"> 
-[? if wagenknecht_advisor : <div style="flex: 1;"><img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if mohamedali_advisor : <div style="flex: 1;"><img src="img/_portraits/MohamedAliAmira.jpg" alt="Amira Mohamed Ali" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if wissler_advisor : <div style="flex: 1;"><img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if pellmann_advisor : <div style="flex: 1;"><img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if riexinger_advisor : <div style="flex: 1;"><img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if gohlke_advisor : <div style="flex: 1;"><img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if schwerdtner_advisor : <div style="flex: 1;"><img src="img/_portraits/SchwerdtnerInes.jpg" alt="Ines Schwerdtner" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if pantisano_advisor : <div style="flex: 1;"><img src="img/_portraits/PantisanoLuigi.jpg" alt="Luigi Pantisano" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if buenger_advisor : <div style="flex: 1;"><img src="img/_portraits/BüngerClara.jpg" alt="Clara Bünger" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if kipping_advisor : <div style="flex: 1;"><img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if vanaken_advisor : <div style="flex: 1;"><img src="img/_portraits/VanAkenJan.jpg" alt="Jan Van Aken" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if reichinnek_advisor : <div style="flex: 1;"><img src="img/_portraits/ReichinnekHeidi.jpg" alt="Heidi Reichinnek" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if lay_advisor : <div style="flex: 1;"><img src="img/_portraits/LayCaren.jpg" alt="Caren Lay" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if schirdewan_advisor : <div style="flex: 1;"><img src="img/_portraits/SchirdewanMartin.jpg" alt="Martin Schirdewan" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if hoss_advisor : <div style="flex: 1;"><img src="img/_portraits/HossLuke.jpg" alt="Luke Hoß" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if gysi_advisor : <div style="flex: 1;"><img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if ramelow_advisor : <div style="flex: 1;"><img src="img/_portraits/RamelowBodo.jpg" alt="Bodo Ramelow" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if bartsch_advisor : <div style="flex: 1;"><img src="img/_portraits/BartschDietmar.jpg" alt="Dietmar Bartsch" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if hennigwellsow_advisor : <div style="flex: 1;"><img src="img/_portraits/HennigWellsowSusanne.jpg" alt="Susanne Hennig-Wellsow" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if goerke_advisor : <div style="flex: 1;"><img src="img/_portraits/GörkeChristian.jpg" alt="Christian Görke" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
+[? if wagenknecht_advisor : <div style="flex: 1;"><img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if mohamedali_advisor : <div style="flex: 1;"><img src="img/_portraits/MohamedAliAmira.jpg" alt="Amira Mohamed Ali" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if wissler_advisor : <div style="flex: 1;"><img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if pellmann_advisor : <div style="flex: 1;"><img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if riexinger_advisor : <div style="flex: 1;"><img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if gohlke_advisor : <div style="flex: 1;"><img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if schwerdtner_advisor : <div style="flex: 1;"><img src="img/_portraits/SchwerdtnerInes.jpg" alt="Ines Schwerdtner" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if pantisano_advisor : <div style="flex: 1;"><img src="img/_portraits/PantisanoLuigi.jpg" alt="Luigi Pantisano" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if buenger_advisor : <div style="flex: 1;"><img src="img/_portraits/BüngerClara.jpg" alt="Clara Bünger" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if kipping_advisor : <div style="flex: 1;"><img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if vanaken_advisor : <div style="flex: 1;"><img src="img/_portraits/VanAkenJan.jpg" alt="Jan Van Aken" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if reichinnek_advisor : <div style="flex: 1;"><img src="img/_portraits/ReichinnekHeidi.jpg" alt="Heidi Reichinnek" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if lay_advisor : <div style="flex: 1;"><img src="img/_portraits/LayCaren.jpg" alt="Caren Lay" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if schirdewan_advisor : <div style="flex: 1;"><img src="img/_portraits/SchirdewanMartin.jpg" alt="Martin Schirdewan" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if hoss_advisor : <div style="flex: 1;"><img src="img/_portraits/HossLuke.jpg" alt="Luke Hoß" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if gysi_advisor : <div style="flex: 1;"><img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if ramelow_advisor : <div style="flex: 1;"><img src="img/_portraits/RamelowBodo.jpg" alt="Bodo Ramelow" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if bartsch_advisor : <div style="flex: 1;"><img src="img/_portraits/BartschDietmar.jpg" alt="Dietmar Bartsch" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if hennigwellsow_advisor : <div style="flex: 1;"><img src="img/_portraits/HennigWellsowSusanne.jpg" alt="Susanne Hennig-Wellsow" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if goerke_advisor : <div style="flex: 1;"><img src="img/_portraits/GörkeChristian.jpg" alt="Christian Görke" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
 </div> 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 5px; margin-bottom: 5px;"> 
 [? if wagenknecht_advisor : <div style="flex: 1;"><p style="text-align: center; margin-bottom: 2px;">Sahra Wagenknecht</p></div> ?] 
@@ -704,26 +704,26 @@ Detailed results for each demographic:
 = Bundestag Leadership
 
 <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 5px; margin-left: -3px;"> 
-[? if wagenknecht_advisor_b : <div style="flex: 1;"><img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if mohamedali_advisor_b : <div style="flex: 1;"><img src="img/_portraits/MohamedAliAmira.jpg" alt="Amira Mohamed Ali" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if wissler_advisor_b : <div style="flex: 1;"><img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if pellmann_advisor_b : <div style="flex: 1;"><img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if riexinger_advisor_b : <div style="flex: 1;"><img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if gohlke_advisor_b : <div style="flex: 1;"><img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if schwerdtner_advisor_b : <div style="flex: 1;"><img src="img/_portraits/SchwerdtnerInes.jpg" alt="Ines Schwerdtner" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if pantisano_advisor_b : <div style="flex: 1;"><img src="img/_portraits/PantisanoLuigi.jpg" alt="Luigi Pantisano" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if buenger_advisor_b : <div style="flex: 1;"><img src="img/_portraits/BüngerClara.jpg" alt="Clara Bünger" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if kipping_advisor_b : <div style="flex: 1;"><img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if vanaken_advisor_b : <div style="flex: 1;"><img src="img/_portraits/VanAkenJan.jpg" alt="Jan Van Aken" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if reichinnek_advisor_b : <div style="flex: 1;"><img src="img/_portraits/ReichinnekHeidi.jpg" alt="Heidi Reichinnek" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if lay_advisor_b : <div style="flex: 1;"><img src="img/_portraits/LayCaren.jpg" alt="Caren Lay" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if schirdewan_advisor_b : <div style="flex: 1;"><img src="img/_portraits/SchirdewanMartin.jpg" alt="Martin Schirdewan" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if hoss_advisor_b : <div style="flex: 1;"><img src="img/_portraits/HossLuke.jpg" alt="Luke Hoß" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if gysi_advisor_b : <div style="flex: 1;"><img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if ramelow_advisor_b : <div style="flex: 1;"><img src="img/_portraits/RamelowBodo.jpg" alt="Bodo Ramelow" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if bartsch_advisor_b : <div style="flex: 1;"><img src="img/_portraits/BartschDietmar.jpg" alt="Dietmar Bartsch" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if hennigwellsow_advisor_b : <div style="flex: 1;"><img src="img/_portraits/HennigWellsowSusanne.jpg" alt="Susanne Hennig-Wellsow" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
-[? if goerke_advisor_b : <div style="flex: 1;"><img src="img/_portraits/GörkeChristian.jpg" alt="Christian Görke" style="width: 96%;object-fit:cover;object-position:top;border:5px solid #ccc;"></div> ?] 
+[? if wagenknecht_advisor_b : <div style="flex: 1;"><img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if mohamedali_advisor_b : <div style="flex: 1;"><img src="img/_portraits/MohamedAliAmira.jpg" alt="Amira Mohamed Ali" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if wissler_advisor_b : <div style="flex: 1;"><img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if pellmann_advisor_b : <div style="flex: 1;"><img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if riexinger_advisor_b : <div style="flex: 1;"><img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if gohlke_advisor_b : <div style="flex: 1;"><img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if schwerdtner_advisor_b : <div style="flex: 1;"><img src="img/_portraits/SchwerdtnerInes.jpg" alt="Ines Schwerdtner" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if pantisano_advisor_b : <div style="flex: 1;"><img src="img/_portraits/PantisanoLuigi.jpg" alt="Luigi Pantisano" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if buenger_advisor_b : <div style="flex: 1;"><img src="img/_portraits/BüngerClara.jpg" alt="Clara Bünger" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if kipping_advisor_b : <div style="flex: 1;"><img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if vanaken_advisor_b : <div style="flex: 1;"><img src="img/_portraits/VanAkenJan.jpg" alt="Jan Van Aken" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if reichinnek_advisor_b : <div style="flex: 1;"><img src="img/_portraits/ReichinnekHeidi.jpg" alt="Heidi Reichinnek" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if lay_advisor_b : <div style="flex: 1;"><img src="img/_portraits/LayCaren.jpg" alt="Caren Lay" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if schirdewan_advisor_b : <div style="flex: 1;"><img src="img/_portraits/SchirdewanMartin.jpg" alt="Martin Schirdewan" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if hoss_advisor_b : <div style="flex: 1;"><img src="img/_portraits/HossLuke.jpg" alt="Luke Hoß" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if gysi_advisor_b : <div style="flex: 1;"><img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if ramelow_advisor_b : <div style="flex: 1;"><img src="img/_portraits/RamelowBodo.jpg" alt="Bodo Ramelow" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if bartsch_advisor_b : <div style="flex: 1;"><img src="img/_portraits/BartschDietmar.jpg" alt="Dietmar Bartsch" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if hennigwellsow_advisor_b : <div style="flex: 1;"><img src="img/_portraits/HennigWellsowSusanne.jpg" alt="Susanne Hennig-Wellsow" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
+[? if goerke_advisor_b : <div style="flex: 1;"><img src="img/_portraits/GörkeChristian.jpg" alt="Christian Görke" style="width: 90%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"></div> ?] 
 </div> 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 5px; margin-bottom: 5px;"> 
 [? if wagenknecht_advisor_b : <div style="flex: 1;"><p style="text-align: center; margin-bottom: 2px;">Sahra Wagenknecht</p></div> ?] 
@@ -757,13 +757,13 @@ Detailed results for each demographic:
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 [? if wagenknecht_power_lost = 0 : 
 <img src="img/LogoAufstehen.jpg" alt="Aufstehen" style="width: 48%;object-fit:contain;">
-[? if oldleft_leader = "Wagenknecht" : <img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;"> ?]
-[? if oldleft_leader = "Pellmann" : <img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;"> ?]
+[? if oldleft_leader = "Wagenknecht" : <img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if oldleft_leader = "Pellmann" : <img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
 ?]
 [? if wagenknecht_power_lost = 1 : 
 <img src="img/LogoSL.svg" alt="SL" style="width: 48%;object-fit:contain;">
-[? if oldleft_leader = "Wissler" : <img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;"> ?]
-[? if oldleft_leader = "Riexinger" : <img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;"> ?]
+[? if oldleft_leader = "Wissler" : <img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if oldleft_leader = "Riexinger" : <img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
 ?]
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
@@ -790,7 +790,7 @@ Dissent: [+ oldleft_dissent : dissent +] <br>
 <span class="tooltip-text" title="beweli text" style="text-align: center;font-weight: bold;color: #BC2D72;">Movement Left</span> <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/LogoBewegungslinke.jpg" alt="Bewegungslinke" style="width: 48%;object-fit:contain;">
-<img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;">
+<img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;">
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
@@ -809,7 +809,7 @@ Dissent: [+ beweli_dissent : dissent +] <br>
 <span class="tooltip-text" title="emali text" style="text-align: center;font-weight: bold;color: [+ spd_color +];">Centre</span> <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/LogoEmali.jpg" alt="Ema.Li" style="width: 48%;object-fit:contain;">
-<img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;">
+<img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;">
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
@@ -828,7 +828,7 @@ Dissent: [+ emali_dissent : dissent +] <br>
 <span class="tooltip-text" title="pragmatist text" style="text-align: center;font-weight: bold;color: #ff5500;">Pragmatists</span> <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 <img src="img/LogoFDS.jpg" alt="FDS" style="width: 48%;object-fit:contain;">
-<img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;">
+<img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 48%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;">
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
