@@ -36,7 +36,7 @@ Major changes:
 Minor changes:
 - Added a system for calculating qol as well as yearly qol change
 - Added a qol dependent mechanic to raise pro_status_quo and hopefully balance the afd/linke two party system
-
+- Added the afd/linke vote reduction to the post event status quo vote stabilization part to hopefully balance the current two party system related problems
 
 
 Future changes:
