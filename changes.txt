@@ -30,6 +30,14 @@ Minor changes:
 - Changed brandenburg elections from 2023 to 2024
 - Changed font from Tahoma to Montserrat -> Cent.Gothic -> Avenir, too lazy to download montserrat
 
+v0.03, 19.10.2026
+Major changes:
+
+Minor changes:
+- Added a system for calculating qol as well as yearly qol change
+- Added a qol dependent mechanic to raise pro_status_quo and hopefully balance the afd/linke two party system
+
+
 
 Future changes:
 - Internal dynamics:
