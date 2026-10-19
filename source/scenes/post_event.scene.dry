@@ -344,6 +344,16 @@ if ((Q.month_actions >= 1 && !Q.rubicon) || (Q.month_actions >= 4 && Q.rubicon))
         Q.capital_strike_progress += ((Q.upper_tax_rates - 5) / 25);
     }
 
+    if (Q.month == 1) {
+    Q.total_qol_change = (Q.total_qol - Q.total_qol_last_year);
+    Q.total_qol_last_year = Q.total_qol;
+    Q.total_qol += (Q.economic_growth - Q.inflation);
+    }
+
+    if (Q.total_qol >= 80) {
+    Q.pro_status_quo += (Q.total_qol-80)/70;
+    }
+
     //////////////////////////////// Education & Science support/economic changes TODO
     // science bonus to economic growth
     Q.science_bonus = 0;
@@ -604,7 +614,10 @@ Q.youth_linke -= 0.4;
 Q.pro_status_quo += 1;
     }
 
-// calculates moderation
+
+// calculates moderation & qol
+
+Q.total_qol = (Q.east_qol + Q.rural_qol + Q.youth_qol + Q.urban_qol + Q.upper_qol);
 
 Q.party_moderation = (Q.foreign_moderation + Q.social_moderation + Q.econ_moderation)/3;
 
