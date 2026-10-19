@@ -101,6 +101,8 @@ Next election: **[+ next_election_month : month +] [+ next_election_year +]**
 
 **Economic growth:** [+ economic_growth_2 +]%
 
+**Yearly QoL change:** [+ total_qol_change +]%
+
 = Polls
 
 <table>
