@@ -1,5 +1,5 @@
 title: The future of the <span style="color: [+ linke_color +];">**BWL**</span>
-view-if: year = 2023 >= 8
+view-if: year = 2023 and month >= 8
 max-visits: 1
 tags: event
 on-display: {!  
