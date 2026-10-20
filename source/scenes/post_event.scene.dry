@@ -350,7 +350,7 @@ if ((Q.month_actions >= 1 && !Q.rubicon) || (Q.month_actions >= 4 && Q.rubicon))
     Q.total_qol += (Q.economic_growth - Q.inflation);
     }
 
-    if (Q.total_qol >= 8000) {
+    if (Q.total_qol >= 80 && pro_status_quo < 80) {
     Q.pro_status_quo += (Q.total_qol-80)/200;
     }
 
