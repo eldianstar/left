@@ -36,6 +36,7 @@ Minor changes:
 v0.03, 19.10.2026
 Major changes:
 - Beweli leadership vote event added + emali leadership change added
+- Added beweli start event
 
 Minor changes:
 - Added a system for calculating qol as well as yearly qol change
@@ -98,5 +99,5 @@ Future changes:
    - Give all advisor actions flavor texts both before, during and after the options
    - Fix the fact that rally options become more limited over time
 - Bugs:
-   - schwerdtner issue bug
+   - issue bars visual bugs
    - ampel vonc event doesnt fire
