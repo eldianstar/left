@@ -1,0 +1,36 @@
+title: The <span style="color: [+ linke_color +];">**Bewegungslinke**</span>
+subtitle: The future of the party?
+new-page: true
+tags: event
+view-if: year = 2021 and month >= 7
+max-visits: 1
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/LogoBewegungslinke.png";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+priority: 1
+
+= The <span style="color: [+ linke_color +];">**Bewegungslinke**</span>
+
+In the last two years, a new caucus in our party has been gaining traction. It is the Movement Left, a group opposing both the post-communist pragmatism and Wagenknecht's conservative populism to form a new form of radical intersectional socialism. While the Bewegungslinke's rise in popularity is undeniable, there are many in the party that would rather see it fail.
+  
+- @embrace_bwl: Embrace the BWL and its intersectionalism as the only way to social equality.
+- @deny_bwl: We will not become a party of blue-haired, they/them hipsters.
+
+@embrace_bwl
+on-arrival: beweli_strength += 5; oldleft_dissent += 3; wagenknecht_left_progress += 1; issue_feminism += 0.5; youth_linke += 1*(1-dissent); social_moderation -= 0.2;
+
+We have decided to support the Movement. However, it is too soon to predict where it will go...
+
+@deny_bwl
+on-arrival: oldleft_strength += 8; beweli_strength -= 15; beweli_dissent += 15; oldleft_dissent -= 5; pragmatist_dissent -= 1; wagenknecht_left_progress -= 5; social_moderation += 3;
+
+Asterisks and pronouns can only damage our party.
