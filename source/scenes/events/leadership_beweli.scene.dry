@@ -1,0 +1,70 @@
+title: The future of the <span style="color: [+ linke_color +];">**BWL**</span>
+view-if: year = 2023 >= 8
+max-visits: 1
+tags: event
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/WagenknechtWissler.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+new-page: true
+on-arrival: beweli_leadership_seen = 1
+
+= The future of the <span style="color: [+ linke_color +];">**BWL**</span>
+
+It has been five years since the <span style="color: [+ linke_color +];">Movement Left</span> was founded as a radical and socially progressive opponent to Sahra Wagenknecht, and the caucus has since reached great importance within our party's internal politics. While the group's social progressivism isn't put into question by anyone, with many of the BWL's original founders, first of all Nicole Gohlke, taking a step back from the stage, there has been growing doubt on what direction it should take.
+
+On one side, the traditional leaders of the group, like Janine Wissler, favor a continuation of the <span style="color: [+ linke_color +];">**BWL**</span>'s radicalism and opposition to moderate parliamentarism, even supporting collaboration with communist think-tanks such as the Trotskyist <span style="color: [+ spd_color +];">Marx21</span>. On the other side, many new supporters of the group, like Ines Schwerdtner, advocate for a more compromising stance on economic and foreign policy issues, and for more collaboration with the party's centre.
+  
+- @results: Who shall lead the <span style="color: [+ linke_color +];">Movement Left</span>?
+
+@results
+on-arrival: {!
+  Q.wisslerb_score += (100-Q.pro_status_quo)/50;
+  Q.wisslerb_score += Q.wissler_advisor;
+  Q.wisslerb_score += Q.wissler_advisor_b;
+  Q.wisslerb_score += (Q.wagenknecht_power_consolidated*2);
+  if (Q.wagenknecht_power_lost == 1) {
+  Q.wisslerb_score -= 999;
+  }
+  Q.schwerdtner_score += (Q.pro_status_quo-30)/50;           
+  Q.schwerdtner_score += Q.schwerdtner_advisor;
+  Q.schwerdtner_score += Q.schwerdtner_advisor_b;
+             
+  if (Q.party_moderation >= 5) {
+    if (Q.beweli_dissent >= 35) {
+      Q.wisslerb_score += (Q.beweli_dissent/40);
+    } else {
+      Q.schwerdtner_score += 1.5;
+    }
+  } else {
+    if (Q.beweli_dissent < 35) {
+      Q.wisslerb_score += 1.5;
+    } else {
+      Q.schwerdtner_score += (Q.beweli_dissent/40);
+    }
+  }
+
+
+  if (Q.schwerdtner_score >= Q.wisslerb_score) {Q.beweli_leader = "Schwerdtner";} else {Q.beweli_leader = "Wissler";}
+!}
+go-to: schwerdtner_won if beweli_leader == "Schwerdtner"; wissler_won if beweli_leader == "Wissler"
+
+@schwerdtner_won
+on-arrival: schwerdtner_advisor_fame += 15; wissler_advisor_fame -= 5; gohlke_advisor_fame -= 15; econ_moderation += oldleft_strength/100; foreign_moderation += oldleft_strength/100; wagenknecht_left_progress += 1;
+face-image: img/_portraits/SchwerdtnerInes.jpg
+
+Ines Schwerdtner and the moderates have unsurprisingly won the power struggle. It seems that the <span style="color: [+ linke_color +];">**BWL**</span> will continue its process of moderation [? if party_moderation < 1 : and cooptation into the spires of <span style="color: [+ spd_color +];">social democracy</span> and capitalism ?].
+  
+@wissler_won
+on-arrival: wissler_advisor_fame += 15; schwerdtner_advisor_fame -= 5; gohlke_advisor_fame -= 15; econ_moderation -= oldleft_strength/100; foreign_moderation -= oldleft_strength/100;
+face-image: img/_portraits/WisslerJanine.jpg
+
+Surprisingly, Wissler and the traditionalist radical wing have won the power struggle. The caucus will remain "Realistisch und Radikal", continuing its extraparliamentary activities and collaboration with [? if party_moderation >= 9 : left-extremist groups. ?][ if party_moderation < 9 : revolutionary groups. ?]
