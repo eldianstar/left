@@ -354,6 +354,8 @@ if ((Q.month_actions >= 1 && !Q.rubicon) || (Q.month_actions >= 4 && Q.rubicon))
     Q.pro_status_quo += (Q.total_qol-80)/200;
     }
 
+    if (Q.year >= 2025 && Q.emali_leader == "Kipping") { Q.emali_leader = "Reichinnek"; }
+
     //////////////////////////////// Education & Science support/economic changes TODO
     // science bonus to economic growth
     Q.science_bonus = 0;
