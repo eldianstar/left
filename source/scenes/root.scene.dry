@@ -139,6 +139,7 @@ Q.wissler_score = 0;
 Q.riexinger_score = 0;
 
 Q.oldleft_leadership_seen = 0;
+Q.beweli_leadership_seen = 0;
 
 Q.wagenknecht_power_consolidated = 0;
 Q.wagenknecht_power_reduced = 0;
