@@ -37,7 +37,7 @@ Minor changes:
 - Added a system for calculating qol as well as yearly qol change
 - Added a qol dependent mechanic to raise pro_status_quo and hopefully balance the afd/linke two party system
 - Added the afd/linke vote reduction to the post event status quo vote stabilization part to hopefully balance the current two party system related problems
-
+- replaced picture frames with something more modern
 
 Future changes:
 - Internal dynamics:
@@ -94,7 +94,6 @@ Future changes:
    - Nerf/revise all advisor actions
    - Give all advisor actions flavor texts both before, during and after the options
    - Fix the fact that rally options become more limited over time
-   - replace picture frames with something more modern
 - Bugs:
    - schwerdtner issue bug
    - ampel vonc event doesnt fire
