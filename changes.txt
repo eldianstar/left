@@ -30,8 +30,12 @@ Minor changes:
 - Changed brandenburg elections from 2023 to 2024
 - Changed font from Tahoma to Montserrat -> Cent.Gothic -> Avenir, too lazy to download montserrat
 
+
+
+
 v0.03, 19.10.2026
 Major changes:
+- Beweli leadership vote event added
 
 Minor changes:
 - Added a system for calculating qol as well as yearly qol change
@@ -41,7 +45,6 @@ Minor changes:
 
 Future changes:
 - Internal dynamics:
-   - Leadership events for factions
    - Faction dissent increase changed for different leaders
    - Better way of displaying advisors
    - Bundestag leaders choice
