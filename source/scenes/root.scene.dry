@@ -138,6 +138,9 @@ Q.wagenknecht_score = 0;
 Q.wissler_score = 0;
 Q.riexinger_score = 0;
 
+Q.wisslerb_score = 0;
+Q.schwerdtner_score = 0;
+
 Q.oldleft_leadership_seen = 0;
 Q.beweli_leadership_seen = 0;
 
