@@ -351,7 +351,7 @@ if ((Q.month_actions >= 1 && !Q.rubicon) || (Q.month_actions >= 4 && Q.rubicon))
     }
 
     if (Q.total_qol >= 80) {
-    Q.pro_status_quo += (Q.total_qol-80)/120;
+    Q.pro_status_quo += (Q.total_qol-80)/200;
     }
 
     //////////////////////////////// Education & Science support/economic changes TODO
@@ -428,7 +428,7 @@ if ((Q.month_actions >= 1 && !Q.rubicon) || (Q.month_actions >= 4 && Q.rubicon))
     }
 ///// status quo votes stabilization
     if ((Q.afd_votes + Q.linke_votes + Q.bsw_votes) - (100 - Q.pro_status_quo) > 5) {
-        Q.pro_status_quo -= 1;
+        Q.pro_status_quo -= 2;
         Q.rural_linke -= 0.2;
         Q.east_linke -= 0.5;
         Q.upper_linke -= 0.2;
@@ -441,7 +441,7 @@ if ((Q.month_actions >= 1 && !Q.rubicon) || (Q.month_actions >= 4 && Q.rubicon))
         Q.youth_afd -= 0.3;
     }
     if ((Q.afd_votes + Q.linke_votes + Q.bsw_votes) - (100 - Q.pro_status_quo) > 5) {
-        Q.pro_status_quo -= 1;
+        Q.pro_status_quo -= 2;
         Q.rural_linke -= 0.2;
         Q.east_linke -= 0.5;
         Q.upper_linke -= 0.2;
@@ -454,7 +454,7 @@ if ((Q.month_actions >= 1 && !Q.rubicon) || (Q.month_actions >= 4 && Q.rubicon))
         Q.youth_afd -= 0.3;
     }
     if ((Q.afd_votes + Q.linke_votes + Q.bsw_votes) - (100 - Q.pro_status_quo) > 10) {
-        Q.pro_status_quo -= 2;
+        Q.pro_status_quo -= 3;
         Q.rural_linke -= 0.2;
         Q.east_linke -= 0.5;
         Q.upper_linke -= 0.2;
@@ -467,7 +467,7 @@ if ((Q.month_actions >= 1 && !Q.rubicon) || (Q.month_actions >= 4 && Q.rubicon))
         Q.youth_afd -= 0.3;
     }
 if ((Q.afd_votes + Q.linke_votes + Q.bsw_votes) - (100 - Q.pro_status_quo) > 10) {
-        Q.pro_status_quo -= 2;
+        Q.pro_status_quo -= 3;
         Q.rural_linke -= 0.2;
         Q.east_linke -= 0.5;
         Q.upper_linke -= 0.2;
@@ -605,7 +605,7 @@ Q.econ_moderation += 0.2;
 
     ///////////////////////////// change party support based on pro_republic
     // if pro_republic is less than the support of the Weimar coalition, reduce SPD support...
-    if (Q.pro_status_quo < (Q.spd_votes + Q.greens_votes + Q.fdp_votes + Q.cdu_votes)) {
+    if (Q.pro_status_quo < (Q.spd_votes + Q.greens_votes + Q.fdp_votes + Q.cdu_votes + (Q.other_votes/1.5))) {
         Q.youth_spd -= 0.15;
 Q.youth_greens -= 0.15;
 Q.youth_fdp -= 0.15;
