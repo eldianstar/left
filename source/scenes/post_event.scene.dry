@@ -657,7 +657,7 @@ Q.pro_status_quo += 1;
 
 // calculates moderation & qol
 
-Q.total_qol = (Q.east_qol + Q.rural_qol + Q.youth_qol + Q.urban_qol + Q.upper_qol);
+Q.total_qol = (Q.east_qol + Q.rural_qol + Q.youth_qol + Q.urban_qol + Q.upper_qol)/5;
 
 Q.party_moderation = (Q.foreign_moderation + Q.social_moderation + Q.econ_moderation)/3;
 
