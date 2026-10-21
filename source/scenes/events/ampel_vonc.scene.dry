@@ -21,8 +21,6 @@ on-arrival: linke_voted_for = 1;
 on-display: {!
 var data = [];
 
-/////////////////////////////// push diagram data ////////////////////////////////////
-
 if ((Q.spd_b + Q.greens_b + Q.linke_b) >= 50) {
     data.push({
         "id": "govt",
@@ -32,7 +30,7 @@ if ((Q.spd_b + Q.greens_b + Q.linke_b) >= 50) {
     });
 }
 
-if (Q.spd_b + Q.greens_b + Q.linke_b) >= 50) {
+if ((Q.spd_b + Q.greens_b + Q.linke_b) >= 50) {
     data.push({
         "id": "opp",
         "legend": "Opposition",
@@ -71,7 +69,7 @@ setTimeout(function() {
 
 !}
 
-[? if (spd_b + greens_b + linke_b) >= 50 : 
+[? if ((spd_b + greens_b + linke_b) >= 50) : 
 {!<svg id="reichstag_support" style="width: 500px; height: 250px;"> </svg>!}
 
 The vote has succeeded, and the government holds!
