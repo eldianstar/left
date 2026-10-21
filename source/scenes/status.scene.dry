@@ -766,13 +766,13 @@ Detailed results for each demographic:
 [? if oldleft_leader = "Riexinger" : <img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 23%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
 ?]
 
-Strength: <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_strength +]%;background-color: [+ bsw_color +];"></div></div>
+Strength: <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_strength +]%;background-color: [+ bsw_color +];"></div></div> <br>
 Dissent: 
 [? if oldleft_dissent < 5 : <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_dissent +]%;background-color: #66BB6A;"></div></div> ?]
-[? if oldleft_dissent >= 5 and oldleft_dissent < 15 : <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_dissent +]%;background-color: #81C784;"></div></div>
-[? if oldleft_dissent >= 15 and oldleft_dissent < 30 : <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_dissent +]%;background-color: #FFD54F;"></div></div>
-[? if oldleft_dissent >= 30 and oldleft_dissent < 50 : <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_dissent +]%;background-color: #FFB74D;"></div></div>
-[? if oldleft_dissent >= 50 : <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_dissent +]%;background-color: #d42f2f;"></div></div>
+[? if oldleft_dissent >= 5 and oldleft_dissent < 15 : <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_dissent +]%;background-color: #81C784;"></div></div> ?]
+[? if oldleft_dissent >= 15 and oldleft_dissent < 30 : <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_dissent +]%;background-color: #FFD54F;"></div></div> ?]
+[? if oldleft_dissent >= 30 and oldleft_dissent < 50 : <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_dissent +]%;background-color: #FFB74D;"></div></div> ?]
+[? if oldleft_dissent >= 50 : <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_dissent +]%;background-color: #d42f2f;"></div></div> ?]
 
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
