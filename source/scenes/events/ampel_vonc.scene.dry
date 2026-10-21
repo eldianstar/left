@@ -102,7 +102,7 @@ data.push({
         "id": "abst",
         "legend": "Abstained",
         "name": "Abstained",
-        "seats": Math.round(Q.greens_b) * Q.bundestag_size)
+        "seats": Math.round((Q.greens_b) * Q.bundestag_size)
     });
 
 if (Q.linke_voted_for == 1) {
@@ -110,14 +110,14 @@ if (Q.linke_voted_for == 1) {
         "id": "opp",
         "legend": "Opposition",
         "name": "Opposition",
-        "seats": Math.round((100-(Q.spd_b + Q.linke_b)) * Q.bundestag_size)
+        "seats": Math.round((100-(Q.spd_b + Q.linke_b + Q.greens_b)) * Q.bundestag_size)
     });
 } else {
     data.push({
         "id": "opp",
         "legend": "Opposition",
         "name": "Opposition",
-        "seats": Math.round((100-(Q.spd_b)) * Q.bundestag_size)
+        "seats": Math.round((100-(Q.spd_b + Q.greens_b)) * Q.bundestag_size)
     });
 
 setTimeout(function() {
