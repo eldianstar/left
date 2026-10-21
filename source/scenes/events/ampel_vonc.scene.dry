@@ -1,7 +1,7 @@
 title: Vote of Confidence for Chancellor Scholz
 new-page: true
 tags: event
-view-if: ampelkoalition_failed == 1 and time == (ampelkoalition_time + 2)
+view-if: ampelkoalition_failed == 1 and time == (ampelkoalition_time + 7)
 max-visits: 1
 face-image: img/ScholzTeryoshi.jpg
 priority: 2
@@ -21,4 +21,4 @@ go-to: against if ((spd_b + greens_b + linke_b) < 50); election_1928.ministries 
 @against
 on-arrival: ampelkoalition = 0; next_election_year = year if month <= 9; next_election_year = (year+1) if month > 9; next_election_month = (month+3) if (month+3) <= 12; next_election_month = (month-9) if (month+3) > 12; pro_status_quo -= 3;
 
-Scholz has lost the vote, as expected. Next elections will be set for [+ next_election_month +] [+ next_election_year +].
+Scholz has lost the vote, as expected. Next elections will be set for [+ next_election_month : month +] [+ next_election_year +].
