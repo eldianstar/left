@@ -43,6 +43,7 @@ Minor changes:
 - Added a qol dependent mechanic to raise pro_status_quo and hopefully balance the afd/linke two party system
 - Added the afd/linke vote reduction to the post event status quo vote stabilization part to hopefully balance the current two party system related problems
 - replaced picture frames with something more modern
+- Corrected post_event and ampel_vonc bugs
 
 Future changes:
 - Internal dynamics:
@@ -100,4 +101,3 @@ Future changes:
    - Fix the fact that rally options become more limited over time
 - Bugs:
    - issue bars visual bugs
-   - ampel vonc event doesnt fire
