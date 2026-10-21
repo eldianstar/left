@@ -19,10 +19,7 @@ As for us, we haven't been approached by any of the member parties. We probably 
 go-to: against if ((spd_b + greens_b + linke_b) < 50); election_1928.ministries if (spd_b + greens_b + linke_b)>= 50
 on-arrival: linke_voted_for = 1;
 
-[? if ((spd_b + greens_b + linke_b) >= 50) :
-
-The vote has succeeded, and the government holds!
-?]
+[? if (spd_b + greens_b + linke_b) >= 50 : The vote has succeeded, and the government holds. ?]
 
 @against
 on-arrival: ampelkoalition = 0; next_election_year = year if month <= 9; next_election_year = (year+1) if month > 9; next_election_month = (month+3) if (month+3) <= 12; next_election_month = (month-9) if (month+3) > 12; pro_status_quo -= 3;
