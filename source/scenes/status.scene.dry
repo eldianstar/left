@@ -756,15 +756,24 @@ Detailed results for each demographic:
 <span class="tooltip-text" title="oldleft text" style="text-align: center;font-weight: bold;color: [+ bsw_color +];">Old Left</span> <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
 [? if wagenknecht_power_lost = 0 : 
-<img src="img/LogoAufstehen.jpg" alt="Aufstehen" style="width: 46%;object-fit:contain;">
-[? if oldleft_leader = "Wagenknecht" : <img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
-[? if oldleft_leader = "Pellmann" : <img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+<img src="img/LogoAufstehen.jpg" alt="Aufstehen" style="width: 23%;object-fit:contain;">
+[? if oldleft_leader = "Wagenknecht" : <img src="img/_portraits/WagenknechtSahra.jpg" alt="Sahra Wagenknecht" style="width: 23%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if oldleft_leader = "Pellmann" : <img src="img/_portraits/PellmannSoeren.jpg" alt="Sören Pellmann" style="width: 23%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
 ?]
 [? if wagenknecht_power_lost = 1 : 
-<img src="img/LogoSL.svg" alt="SL" style="width: 46%;object-fit:contain;">
-[? if oldleft_leader = "Wissler" : <img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
-[? if oldleft_leader = "Riexinger" : <img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+<img src="img/LogoSL.svg" alt="SL" style="width: 23%;object-fit:contain;">
+[? if oldleft_leader = "Wissler" : <img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 23%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if oldleft_leader = "Riexinger" : <img src="img/_portraits/RiexingerBernd.jpg" alt="Bernd Riexinger" style="width: 23%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
 ?]
+
+Strength: <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_strength +]%;background-color: [+ bsw_color +];"></div></div>
+Dissent: 
+[? if oldleft_dissent < 5 : <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_dissent +]%;background-color: #66BB6A;"></div></div> ?]
+[? if oldleft_dissent >= 5 and oldleft_dissent < 15 : <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_dissent +]%;background-color: #81C784;"></div></div>
+[? if oldleft_dissent >= 15 and oldleft_dissent < 30 : <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_dissent +]%;background-color: #FFD54F;"></div></div>
+[? if oldleft_dissent >= 30 and oldleft_dissent < 50 : <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_dissent +]%;background-color: #FFB74D;"></div></div>
+[? if oldleft_dissent >= 50 : <div class="bar" style="width: 75px;"><div class="bar-fill" style="width: [+ oldleft_dissent +]%;background-color: #d42f2f;"></div></div>
+
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
@@ -772,7 +781,7 @@ Detailed results for each demographic:
 <p style="text-align: center;margin-bottom: 2px;">Aufstehen</p>
 ?]
 [? if wagenknecht_power_lost = 1 :
-<p style="text-align: center;margin-bottom: 2px;">Sozialistische Linke</p>
+<p style="text-align: center;margin-bottom: 2px;">SL</p>
 ?]
 </div>
 <div style="flex: 1;">
@@ -789,15 +798,19 @@ Dissent: [+ oldleft_dissent : dissent +] <br>
 [? if beweli_left = 0 :
 <span class="tooltip-text" title="beweli text" style="text-align: center;font-weight: bold;color: #BC2D72;">Movement Left</span> <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
-<img src="img/LogoBewegungslinke.jpg" alt="Bewegungslinke" style="width: 46%;object-fit:contain;">
-<img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;">
+<img src="img/LogoBewegungslinke.jpg" alt="Bewegungslinke" style="width: 23%;object-fit:contain;">
+[? if beweli_leader == "Gohlke" : <img src="img/_portraits/GohlkeNicole.jpg" alt="Nicole Gohlke" style="width: 23%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if beweli_leader == "Schwerdtner" : <img src="img/_portraits/SchwerdtnerInes.jpg" alt="Ines Schwerdtner" style="width: 23%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if beweli_leader == "Wissler" : <img src="img/_portraits/WisslerJanine.jpg" alt="Janine Wissler" style="width: 23%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
-<p style="text-align: center;margin-bottom: 2px;">Bewegungslinke</p>
+<p style="text-align: center;margin-bottom: 2px;">BWL</p>
 </div>
 <div style="flex: 1;">
-<p style="text-align: center;margin-bottom: 2px;">Gohlke</p>
+[? if beweli_leader == "Gohlke" : <p style="text-align: center;margin-bottom: 2px;">Gohlke</p> ?]
+[? if beweli_leader == "Schwerdtner" : <p style="text-align: center;margin-bottom: 2px;">Schwerdtner</p> ?]
+[? if beweli_leader == "Wissler" : <p style="text-align: center;margin-bottom: 2px;">Wissler</p> ?]
 </div>
 </div>
 Strength: [+ beweli_strength : strength +] <br>
@@ -808,15 +821,17 @@ Dissent: [+ beweli_dissent : dissent +] <br>
 [? if emali_left = 0 :
 <span class="tooltip-text" title="emali text" style="text-align: center;font-weight: bold;color: [+ spd_color +];">Centre</span> <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
-<img src="img/LogoEmali.jpg" alt="Ema.Li" style="width: 46%;object-fit:contain;">
-<img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;">
+<img src="img/LogoEmali.jpg" alt="Ema.Li" style="width: 23%;object-fit:contain;">
+[? if emali_leader == "Kipping" : <img src="img/_portraits/KippingKatja.jpg" alt="Katja Kipping" style="width: 23%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
+[? if emali_leader == "Reichinnek" : <img src="img/_portraits/.jpg" alt="Heidi Reichinnek" style="width: 23%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;"> ?]
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
 <p style="text-align: center;margin-bottom: 2px;">Ema.Li</p>
 </div>
 <div style="flex: 1;">
-<p style="text-align: center;margin-bottom: 2px;">Kipping</p>
+[? if emali_leader == "Kipping" : <p style="text-align: center;margin-bottom: 2px;">Kipping</p> ?]
+[? if emali_leader == "Reichinnek" : <p style="text-align: center;margin-bottom: 2px;">Reichinnek</p> ?]
 </div>
 </div>
 Strength: [+ emali_strength : strength +] <br>
@@ -827,8 +842,8 @@ Dissent: [+ emali_dissent : dissent +] <br>
 [? if pragmatist_left = 0 :
 <span class="tooltip-text" title="pragmatist text" style="text-align: center;font-weight: bold;color: #ff5500;">Pragmatists</span> <br>
 <div style="display: flex;gap: 5px;margin-bottom: 5px;margin-left: -3px;">
-<img src="img/LogoFDS.jpg" alt="FDS" style="width: 46%;object-fit:contain;">
-<img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 46%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;">
+<img src="img/LogoFDS.jpg" alt="FDS" style="width: 23%;object-fit:contain;">
+<img src="img/_portraits/GysiGregor.jpg" alt="Gregor Gysi" style="width: 23%;object-fit:cover;object-position:top;border:5px solid #ccc;border-radius: 7px;">
 </div>
 <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;">
 <div style="flex: 1;">
