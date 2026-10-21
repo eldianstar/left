@@ -780,6 +780,18 @@ th {
   fill: #ff5500;
 }
 
+.seat.govt {
+  fill: #1AA037;
+}
+
+.seat.abst {
+  fill: #cccccc;
+}
+
+.seat.opp {
+  fill: 	#E3000F;
+}
+
 .tooltip-text {
   text-decoration: underline;
   text-decoration-style: dotted;
