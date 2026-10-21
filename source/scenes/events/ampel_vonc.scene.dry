@@ -17,8 +17,141 @@ As for us, we haven't been approached by any of the member parties. We probably 
 
 @for
 go-to: against if ((spd_b + greens_b + linke_b) < 50); election_1928.ministries if (spd_b + greens_b + linke_b)>= 50
+on-arrival: linke_voted_for = 1;
+on-display: {!
+var data = [];
+
+/////////////////////////////// push diagram data ////////////////////////////////////
+
+if ((Q.spd_b + Q.greens_b + Q.linke_b) >= 50) {
+    data.push({
+        "id": "govt",
+        "legend": "Government",
+        "name": "Government",
+        "seats": Math.round((Q.linke_b + Q.greens_b + Q.spd_b) * Q.bundestag_size)
+    });
+}
+
+if (Q.spd_b + Q.greens_b + Q.linke_b) >= 50) {
+    data.push({
+        "id": "opp",
+        "legend": "Opposition",
+        "name": "Opposition",
+        "seats": Math.round((100-(Q.spd_b + Q.greens_b + Q.linke_b)) * Q.bundestag_size)
+    });
+}
+
+setTimeout(function() {
+    if (window && window.d3) {
+        var width = 500;
+        var height = 500;
+        var contentDiv = document.getElementById('content');
+
+        if (!contentDiv) return; 
+
+        var screenWidth = contentDiv.offsetWidth;
+        if (screenWidth < width - 50) {
+            width = screenWidth - 50;
+            height = width;
+            var svgElement = document.getElementById("reichstag_support");
+            if (svgElement) {
+                svgElement.style.height = (screenWidth / 2) + "px";
+            }
+        }
+
+        var parliament = d3.parliament();
+        parliament.width(width).height(height).innerRadiusCoef(0.4);
+        parliament.enter.fromCenter(true).smallToBig(true);
+        parliament.exit.toCenter(false).bigToSmall(true);
+
+        d3.select("#reichstag_support").selectAll("*").remove();
+        d3.select("#reichstag_support").datum(data).call(parliament);
+    }
+}, (Q.bundestag_size*100));
+
+!}
+
+[? if (spd_b + greens_b + linke_b) >= 50 : 
+{!<svg id="reichstag_support" style="width: 500px; height: 250px;"> </svg>!}
+
+The vote has succeeded, and the government holds!
+?]
 
 @against
 on-arrival: ampelkoalition = 0; next_election_year = year if month <= 9; next_election_year = (year+1) if month > 9; next_election_month = (month+3) if (month+3) <= 12; next_election_month = (month-9) if (month+3) > 12; pro_status_quo -= 3;
+on-display: {!
+var data = [];
+
+/////////////////////////////// push diagram data ////////////////////////////////////
+
+if (Q.linke_voted_for == 1) {
+    data.push({
+        "id": "govt",
+        "legend": "Government",
+        "name": "Government",
+        "seats": Math.round((Q.linke_b + Q.spd_b) * Q.bundestag_size)
+    });
+} else {
+data.push({
+        "id": "govt",
+        "legend": "Government",
+        "name": "Government",
+        "seats": Math.round((Q.spd_b) * Q.bundestag_size)
+    });
+}
+
+data.push({
+        "id": "abst",
+        "legend": "Abstained",
+        "name": "Abstained",
+        "seats": Math.round(Q.greens_b) * Q.bundestag_size)
+    });
+
+if (Q.linke_voted_for == 1) {
+    data.push({
+        "id": "opp",
+        "legend": "Opposition",
+        "name": "Opposition",
+        "seats": Math.round((100-(Q.spd_b + Q.linke_b)) * Q.bundestag_size)
+    });
+} else {
+    data.push({
+        "id": "opp",
+        "legend": "Opposition",
+        "name": "Opposition",
+        "seats": Math.round((100-(Q.spd_b)) * Q.bundestag_size)
+    });
+
+setTimeout(function() {
+    if (window && window.d3) {
+        var width = 500;
+        var height = 500;
+        var contentDiv = document.getElementById('content');
+
+        if (!contentDiv) return; 
+
+        var screenWidth = contentDiv.offsetWidth;
+        if (screenWidth < width - 50) {
+            width = screenWidth - 50;
+            height = width;
+            var svgElement = document.getElementById("reichstag_support");
+            if (svgElement) {
+                svgElement.style.height = (screenWidth / 2) + "px";
+            }
+        }
+
+        var parliament = d3.parliament();
+        parliament.width(width).height(height).innerRadiusCoef(0.4);
+        parliament.enter.fromCenter(true).smallToBig(true);
+        parliament.exit.toCenter(false).bigToSmall(true);
+
+        d3.select("#reichstag_support").selectAll("*").remove();
+        d3.select("#reichstag_support").datum(data).call(parliament);
+    }
+}, (Q.bundestag_size*100));
+
+!}
+
+{!<svg id="reichstag_support" style="width: 500px; height: 250px;"> </svg>!}
 
 Scholz has lost the vote, as expected. Next elections will be set for [+ next_election_month : month +] [+ next_election_year +].
