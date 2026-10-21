@@ -160,6 +160,9 @@ Q.decentralization_percent = 40;
 Q.bsw_rising = 0;
 
 
+Q.linke_voted_for = 0;
+
+
 ////// What has happened? /////
 
 Q.ukraine_seen = 0;
