@@ -8,7 +8,7 @@ on-display: {!
 
     var image = new Image();  
     image.className = "face-img";  
-    image.src = "img/WagenknechtWissler.jpg";  
+    image.src = "img/LogoBewegungslinke.jpg";  
 
     cardEl.appendChild(image);  
     var contentDiv = document.querySelector("#page #mid_panel #content");
